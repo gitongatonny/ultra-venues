@@ -69,24 +69,6 @@ Footer START -->
 
 		</div><!-- Row END -->
 
-		<!-- Tops Venues -->
-		<div class="row mt-5">
-			<h5 class="mb-2 text-white">Our Top Venues</h5>
-			<ul class="list-inline text-primary-hover lh-lg">
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 1</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 2</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 3</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 4</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 5</a></li>
-                <li class="list-inline-item"><a href="#" class="text-muted">Venue 6</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 7</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 8</a></li>
-				<li class="list-inline-item"><a href="#" class="text-muted">Venue 9</a></li>
-                <li class="list-inline-item"><a href="#" class="text-muted">Venue 10</a></li>
-
-			</ul>
-		</div>
-
 		<!-- Payment and card -->
 		<div class="row g-4 justify-content-between mt-0 mt-md-2">
 
