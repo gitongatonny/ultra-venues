@@ -6,9 +6,9 @@
 			<div class="row align-items-center">
 				<div class="col-4">
 					<!-- Logo START -->
-					<a class="navbar-brand" href="index.html">
-						<img class="light-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/logo-hotel.svg" alt="logo">
-						<img class="dark-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/logo-hotel-light.svg" alt="logo">
+					<a class="navbar-brand" href="index.php">
+						<img class="light-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/" alt="ultra-venues-logo">
+						<img class="dark-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/" alt="ultra-venues-logo">
 					</a>
 					<!-- Logo END -->
 				</div>
@@ -17,18 +17,9 @@
 					<!-- Navbar top Right-->
 					<div class="align-items-center justify-content-end d-none d-lg-flex">
 						<ul class="nav border-bottom">
-							<li class="dropdown nav-item">
-								<a class="nav-link small pb-2" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-globe fa-fw me-2"></i>Language</a>
-								<ul class="dropdown-menu dropdown-animation dropdown-menu-end min-w-auto" aria-labelledby="languageDropdown">
-									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">English</a> </li>
-									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">Español</a> </li>
-									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/fr.svg" alt="">Français</a> </li>
-									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">Deutsch</a> </li>
-								</ul>
-							</li>
-							<li class="nav-item"> <a href="account-bookings.html" class="nav-link small pb-2"><i class="bi bi-briefcase me-2"></i>My Trip</a> </li>
-							<li class="nav-item"> <a href="help-center.html" class="nav-link small pb-2"><i class="bi bi-info-circle me-2"></i>Help</a> </li>
-							<li class="nav-item"> <a href="sign-in.html" class="nav-link small pb-2"><i class="far fa-user me-2"></i>Sign In or Login</a> </li>
+							<li class="nav-item"> <a href="customer-bookings.php" class="nav-link small pb-2"><i class="bi bi-briefcase me-2"></i>My Bookings</a> </li>
+							<li class="nav-item"> <a href="help-center.php" class="nav-link small pb-2"><i class="bi bi-info-circle me-2"></i>Help</a> </li>
+							<li class="nav-item"> <a href="login.php" class="nav-link small pb-2"><i class="far fa-user me-2"></i>Login/Register</a> </li>
 							<!-- Dark mode option START -->
 							<li class="nav-item dropdown">
 								<button class="btn btn-link text-warning lh-3 p-0 mb-0" id="bd-theme"
@@ -78,39 +69,39 @@
 						<!-- Main navbar START -->
 						<div class="navbar-collapse collapse" id="navbarCollapse">
 							<ul class="navbar-nav navbar-nav-scroll ms-auto">
-								<!-- Nav item Find hotel -->
+								<!-- Nav item Find Venue -->
 								<li class="nav-item dropdown dropdown-fullwidth">
-									<a class="nav-link dropdown-toggle" href="#" id="hotelMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find a hotel</a>
+									<a class="nav-link dropdown-toggle" href="#" id="hotelMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find a Venue</a>
 									<div class="dropdown-menu" aria-labelledby="hotelMenu">
 										<div class="container">
 											<div class="row g-4 justify-content-between p-lg-3">
-												<!-- Destination -->
+												<!-- Locations -->
 												<div class="col-lg-5">
-													<h6 class="mb-3"><i class="bi bi-pin-map-fill text-primary me-2"></i>Destination</h6>
+													<h6 class="mb-3"><i class="bi bi-pin-map-fill text-primary me-2"></i>Locations</h6>
 													<hr class="my-2">
 													<div class="row">
 														<div class="col-lg-6">
 															<ul class="list-unstyled">
-																<li> <a class="dropdown-item" href="#">New York</a> </li>
-																<li> <a class="dropdown-item" href="#">California</a> </li>
-																<li> <a class="dropdown-item" href="#">New Jersey</a> </li>
-																<li> <a class="dropdown-item" href="#">Canada</a> </li>
-																<li> <a class="dropdown-item" href="#">Las vegas</a> </li>
+																<li> <a class="dropdown-item" href="#">Nyeri</a> </li>
+																<li> <a class="dropdown-item" href="#">Nanyuki</a> </li>
+																<li> <a class="dropdown-item" href="#">Embu</a> </li>
+																<li> <a class="dropdown-item" href="#">Meru</a> </li>
+																<li> <a class="dropdown-item" href="#">Mwea</a> </li>
 															</ul>
 														</div>
 	
 														<div class="col-lg-6">
 															<ul class="list-unstyled">
-																<li> <a class="dropdown-item" href="#">London</a> </li>
-																<li> <a class="dropdown-item" href="#">Singapore</a> </li>
-																<li> <a class="dropdown-item" href="#">Malaysia</a> </li>
-																<li> <a class="dropdown-item" href="#">manhattan</a> </li>
+																<li> <a class="dropdown-item" href="#">Naromoru</a> </li>
+																<li> <a class="dropdown-item" href="#">Runyenjes</a> </li>
+																<li> <a class="dropdown-item" href="#">Nyahururu</a> </li>
+																<li> <a class="dropdown-item" href="#">Timau</a> </li>
 															</ul>
 														</div>
 													</div>
 												</div>
 	
-												<!-- Hotel type -->
+												<!-- Venue type -->
 												<div class="col-lg-3">
 													<h6 class="mb-3"><i class="bi bi-list-ul text-primary me-2"></i>Hotel type</h6>
 													<hr class="my-2">
@@ -124,17 +115,19 @@
 													</ul>
 												</div>
 	
-												<!-- Category -->
+												<!-- Event Category -->
 												<div class="col-lg-3">
-													<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Category</h6>
+													<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Event Category</h6>
 													<hr class="my-2">
 													<ul class="list-unstyled">
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-umbrella-beach fa-fw me-2"></i>Beach</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-city fa-fw me-2"></i>City</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-spa fa-fw me-2"></i>Spa</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Wildlife</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-golf-ball-tee fa-fw me-2"></i>Golf</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram fa-fw me-2"></i>Heritage</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-umbrella-beach fa-fw me-2"></i>Wedding</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-city fa-fw me-2"></i>Personal Custom Event</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-spa fa-fw me-2"></i>Family Gathering</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Graduation</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-golf-ball-tee fa-fw me-2"></i>Symposium</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram fa-fw me-2"></i>Staff Retreat</a> </li>
+                                                        <li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Corporate Meeting</a> </li>
+
 													</ul>
 												</div>
 	
@@ -145,11 +138,11 @@
 														<div class="card-body d-lg-flex justify-content-between align-items-center position-relative z-index-9">
 															<!-- Meta -->
 															<div class="mb-3 mb-lg-0">
-																<h5 class="text-white">Enjoy Great Times with us</h5>
+																<h5 class="text-white">Host an unforgetaable event with us</h5>
 																<ul class="list-inline">
-																	<li class="list-inline-item text-white me-2"> <i class="bi bi-patch-check-fill me-1"></i>Get 1000 bonus points on every stay</li>
-																	<li class="list-inline-item text-white me-2"> <i class="bi bi-patch-check-fill me-1"></i>Earn through Dec 15</li>
-																	<li class="list-inline-item text-white"> <i class="bi bi-patch-check-fill me-1"></i>Redeem for free night and more</li>
+																	<li class="list-inline-item text-white me-2"> <i class="bi bi-patch-check-fill me-1"></i>Get 1000 bonus points on every booking</li>
+																	<li class="list-inline-item text-white me-2"> <i class="bi bi-patch-check-fill me-1"></i>Earn through April 15</li>
+																	<li class="list-inline-item text-white"> <i class="bi bi-patch-check-fill me-1"></i>Redeem for free supplementary services</li>
 																</ul>
 															</div>
 															<!-- Button -->
@@ -162,19 +155,19 @@
 									</div>
 								</li>
 	
-								<!-- Nav item Facilities -->
+								<!-- Nav item Find Venue -->
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hotel Facilities</a>
+									<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Venue Facilities</a>
 									<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 	
 										<li> <a class="dropdown-item" href="#">Banquet</a></li>
-										<li> <a class="dropdown-item" href="#">Conference and meeting</a></li>
-										<li> <a class="dropdown-item" href="#">Fitness room</a></li>
-										<li> <a class="dropdown-item" href="#">Health club</a></li>
-										<li> <a class="dropdown-item" href="#">Sauna and steam bath</a></li>
-										<li> <a class="dropdown-item" href="#">Luggage storage</a></li>
-										<li> <a class="dropdown-item" href="#">Summer terrace</a></li>
-										<li> <a class="dropdown-item" href="#">Non-smoking rooms</a></li>
+										<li> <a class="dropdown-item" href="#">Conference and Meeting</a></li>
+										<li> <a class="dropdown-item" href="#">Open Garden Space</a></li>
+										<li> <a class="dropdown-item" href="#">Large Parking Area</a></li>
+										<li> <a class="dropdown-item" href="#">Food & Drinks Available</a></li>
+										<li> <a class="dropdown-item" href="#">Luggage Storage</a></li>
+										<li> <a class="dropdown-item" href="#">Summer Terrace</a></li>
+										<li> <a class="dropdown-item" href="#">DJs and MCs Available</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -197,7 +190,7 @@
 							<div class="nav-item dropdown form-control-bg-light">
 								<!-- Stay button -->
 								<a class="btn btn-sm btn-primary mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-									Book a stay <i class="fa-solid fa-angle-down"></i>
+									Book a Venue <i class="fa-solid fa-angle-down"></i>
 								</a>
 
 								<!-- Form START -->
@@ -212,33 +205,33 @@
 										<!-- Card body -->
 										<div class="card-body">
 											<div class="row g-3">
-												<!-- Pickup -->
+												<!-- Venue -->
 												<div class="col-12">
-													<label class="form-label mb-0">Hotel or Destination</label>
+													<label class="form-label mb-0">Venue</label>
 													<select class="form-select js-choice" data-search-enabled="true" aria-label=".form-select-sm">
 														<option value="">Select location</option>
-														<option>San Jacinto, USA</option>
-														<option>North Dakota, Canada</option>
-														<option>West Virginia, Paris</option>
+														<option>Nyeri</option>
+														<option>Nanyuki</option>
+														<option>Meru</option>
 													</select>
 												</div>
 					
 												<!-- Date -->
 												<div class="col-md-6">
-													<label class="form-label mb-0">Check in</label>
+													<label class="form-label mb-0">Start Date</label>
 													<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
 												</div>
 												
 												<!-- Date -->
 												<div class="col-md-6">
-													<label class="form-label mb-0">Check out</label>
+													<label class="form-label mb-0">End Date</label>
 													<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
 												</div>
 					
-												<!-- Occupant -->
+												<!-- Capacity -->
 												<div class="col-12">
 													<!-- Dropdown input -->
-													<label class="form-label mb-0">Guests & rooms</label>
+													<label class="form-label mb-0">Guests Capacity</label>
 													<div class="dropdown guest-selector me-2">
 														<input type="text" class="form-guest-selector form-control selection-result" value="2 Guests 1 Room" data-bs-auto-close="outside" data-bs-toggle="dropdown">
 													
@@ -281,8 +274,8 @@
 															<!-- Rooms -->
 															<li class="d-flex justify-content-between">
 																<div>
-																	<h6 class="mb-0">Rooms</h6>
-																	<small>Max room 8</small>
+																	<h6 class="mb-0">Capacity</h6>
+																	<small>Max capacity is 350 guests</small>
 																</div>
 					
 																<div class="hstack gap-1 align-items-center">
