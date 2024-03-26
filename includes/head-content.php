@@ -1,8 +1,8 @@
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Webestica.com">
-	<meta name="description" content="Booking - Multipurpose Online Booking Theme">
+	<meta name="author" content="ultravenues.com">
+	<meta name="description" content="Ultra Venues - Booking & Management with Intelligent Recommendations">
 
 	<!-- Dark mode -->
 	<script>
@@ -65,7 +65,7 @@
 	</script>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.ico">
+	<link rel="shortcut icon" href="assets/images/">
 
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
