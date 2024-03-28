@@ -142,16 +142,16 @@
 									<!-- Notification item -->
 									<li>
 										<a href="#" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3">
-											<h6 class="mb-2">New! Booking flights from New York ✈️</h6>
-											<p class="mb-0 small">Find the flexible ticket on flights around the world. Start searching today</p>
-											<span>Wednesday</span>
+											<h6 class="mb-2">Booking Confirmed for Green Hills Hotel 🏨</h6>
+											<p class="mb-0 small">Your 2-Day Venue for a Company Retreat has been booked</p>
+											<span>12th May 2024 - 13th May 2024</span>
 										</a>
 									</li>
 									<!-- Notification item -->
 									<li>
 										<a href="#" class="list-group-item list-group-item-action rounded border-0 mb-1 p-3">
-											<h6 class="mb-2">Sunshine saving are here 🌞 save 30% or more on a stay</h6>
-											<span>15 Nov 2022</span>
+											<h6 class="mb-2">Reminder! Your Event is 1 week away.</h6>
+											<span>12th May 2024</span>
 										</a>
 									</li>
 								</ul>
@@ -160,7 +160,7 @@
 
 							<!-- Card footer -->
 							<div class="card-footer bg-transparent text-center border-top">
-								<a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activity</a>
+								<a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activities</a>
 							</div>
 						</div>
 					</div>
