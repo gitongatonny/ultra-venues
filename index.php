@@ -13,7 +13,7 @@
 
     <body>
         <!-- Header START -->
-        <?php include "includes/header-navbar.php";?>
+        <?php include "includes/header-main.php";?>
         <!-- Header END -->
 
         <main>
