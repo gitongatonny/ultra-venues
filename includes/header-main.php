@@ -36,15 +36,15 @@
 								<h6 class="mb-3"><i class="bi bi-pin-map-fill text-primary me-2"></i>Locations</h6>
 								<hr class="my-2">
 								<ul class="list-unstyled">
-									<li> <a class="dropdown-item" href="#">Nyeri</a> </li>
-									<li> <a class="dropdown-item" href="#">Nanyuki</a> </li>
-									<li> <a class="dropdown-item" href="#">Embu</a> </li>
-									<li> <a class="dropdown-item" href="#">Meru</a> </li>
-									<li> <a class="dropdown-item" href="#">Mwea</a> </li>
-									<li> <a class="dropdown-item" href="#">Naromoru</a> </li>
-									<li> <a class="dropdown-item" href="#">Runyenjes</a> </li>
-									<li> <a class="dropdown-item" href="#">Nyahururu</a> </li>
-									<li> <a class="dropdown-item" href="#">Timau</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nyeri</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nanyuki</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Embu</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Meru</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Mwea</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Naromoru</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Runyenjes</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nyahururu</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Timau</a> </li>
 								</ul>
 							</ul>
 					</li>
@@ -59,12 +59,12 @@
 							<h6 class="mb-3"><i class="bi bi-list-ul text-primary me-2"></i>Venue Types</h6>
 								<hr class="my-2">
 								<ul class="list-unstyled">
-									<li> <a class="dropdown-item" href="#">All</a> </li>
-									<li> <a class="dropdown-item" href="#">Hotels</a> </li>
-									<li> <a class="dropdown-item" href="#">Villas</a> </li>
-									<li> <a class="dropdown-item" href="#">Palace</a> </li>
-									<li> <a class="dropdown-item" href="#">Resorts</a> </li>
-									<li> <a class="dropdown-item" href="#">Gardens</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-globe fa-fw me-2"></i> All</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-building fa-fw me-2"></i> Hotels</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-home fa-fw me-2"></i> Villas</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-landmark fa-fw me-2"></i> Palace</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-tree fa-fw me-2"></i> Resorts</a> </li>
+									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-leaf fa-fw me-2"></i> Gardens</a> </li>
 								</ul>
 							</ul>
 					</li>
@@ -79,34 +79,31 @@
 							<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Event Categories</h6>
 								<hr class="my-2">
 								<ul class="list-unstyled">
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-umbrella-beach fa-fw me-2"></i>Wedding</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-city fa-fw me-2"></i>Personal Custom Event</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-spa fa-fw me-2"></i>Family Gathering</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Graduation</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-golf-ball-tee fa-fw me-2"></i>Symposium</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram fa-fw me-2"></i>Staff Retreat</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Corporate Meeting</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-ring fa-fw me-2"></i>Wedding</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-calendar-alt fa-fw me-2"></i>Personal Custom Event</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-users fa-fw me-2"></i>Family Gathering</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-graduation-cap fa-fw me-2"></i>Graduation</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-microphone fa-fw me-2"></i>Symposium</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-plane fa-fw me-2"></i>Staff Retreat</a> </li>
+									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-briefcase fa-fw me-2"></i>Corporate Meeting</a> </li>
 								</ul>
 							</ul>
 					</li>
 					<!-- Nav item Venue Types -->
 
 
-					<!-- Nav item Venue Offerings -->
-					<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Venue Offerings</a>
-							<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
-
-								<li> <a class="dropdown-item" href="#">Banquet</a></li>
-								<li> <a class="dropdown-item" href="#">Conference and Meeting</a></li>
-								<li> <a class="dropdown-item" href="#">Open Garden Space</a></li>
-								<li> <a class="dropdown-item" href="#">Large Parking Area</a></li>
-								<li> <a class="dropdown-item" href="#">Food & Drinks Available</a></li>
-								<li> <a class="dropdown-item" href="#">Luggage Storage</a></li>
-								<li> <a class="dropdown-item" href="#">Summer Terrace</a></li>
-								<li> <a class="dropdown-item" href="#">DJs and MCs Available</a></li>
-							</ul>
+					<!-- Nav item About Us -->
+					<li class="nav-item">
+						<a class="nav-link" href="#">About Us</a>
 					</li>
+					<!-- Nav item About Us -->
+
+
+					<!-- Nav item Contact Us -->
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact Us</a>
+					</li>
+					<!-- Nav item Contact Us -->
 	
 
 							
