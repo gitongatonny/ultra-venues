@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Page | Ultra Venues</title>
+        <title>Home | Ultra Venues</title>
 
         <!-- Head Content -->
         <?php include "includes/head-content.php";?>
@@ -23,7 +23,7 @@
 
     <!-- =======================
     Main banner START -->
-    <section class="position-relative py-8 py-lg-9" style="background-image:url(assets/images/bg/20.jpg); background-position: center left; background-size: cover;">
+    <section class="position-relative py-8 py-lg-9" style="background-image:url(assets/images/mt-kenya.jpg); background-position: center left; background-size: cover;">
         <!-- Background dark overlay -->
         <div class="bg-overlay bg-dark opacity-8"></div>
         <div class="container z-index-9 position-relative">
@@ -31,7 +31,7 @@
                 <!-- Title -->
                 <div class="col-xl-8 m-auto text-center">
                     <h6 class="text-white fw-normal mb-3">Discover The Best Venues in the Mt. Kenya Region</h6>
-                    <h1 class="display-4 text-white mb-0">Book with us
+                    <h1 class="display-4 text-white mb-0">Book with us,
                         <span class="position-relative z-index-9 d-block">Get the Best
                                 <!-- SVG START -->
                                 <span class="position-absolute top-50 start-50 translate-middle z-index-n1 d-none d-md-block mt-4">
@@ -42,6 +42,7 @@
                                 <!-- SVG END -->
                             </span>
                     </h1>
+                    <br>
                     <div class="col-lg-12">
                     <div class="col-lg-7 d-flex justify-content-center mx-auto mt-5">
                         <!-- Search -->
