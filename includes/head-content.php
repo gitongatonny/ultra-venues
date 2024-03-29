@@ -65,7 +65,7 @@
 	</script>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/">
+	<link rel="shortcut icon" href="assets/images/logo.svg">
 
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
