@@ -31,7 +31,7 @@
 
 					<!-- Nav item Locations -->
 					<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find a Venue Location</a>
+							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
 							<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 								<h6 class="mb-3"><i class="bi bi-pin-map-fill text-primary me-2"></i>Locations</h6>
 								<hr class="my-2">
@@ -74,7 +74,7 @@
 
 					<!-- Nav item Venue Types -->
 					<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Event Categories</a>
+							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Event Types</a>
 							<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 							<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Event Categories</h6>
 								<hr class="my-2">
@@ -114,6 +114,10 @@
 
 			<!-- Profile and Notification START -->
 			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
+
+		
+				<!-- Google Translate Functionality -->
+				<div id="google_translate_element"></div> 
 
 				<!-- Notification dropdown START -->
 				<li class="nav-item dropdown ms-0 ms-md-3">
