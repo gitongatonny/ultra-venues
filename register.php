@@ -85,8 +85,9 @@ Main Content START -->
 										<label class="form-check-label" for="rememberCheck">Keep me signed in</label>
 									</div>
 									<!-- Button -->
-									<div><button type="submit" class="btn btn-primary w-100 mb-0">Sign up</button></div>
-		
+									<div>
+										<button type="button" class="btn btn-primary w-100 mb-0" onclick="redirectToDash()">Register</button>
+									</div>		
 									<!-- Divider -->
 									<div class="position-relative my-4">
 										<hr>
@@ -118,6 +119,13 @@ Main Content END -->
         <!-- Footer START -->
             <?php include "includes/footer.php";?>
         <!-- Footer END -->
+
+		<script>
+			function redirectToDash() {
+			window.location.href = "dash.php";
+			}
+		</script>
+
     </body>
 
 
