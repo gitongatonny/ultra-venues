@@ -153,7 +153,7 @@
                                     <div class="d-flex justify-content-center align-items-center text-start me-0 me-sm-4">
                                     <!-- Button -->
                                     <br>
-                                    <div> <a href="about-us.php" class="btn btn-lg btn-outline-primary mb-0">Book your Trip Now!</a> </div>
+                                    <div> <a href="about-us.php" class="btn btn-lg btn-outline-primary mb-0">Book your Venue Now!</a> </div>
                                 </div>
 
                             </div>
@@ -162,6 +162,224 @@
                 </section>
                 <!-- =======================
                 About END -->
+
+
+                <!-- =======================
+                Listing START -->
+                        <section class="pt-0 pt-sm-5">
+                            <div class="container">
+                                <!-- Title -->
+                                <div class="row mb-4 mb-sm-5">
+                                    <div class="col-12 text-center">
+                                        <h2 class="mb-0">Our Top Venues</h2>
+                                        <p class="mb-0">Book your venue with us and get the best service.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row g-4">
+                                    <!-- Card item -->
+                                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                                        <div class="card shadow h-100">
+                                            <div class="position-relative">
+                                                <!-- Image -->
+                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
+                                                    alt="Card image">
+                                                <!-- Overlay -->
+                                                <div class="card-img-overlay p-3 z-index-1">
+                                                    <div class="badge text-bg-dark"><i
+                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i>Hotel</div>
+                                                    <div class="badge text-bg-success">Open</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card body START -->
+                                            <div class="card-body">
+                                                <!-- Title -->
+                                                <h5 class="card-title me-2"><a href="directory-detail.html">Green Hills Hotel</a>
+                                                </h5>
+                                                <br>
+
+                                                <!-- Address and Contact -->
+                                                <ul class="list-group list-group-borderless mb-0">
+                                                    <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Nyeri
+                                                    </li>
+                                                    <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 250 guests 
+                                                    </li>
+
+                                                    <br>
+                                                    <!-- Price -->
+                                                    <p class="mb-0">Starts at <span class="text-success">Ksh 9,999</span> per/day</p>
+                                                </ul>
+                                            </div>
+                                            <!-- Card body END -->
+
+                                            <!-- Card footer START-->
+                                            <div class="card-footer border-top">
+                                                <!-- Buttons -->
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                            class="bi bi-arrow-right ms-1"></i></a>
+                                                    <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Card item -->
+                                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                                        <div class="card shadow h-100">
+                                            <div class="position-relative">
+                                                <!-- Image -->
+                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
+                                                    alt="Card image">
+                                                <!-- Overlay -->
+                                                <div class="card-img-overlay p-3 z-index-1">
+                                                    <div class="badge text-bg-dark"><i
+                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i> Hotel</div>
+                                                    <div class="badge text-bg-success">Open</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card body START -->
+                                            <div class="card-body">
+                                                <!-- Title -->
+                                                <h5 class="card-title me-2"><a href="directory-detail.html">Alba Hotel</a></h5>
+                                                <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
+                                                <br>
+                                                <br>
+                                                <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Nyeri
+                                                    </li>
+                                                    <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 150 guests 
+                                                </li>
+                                                <br>
+
+                                                <!-- Content -->
+                                                <p class="mb-0">Starts at <span class="text-success">Ksh 11,000</span> per/day</p>
+                                            </div>
+                                            <!-- Card body END -->
+
+                                            <!-- Card footer START-->
+                                            <div class="card-footer border-top">
+                                                <!-- Buttons -->
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                            class="bi bi-arrow-right ms-1"></i></a>
+                                                    <a href="#" class="h6 mb-0 z-index-2"><i
+                                                            class="fa-solid fa-heart text-danger"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card item -->
+                                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                                        <div class="card shadow h-100">
+                                            <div class="position-relative">
+                                                <!-- Image -->
+                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
+                                                    alt="Card image">
+                                                <!-- Overlay -->
+                                                <div class="card-img-overlay p-3 z-index-1">
+                                                    <div class="badge text-bg-dark"><i
+                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i>Resort</div>
+                                                    <div class="badge text-bg-success">Open</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card body START -->
+                                            <div class="card-body">
+                                                <!-- Title -->
+                                                <h5 class="card-title me-2"><a href="directory-detail.html">Sarova Maiyan</a>
+                                                </h5>
+                                                <br>
+
+                                                <!-- Address and Contact -->
+                                                <ul class="list-group list-group-borderless mb-0">
+                                                    <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Nanyuki
+                                                    </li>
+                                                    <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 200 guests 
+                                                    </li>
+
+                                                    <br>
+                                                    <!-- Price -->
+                                                    <p class="mb-0">Starts at <span class="text-success">Ksh 19,999</span> per/day</p>
+                                                </ul>
+                                            </div>
+                                            <!-- Card body END -->
+
+                                            <!-- Card footer START-->
+                                            <div class="card-footer border-top">
+                                                <!-- Buttons -->
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                            class="bi bi-arrow-right ms-1"></i></a>
+                                                    <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card item -->
+                                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                                        <div class="card shadow h-100">
+                                            <div class="position-relative">
+                                                <!-- Image -->
+                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
+                                                    alt="Card image">
+                                                <!-- Overlay -->
+                                                <div class="card-img-overlay p-3 z-index-1">
+                                                    <div class="badge text-bg-dark"><i
+                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i> Palace</div>
+                                                    <div class="badge text-bg-success">Open</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card body START -->
+                                            <div class="card-body">
+                                                <!-- Title -->
+                                                <h5 class="card-title me-2"><a href="directory-detail.html">Oriental Pallce</a></h5>
+                                                <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
+                                                <br>
+                                                <br>
+                                                <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Embu
+                                                    </li>
+                                                    <li class="list-group-item small pb-0">
+                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 100 guests 
+                                                </li>
+                                                <br>
+
+                                                <!-- Content -->
+                                                <p class="mb-0">Starts at <span class="text-success">Ksh 15,999</span> per/day</p>
+                                            </div>
+                                            <!-- Card body END -->
+
+                                            <!-- Card footer START-->
+                                            <div class="card-footer border-top">
+                                                <!-- Buttons -->
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                            class="bi bi-arrow-right ms-1"></i></a>
+                                                    <a href="#" class="h6 mb-0 z-index-2"><i
+                                                            class="fa-solid fa-heart text-danger"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </section>
+                        <!-- =======================
+                Listing END -->
 
 
                 <!-- =======================
@@ -180,7 +398,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Nyeri</a></h5>
@@ -193,7 +411,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Meru</a></h5>
@@ -206,7 +424,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Nanyuki</a></h5>
@@ -219,7 +437,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Embu</a></h5>
@@ -232,7 +450,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Mwea</a></h5>
@@ -245,7 +463,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Naromoru</a></h5>
@@ -258,7 +476,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Laikipia</a></h5>
@@ -271,7 +489,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Timau</a></h5>
@@ -284,7 +502,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Nyahururu</a></h5>
@@ -297,7 +515,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Runyenjes</a></h5>
@@ -310,7 +528,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Chuka</a></h5>
@@ -323,7 +541,7 @@
                             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                                 <div class="card bg-transparent text-center p-1 h-100">
                                     <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" alt="">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
                                         <h5 class="card-title"><a href="#" class="stretched-link">Kirinyaga</a></h5>
