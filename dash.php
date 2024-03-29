@@ -113,60 +113,10 @@
                     </section>
                     <!-- =======================
                     Main banner END -->
-
-
-
-                    <!-- =======================
-                About START -->
-                <section class="pt-5 pt-md-8 pb-0">
-                    <div class="container z-index-9">
-                        <div class="row">
-                            <div class="col-lg-10 m-auto text-center">
-                                <h2>Book a Suitable Venue with Us!</h2>
-                                <p class="lead"><span class="text-primary-ultra fw-bold">Ultra Venues</span> is a premier platform specializing in venue booking for a variety of events. Whether you're planning a wedding, corporate meeting, or any other special occasion, we connect you with the perfect venue to host your event. For venue owners, we offer a comprehensive booking management system, driving customers to your venues and optimizing your booking process. Our intelligent recommendations ensure that customers find the venues that best suit their needs, creating memorable experiences.</p>
-                                
-                                <!-- List -->
-                                <ul class="list-inline hstack gap-4 flex-wrap justify-content-center mt-4">
-                                    <li class="list-inline-item">
-                                        <h5 class="mb-0 fw-normal"><i class="bi bi-person fa-fw text-warning me-1"></i>Excellent Service</h5>
-                                    </li>
-                                    <li class="list-inline-item"> 
-                                        <h5 class="mb-0 fw-normal"><i class="bi bi-pin-map fa-fw text-warning me-1"></i>Best Locations</h5>
-                                    </li>
-                                    <li>
-                                    <div class="d-flex justify-content-center align-items-center text-start me-0 me-sm-4">
-                                        <h3 class="me-2 mb-0">4.8</h3>
-                                        <div>
-                                            <ul class="list-inline mb-0">
-                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
-                                            </ul>
-                                            <p class="mb-0 small">Clients Love Us!</p>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                    <!-- About Us Btn -->
-                                    <div class="d-flex justify-content-center align-items-center text-start me-0 me-sm-4">
-                                    <!-- Button -->
-                                    <br>
-                                    <div> <a href="about-us.php" class="btn btn-lg btn-outline-primary mb-0">Book your Venue Now!</a> </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- Row END -->
-                    </div>
-                </section>
-                <!-- =======================
-                About END -->
-
-
+        
                 <!-- =======================
                 Top Venues START -->
-                        <section class="pt-0 pt-sm-5">
+                <section class="pt-0 pt-sm-5">
                             <div class="container">
                                 <!-- Title -->
                                 <div class="row mb-4 mb-sm-5">
@@ -380,6 +330,53 @@
                         </section>
                         <!-- =======================
                 Top Venues END -->
+
+
+
+                    <!-- =======================
+                About START -->
+                <section class="pt-5 pt-md-8 pb-0">
+                    <div class="container z-index-9">
+                        <div class="row">
+                            <div class="col-lg-10 m-auto text-center">
+                                <h2>Book a Suitable Venue with Us!</h2>
+                                <p class="lead"><span class="text-primary-ultra fw-bold">Ultra Venues</span> is a premier platform specializing in venue booking for a variety of events. Whether you're planning a wedding, corporate meeting, or any other special occasion, we connect you with the perfect venue to host your event. For venue owners, we offer a comprehensive booking management system, driving customers to your venues and optimizing your booking process. Our intelligent recommendations ensure that customers find the venues that best suit their needs, creating memorable experiences.</p>
+                                
+                                <!-- List -->
+                                <ul class="list-inline hstack gap-4 flex-wrap justify-content-center mt-4">
+                                    <li class="list-inline-item">
+                                        <h5 class="mb-0 fw-normal"><i class="bi bi-person fa-fw text-warning me-1"></i>Excellent Service</h5>
+                                    </li>
+                                    <li class="list-inline-item"> 
+                                        <h5 class="mb-0 fw-normal"><i class="bi bi-pin-map fa-fw text-warning me-1"></i>Best Locations</h5>
+                                    </li>
+                                    <li>
+                                    <div class="d-flex justify-content-center align-items-center text-start me-0 me-sm-4">
+                                        <h3 class="me-2 mb-0">4.8</h3>
+                                        <div>
+                                            <ul class="list-inline mb-0">
+                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                                                <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
+                                                <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
+                                            </ul>
+                                            <p class="mb-0 small">Clients Love Us!</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                    <!-- About Us Btn -->
+                                    <div class="d-flex justify-content-center align-items-center text-start me-0 me-sm-4">
+                                </div>
+
+                            </div>
+                        </div> <!-- Row END -->
+                    </div>
+                </section>
+                <!-- =======================
+                About END -->
+
 
 
                 <!-- =======================
