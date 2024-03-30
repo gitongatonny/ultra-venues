@@ -77,7 +77,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Nyeri</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Nyeri</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -113,7 +113,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Meru</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Meru</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -149,7 +149,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Embu</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Embu</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -185,7 +185,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Mwea</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Mwea</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -223,7 +223,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Nyeri</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Nyeri</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -259,7 +259,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Meru</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Meru</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -295,7 +295,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Embu</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Embu</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -331,7 +331,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Mwea</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Mwea</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -370,7 +370,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Nyeri</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Nyeri</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -406,7 +406,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Meru</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Meru</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -442,7 +442,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Embu</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Embu</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
@@ -478,7 +478,7 @@
                                 <!-- Card body -->
                                 <div class="card-body px-2">
                                     <!-- Title -->
-                                    <h5 class="card-title"><a href="tour-grid.html" class="stretched-link">Mwea</a></h5>
+                                    <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Mwea</a></h5>
                                     <!-- Content -->
                                     <div class="hstack gap-2">
                                         <span class="h5 mb-0 text-success">9,999</span>
