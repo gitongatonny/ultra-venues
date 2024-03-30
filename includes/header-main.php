@@ -31,20 +31,20 @@
 
 					<!-- Nav item Locations -->
 					<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
+							<a class="nav-link dropdown-toggle" href="locations.php" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
 							<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 								<h6 class="mb-3"><i class="bi bi-pin-map-fill text-primary me-2"></i>Locations</h6>
 								<hr class="my-2">
 								<ul class="list-unstyled">
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nyeri</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nanyuki</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Embu</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Meru</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Mwea</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Naromoru</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Runyenjes</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nyahururu</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Timau</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nyeri</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nanyuki</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Embu</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Meru</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Mwea</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Naromoru</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Runyenjes</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Nyahururu</a> </li>
+									<li> <a class="dropdown-item" href="location-detail.php"> <i class="bi bi-geo-alt-fill fa-fw me-2"></i> Timau</a> </li>
 								</ul>
 							</ul>
 					</li>
@@ -54,17 +54,17 @@
 
 					<!-- Nav item Venue Types -->
 					<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Venue Types</a>
+							<a class="nav-link dropdown-toggle" href="venues.php" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Venue Types</a>
 							<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 							<h6 class="mb-3"><i class="bi bi-list-ul text-primary me-2"></i>Venue Types</h6>
 								<hr class="my-2">
 								<ul class="list-unstyled">
-									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-globe fa-fw me-2"></i> All</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-building fa-fw me-2"></i> Hotels</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-home fa-fw me-2"></i> Villas</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-landmark fa-fw me-2"></i> Palace</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-tree fa-fw me-2"></i> Resorts</a> </li>
-									<li> <a class="dropdown-item" href="#"> <i class="fa-solid fa-leaf fa-fw me-2"></i> Gardens</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"> <i class="fa-solid fa-globe fa-fw me-2"></i> All</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"> <i class="fa-solid fa-building fa-fw me-2"></i> Hotels</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"> <i class="fa-solid fa-home fa-fw me-2"></i> Villas</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"> <i class="fa-solid fa-landmark fa-fw me-2"></i> Palace</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"> <i class="fa-solid fa-tree fa-fw me-2"></i> Resorts</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"> <i class="fa-solid fa-leaf fa-fw me-2"></i> Gardens</a> </li>
 								</ul>
 							</ul>
 					</li>
@@ -74,18 +74,18 @@
 
 					<!-- Nav item Venue Types -->
 					<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Event Types</a>
+							<a class="nav-link dropdown-toggle" href="venues.php" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Event Types</a>
 							<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 							<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Event Categories</h6>
 								<hr class="my-2">
 								<ul class="list-unstyled">
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-ring fa-fw me-2"></i>Wedding</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-calendar-alt fa-fw me-2"></i>Personal Custom Event</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-users fa-fw me-2"></i>Family Gathering</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-graduation-cap fa-fw me-2"></i>Graduation</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-microphone fa-fw me-2"></i>Symposium</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-plane fa-fw me-2"></i>Staff Retreat</a> </li>
-									<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-briefcase fa-fw me-2"></i>Corporate Meeting</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-ring fa-fw me-2"></i>Wedding</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-calendar-alt fa-fw me-2"></i>Personal Custom Event</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-users fa-fw me-2"></i>Family Gathering</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-graduation-cap fa-fw me-2"></i>Graduation</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-microphone fa-fw me-2"></i>Symposium</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-plane fa-fw me-2"></i>Staff Retreat</a> </li>
+									<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-briefcase fa-fw me-2"></i>Corporate Meeting</a> </li>
 								</ul>
 							</ul>
 					</li>

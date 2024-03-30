@@ -71,7 +71,7 @@
 							<ul class="navbar-nav navbar-nav-scroll ms-auto">
 								<!-- Nav item Find Venue -->
 								<li class="nav-item dropdown dropdown-fullwidth">
-									<a class="nav-link dropdown-toggle" href="#" id="hotelMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find a Venue</a>
+									<a class="nav-link dropdown-toggle" href="venues.php" id="hotelMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find a Venue</a>
 									<div class="dropdown-menu" aria-labelledby="hotelMenu">
 										<div class="container">
 											<div class="row g-4 justify-content-between p-lg-3">
@@ -82,20 +82,20 @@
 													<div class="row">
 														<div class="col-lg-6">
 															<ul class="list-unstyled">
-																<li> <a class="dropdown-item" href="#">Nyeri</a> </li>
-																<li> <a class="dropdown-item" href="#">Nanyuki</a> </li>
-																<li> <a class="dropdown-item" href="#">Embu</a> </li>
-																<li> <a class="dropdown-item" href="#">Meru</a> </li>
-																<li> <a class="dropdown-item" href="#">Mwea</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Nyeri</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Nanyuki</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Embu</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Meru</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Mwea</a> </li>
 															</ul>
 														</div>
 	
 														<div class="col-lg-6">
 															<ul class="list-unstyled">
-																<li> <a class="dropdown-item" href="#">Naromoru</a> </li>
-																<li> <a class="dropdown-item" href="#">Runyenjes</a> </li>
-																<li> <a class="dropdown-item" href="#">Nyahururu</a> </li>
-																<li> <a class="dropdown-item" href="#">Timau</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Naromoru</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Runyenjes</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Nyahururu</a> </li>
+																<li> <a class="dropdown-item" href="venue-details.php">Timau</a> </li>
 															</ul>
 														</div>
 													</div>
@@ -106,12 +106,12 @@
 													<h6 class="mb-3"><i class="bi bi-list-ul text-primary me-2"></i>Hotel type</h6>
 													<hr class="my-2">
 													<ul class="list-unstyled">
-														<li> <a class="dropdown-item" href="#">All</a> </li>
-														<li> <a class="dropdown-item" href="#">Hotels</a> </li>
-														<li> <a class="dropdown-item" href="#">Villas</a> </li>
-														<li> <a class="dropdown-item" href="#">Palace</a> </li>
-														<li> <a class="dropdown-item" href="#">Resorts</a> </li>
-														<li> <a class="dropdown-item" href="#">Restaurants</a> </li>
+														<li> <a class="dropdown-item" href="venues.php">All</a> </li>
+														<li> <a class="dropdown-item" href="venues.php">Hotels</a> </li>
+														<li> <a class="dropdown-item" href="venues.php">Villas</a> </li>
+														<li> <a class="dropdown-item" href="venues.php">Palace</a> </li>
+														<li> <a class="dropdown-item" href="venues.php">Resorts</a> </li>
+														<li> <a class="dropdown-item" href="venues.php">Restaurants</a> </li>
 													</ul>
 												</div>
 	
@@ -120,13 +120,13 @@
 													<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Event Category</h6>
 													<hr class="my-2">
 													<ul class="list-unstyled">
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-umbrella-beach fa-fw me-2"></i>Wedding</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-city fa-fw me-2"></i>Personal Custom Event</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-spa fa-fw me-2"></i>Family Gathering</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Graduation</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-golf-ball-tee fa-fw me-2"></i>Symposium</a> </li>
-														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram fa-fw me-2"></i>Staff Retreat</a> </li>
-                                                        <li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Corporate Meeting</a> </li>
+														<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-umbrella-beach fa-fw me-2"></i>Wedding</a> </li>
+														<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-city fa-fw me-2"></i>Personal Custom Event</a> </li>
+														<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-spa fa-fw me-2"></i>Family Gathering</a> </li>
+														<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Graduation</a> </li>
+														<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-golf-ball-tee fa-fw me-2"></i>Symposium</a> </li>
+														<li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-gopuram fa-fw me-2"></i>Staff Retreat</a> </li>
+                                                        <li> <a class="dropdown-item" href="venues.php"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Corporate Meeting</a> </li>
 
 													</ul>
 												</div>
@@ -146,7 +146,7 @@
 																</ul>
 															</div>
 															<!-- Button -->
-															<a href="#" class="btn btn-white mb-0">Register Now</a>
+															<a href="venues.php" class="btn btn-white mb-0">Book a Venue Now</a>
 														</div>
 													</div>
 												</div>
@@ -157,17 +157,17 @@
 	
 								<!-- Nav item Find Venue -->
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Venue Facilities</a>
+									<a class="nav-link dropdown-toggle" href="venues.php" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Venue Facilities</a>
 									<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
 	
-										<li> <a class="dropdown-item" href="#">Banquet</a></li>
-										<li> <a class="dropdown-item" href="#">Conference and Meeting</a></li>
-										<li> <a class="dropdown-item" href="#">Open Garden Space</a></li>
-										<li> <a class="dropdown-item" href="#">Large Parking Area</a></li>
-										<li> <a class="dropdown-item" href="#">Food & Drinks Available</a></li>
-										<li> <a class="dropdown-item" href="#">Luggage Storage</a></li>
-										<li> <a class="dropdown-item" href="#">Summer Terrace</a></li>
-										<li> <a class="dropdown-item" href="#">DJs and MCs Available</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Banquet</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Conference and Meeting</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Open Garden Space</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Large Parking Area</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Food & Drinks Available</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Luggage Storage</a></li>
+										<li> <a class="dropdown-item" href="venues.php">Summer Terrace</a></li>
+										<li> <a class="dropdown-item" href="venues.php">DJs and MCs Available</a></li>
 									</ul>
 								</li>
 							</ul>

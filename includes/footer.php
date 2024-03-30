@@ -25,7 +25,7 @@
 						<div class="col-6 col-md-4">
 							<h5 class="text-white mb-2 mb-md-4">Main Pages</h5>
 							<ul class="nav flex-column text-primary-hover">
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Home</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="index.php">Home</a></li>
 								<li class="nav-item"><a class="nav-link text-muted" href="#">About Us</a></li>
 								<li class="nav-item"><a class="nav-link text-muted" href="#">Contact Us</a></li>
 								<li class="nav-item"><a class="nav-link text-muted" href="#">Help</a></li>
@@ -37,11 +37,11 @@
 						<div class="col-6 col-md-4">
 							<h5 class="text-white mb-2 mb-md-4">Top Locations</h5>
 							<ul class="nav flex-column text-primary-hover">
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Nyeri</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Nanyuki</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Meru</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Embu</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Mwea</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Nyeri</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Nanyuki</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Meru</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Embu</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Mwea</a></li>
 							</ul>
 						</div>
 
@@ -49,10 +49,10 @@
 						<div class="col-6 col-md-4">
 							<h5 class="text-white mb-2 mb-md-4">Top Event Types</h5>
 							<ul class="nav flex-column text-primary-hover">
-								<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-ring me-2"></i>Wedding</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-plane me-2"></i>Staff Retreat</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-briefcase me-2"></i>Corporate Meeting</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-calendar-alt me-2"></i>Personal Custom Event</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venues.php"><i class="fa-solid fa-ring me-2"></i>Wedding</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venues.php"><i class="fa-solid fa-plane me-2"></i>Staff Retreat</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venues.php"><i class="fa-solid fa-briefcase me-2"></i>Corporate Meeting</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="venues.php"><i class="fa-solid fa-calendar-alt me-2"></i>Personal Custom Event</a></li>
 
 							</ul>
 						</div>
