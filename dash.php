@@ -54,21 +54,21 @@
                                                         data-bs-toggle="dropdown" placeholder="What venue type are you looking for..">
                                                     <!-- dropdown button -->
                                                     <ul class="dropdown-menu input-dropdown shadow rounded-0 rounded-bottom w-100">
-                                                        <li><a class="dropdown-item" href="#"><i
+                                                        <li><a class="dropdown-item" href="venues.php"><i
                                                                     class="fa-solid fa-building fa-fw me-2"></i>Hotels</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="#"><i
+                                                        <li><a class="dropdown-item" href="venues.php"><i
                                                                     class="fa-solid fa-home fa-fw me-2"></i>Villas</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="#"><i
+                                                        <li><a class="dropdown-item" href="venues.php"><i
                                                                     class="fa-solid fa-landmark fa-fw me-2"></i>Palaces</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="#"><i
+                                                        <li><a class="dropdown-item" href="venues.php"><i
                                                                     class="fa-solid fa-tree fa-fw me-2"></i>Resorts</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="#"><i
+                                                        <li><a class="dropdown-item" href="venues.php"><i
                                                                     class="fa-solid fa-leaf fa-fw me-2"></i>Gardens</a></li>
-                                                        <li><a class="dropdown-item" href="#"><i
+                                                        <li><a class="dropdown-item" href="venues.php"><i
                                                                     class="fa-solid fa-users fa-fw me-2"></i>Conference Rooms</a>
                                                         </li>
                                                     </ul>
@@ -145,7 +145,7 @@
                                             <!-- Card body START -->
                                             <div class="card-body">
                                                 <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="directory-detail.html">Green Hills Hotel</a>
+                                                <h5 class="card-title me-2"><a href="venue-details.php">Green Hills Hotel</a>
                                                 </h5>
                                                 <br>
 
@@ -169,7 +169,7 @@
                                             <div class="card-footer border-top">
                                                 <!-- Buttons -->
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
                                                             class="bi bi-arrow-right ms-1"></i></a>
                                                     <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
                                                 </div>
@@ -196,7 +196,7 @@
                                             <!-- Card body START -->
                                             <div class="card-body">
                                                 <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="directory-detail.html">Alba Hotel</a></h5>
+                                                <h5 class="card-title me-2"><a href="venue-details.php">Alba Hotel</a></h5>
                                                 <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
                                                 <br>
                                                 <br>
@@ -217,7 +217,7 @@
                                             <div class="card-footer border-top">
                                                 <!-- Buttons -->
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
                                                             class="bi bi-arrow-right ms-1"></i></a>
                                                     <a href="#" class="h6 mb-0 z-index-2"><i
                                                             class="fa-solid fa-heart text-danger"></i></a>
@@ -244,7 +244,7 @@
                                             <!-- Card body START -->
                                             <div class="card-body">
                                                 <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="directory-detail.html">Sarova Maiyan</a>
+                                                <h5 class="card-title me-2"><a href="venue-details.php">Sarova Maiyan</a>
                                                 </h5>
                                                 <br>
 
@@ -268,7 +268,7 @@
                                             <div class="card-footer border-top">
                                                 <!-- Buttons -->
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
                                                             class="bi bi-arrow-right ms-1"></i></a>
                                                     <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
                                                 </div>
@@ -294,7 +294,7 @@
                                             <!-- Card body START -->
                                             <div class="card-body">
                                                 <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="directory-detail.html">Oriental Palace</a></h5>
+                                                <h5 class="card-title me-2"><a href="venue-details.php">Oriental Palace</a></h5>
                                                 <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
                                                 <br>
                                                 <br>
@@ -315,7 +315,7 @@
                                             <div class="card-footer border-top">
                                                 <!-- Buttons -->
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="directory-detail.html" class="btn btn-link p-0 mb-0">View details<i
+                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
                                                             class="bi bi-arrow-right ms-1"></i></a>
                                                     <a href="#" class="h6 mb-0 z-index-2"><i
                                                             class="fa-solid fa-heart text-danger"></i></a>
@@ -398,7 +398,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Nyeri</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Nyeri</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +411,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Meru</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Meru</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -424,7 +424,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Nanyuki</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Nanyuki</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -437,7 +437,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Embu</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Embu</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -450,7 +450,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Mwea</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Mwea</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -463,7 +463,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Naromoru</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Naromoru</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -476,7 +476,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Laikipia</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Laikipia</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -489,7 +489,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Timau</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Timau</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -502,7 +502,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Nyahururu</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Nyahururu</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Runyenjes</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Runyenjes</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -528,7 +528,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Chuka</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Chuka</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -541,7 +541,7 @@
                                     <img src="assets/images/Locations/Nyeri.jpg" class="rounded-circle" alt="">
 
                                     <div class="card-body p-0 pt-3">
-                                        <h5 class="card-title"><a href="#" class="stretched-link">Kirinyaga</a></h5>
+                                        <h5 class="card-title"><a href="location-detail.php" class="stretched-link">Kirinyaga</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -578,7 +578,7 @@
                                         </div>
                                         <!-- Content and input -->
                                         <div class="col-lg-4 text-lg-end">
-                                            <a href="destinations.php" class="btn btn-lg btn-dark mb-0">Book a Venue Now!</a>
+                                            <a href="venues.php" class="btn btn-lg btn-dark mb-0">Book a Venue Now!</a>
                                         </div>
                                     </div> <!-- Row END -->
                                 </div>
