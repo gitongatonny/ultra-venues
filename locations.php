@@ -17,6 +17,29 @@
         <!-- Header END -->
 
         <main>
+
+            <!-- =======================
+            Main Banner START -->
+            <section class="pt-0">
+                <div class="container position-relative">
+                    <!-- Bg image -->
+                    <div class="rounded-3 p-4 p-sm-5" style="background-image: url(assets/images/mt-kenya.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                        <!-- Banner title -->
+                        <div class="row justify-content-between pt-0 pb-5"> 
+                            <div class="col-md-7 col-lg-8 col-xxl-7 pb-5 mb-0 mb-lg-5"> 
+                                <h1 class="text-white">Creating Unforgettable Moments</h1>
+                                <p class="text-white mb-0">Planning an event? We provide the perfect venues for weddings, business conferences, and more. Let us help you make it memorable!</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <!-- =======================
+            Main Banner END -->
+
+
             <!-- =======================
             Locations START -->
             <section class="pt-0 pt-md-5">
