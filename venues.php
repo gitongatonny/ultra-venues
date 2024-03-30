@@ -108,17 +108,7 @@
                             <i class="bi fa-fe bi-sliders me-2"></i>Show Filters
                         </label>
 
-                        <!-- tabs -->
-                        <ul class="nav nav-pills nav-pills-dark" id="tour-pills-tab" role="tablist">
-                            <!-- Tab item -->
-                            <li class="nav-item">
-                            <a class="nav-link rounded-start rounded-0 mb-0" href="hotel-list.html"><i class="bi fa-fw bi-list-ul"></i></a>
-                            </li>
-                            <!-- Tab item -->
-                            <li class="nav-item">
-                            <a class="nav-link rounded-end rounded-0 mb-0 active" href="hotel-grid.html"><i class="bi fa-fw bi-grid-fill"></i></a>
-                            </li>
-                        </ul>
+
                                 </div>
                                 <!-- Meta END -->
                             </div>
@@ -142,14 +132,14 @@
                                     <!-- nouislider item -->
                                     <div class="col-md-6 col-lg-4">
                                         <div class="form-control-borderless">
-                                            <label class="form-label">Price Range</label>
+                                            <label class="form-label">Daily Price Range</label>
                                             <div class="position-relative">
                                                 <div class="noui-wrapper">
                                                     <div class="d-flex justify-content-between">
                                                         <input type="text" class="text-body input-with-range-min">
                                                         <input type="text" class="text-body input-with-range-max">
                                                     </div>
-                                                    <div class="noui-slider-range mt-2" data-range-min='500' data-range-max='2000' data-range-selected-min='700' data-range-selected-max='1500'></div>
+                                                    <div class="noui-slider-range mt-2" data-range-min='5000' data-range-max='100000' data-range-selected-min='5000' data-range-selected-max='15000'></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -161,7 +151,7 @@
                                             <label class="form-label">Popular Filters</label>
                                             <select class="form-select js-choice border-0">
                                                 <option value="">Select Option</option>
-                                                <option>Recently search</option>
+                                                <option>Recent search</option>
                                                 <option>Most popular</option>
                                                 <option>Top rated</option>
                                             </select>
@@ -234,12 +224,13 @@
                                     <!-- Select item -->
                                     <div class="col-md-6 col-lg-4">
                                         <div class="form-size-lg form-control-borderless">
-                                            <label class="form-label">Hotel Type</label>
+                                            <label class="form-label">Venue Type</label>
                                             <select class="form-select js-choice border-0">
                                                 <option value="">Select Option</option>
-                                                <option>Free Cancellation Available</option>
-                                                <option>Pay At Hotel Available</option>
-                                                <option>Free Breakfast Included</option>
+                                                <option>Hotel</option>
+                                                <option>Resort</option>
+                                                <option>Garden</option>
+                                                <option>Palace</option>
                                             </select>
                                         </div>
                                     </div>
@@ -264,7 +255,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
                                                         <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault2">
-                                                            Room Services
+                                                            Ample Parking Space
                                                         </label>
                                                     </div>
                                                 </div>
@@ -274,7 +265,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault3">
-                                                                Dining
+                                                                DJ Service
                                                             </label>
                                                     </div>
                                                 </div>
@@ -284,7 +275,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault4">
-                                                                Caretaker
+                                                                MC Service
                                                             </label>
                                                     </div>
                                                 </div>
@@ -294,7 +285,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault5">
-                                                                Free Internet
+                                                                Catering Service
                                                             </label>
                                                     </div>
                                                 </div>
@@ -304,7 +295,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault6">
-                                                                Business Service
+                                                                Tents Provision
                                                             </label>
                                                     </div>
                                                 </div>
@@ -324,7 +315,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault8">
-                                                                Mask
+                                                                Security
                                                             </label>
                                                     </div>
                                                 </div>
@@ -334,7 +325,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault9">
-                                                                Spa
+                                                                Photograghy & Videography
                                                             </label>
                                                     </div>
                                                 </div>
@@ -344,7 +335,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault10">
-                                                                Swimming pool
+                                                                Accomodation
                                                             </label>
                                                     </div>
                                                 </div>
@@ -354,7 +345,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault11">
-                                                                Fitness Centre 
+                                                                Wheelchair Accessibility 
                                                             </label>
                                                     </div>
                                                 </div>
@@ -364,7 +355,7 @@
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
                                                             <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault12">
-                                                                Bar 
+                                                                Bar Lounge
                                                             </label>
                                                     </div>
                                                 </div>
