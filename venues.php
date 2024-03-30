@@ -23,11 +23,11 @@
                 <section class="pt-0">
                     <div class="container">
                         <!-- Background image -->
-                        <div class="rounded-3 p-3 p-sm-5" style="background-image: url(assets/images/bg/05.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                        <div class="rounded-3 p-3 p-sm-5" style="background-image: url(assets/images/Locations/Nyeri.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
                             <!-- Banner title -->
                             <div class="row my-2 my-xl-5"> 
                                 <div class="col-md-8 mx-auto"> 
-                                    <h1 class="text-center text-white">150 Hotels in New York</h1>
+                                    <h1 class="text-center text-white">Venues</h1>
                                 </div>
                             </div>
 
@@ -44,9 +44,9 @@
                                                 <label class="form-label">Location</label>
                                                 <select class="form-select js-choice" data-search-enabled="true">
                                                     <option value="">Select location</option>
-                                                    <option selected>San Jacinto, USA</option>
-                                                    <option>North Dakota, Canada</option>
-                                                    <option>West Virginia, Paris</option>
+                                                    <option selected>Nyeri</option>
+                                                    <option>Meru</option>
+                                                    <option>Nanyuki</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -59,8 +59,8 @@
                                             <i class="bi bi-calendar fs-3 me-2 mt-2"></i>
                                             <!-- Date input -->
                                             <div class="form-control-border form-control-transparent form-fs-md">
-                                                <label class="form-label">Check in - out</label>
-                                                <input type="text" class="form-control flatpickr" data-mode="range" placeholder="Select date" value="19 Sep to 28 Sep">
+                                                <label class="form-label">Start/End Date</label>
+                                                <input type="text" class="form-control flatpickr" data-mode="range" placeholder="Select date" value="19 Sep to 21 Sep">
                                             </div>
                                         </div>
                                     </div>
@@ -72,60 +72,9 @@
                                             <i class="bi bi-person fs-3 me-2 mt-2"></i>
                                             <!-- Dropdown input -->
                                             <div class="w-100">
-                                                <label class="form-label">Guests & rooms</label>
+                                                <label class="form-label">Guests</label>
                                                 <div class="dropdown guest-selector me-2">
-                                                    <input type="text" class="form-guest-selector form-control selection-result" value="2 Guests 1 Room" id="dropdownShare" data-bs-auto-close="outside" data-bs-toggle="dropdown">
-                                                
-                                                    <!-- dropdown items -->
-                                                    <ul class="dropdown-menu guest-selector-dropdown" aria-labelledby="dropdownShare">
-                                                        <!-- Adult -->
-                                                        <li class="d-flex justify-content-between">
-                                                            <div>
-                                                                <h6 class="mb-0">Adults</h6>
-                                                                <small>Ages 13 or above</small>
-                                                            </div>
-
-                                                            <div class="hstack gap-1 align-items-center">
-                                                                <button type="button" class="btn btn-link adult-remove p-0 mb-0"><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
-                                                                <h6 class="guest-selector-count mb-0 adults">2</h6>
-                                                                <button type="button" class="btn btn-link adult-add p-0 mb-0"><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
-                                                            </div>
-                                                        </li>
-
-                                                        <!-- Divider -->
-                                                        <li class="dropdown-divider"></li>
-
-                                                        <!-- Child -->
-                                                        <li class="d-flex justify-content-between">
-                                                            <div>
-                                                                <h6 class="mb-0">Child</h6>
-                                                                <small>Ages 13 below</small>
-                                                            </div>
-
-                                                            <div class="hstack gap-1 align-items-center">
-                                                                <button type="button" class="btn btn-link child-remove p-0 mb-0" ><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
-                                                                <h6 class="guest-selector-count mb-0 child">0</h6>
-                                                                <button type="button" class="btn btn-link child-add p-0 mb-0" ><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
-                                                            </div>
-                                                        </li>
-
-                                                        <!-- Divider -->
-                                                        <li class="dropdown-divider"></li>
-
-                                                        <!-- Rooms -->
-                                                        <li class="d-flex justify-content-between">
-                                                            <div>
-                                                                <h6 class="mb-0">Rooms</h6>
-                                                                <small>Max room 8</small>
-                                                            </div>
-
-                                                            <div class="hstack gap-1 align-items-center">
-                                                                <button type="button" class="btn btn-link room-remove p-0 mb-0" ><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
-                                                                <h6 class="guest-selector-count mb-0 rooms">1</h6>
-                                                                <button type="button" class="btn btn-link room-add p-0 mb-0" ><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                                    <input type="number" class="form-guest-selector form-control selection-result" value="50" id="dropdownShare" data-bs-auto-close="outside" data-bs-toggle="dropdown">
                                                 </div>
                                             </div>
                                         </div>
