@@ -294,7 +294,7 @@
                                             <!-- Card body START -->
                                             <div class="card-body">
                                                 <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="directory-detail.html">Oriental Pallce</a></h5>
+                                                <h5 class="card-title me-2"><a href="directory-detail.html">Oriental Palace</a></h5>
                                                 <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
                                                 <br>
                                                 <br>

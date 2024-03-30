@@ -308,6 +308,9 @@
 			<!-- Profile and Notification START -->
 			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
 
+				<!-- Google Translate Functionality -->
+				<div id="google_translate_element"></div> 
+
 				<!-- Notification dropdown START -->
 				<li class="nav-item dropdown ms-0 ms-md-3">
 					<!-- Notification button -->
