@@ -46,7 +46,11 @@
                     <div class="col-lg-12">
                     <div class="col-lg-7 d-flex justify-content-center mx-auto mt-5">
                         <!-- Search -->
-                        <a class="btn btn-lg btn-primary mb-0 mt-3" href="login.php">Login/Register</a>
+                        <a class="btn btn-lg btn-primary mb-0 mt-3" href="login.php">Customer - Login/Register</a>
+                    </div>
+                    <div class="col-lg-7 d-flex justify-content-center mx-auto mt-5">
+                        <!-- Search -->
+                        <a class="btn btn-lg btn-primary mb-0 mt-3" href="login.php">Vendor - Login/Register</a>
                     </div>
                 </div>
                 </div>
