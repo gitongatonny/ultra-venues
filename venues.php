@@ -420,7 +420,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Green Hills Hotel</a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Green Hills Hotel</a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -443,7 +443,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>
                                         </div>
                                     </div>
@@ -470,7 +470,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -492,7 +492,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -519,7 +519,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -541,7 +541,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -568,7 +568,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -590,7 +590,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -616,7 +616,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -638,7 +638,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -665,7 +665,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -687,7 +687,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -714,7 +714,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -736,7 +736,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -763,7 +763,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
@@ -785,7 +785,7 @@
                                             </div>
                                             <!-- Button -->
                                             <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
+                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
                                             </div>                  
                                         </div>
                                     </div>
@@ -812,7 +812,7 @@
                                         </div>
 
                                         <!-- Title -->
-                                        <h5 class="card-title"><a href="hotel-detail.html">Oriental Palace </a></h5>
+                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
 
                                         <!-- List -->
                                         <ul class="nav nav-divider mb-2 mb-sm-3">
