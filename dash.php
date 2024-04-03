@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- push to main -->
+    <!-- push to mai -->
     <head>
         <title>Home | Ultra Venues</title>
 
