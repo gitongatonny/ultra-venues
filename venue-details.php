@@ -136,7 +136,6 @@ Title and tabs START -->
 					<div class="card-footer bg-transparent border-top py-0">
 						<ul class="nav nav-tabs nav-bottom-line nav-responsive border-0" role="tablist">
 							<li class="nav-item"> <a class="nav-link mb-0 active" data-bs-toggle="tab" href="#tab-1">About</a> </li>
-							<li class="nav-item"> <a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-2">Booking</a> </li>
 							<li class="nav-item"> <a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-3">Services</a> </li>
 						</ul>
 					</div>
@@ -155,7 +154,7 @@ Content START -->
 		<!-- Tabs contents START -->
 		<div class="tab-content mb-0" id="tour-pills-tabContent">
 
-			<!-- Content item START -->
+			<!-- About Tab START -->
 			<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
 				<div class="row g-4 g-lg-5">
 					<!-- Left side START -->
@@ -283,6 +282,41 @@ Content START -->
 
 					<!-- Right side START -->
 					<div class="col-lg-5 col-xl-4">
+
+                        <!-- Book now item START -->
+                        <div class="col-md-6 col-xl-12">
+                            <div class="card card-body border bg-transparent">
+                                <!-- Title -->
+                                <div class="hstack gap-2 mb-1">
+                                    <h3 class="card-title mb-0">Ksh. 30,000</h3>
+                                    <span class="fs-5">/day</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-4">
+                                    <!-- Rating -->
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item me-1 h6 mb-0">4.6</li>
+                                        <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+                                        <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+                                        <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+                                        <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+                                        <li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="d-grid gap-2">
+                                    <a href="#" class="btn btn-primary">Book Venue Now</a>
+                                    <button class="btn btn-outline-primary mb-0" type="button" data-bs-toggle="modal" data-bs-target="#inquiryForm">
+                                        <i class="bi bi-eye fa-fw me-2"></i>Send Inquiry
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Book now item END -->
+
+
 						<!-- Direction START -->
 						<div class="card shadow mb-4">
 							<!-- Card header -->
@@ -293,8 +327,8 @@ Content START -->
 							<!-- Card body -->
 							<div class="card-body">
 								<!-- Map START -->
-								<iframe class="w-100 grayscale rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin" height="200" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
-								
+								<iframe class="w-100 grayscale rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510643.6935038897!2d36.55104759169058!3d-0.8258642732570437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285e05b92ed9f7%3A0x6f967ea9a50c8025!2sGreen%20Hills%20Hotel!5e0!3m2!1sen!2ske!4v1712358392777!5m2!1sen!2ske" height="200" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+
 								<!-- Info -->
 								<ul class="list-group list-group-borderless my-3">
 									<!-- Address -->
@@ -326,71 +360,116 @@ Content START -->
 						</div>
 						<!-- Direction END -->
 
-						<!-- Time table START -->
-						<div class="card shadow">
-							<!-- Card header -->
-							<div class="card-header border-bottom">
-								<h5 class="mb-0">Working Hours</h5>
-							</div>
 
-							<!-- Card body -->
-							<div class="card-body">
-								<ul class="list-group list-group-borderless mb-0">
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Monday</span>
-										<span>9:00 AM to 8:00 PM</span>
-									</li>
-
-									<li class="list-group-item py-0"><hr class="my-1"></li>
-
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Tuesday</span>
-										<span>9:00 AM to 8:00 PM</span>
-									</li>
-
-									<li class="list-group-item py-0"><hr class="my-1"></li>
-
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Wednesday</span>
-										<span>9:00 AM to 8:00 PM</span>
-									</li>
-
-									<li class="list-group-item py-0"><hr class="my-1"></li>
-
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Thursday</span>
-										<span>9:00 AM to 8:00 PM</span>
-									</li>
-
-									<li class="list-group-item py-0"><hr class="my-1"></li> 
-
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Friday</span>
-										<span>9:00 AM to 8:00 PM</span>
-									</li>
-
-									<li class="list-group-item py-0"><hr class="my-1"></li> 
-
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Saturday</span>
-										<span>Open all day</span>
-									</li>
-
-									<li class="list-group-item py-0"><hr class="my-1"></li> 
-
-									<li class="list-group-item d-flex justify-content-between">
-										<span>Sunday</span>
-										<span>Open all day</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- Time table END -->
 					</div>
 					<!-- Right side END -->
 				</div>
 			</div>
-			<!-- Content item END -->
+			<!-- About Tab END -->
+
+
+
+			<!-- Services Tab START -->
+            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-2">
+                <!-- Venue services -->
+                <h5 class="mb-3"><i class="fa-solid fa-hotel fa-fw text-warning"></i> Venue Services</h5>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Wedding Venue</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Conference Room</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Meeting Room</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Party Venue</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Outdoor Venue</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Indoor Venue</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Corporate Event Venue</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Private Party Venue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional services -->
+                <h5 class="mb-3 mt-5"><i class="bi bi-tools fa-fw text-warning"></i> Additional Services</h5>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Catering Services</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Audio/Visual Equipment Rental</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Event Planning Services</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Decoration Services</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Photography Services</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Transportation Services</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <ul class="list-group list-group-borderless mb-0">
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Accommodation Services</a>
+                            </li>
+                            <li class="list-group-item h6 fw-normal mb-0">
+                                <a href="#" class="mb-0"> <i class="bi fa-fw bi-arrow-right me-1"></i>Security Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			<!-- Services Tab END -->
+
+
 
 
 		</div>
@@ -405,6 +484,7 @@ Content END -->
         <!-- Footer START -->
             <?php include "includes/footer.php";?>
         <!-- Footer END -->
+
     </body>
 
 
