@@ -126,7 +126,9 @@
 	<script src="assets/vendor/flatpickr/js/flatpickr.min.js"></script>
 	<script src="assets/vendor/choices/js/choices.min.js"></script>
 	<script src="assets/vendor/jarallax/jarallax.min.js"></script>
-		<script src="assets/vendor/jarallax/jarallax-video.min.js"></script>
+	<script src="assets/vendor/jarallax/jarallax-video.min.js"></script>
+	<script src="assets/vendor/nouislider/nouislider.min.js"></script>
+
 
 	<!-- ThemeFunctions -->
 	<script src="assets/js/functions.js"></script>
