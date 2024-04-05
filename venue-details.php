@@ -485,6 +485,64 @@ Content END -->
             <?php include "includes/footer.php";?>
         <!-- Footer END -->
 
+        <!-- Send Inquiry START -->
+        <div class="modal fade" id="inquiryForm" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Title -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="inquiryFormlabel">Get Inquiry</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <!-- Body -->
+                    <div class="modal-body p-3">
+                        <div class="card bg-transparent">
+                            <!-- Card header -->
+                            <div class="card-header bg-transparent">
+                                <!-- Title -->
+                                <h6 class="card-title mb-0">Our expert will get in touch with you shortly</h6>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body pt-0">
+
+                                <form>
+                                    <!-- Name -->
+                                    <div class="mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter Your Name">
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="mb-3">
+                                        <label class="form-label">Email id</label>
+                                        <input type="email" class="form-control" placeholder="Enter Your Email Address">
+                                    </div>
+                                    <!-- Phone number -->
+                                    <div class="mb-3">
+                                        <label class="form-label">Phone number</label>
+                                        <input type="text" class="form-control" placeholder="Enter Your Phone Number">
+                                    </div>
+
+                                    <div class="mb-3 ms-2 form-check">
+                                        <input type="checkbox" class="form-check-input" id="inquiryCheck">
+                                        <label class="form-check-label" for="inquiryCheck">I agree to receive updates and offers</label>
+                                    </div>
+
+                                    <!-- Buttons -->
+                                    <div class="d-grid gap-2 d-md-block">
+                                        <button class="btn btn-dark mb-0" type="button">Send Inquiry</button>
+                                        <button class="btn btn-link mb-0" type="button">Call on: +254 123 456 789</button>
+                                    </div>
+                                </form> <!-- Form END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Send Inquiry END -->
+
     </body>
 
 
