@@ -19,7 +19,54 @@
         <main>
 
 
+<!-- =======================
+Main Title START -->
+<section class="py-0 pt-sm-5">
+	<div class="container position-relative">
+		<!-- Title and button START -->
+		<div class="row mb-3">
+			<div class="col-12">
+				<!-- Meta -->
+				<div class="d-lg-flex justify-content-lg-between mb-1">
+					<!-- Title -->
+					<div class="mb-2 mb-lg-0">
+						<h1 class="fs-2">Nyeri </h1>
+						<!-- Location -->
+						<p class="fw-bold mb-0"><i class="bi bi-geo-alt me-2"></i>Mt. Kenya Region
+							<a href="#" class="ms-2 text-decoration-underline" data-bs-toggle="modal" data-bs-target="#mapmodal">
+								<i class="bi bi-eye-fill me-1"></i>View On Map
+							</a>
+						</p>
+					</div>
 
+					<!-- Buttons -->
+					<ul class="list-inline text-end">
+						<!-- Heart icon -->
+						<li class="list-inline-item">
+							<a href="#" class="btn btn-sm btn-light px-2"><i class="fa-solid fa-fw fa-heart"></i></a>
+						</li>
+						<!-- Share icon -->
+						<li class="list-inline-item dropdown">
+							<!-- Share button -->
+							<a href="#" class="btn btn-sm btn-light px-2" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fa-solid fa-fw fa-share-alt"></i>
+							</a>
+							<!-- dropdown button -->
+							<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+								<li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Title and button END -->
+
+
+	</div>
+</section>
+<!-- =======================
+Main Title END -->
 
 <!-- =======================
 Image gallery START -->
