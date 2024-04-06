@@ -378,6 +378,40 @@
         <!-- =======================
         Recommended Venues END -->
 
+        <!-- =======================
+        Action box START -->
+        <section>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <!-- Action box START -->
+                        <div class="card card-body shadow p-4">
+                            <div class="row g-4 justify-content-between align-items-center">
+                                <!-- Image -->
+                                <div class="col-sm-3 col-lg-2">
+                                    <img src="assets/images/Locations/location.svg" alt="" style="height: 80px; width: 80px;">
+                                </div>
+
+                                <!-- Title and content -->
+                                <div class="col-sm-9 col-lg-6 col-xl-7">
+                                    <h4>Get the Best Venues with Us.</h4>
+                                    <p class="mb-0">Didn't find a nice pick in the recommendations?</p>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="col-lg-3 col-xxl-2 d-grid">
+                                    <a href="#" class="btn btn-primary mb-0">View All Venues</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action box END -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =======================
+        Action box END -->
+
         </main>
 
         <!-- Footer START -->
