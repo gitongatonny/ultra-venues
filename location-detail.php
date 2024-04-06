@@ -138,6 +138,115 @@
         <!-- =======================
         Image gallery END -->
 
+        <!-- =======================
+        About Location START -->
+        <section class="py-0 py-lg-7">
+            <div class="container">
+            <!-- Title -->
+            <div class="row mb-4">
+                <div class="col-12">
+                <h2>What Nyeri has to Offer.</h2>
+                <p class="mb-0">Discover the perfect venue for your special event in Nyeri. Whether you're planning a wedding, graduation, or a corporate meeting, we have a wide range of venues to suit your needs.</p>
+                </div>
+            </div>
+
+            <!-- Counters and features START -->
+            <div class="row g-4">
+                <!-- Counter -->
+                <div class="col-xl-4">
+                <div class="card card-body bg-primary bg-opacity-10 vstack gap-4 justify-content-center h-100 p-4">
+                    <!-- Counter item -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="purecounter text-primary mb-0" data-purecounter-start="0" data-purecounter-end="50"	data-purecounter-delay="200">0</h3>
+                    <h6 class="fw-normal mb-0">Venues Available</h6>
+                    </div>
+
+                    <!-- Counter item -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center me-3">
+                        <h3 class="purecounter text-primary mb-0" data-purecounter-start="0" data-purecounter-end="2000"	data-purecounter-delay="300">0</h3>
+                        <span class="h3 text-primary mb-0">+</span>
+                    </div>
+                    <h6 class="fw-normal mb-0">Happy Customers</h6>
+                    </div>
+
+                    <!-- Counter item -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center me-3">
+                        <h3 class="purecounter text-primary mb-0" data-purecounter-start="0" data-purecounter-end="20"	data-purecounter-delay="300">0</h3>
+                        <span class="h3 text-primary mb-0">+</span>
+                    </div>
+                    <h6 class="fw-normal mb-0">Years of Experience</h6>
+                    </div>
+
+                </div>
+                </div>
+
+
+                <!-- Features -->
+                <div class="col-md-6 col-xl-4">
+                <ul class="list-group list-group-borderless">
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-cash-coin fa-fw text-info me-2"></i>Competitive Pricing
+                    </h6>
+                    <br>
+                    </li>
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-credit-card-2-back fa-fw text-warning me-2"></i>Online Payment Options
+                    </h6>
+                    <br>
+                    </li>
+                    <br>
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-tools fa-fw text-primary me-2"></i>Excellent Event Services
+                    </h6>
+                    <br>
+                    </li>
+
+                </ul>
+
+                </div>
+
+                <!-- Features Row 2 -->
+                <div class="col-md-6 col-xl-4">
+                <ul class="list-group list-group-borderless">
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-tree fa-fw text-success me-2"></i>Beautiful Sceneries
+                    </h6>
+                    <br>
+                    </li>
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-people fa-fw text-primary me-2"></i>Professional Staff
+                    </h6>
+                    <br>
+                    </li>
+
+                    <li class="list-group-item pt-3 pb-0">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-check-circle fa-fw text-success me-2"></i>Excellent Customer Service
+                    </h6>
+                    <br>
+                    </li>
+                </ul>
+
+                </div>
+
+            </div>
+            <!-- Counters and features END -->
+            </div>
+        </section>
+        <!-- =======================
+        About Location END -->
+
         </main>
 
         <!-- Footer START -->
