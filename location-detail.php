@@ -138,6 +138,280 @@
         <!-- =======================
         Image gallery END -->
 
+        <!-- =======================
+        About Location START -->
+        <section class="py-0 py-lg-7">
+            <div class="container">
+            <!-- Title -->
+            <div class="row mb-4">
+                <div class="col-12">
+                <h2>What Nyeri has to Offer.</h2>
+                <p class="mb-0">Discover the perfect venue for your special event in Nyeri. Whether you're planning a wedding, graduation, or a corporate meeting, we have a wide range of venues to suit your needs.</p>
+                </div>
+            </div>
+
+            <!-- Counters and features START -->
+            <div class="row g-4">
+                <!-- Counter -->
+                <div class="col-xl-4">
+                <div class="card card-body bg-primary bg-opacity-10 vstack gap-4 justify-content-center h-100 p-4">
+                    <!-- Counter item -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="purecounter text-primary mb-0" data-purecounter-start="0" data-purecounter-end="50"	data-purecounter-delay="200">0</h3>
+                    <h6 class="fw-normal mb-0">Venues Available</h6>
+                    </div>
+
+                    <!-- Counter item -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center me-3">
+                        <h3 class="purecounter text-primary mb-0" data-purecounter-start="0" data-purecounter-end="2000"	data-purecounter-delay="300">0</h3>
+                        <span class="h3 text-primary mb-0">+</span>
+                    </div>
+                    <h6 class="fw-normal mb-0">Happy Customers</h6>
+                    </div>
+
+                    <!-- Counter item -->
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-center me-3">
+                        <h3 class="purecounter text-primary mb-0" data-purecounter-start="0" data-purecounter-end="20"	data-purecounter-delay="300">0</h3>
+                        <span class="h3 text-primary mb-0">+</span>
+                    </div>
+                    <h6 class="fw-normal mb-0">Years of Experience</h6>
+                    </div>
+
+                </div>
+                </div>
+
+
+                <!-- Features -->
+                <div class="col-md-6 col-xl-4">
+                <ul class="list-group list-group-borderless">
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-cash-coin fa-fw text-info me-2"></i>Competitive Pricing
+                    </h6>
+                    <br>
+                    </li>
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-credit-card-2-back fa-fw text-warning me-2"></i>Online Payment Options
+                    </h6>
+                    <br>
+                    </li>
+                    <br>
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-tools fa-fw text-primary me-2"></i>Excellent Event Services
+                    </h6>
+                    <br>
+                    </li>
+
+                </ul>
+
+                </div>
+
+                <!-- Features Row 2 -->
+                <div class="col-md-6 col-xl-4">
+                <ul class="list-group list-group-borderless">
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-tree fa-fw text-success me-2"></i>Beautiful Sceneries
+                    </h6>
+                    <br>
+                    </li>
+
+                    <li class="list-group-item py-3">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-people fa-fw text-primary me-2"></i>Professional Staff
+                    </h6>
+                    <br>
+                    </li>
+
+                    <li class="list-group-item pt-3 pb-0">
+                    <h6 class="mb-0 fw-normal">
+                        <i class="bi bi-check-circle fa-fw text-success me-2"></i>Excellent Customer Service
+                    </h6>
+                    <br>
+                    </li>
+                </ul>
+
+                </div>
+
+            </div>
+            <!-- Counters and features END -->
+            </div>
+        </section>
+        <!-- =======================
+        About Location END -->
+
+
+        <!-- =======================
+        Recommended Venues START -->
+        <section>
+            <div class="container">
+
+                <!-- Title -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-0">Top Recommendations </h2>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Kiganjo</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">Green Hills Hotel</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 14,500 </h6>
+                                    <h6 class="mb-0">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Nyeri Town</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">White Rhino Hotel</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 19,999 </h6>
+                                    <h6 class="mb-0">4.8<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Chaka</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">Bulls Eye Resort</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 15,000 </h6>
+                                    <h6 class="mb-0">4.6<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Mweiga</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">Helios Gardens</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 12,999 </h6>
+                                    <h6 class="mb-0">4.8<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+                </div> <!-- Row END -->
+            </div>
+        </section>
+        <!-- =======================
+        Recommended Venues END -->
+
+        <!-- =======================
+        Action box START -->
+        <section>
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <!-- Action box START -->
+                        <div class="card card-body shadow p-4">
+                            <div class="row g-4 justify-content-between align-items-center">
+                                <!-- Image -->
+                                <div class="col-sm-3 col-lg-2">
+                                    <img src="assets/images/Locations/location.svg" alt="" style="height: 80px; width: 80px;">
+                                </div>
+
+                                <!-- Title and content -->
+                                <div class="col-sm-9 col-lg-6 col-xl-7">
+                                    <h4>Get the Best Venues with Us.</h4>
+                                    <p class="mb-0">Didn't find a nice pick in the recommendations?</p>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="col-lg-3 col-xxl-2 d-grid">
+                                    <a href="venues.php" class="btn btn-primary mb-0">View All Venues</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action box END -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =======================
+        Action box END -->
+
         </main>
 
         <!-- Footer START -->
