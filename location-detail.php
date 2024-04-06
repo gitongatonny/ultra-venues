@@ -247,6 +247,137 @@
         <!-- =======================
         About Location END -->
 
+
+        <!-- =======================
+        Recommended Venues START -->
+        <section>
+            <div class="container">
+
+                <!-- Title -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-0">Top Recommendations </h2>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Kiganjo</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="hotel-detail.html" class="stretched-link">Green Hills Hotel</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 14,500 </h6>
+                                    <h6 class="mb-0">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Nyeri Town</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="hotel-detail.html" class="stretched-link">White Rhino Hotel</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 19,999 </h6>
+                                    <h6 class="mb-0">4.8<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Chaka</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="hotel-detail.html" class="stretched-link">Bulls Eye Resort</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 15,000 </h6>
+                                    <h6 class="mb-0">4.6<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+
+                    <!-- Hotel item -->
+                    <div class="col-sm-6 col-xl-3">
+                        <!-- Card START -->
+                        <div class="card card-img-scale overflow-hidden bg-transparent">
+                            <!-- Image and overlay -->
+                            <div class="card-img-scale-wrapper rounded-3">
+                                <!-- Image -->
+                                <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                <!-- Badge -->
+                                <div class="position-absolute bottom-0 start-0 p-3">
+                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i>Mweiga</div>
+                                </div>
+                            </div>
+
+                            <!-- Card body -->
+                            <div class="card-body px-2">
+                                <!-- Title -->
+                                <h5 class="card-title"><a href="hotel-detail.html" class="stretched-link">Helios Gardens</a></h5>
+                                <!-- Price and rating -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="text-success mb-0">Ksh. 12,999 </h6>
+                                    <h6 class="mb-0">4.8<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card END -->
+                    </div>
+                </div> <!-- Row END -->
+            </div>
+        </section>
+        <!-- =======================
+        Recommended Venues END -->
+
         </main>
 
         <!-- Footer START -->
