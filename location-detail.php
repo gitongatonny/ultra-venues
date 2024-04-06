@@ -278,7 +278,7 @@
                             <!-- Card body -->
                             <div class="card-body px-2">
                                 <!-- Title -->
-                                <h5 class="card-title"><a href="venue-details.html" class="stretched-link">Green Hills Hotel</a></h5>
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">Green Hills Hotel</a></h5>
                                 <!-- Price and rating -->
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="text-success mb-0">Ksh. 14,500 </h6>
@@ -306,7 +306,7 @@
                             <!-- Card body -->
                             <div class="card-body px-2">
                                 <!-- Title -->
-                                <h5 class="card-title"><a href="venue-details.html" class="stretched-link">White Rhino Hotel</a></h5>
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">White Rhino Hotel</a></h5>
                                 <!-- Price and rating -->
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="text-success mb-0">Ksh. 19,999 </h6>
@@ -334,7 +334,7 @@
                             <!-- Card body -->
                             <div class="card-body px-2">
                                 <!-- Title -->
-                                <h5 class="card-title"><a href="venue-details.html" class="stretched-link">Bulls Eye Resort</a></h5>
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">Bulls Eye Resort</a></h5>
                                 <!-- Price and rating -->
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="text-success mb-0">Ksh. 15,000 </h6>
@@ -362,7 +362,7 @@
                             <!-- Card body -->
                             <div class="card-body px-2">
                                 <!-- Title -->
-                                <h5 class="card-title"><a href="venue-details.html" class="stretched-link">Helios Gardens</a></h5>
+                                <h5 class="card-title"><a href="venue-details.php" class="stretched-link">Helios Gardens</a></h5>
                                 <!-- Price and rating -->
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="text-success mb-0">Ksh. 12,999 </h6>
