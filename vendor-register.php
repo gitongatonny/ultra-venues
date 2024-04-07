@@ -45,8 +45,8 @@
                                                 <img class="h-50px mb-4" src="assets/images/logo.svg" alt="logo">
                                             </a>
                                             <!-- Title -->
-                                            <h1 class="mb-2 h3">Register Venue</h1>
-                                            <p class="mb-0">Already a member?<a href="login.php"> Log in</a></p>
+                                            <h1 class="mb-2 h3">Register your Venue with Us</h1>
+                                            <p class="mb-0">Already an approved vendor?<a href="vendor-login.php"> Log in</a></p>
                                             
                                             <!-- Form START -->
                                             <form class="mt-4 text-start row">
@@ -70,7 +70,7 @@
                                                         <input type="text" class="form-control">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label class="form-label">City</label>
+                                                        <label class="form-label">Location (Be Detailed)</label>
                                                         <input type="text" class="form-control">
                                                     </div>
                                                     <div class="mb-3">
@@ -103,7 +103,7 @@
                                                 </div>
                                                 <!-- Button -->
                                                 <div class="col-12">
-                                                    <button type="button" class="btn btn-primary w-100 mb-0" onclick="redirectToDash()">Register Venue</button>
+                                                    <button type="button" class="btn btn-primary w-100 mb-0" href="thanks-for-reg.php">Register Venue</button>
                                                 </div>
                                             </form>
                                             <!-- Form END -->
