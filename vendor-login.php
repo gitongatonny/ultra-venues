@@ -39,12 +39,12 @@
                                     <div class="col-lg-6 order-1">
                                         <div class="p-4 p-sm-7">
                                             <!-- Logo -->
-                                            <a href="index.html">
+                                            <a href="index.php">
                                                 <img class="h-50px mb-4" src="assets/images/logo.svg" alt="ultra-venues-logo">
                                             </a>
                                             <!-- Title -->
                                             <h1 class="mb-2 h3">Welcome back</h1>
-                                            <p class="mb-0">New here?<a href="register.php"> Create an account</a></p>
+                                            <p class="mb-0">New here?<a href="vendor-register.php"> Register for a Vendor Account</a></p>
                     
                                             <!-- Form START -->
                                             <form class="mt-4 text-start">
