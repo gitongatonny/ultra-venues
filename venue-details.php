@@ -306,7 +306,7 @@ Content START -->
 
                                 <!-- Button -->
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-primary">Book Venue Now</a>
+                                    <a href="booking.php" class="btn btn-primary">Book Venue Now</a>
                                     <button class="btn btn-outline-primary mb-0" type="button" data-bs-toggle="modal" data-bs-target="#inquiryForm">
                                         <i class="bi bi-eye fa-fw me-2"></i>Send Inquiry
                                     </button>
