@@ -18,8 +18,20 @@
 
         <main>
 
+
+
+        <!-- Alert box START -->
+        <div class="alert alert-danger alert-dismissible d-flex justify-content-between align-items-center fade show mb-4 rounded-3 pe-2" role="alert" style="width: 60%; margin: 0 auto;">
+            <div class="d-flex">
+                <span class="alert-heading h5 mb-0 me-2"><i class="bi bi-exclamation-octagon-fill"></i></span>
+                <span><stroYou class="alert-heading me-2">You'll receive an email from <strong>vendor-reg@ultravenues.com</strong> within 2 business days to approve your registration on Ultra-Venues. The email will contain login credentials.</a></span>
+            </div>
+            <button type="button" class="btn btn-link text-primary-hover pb-0 text-end" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <!-- Alert box END -->
+
             <!-- Main Content START -->
-            <section class="vh-xxl-200">
+            <section class="vh-xxl-200" style="margin-top: -50px;">
                 <div class="container h-100 d-flex px-0 px-sm-4">
                     <div class="row justify-content-center align-items-center m-auto">
                         <div class="col-12">
