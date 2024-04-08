@@ -41,12 +41,14 @@
                                             <i class="bi bi-geo-alt fs-3 me-2 mt-2"></i>
                                             <!-- Select input -->
                                             <div class="flex-grow-1">
-                                                <label class="form-label">Location</label>
+                                                <label class="form-label">Venue Name</label>
                                                 <select class="form-select js-choice" data-search-enabled="true">
-                                                    <option value="">Select location</option>
-                                                    <option selected>Nyeri</option>
-                                                    <option>Meru</option>
-                                                    <option>Nanyuki</option>
+                                                    <option value="">Select Venue</option>
+                                                    <option selected>Green Hills Hotel</option>
+                                                    <option>The White Rhino</option>
+                                                    <option>The Nelion</option>
+                                                    <option>Oriental Palace</option>
+                                                    <option>Legacy Gardens</option>
                                                 </select>
                                             </div>
                                         </div>
