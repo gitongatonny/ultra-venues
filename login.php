@@ -66,13 +66,13 @@ Main Content START -->
 										<a href="forgot-pass.php">Forgot password?</a>
 									</div>
 									<div>
-										<button type="button" class="btn btn-primary w-100 mb-0" onclick="redirectToDash()">Login</button>
+										<button type="button" class="btn btn-primary w-100 mb-0" href="dash.php">Login</button>
 									</div>
 									
 									<!-- Divider -->
 									<div class="position-relative my-4">
 										<hr>
-										<p class="small position-absolute top-50 start-50 translate-middle bg-mode px-1 px-sm-2">Or sign in with</p>
+										<p class="small position-absolute top-50 start-50 translate-middle bg-mode px-1 px-sm-2">Or</p>
 									</div>
 		
 									<!-- Sign-In with Google Btn -->
