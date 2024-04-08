@@ -219,34 +219,6 @@ Hotel list START -->
 							</div>
 							<!-- Price range END -->
 
-							<hr class="my-0"> <!-- Divider -->
-
-							<!-- Popular type START -->
-							<div class="card card-body rounded-0 p-4">
-								<!-- Title -->
-								<h6 class="mb-2">Popular Type</h6>
-								<!-- Popular Type group -->
-								<div class="col-12">
-									<!-- Checkbox -->
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="popolarType1">
-										<label class="form-check-label" for="popolarType1">Free Breakfast Included</label>
-									</div>
-									<!-- Checkbox -->
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="popolarType2">
-										<label class="form-check-label" for="popolarType2">Pay At Hotel Available</label>
-									</div>
-									<!-- Checkbox -->
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="popolarType3">
-										<label class="form-check-label" for="popolarType3">Free Cancellation Available</label>
-									</div>
-								</div>
-							</div>
-							<!-- Popular type END -->
-
-							<hr class="my-0"> <!-- Divider -->
 
 
 							<hr class="my-0"> <!-- Divider -->
