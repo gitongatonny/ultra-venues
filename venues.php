@@ -393,7 +393,7 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Green Hills Hotel </a></h5>
+									<h5 class="card-title mb-1"><a href="venue-details.php">Green Hills Hotel </a></h5>
 									<small><i class="bi bi-geo-alt me-2"></i>Chaka, Nyeri</small>
 
 									<!-- Amenities -->
@@ -475,7 +475,7 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Oriental Palace</a></h5>
+									<h5 class="card-title mb-1"><a href="venue-details.php">Oriental Palace</a></h5>
 									<small><i class="bi bi-geo-alt me-2"></i>Kimathi, Nyeri</small>
 
 									<!-- Amenities -->
@@ -556,7 +556,7 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">The White Rhino </a></h5>
+									<h5 class="card-title mb-1"><a href="venue-details.php">The White Rhino </a></h5>
 									<small><i class="bi bi-geo-alt me-2"></i>CBD, Nyeri</small>
 
 									<!-- Amenities -->
@@ -637,7 +637,7 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Legacy Gardens </a></h5>
+									<h5 class="card-title mb-1"><a href="venue-details.php">Legacy Gardens </a></h5>
 									<small><i class="bi bi-geo-alt me-2"></i>Mweiga, Nyeri</small>
 
 									<!-- Amenities -->
@@ -718,7 +718,7 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">FK Resort </a></h5>
+									<h5 class="card-title mb-1"><a href="venue-details.php">FK Resort </a></h5>
 									<small><i class="bi bi-geo-alt me-2"></i>Nyeri - Nairobi Highway</small>
 
 									<!-- Amenities -->
