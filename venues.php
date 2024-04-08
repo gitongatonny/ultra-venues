@@ -416,7 +416,7 @@ Hotel list START -->
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
-											<a href="#" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
 										</div>                  
 									</div>
 								</div>
@@ -497,7 +497,7 @@ Hotel list START -->
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
-											<a href="#" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
 										</div>                  
 									</div>
 								</div>
@@ -578,7 +578,7 @@ Hotel list START -->
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
-											<a href="#" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
 										</div>                  
 									</div>
 								</div>
@@ -659,7 +659,7 @@ Hotel list START -->
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
-											<a href="#" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
 										</div>                  
 									</div>
 								</div>
@@ -740,7 +740,7 @@ Hotel list START -->
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
-											<a href="#" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
 										</div>                  
 									</div>
 								</div>
