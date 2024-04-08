@@ -479,7 +479,7 @@ Content END -->
                 <div class="modal-content">
                     <!-- Title -->
                     <div class="modal-header">
-                        <h5 class="modal-title" id="inquiryFormlabel">Get Inquiry</h5>
+                        <h5 class="modal-title" id="inquiryFormlabel">Send Inquiry</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     
@@ -489,7 +489,12 @@ Content END -->
                             <!-- Card header -->
                             <div class="card-header bg-transparent">
                                 <!-- Title -->
-                                <h6 class="card-title mb-0">Our expert will get in touch with you shortly</h6>
+                                <h6 class="card-title mb-1">The venue's expert(s) will get in touch within 2 business days</h6>
+                            </div>
+
+                            <!-- Alert box -->
+                            <div class="alert alert-success" role="alert">
+                                <strong class="mx-1">Disclaimer: </strong> This inquiry links you directly to the venue's representative for personalized assistance.
                             </div>
 
                             <!-- Card body -->
@@ -503,7 +508,7 @@ Content END -->
                                     </div>
                                     <!-- Email -->
                                     <div class="mb-3">
-                                        <label class="form-label">Email id</label>
+                                        <label class="form-label">Email Address</label>
                                         <input type="email" class="form-control" placeholder="Enter Your Email Address">
                                     </div>
                                     <!-- Phone number -->
