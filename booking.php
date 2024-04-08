@@ -22,7 +22,7 @@
             <form class="card border col-md-8 col-sm-10 mx-auto">
                 <!-- Card header -->
                 <div class="card-header border-bottom px-4">
-                    <h3 class="card-title mb-0">Booking Details</h3>
+                    <h3 class="card-title mb-0">Booking Details - Green Hills Hotel</h3>
                 </div>
 
                 <!-- Card body START -->
@@ -49,6 +49,7 @@
                                                 <option>Wedding</option>
                                                 <option>Graduation</option>
                                                 <option>Corporate Meeting</option>
+                                                <option>Custom</option>
                                             </select>
                                         </div>
 
