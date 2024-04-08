@@ -50,7 +50,7 @@ Main Content START -->
 					<div class="card-body p-0 mt-3">
 						<!-- Alert box -->
 						<div class="alert alert-success" role="alert">
-							You can pay using Mpesa
+							Accept the Mpesa prompt that'll be sent to your phone to complete the payment.
 						</div>
 
 						<form class="bg-light rounded-3 p-4">
@@ -59,7 +59,7 @@ Main Content START -->
 								<!-- Mpesa Phone Number -->
 								<div class="col-12">
 									<label class="form-label"><span class="h6 fw-normal">Mpesa Phone Number *</span></label>
-									<input type="tel" class="form-control" aria-label="Mpesa Phone Number" placeholder="Enter your Mpesa phone number">
+									<input type="tel" class="form-control" aria-label="Mpesa Phone Number" placeholder="Enter your Mpesa phone number +254 712 345 678">
 								</div>
 
 								<!-- Buttons -->
@@ -90,7 +90,7 @@ Main Content START -->
 					<div class="card-body p-0 mt-3">
 						<!-- Alert box -->
 						<div class="alert alert-success" role="alert">
-							Find the card options below.
+							Fill in your card information below.
 						</div>
 
 						<form class="bg-light rounded-3 p-4">
@@ -153,7 +153,7 @@ Main Content START -->
 
 			<!-- Right content START -->
 			<aside class="col-xl-4">
-				<div data-sticky data-margin-top="80" data-sticky-for="1199" class="row g-4">
+				<div data-sticky data-margin-top="150" data-sticky-for="1199" class="row g-4">
 					<!-- Price summary START -->
 					<div class="col-md-6 col-xl-12">
 						<div class="card bg-light rounded-2">

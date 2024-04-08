@@ -87,16 +87,15 @@ Main Content START -->
 									<!-- Button -->
 									<div>
 										<button type="button" class="btn btn-primary w-100 mb-0" onclick="redirectToDash()">Register</button>
-									</div>		
 									<!-- Divider -->
 									<div class="position-relative my-4">
 										<hr>
-										<p class="small position-absolute top-50 start-50 translate-middle bg-mode px-1 px-sm-2">Or sign in with</p>
+										<p class="small position-absolute top-50 start-50 translate-middle bg-mode px-1 px-sm-2">Or</p>
 									</div>
 		
 									<!-- Google and facebook button -->
 									<div class="vstack gap-3">
-										<a href="#" class="btn btn-light mb-0"><i class="fab fa-fw fa-google text-google-icon me-2"></i>Sign in with Google</a>
+										<a href="#" class="btn btn-light mb-0"><i class="fab fa-fw fa-google text-google-icon me-2"></i>Register with yur Google Account</a>
 									</div>
 		
 									<!-- Copyright -->

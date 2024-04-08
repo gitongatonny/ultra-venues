@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Venues | Ultra Venues</title>
+        <title>Venues Listing | Ultra Venues</title>
 
         <!-- Head Content -->
         <?php include "includes/head-content.php";?>
@@ -18,7 +18,7 @@
 
         <main>
 
-                            <!-- =======================
+                <!-- =======================
                 Main Banner START -->
                 <section class="pt-0">
                     <div class="container">
@@ -41,12 +41,14 @@
                                             <i class="bi bi-geo-alt fs-3 me-2 mt-2"></i>
                                             <!-- Select input -->
                                             <div class="flex-grow-1">
-                                                <label class="form-label">Location</label>
+                                                <label class="form-label">Venue Name</label>
                                                 <select class="form-select js-choice" data-search-enabled="true">
-                                                    <option value="">Select location</option>
-                                                    <option selected>Nyeri</option>
-                                                    <option>Meru</option>
-                                                    <option>Nanyuki</option>
+                                                    <option value="">Select Venue</option>
+                                                    <option selected>Green Hills Hotel</option>
+                                                    <option>The White Rhino</option>
+                                                    <option>The Nelion</option>
+                                                    <option>Oriental Palace</option>
+                                                    <option>Legacy Gardens</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -91,779 +93,683 @@
                 </section>
                 <!-- =======================
                 Main Banner END -->
-                    
-                <!-- =======================
-                Title and Tabs START -->
-                <section class="pt-0 pb-4">
-                    <div class="container position-relative">
-
-                        <!-- Title and button START -->
-                        <div class="row">
-                            <div class="col-12">
-                                <!-- Meta START -->
-                                <div class="d-flex justify-content-between">
-                        <!-- Filter collapse button -->
-                        <input type="checkbox" class="btn-check" id="btn-check-soft">
-                        <label class="btn btn-primary-soft btn-primary-check mb-0" for="btn-check-soft" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-controls="collapseFilter">
-                            <i class="bi fa-fe bi-sliders me-2"></i>Show Filters
-                        </label>
-
-
-                                </div>
-                                <!-- Meta END -->
-                            </div>
-                        </div>
-                        <!-- Title and button END -->
-
-                        <!-- Collapse body START -->
-                        <div class="collapse" id="collapseFilter">
-                            <div class="card card-body bg-light p-4 mt-4 z-index-9">
-
-                                <!-- Form START -->
-                                <form class="row g-4">
-                                    <!-- Input item -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-control-borderless">
-                                            <label class="form-label">Enter Hotel Name</label>
-                                            <input type="text" class="form-control form-control-lg">
-                                        </div>
-                                    </div>
-
-                                    <!-- nouislider item -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-control-borderless">
-                                            <label class="form-label">Daily Price Range</label>
-                                            <div class="position-relative">
-                                                <div class="noui-wrapper">
-                                                    <div class="d-flex justify-content-between">
-                                                        <input type="text" class="text-body input-with-range-min">
-                                                        <input type="text" class="text-body input-with-range-max">
-                                                    </div>
-                                                    <div class="noui-slider-range mt-2" data-range-min='5000' data-range-max='100000' data-range-selected-min='5000' data-range-selected-max='15000'></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Select item -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-size-lg form-control-borderless">
-                                            <label class="form-label">Popular Filters</label>
-                                            <select class="form-select js-choice border-0">
-                                                <option value="">Select Option</option>
-                                                <option>Recent search</option>
-                                                <option>Most popular</option>
-                                                <option>Top rated</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Customer rating -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-control-borderless">
-                                            <label class="form-label">Customer Rating</label>
-                                            <ul class="list-inline mb-0 g-3">
-                                                <!-- 1 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-1">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-1">3+</label>
-                                                </li>
-                                                <!-- 2 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-2">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-2">3.5+</label>
-                                                </li>
-                                                <!-- 3 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-3">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-3">4+</label>
-                                                </li>
-                                                <!-- 4 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-4">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-4">4.5+</label>
-                                                </li>
-                                            </ul>
-                                        </div>	
-                                    </div>
-
-                                    <!-- Star rating -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-control-borderless">
-                                            <label class="form-label">Star Rating</label>
-                                            <ul class="list-inline mb-0 g-3">
-                                                <!-- 1 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-9">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-9">1<i class="bi bi-star-fill"></i></label>
-                                                </li>
-                                                <!-- 2 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-10">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-10">2<i class="bi bi-star-fill"></i></label>
-                                                </li>
-                                                <!-- 3 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-11">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-11">3<i class="bi bi-star-fill"></i></label>
-                                                </li>
-                                                <!-- 4 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-12">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-12">4<i class="bi bi-star-fill"></i></label>
-                                                </li>
-                                                <!-- 4 -->
-                                                <li class="list-inline-item">
-                                                    <input type="checkbox" class="btn-check" id="btn-check-13">
-                                                    <label class="btn btn-white btn-primary-soft-check" for="btn-check-13">5<i class="bi bi-star-fill"></i></label>
-                                                </li>
-                                            </ul>
-                                        </div>	
-                                    </div>
-
-                                    <!-- Select item -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-size-lg form-control-borderless">
-                                            <label class="form-label">Venue Type</label>
-                                            <select class="form-select js-choice border-0">
-                                                <option value="">Select Option</option>
-                                                <option>Hotel</option>
-                                                <option>Resort</option>
-                                                <option>Garden</option>
-                                                <option>Palace</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Check box item -->
-                                    <div class="col-12">
-                                        <div class="form-control-borderless">
-                                            <label class="form-label">Amenities</label>
-                                            <div class="row g-3">
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault">
-                                                            Large Space
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                                                        <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault2">
-                                                            Ample Parking Space
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault3">
-                                                                DJ Service
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault4">
-                                                                MC Service
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault5">
-                                                                Catering Service
-                                                            </label>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault6">
-                                                                Tents Provision
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault7">
-                                                                Bonfire
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault8">
-                                                                Security
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault9">
-                                                                Photograghy & Videography
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault10">
-                                                                Accomodation
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault11">
-                                                                Wheelchair Accessibility 
-                                                            </label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- checkbox -->
-                                                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
-                                                            <label class="form-check-label h6 fw-light mb-0" for="flexCheckDefault12">
-                                                                Bar Lounge
-                                                            </label>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- Row END -->
-                                        </div>
-                                    </div>
-
-                                    <!-- Button -->
-                                    <div class="text-end align-items-center">
-                                        <button class="btn btn-link p-0 mb-0">Clear all</button>
-                                        <button class="btn btn-dark mb-0 ms-3">Apply filter</button>
-                                    </div>
-                                </form>
-                                <!-- Form END -->
-                            </div>
-                        </div>
-                        <!-- Collapse body END -->
-
-                    </div>
-                </section>
-                <!-- =======================
-                Title and Tabs END -->
-
-                <!-- =======================
-                Hotel grid START -->
-                <section class="pt-0">
-                    <div class="container">
-                        <div class="row g-4">
-
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                    <!-- Overlay item -->
-                                    <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Nyeri</div>
-                                    </div>
-
-                                    <!-- Slider START -->
-                                    <div class="tiny-slider arrow-round arrow-xs arrow-dark rounded-2 overflow-hidden">
-                                        <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-dots="false" data-items="1">
-                                            <!-- Image item -->
-                                            <div><img src="assets/images/mt-kenya.jpg" alt="Card image"></div>
-
-                                            <!-- Image item -->
-                                            <div><img src="assets/images/mt-kenya.jpg" alt="Card image"></div>
-
-                                            <!-- Image item -->
-                                            <div><img src="assets/images/mt-kenya.jpg" alt="Card image"></div>
-
-                                            <!-- Image item -->
-                                            <div><img src="assets/images/mt-kenya.jpg" alt="Card image"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Slider END -->
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.5</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Green Hills Hotel</a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,000</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                                <span class="text-decoration-line-through">10,000</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                    
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                        
-                            <!-- Card item START -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card shadow p-2 pb-0 h-100">
-                                        <!-- Overlay item -->
-                                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                                        <div class="badge bg-danger text-white">Embu</div>
-                                    </div>
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
-
-                                    <!-- Card body START -->
-                                    <div class="card-body px-3 pb-0">
-                                        <!-- Rating and cart -->
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                            <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                                        </div>
-
-                                        <!-- Title -->
-                                        <h5 class="card-title"><a href="venue-details.php">Oriental Palace </a></h5>
-
-                                        <!-- List -->
-                                        <ul class="nav nav-divider mb-2 mb-sm-3">
-                                            <li class="nav-item">Ample Parking</li>
-                                            <li class="nav-item">Secure</li>
-                                            <li class="nav-item">Catering</li>
-                                        </ul>
-                                    </div>
-                                    <!-- Card body END -->
-
-                                    <!-- Card footer START-->
-                                    <div class="card-footer pt-0">
-                                        <!-- Price and Button -->
-                                        <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                            <!-- Price -->
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="fw-normal text-success mb-0 me-1">8,200</h5>
-                                                <span class="mb-0 me-2">/day</span>
-                                            </div>
-                                            <!-- Button -->
-                                            <div class="mt-2 mt-sm-0 z-index-2">
-                                                <a href="hotel-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View Details<i class="bi bi-arrow-right ms-2"></i></a>    
-                                            </div>                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-
-                        </div> <!-- Row END -->
-
-                        <!-- Pagination -->
-                        <div class="row">
-                            <div class="col-12">
-                                <nav class="mt-4 d-flex justify-content-center" aria-label="navigation">
-                                    <ul class="pagination pagination-primary-soft d-inline-block d-md-flex rounded mb-0">
-                                        <li class="page-item mb-0"><a class="page-link" href="#" tabindex="-1"><i class="fa-solid fa-angle-left"></i></a></li>
-                                        <li class="page-item mb-0"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item mb-0 active"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item mb-0"><a class="page-link" href="#">..</a></li>
-                                        <li class="page-item mb-0"><a class="page-link" href="#">6</a></li>
-                                        <li class="page-item mb-0"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- =======================
-                Hotel grid END -->
 
+<!-- =======================
+Hotel list START -->
+<section class="pt-0">
+	<div class="container">
+		<!-- Tabs and alert START -->
+		<div class="row mb-4">
+			<div class="col-12">
+
+				<!-- Buttons -->
+				<div class="hstack gap-3 justify-content-between justify-content-md-end">
+					<!-- Filter offcanvas button -->
+					<button class="btn btn-primary-soft btn-primary-check mb-0 d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+						<i class="fa-solid fa-sliders-h me-1"></i> Show filters
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Tabs and alert END -->
+
+		<div class="row">
+			<!-- Left sidebar START -->
+			<aside class="col-xl-4 col-xxl-3">
+				<!-- Responsive offcanvas body START -->
+				<div class="offcanvas-xl offcanvas-end" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasSidebarLabel">Advance Filters</h5>
+						<button  type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasSidebar" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body flex-column p-3 p-xl-0">
+						<form class="rounded-3 shadow">
+							<!-- Hotel type START -->
+							<div class="card card-body rounded-0 rounded-top p-4">
+								<!-- Title -->
+								<h6 class="mb-2">Hotel Type</h6>
+								<!-- Hotel Type group -->
+								<div class="col-12">
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="hotelType1">
+										<label class="form-check-label" for="hotelType1">All</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="hotelType2">
+										<label class="form-check-label" for="hotelType2">Hotel</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="hotelType4">
+										<label class="form-check-label" for="hotelType4">Resort</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="hotelType6">
+										<label class="form-check-label" for="hotelType6">Lodge</label>
+									</div>
+									
+									<!-- Collapse body -->
+									<div class="multi-collapse collapse" id="hotelType">
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="hotelType10">
+											<label class="form-check-label" for="hotelType10">Palace</label>
+										</div>
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="hotelType8">
+											<label class="form-check-label" for="hotelType8">Garden</label>
+										</div>
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="hotelType9">
+											<label class="form-check-label" for="hotelType9">Conference Room</label>
+										</div>
+									</div>
+									<!-- Collapse button -->
+									<a class="p-0 mb-0 mt-2 btn-more d-flex align-items-center collapsed" data-bs-toggle="collapse" href="#hotelType" role="button" aria-expanded="false" aria-controls="hotelType">
+										See <span class="see-more ms-1">more</span><span class="see-less ms-1">less</span><i class="fa-solid fa-angle-down ms-2"></i>
+									</a>
+								</div>
+							</div>
+							<!-- Hotel type END -->
+
+							<hr class="my-0"> <!-- Divider -->
+
+							<!-- Price range START -->
+							<div class="card card-body rounded-0 p-4">
+								<!-- Title -->
+								<h6 class="mb-2">Price range</h6>
+								<!-- Price range group -->
+								<div class="col-12">
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="priceRange1">
+										<label class="form-check-label" for="priceRange1">Up to Ksh. 5,000</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="priceRange2">
+										<label class="form-check-label" for="priceRange2">Ksh. 5,000 - 10,000</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="priceRange3">
+										<label class="form-check-label" for="priceRange3">Ksh. 10,000 - 15,000</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="priceRange4">
+										<label class="form-check-label" for="priceRange4">Ksh. 15,000 - 20,000</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="priceRange5">
+										<label class="form-check-label" for="priceRange5">Ksh. 20,000 - 35,000</label>
+									</div>
+                                    <!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="priceRange5">
+										<label class="form-check-label" for="priceRange5">Ksh. 35,000 +</label>
+									</div>
+								</div>
+							</div>
+							<!-- Price range END -->
+
+
+
+							<hr class="my-0"> <!-- Divider -->
+
+							<!-- Rating Star START -->
+							<div class="card card-body rounded-0 p-4">
+								<!-- Title -->
+								<h6 class="mb-2">Rating Star</h6>
+								<!-- Rating Star group -->
+								<ul class="list-inline mb-0 g-3">
+									<!-- Item -->
+									<li class="list-inline-item mb-0">
+										<input type="checkbox" class="btn-check" id="btn-check-6">
+										<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-6">1<i class="bi bi-star-fill"></i></label>
+									</li>
+									<!-- Item -->
+									<li class="list-inline-item mb-0">
+										<input type="checkbox" class="btn-check" id="btn-check-7">
+										<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-7">2<i class="bi bi-star-fill"></i></label>
+									</li>
+									<!-- Item -->
+									<li class="list-inline-item mb-0">
+										<input type="checkbox" class="btn-check" id="btn-check-8">
+										<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-8">3<i class="bi bi-star-fill"></i></label>
+									</li>
+									<!-- Item -->
+									<li class="list-inline-item mb-0">
+										<input type="checkbox" class="btn-check" id="btn-check-15">
+										<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-15">4<i class="bi bi-star-fill"></i></label>
+									</li>
+									<!-- Item -->
+									<li class="list-inline-item mb-0">
+										<input type="checkbox" class="btn-check" id="btn-check-16">
+										<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-16">5<i class="bi bi-star-fill"></i></label>
+									</li>
+								</ul>
+							</div>
+							<!-- Rating Star END -->
+
+							<hr class="my-0"> <!-- Divider -->
+
+							<!-- Amenities START -->
+							<div class="card card-body rounded-0 rounded-bottom p-4">
+								<!-- Title -->
+								<h6 class="mb-2">Amenities</h6>
+								<!-- Amenities group -->
+								<div class="col-12">
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="amenitiesType2">
+										<label class="form-check-label" for="amenitiesType2">Large Open Space</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="amenitiesType3">
+										<label class="form-check-label" for="amenitiesType3">MC Available</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="amenitiesType4">
+										<label class="form-check-label" for="amenitiesType4">Large Parking Space</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="amenitiesType5">
+										<label class="form-check-label" for="amenitiesType5">Catering Services</label>
+									</div>
+									<!-- Checkbox -->
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="amenitiesType6">
+										<label class="form-check-label" for="amenitiesType6">Extra Security</label>
+									</div>
+									
+									<!-- Collapse body -->
+									<div class="multi-collapse collapse" id="amenitiesCollapes">
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="amenitiesType7">
+											<label class="form-check-label" for="amenitiesType7">Disabled Accessibility</label>
+										</div>
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="amenitiesType8">
+											<label class="form-check-label" for="amenitiesType8">DJ Service</label>
+										</div>
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="amenitiesType9">
+											<label class="form-check-label" for="amenitiesType9">Tents Provision</label>
+										</div>
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="amenitiesType10">
+											<label class="form-check-label" for="amenitiesType10">Photograghy</label>
+										</div>
+										<!-- Checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="amenitiesType10">
+											<label class="form-check-label" for="amenitiesType10">Videograghy</label>
+										</div>
+									</div>
+									<!-- Collapse button -->
+									<a class="p-0 mb-0 mt-2 btn-more d-flex align-items-center collapsed" data-bs-toggle="collapse" href="#amenitiesCollapes" role="button" aria-expanded="false" aria-controls="amenitiesCollapes">
+										See <span class="see-more ms-1">more</span><span class="see-less ms-1">less</span><i class="fa-solid fa-angle-down ms-2"></i>
+									</a>
+								</div>
+							</div>
+							<!-- Amenities END -->
+						</form><!-- Form End -->
+					</div>
+					<!-- Buttons -->
+					<div class="d-flex justify-content-between p-2 p-xl-0 mt-xl-4">
+						<button class="btn btn-link p-0 mb-0">Clear all</button>
+						<button class="btn btn-primary mb-0">Filter Results</button>
+					</div>
+				</div>
+				<!-- Responsive offcanvas body END -->
+			</aside>
+			<!-- Left sidebar END -->
+
+			<!-- Main content START -->
+			<div class="col-xl-8 col-xxl-9">
+				<div class="vstack gap-4">
+
+					<!-- Card item START -->
+					<div class="card shadow p-2">
+						<div class="row g-0">
+							<!-- Card img -->
+							<div class="col-md-5">
+								<img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+							</div>
+
+								<!-- Overlay item -->
+								<div class="position-absolute top-0 start-0 z-index-1 m-2">
+									<div class="badge text-bg-danger">Nyeri</div>
+								</div>
+
+
+
+
+							<!-- Card body -->
+							<div class="col-md-7">
+								<div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
+
+									<!-- Rating and buttons -->
+									<div class="d-flex justify-content-between align-items-center">
+										<ul class="list-inline mb-0">
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+										</ul>
+
+										<ul class="list-inline mb-0 z-index-2">
+											<!-- Heart icon -->
+											<li class="list-inline-item">
+												<a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
+											</li>
+											<!-- Share icon -->
+											<li class="list-inline-item dropdown">
+												<!-- Share button -->
+												<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-fw fa-share-alt"></i>
+												</a>
+												<!-- dropdown button -->
+												<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+													<li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-1"><a href="venue-details.php">Green Hills Hotel </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Chaka, Nyeri</small>
+
+									<!-- Amenities -->
+									<ul class="list-group list-group-borderless small mb-0 mt-2">
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Ample Parking Space
+										</li>
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
+										</li>
+									</ul>
+									
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Button -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 10,000</h5>
+											<span class="mb-0 me-2">/day</span>
+											<span class="text-decoration-line-through mb-0">Ksh. 15,000</span>
+										</div>
+										<!-- Price -->
+										<div class="mt-3 mt-sm-0">
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="card shadow p-2">
+						<div class="row g-0">
+							<!-- Card img -->
+							<div class="col-md-5">
+								<img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+							</div>
+
+								<!-- Overlay item -->
+								<div class="position-absolute top-0 start-0 z-index-1 m-2">
+									<div class="badge text-bg-danger">Nyeri</div>
+								</div>
+
+
+
+
+							<!-- Card body -->
+							<div class="col-md-7">
+								<div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
+
+									<!-- Rating and buttons -->
+									<div class="d-flex justify-content-between align-items-center">
+										<ul class="list-inline mb-0">
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+										</ul>
+
+										<ul class="list-inline mb-0 z-index-2">
+											<!-- Heart icon -->
+											<li class="list-inline-item">
+												<a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
+											</li>
+											<!-- Share icon -->
+											<li class="list-inline-item dropdown">
+												<!-- Share button -->
+												<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-fw fa-share-alt"></i>
+												</a>
+												<!-- dropdown button -->
+												<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+													<li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-1"><a href="venue-details.php">Oriental Palace</a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Kimathi, Nyeri</small>
+
+									<!-- Amenities -->
+									<ul class="list-group list-group-borderless small mb-0 mt-2">
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Bonfire
+										</li>
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>DJ Available
+										</li>
+									</ul>
+									
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Button -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 12,500</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Price -->
+										<div class="mt-3 mt-sm-0">
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="card shadow p-2">
+						<div class="row g-0">
+							<!-- Card img -->
+							<div class="col-md-5">
+								<img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+							</div>
+
+								<!-- Overlay item -->
+								<div class="position-absolute top-0 start-0 z-index-1 m-2">
+									<div class="badge text-bg-danger">Nyeri</div>
+								</div>
+
+
+
+
+							<!-- Card body -->
+							<div class="col-md-7">
+								<div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
+
+									<!-- Rating and buttons -->
+									<div class="d-flex justify-content-between align-items-center">
+										<ul class="list-inline mb-0">
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+										</ul>
+
+										<ul class="list-inline mb-0 z-index-2">
+											<!-- Heart icon -->
+											<li class="list-inline-item">
+												<a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
+											</li>
+											<!-- Share icon -->
+											<li class="list-inline-item dropdown">
+												<!-- Share button -->
+												<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-fw fa-share-alt"></i>
+												</a>
+												<!-- dropdown button -->
+												<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+													<li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-1"><a href="venue-details.php">The White Rhino </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>CBD, Nyeri</small>
+
+									<!-- Amenities -->
+									<ul class="list-group list-group-borderless small mb-0 mt-2">
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Tents Provision
+										</li>
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
+										</li>
+									</ul>
+									
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Button -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 19,999</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Price -->
+										<div class="mt-3 mt-sm-0">
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="card shadow p-2">
+						<div class="row g-0">
+							<!-- Card img -->
+							<div class="col-md-5">
+								<img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+							</div>
+
+								<!-- Overlay item -->
+								<div class="position-absolute top-0 start-0 z-index-1 m-2">
+									<div class="badge text-bg-danger">Nyeri</div>
+								</div>
+
+
+
+
+							<!-- Card body -->
+							<div class="col-md-7">
+								<div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
+
+									<!-- Rating and buttons -->
+									<div class="d-flex justify-content-between align-items-center">
+										<ul class="list-inline mb-0">
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+										</ul>
+
+										<ul class="list-inline mb-0 z-index-2">
+											<!-- Heart icon -->
+											<li class="list-inline-item">
+												<a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
+											</li>
+											<!-- Share icon -->
+											<li class="list-inline-item dropdown">
+												<!-- Share button -->
+												<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-fw fa-share-alt"></i>
+												</a>
+												<!-- dropdown button -->
+												<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+													<li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-1"><a href="venue-details.php">Legacy Gardens </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Mweiga, Nyeri</small>
+
+									<!-- Amenities -->
+									<ul class="list-group list-group-borderless small mb-0 mt-2">
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Ample Parking Space
+										</li>
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Photograghy
+										</li>
+									</ul>
+									
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Button -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 9,500</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Price -->
+										<div class="mt-3 mt-sm-0">
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Card item START -->
+					<div class="card shadow p-2">
+						<div class="row g-0">
+							<!-- Card img -->
+							<div class="col-md-5">
+								<img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+							</div>
+
+								<!-- Overlay item -->
+								<div class="position-absolute top-0 start-0 z-index-1 m-2">
+									<div class="badge text-bg-danger">Nyeri</div>
+								</div>
+
+
+
+
+							<!-- Card body -->
+							<div class="col-md-7">
+								<div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
+
+									<!-- Rating and buttons -->
+									<div class="d-flex justify-content-between align-items-center">
+										<ul class="list-inline mb-0">
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+										</ul>
+
+										<ul class="list-inline mb-0 z-index-2">
+											<!-- Heart icon -->
+											<li class="list-inline-item">
+												<a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
+											</li>
+											<!-- Share icon -->
+											<li class="list-inline-item dropdown">
+												<!-- Share button -->
+												<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+													<i class="fa-solid fa-fw fa-share-alt"></i>
+												</a>
+												<!-- dropdown button -->
+												<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+													<li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-1"><a href="venue-details.php">FK Resort </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Nyeri - Nairobi Highway</small>
+
+									<!-- Amenities -->
+									<ul class="list-group list-group-borderless small mb-0 mt-2">
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Large Open Space
+										</li>
+										<li class="list-group-item d-flex text-success p-0">
+											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
+										</li>
+									</ul>
+									
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Button -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 20,000</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Price -->
+										<div class="mt-3 mt-sm-0">
+											<a href="booking.php" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Card item END -->
+
+					<!-- Pagination -->
+					<nav class="d-flex justify-content-center" aria-label="navigation">
+						<ul class="pagination pagination-primary-soft d-inline-block d-md-flex rounded mb-0">
+							<li class="page-item mb-0"><a class="page-link" href="#" tabindex="-1"><i class="fa-solid fa-angle-left"></i></a></li>
+							<li class="page-item mb-0"><a class="page-link" href="#">1</a></li>
+							<li class="page-item mb-0 active"><a class="page-link" href="#">2</a></li>
+							<li class="page-item mb-0"><a class="page-link" href="#">..</a></li>
+							<li class="page-item mb-0"><a class="page-link" href="#">6</a></li>
+							<li class="page-item mb-0"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+			<!-- Main content END -->
+		</div> <!-- Row END -->
+	</div>
+</section>
+<!-- =======================
+Hotel list END -->
+        
         </main>
 
         <!-- Footer START -->

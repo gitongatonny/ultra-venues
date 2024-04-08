@@ -261,18 +261,6 @@ Content START -->
 										</a>
 									</div>
 
-									<div class="col-md-4">
-										<a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
-											<div class="card card-element-hover card-overlay-hover overflow-hidden">
-												<!-- Image -->
-												<img src="assets/images/mt-kenya.jpg" class="card-img" alt="">
-												<!-- Full screen button -->
-												<div class="hover-element w-100 h-100">
-													<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-												</div>
-											</div>
-										</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -306,7 +294,7 @@ Content START -->
 
                                 <!-- Button -->
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-primary">Book Venue Now</a>
+                                    <a href="booking.php" class="btn btn-primary">Book Venue Now</a>
                                     <button class="btn btn-outline-primary mb-0" type="button" data-bs-toggle="modal" data-bs-target="#inquiryForm">
                                         <i class="bi bi-eye fa-fw me-2"></i>Send Inquiry
                                     </button>
@@ -491,7 +479,7 @@ Content END -->
                 <div class="modal-content">
                     <!-- Title -->
                     <div class="modal-header">
-                        <h5 class="modal-title" id="inquiryFormlabel">Get Inquiry</h5>
+                        <h5 class="modal-title" id="inquiryFormlabel">Send Inquiry</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     
@@ -501,7 +489,12 @@ Content END -->
                             <!-- Card header -->
                             <div class="card-header bg-transparent">
                                 <!-- Title -->
-                                <h6 class="card-title mb-0">Our expert will get in touch with you shortly</h6>
+                                <h6 class="card-title mb-1">The venue's expert(s) will get in touch within 2 business days</h6>
+                            </div>
+
+                            <!-- Alert box -->
+                            <div class="alert alert-success" role="alert">
+                                <strong class="mx-1">Disclaimer: </strong> This inquiry links you directly to the venue's representative for personalized assistance.
                             </div>
 
                             <!-- Card body -->
@@ -515,7 +508,7 @@ Content END -->
                                     </div>
                                     <!-- Email -->
                                     <div class="mb-3">
-                                        <label class="form-label">Email id</label>
+                                        <label class="form-label">Email Address</label>
                                         <input type="email" class="form-control" placeholder="Enter Your Email Address">
                                     </div>
                                     <!-- Phone number -->
