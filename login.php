@@ -66,7 +66,7 @@ Main Content START -->
 										<a href="forgot-pass.php">Forgot password?</a>
 									</div>
 									<div>
-										<button type="button" class="btn btn-primary w-100 mb-0" href="dash.php">Login</button>
+										<button type="button" class="btn btn-primary w-100 mb-0" onclick="redirectToDash()">Login</button>
 									</div>
 									
 									<!-- Divider -->
