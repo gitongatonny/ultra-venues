@@ -86,7 +86,7 @@ Main Content START -->
 									</div>
 									<!-- Button -->
 									<div>
-										<button type="button" class="btn btn-primary w-100 mb-0" onclick="redirectToDash()">Register</button>
+										<button type="button" class="btn btn-primary w-100 mb-0" href="dash.php">Register</button>
 									</div>		
 									<!-- Divider -->
 									<div class="position-relative my-4">
