@@ -261,18 +261,6 @@ Content START -->
 										</a>
 									</div>
 
-									<div class="col-md-4">
-										<a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
-											<div class="card card-element-hover card-overlay-hover overflow-hidden">
-												<!-- Image -->
-												<img src="assets/images/mt-kenya.jpg" class="card-img" alt="">
-												<!-- Full screen button -->
-												<div class="hover-element w-100 h-100">
-													<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-												</div>
-											</div>
-										</a>
-									</div>
 								</div>
 							</div>
 						</div>
