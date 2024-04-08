@@ -128,11 +128,11 @@
 	<script src="assets/vendor/jarallax/jarallax.min.js"></script>
 	<script src="assets/vendor/jarallax/jarallax-video.min.js"></script>
 	<script src="assets/vendor/nouislider/nouislider.min.js"></script>
+	<script src="assets/vendor/sticky-js/sticky.min.js"></script>
 
 
 	<!-- ThemeFunctions -->
 	<script src="assets/js/functions.js"></script>
-
 
 
     <!-- Google Translate Functionality -->
