@@ -151,57 +151,54 @@ Main Content START -->
 			</div>
 			<!-- Left Content END -->
 
-			<!-- Sidebar START -->
+			<!-- Right content START -->
 			<aside class="col-xl-4">
-				<div data-sticky data-margin-top="80" data-sticky-for="1199">
-					<div class="card card-body bg-light p-4">
-						<!-- Title -->
-						<h6 class="text-danger fw-normal">Hurry! Limited cars left</h6>
-
-						<!-- List -->
-						<ul class="list-group list-group-borderless mb-0">
-							<li class="list-group-item d-flex justify-content-between">
-								<span class="h6 fw-light mb-0">Base Price</span>
-								<span class="h6 fw-light mb-0">$260</span>
-							</li>
-							<li class="list-group-item d-flex justify-content-between">
-								<span class="h6 fw-light mb-0">State Tax</span>
-								<span class="h6 fw-light mb-0">$50</span>
-							</li>
-							<li class="list-group-item d-flex justify-content-between">
-								<span class="h6 fw-light mb-0">Night Charge</span>
-								<span class="h6 fw-light mb-0">$100</span>
-							</li>
-							<li class="list-group-item d-flex justify-content-between">
-								<span class="h6 fw-light mb-0">Convenience Fee</span>
-								<span class="h6 fw-light mb-0">$25</span>
-							</li>
-							<li class="list-group-item py-0"><hr class="my-0"></li> 
-							<!-- Divider -->
-							<li class="list-group-item d-flex justify-content-between pb-0">
-								<span class="h5 fw-normal mb-0">Total</span>
-								<span class="h5 fw-normal mb-0">$435</span>
-							</li>
-						</ul>
-
-						<div class="d-grid mt-4 gap-2">
-							<div class="form-check form-check-inline mb-0">
-								<input class="form-check-input" type="radio" name="discountOptions" id="discount1" value="option1" checked="">
-								<label class="form-check-label h6 fw-normal mb-0" for="discount1">Pay $220 now (Half Payment)</label>
+				<div data-sticky data-margin-top="150" data-sticky-for="1199" class="row g-4">
+					<!-- Price summary START -->
+					<div class="col-md-6 col-xl-12">
+						<div class="card bg-light rounded-2">
+							<!-- card header -->
+							<div class="card-header border-bottom bg-light">
+								<h5 class="card-title mb-0">Price Summary</h5>
 							</div>
 
-							<div class="form-check form-check-inline mb-0">
-								<input class="form-check-input" type="radio" name="discountOptions" id="discount2" value="option2">
-								<label class="form-check-label h6 fw-normal mb-0" for="discount2">Pay $435 now (Full payment)</label>
+							<!-- Card body -->
+							<div class="card-body">
+								<ul class="list-group list-group-borderless">
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										<span class="h6 fw-normal mb-0">Base Booking Cost
+											<a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content="COVID-19 test required Vaccinated travelers can visit">
+												<i class="bi bi-info-circle"></i>
+											</a>
+										</span>
+										<span class="fs-5">Ksh. 15,000</span>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										<span class="h6 fw-normal mb-0">Other Services</span>
+										<span class="fs-5 text-success">+Ksh. 5000</span>
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										<span class="h6 fw-normal mb-0">Discount</span>
+										<span class="fs-5 text-danger">-Ksh. 2,500</span>
+									</li>
+
+								</ul>
 							</div>
 
-							<!-- Button -->
-							<a href="cab-booking.html" class="btn btn-dark mb-0 mt-2">Pay Now</a>
+							<!-- Card footer -->
+							<div class="card-footer border-top bg-light">
+								<div class="d-flex justify-content-between align-items-center">
+									<span class="h5 fw-normal mb-0">Total Cost</span>
+									<span class="h5 fw-normal mb-0">Ksh. 17,500</span>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div> 
+					<!-- Price summary END -->
+
+				</div>	
 			</aside>
-			<!-- Sidebar END -->
+			<!-- Right content END -->
 		</div>
 	</div>
 </section>
