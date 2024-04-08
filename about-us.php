@@ -77,6 +77,27 @@
             <!-- =======================
             Main banner START -->
 
+        <!-- =======================
+        About content START -->
+        <section class="pt-0 pt-lg-5">
+            <div class="container">
+                <!-- Content START -->
+                <div class="row mb-4 mb-md-5">
+                    <div class="col-md-10 mx-auto">
+                        <h3 class="mb-4">About Ultra Venues</h3>
+                        <p class="fw-bold">Welcome to Ultra Venues, your premier destination for finding the perfect venue for your next event. Whether you're planning a dream wedding, a corporate seminar, or any other special occasion, we are here to make your event unforgettable.</p>
+                        <p class="mb-0">At Ultra Venues, we pride ourselves on offering a wide selection of exceptional hotels, resorts, gardens, and more in the beautiful Mt. Kenya region. Our team of experts meticulously curates each venue to ensure they meet the highest standards of quality and offer a range of amenities to cater to your specific event requirements.</p>
+                        <p class="mb-0">With over 1K+ venues and 10+ locations to choose from, you can trust us to help you find the perfect setting that matches your vision. Our goal is to provide you with a seamless and stress-free venue booking experience, so you can focus on creating memories that will last a lifetime.</p>
+                        <p class="mb-0">But we offer more than just venues. We offer an experience like no other. From the moment you step into our website, you'll be captivated by the elegance and sophistication that Ultra Venues exudes. Our user-friendly interface allows you to easily browse through our extensive collection of venues, filter them based on your preferences, and make bookings with just a few clicks.</p>
+                    </div>
+                </div>
+                <!-- Content END -->
+
+            </div>
+        </section>
+        <!-- =======================
+        About content END -->
+
         </main>
 
         <!-- Footer START -->
