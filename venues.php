@@ -503,16 +503,16 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Green Hills Hotel </a></h5>
-									<small><i class="bi bi-geo-alt me-2"></i>Chaka, Nyeri</small>
+									<h5 class="card-title mb-1"><a href="hotel-detail.html">Oriental Palace</a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Kimathi, Nyeri</small>
 
 									<!-- Amenities -->
 									<ul class="list-group list-group-borderless small mb-0 mt-2">
 										<li class="list-group-item d-flex text-success p-0">
-											<i class="bi bi-patch-check-fill me-2"></i>Ample Parking Space
+											<i class="bi bi-patch-check-fill me-2"></i>Bonfire
 										</li>
 										<li class="list-group-item d-flex text-success p-0">
-											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
+											<i class="bi bi-patch-check-fill me-2"></i>DJ Available
 										</li>
 									</ul>
 									
@@ -520,9 +520,8 @@ Hotel list START -->
 									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
 										<!-- Button -->
 										<div class="d-flex align-items-center">
-											<h5 class="fw-bold mb-0 me-1">Ksh. 10,000</h5>
+											<h5 class="fw-bold mb-0 me-1">Ksh. 12,500</h5>
 											<span class="mb-0 me-2">/day</span>
-											<span class="text-decoration-line-through mb-0">Ksh. 15,000</span>
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
@@ -585,13 +584,13 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Green Hills Hotel </a></h5>
-									<small><i class="bi bi-geo-alt me-2"></i>Chaka, Nyeri</small>
+									<h5 class="card-title mb-1"><a href="hotel-detail.html">The White Rhino </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>CBD, Nyeri</small>
 
 									<!-- Amenities -->
 									<ul class="list-group list-group-borderless small mb-0 mt-2">
 										<li class="list-group-item d-flex text-success p-0">
-											<i class="bi bi-patch-check-fill me-2"></i>Ample Parking Space
+											<i class="bi bi-patch-check-fill me-2"></i>Tents Provision
 										</li>
 										<li class="list-group-item d-flex text-success p-0">
 											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
@@ -602,9 +601,8 @@ Hotel list START -->
 									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
 										<!-- Button -->
 										<div class="d-flex align-items-center">
-											<h5 class="fw-bold mb-0 me-1">Ksh. 10,000</h5>
+											<h5 class="fw-bold mb-0 me-1">Ksh. 19,999</h5>
 											<span class="mb-0 me-2">/day</span>
-											<span class="text-decoration-line-through mb-0">Ksh. 15,000</span>
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
@@ -667,8 +665,8 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Green Hills Hotel </a></h5>
-									<small><i class="bi bi-geo-alt me-2"></i>Chaka, Nyeri</small>
+									<h5 class="card-title mb-1"><a href="hotel-detail.html">Legacy Gardens </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Mweiga, Nyeri</small>
 
 									<!-- Amenities -->
 									<ul class="list-group list-group-borderless small mb-0 mt-2">
@@ -676,7 +674,7 @@ Hotel list START -->
 											<i class="bi bi-patch-check-fill me-2"></i>Ample Parking Space
 										</li>
 										<li class="list-group-item d-flex text-success p-0">
-											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
+											<i class="bi bi-patch-check-fill me-2"></i>Photograghy
 										</li>
 									</ul>
 									
@@ -684,9 +682,8 @@ Hotel list START -->
 									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
 										<!-- Button -->
 										<div class="d-flex align-items-center">
-											<h5 class="fw-bold mb-0 me-1">Ksh. 10,000</h5>
+											<h5 class="fw-bold mb-0 me-1">Ksh. 9,500</h5>
 											<span class="mb-0 me-2">/day</span>
-											<span class="text-decoration-line-through mb-0">Ksh. 15,000</span>
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
@@ -749,13 +746,13 @@ Hotel list START -->
 									</div>
 
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="hotel-detail.html">Green Hills Hotel </a></h5>
-									<small><i class="bi bi-geo-alt me-2"></i>Chaka, Nyeri</small>
+									<h5 class="card-title mb-1"><a href="hotel-detail.html">FK Resort </a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Nyeri - Nairobi Highway</small>
 
 									<!-- Amenities -->
 									<ul class="list-group list-group-borderless small mb-0 mt-2">
 										<li class="list-group-item d-flex text-success p-0">
-											<i class="bi bi-patch-check-fill me-2"></i>Ample Parking Space
+											<i class="bi bi-patch-check-fill me-2"></i>Large Open Space
 										</li>
 										<li class="list-group-item d-flex text-success p-0">
 											<i class="bi bi-patch-check-fill me-2"></i>Catering Service
@@ -766,9 +763,8 @@ Hotel list START -->
 									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
 										<!-- Button -->
 										<div class="d-flex align-items-center">
-											<h5 class="fw-bold mb-0 me-1">Ksh. 10,000</h5>
+											<h5 class="fw-bold mb-0 me-1">Ksh. 20,000</h5>
 											<span class="mb-0 me-2">/day</span>
-											<span class="text-decoration-line-through mb-0">Ksh. 15,000</span>
 										</div>
 										<!-- Price -->
 										<div class="mt-3 mt-sm-0">
