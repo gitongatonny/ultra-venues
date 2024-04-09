@@ -103,7 +103,7 @@
                                                 </div>
                                                 <!-- Button -->
                                                 <div class="col-12">
-                                                    <button type="button" class="btn btn-primary w-100 mb-0" href="thanks-for-reg.php">Register Venue</button>
+                                                    <button type="button" class="btn btn-primary w-100 mb-0" onclick="window.location.href='vendor-reg-confirm.php'">Register Venue</button>
                                                 </div>
                                             </form>
                                             <!-- Form END -->

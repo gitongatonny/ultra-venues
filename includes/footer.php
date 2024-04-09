@@ -26,9 +26,9 @@
 							<h5 class="text-white mb-2 mb-md-4">Main Pages</h5>
 							<ul class="nav flex-column text-primary-hover">
 								<li class="nav-item"><a class="nav-link text-muted" href="index.php">Home</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">About Us</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Contact Us</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="#">Help</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="about-us.php">About Us</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="contact-us.php">Contact Us</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="faq.php">Help</a></li>
 							</ul>
 						</div>
 
@@ -37,11 +37,11 @@
 						<div class="col-6 col-md-4">
 							<h5 class="text-white mb-2 mb-md-4">Top Locations</h5>
 							<ul class="nav flex-column text-primary-hover">
-								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Nyeri</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Nanyuki</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Meru</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Embu</a></li>
-								<li class="nav-item"><a class="nav-link text-muted" href="venue-details.php">Mwea</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="location-detail.php">Nyeri</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="location-detail.php">Nanyuki</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="location-detail.php">Meru</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="location-detail.php">Embu</a></li>
+								<li class="nav-item"><a class="nav-link text-muted" href="location-detail.php">Mwea</a></li>
 							</ul>
 						</div>
 
@@ -81,8 +81,8 @@
 					<ul class="list-inline mb-0 mt-3">
 						<li class="list-inline-item"> <a class="btn btn-sm px-2 bg-facebook mb-0" href="#"><i class="fab fa-fw fa-facebook-f"></i></a> </li>
 						<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-instagram mb-0" href="#"><i class="fab fa-fw fa-instagram"></i></a> </li>
-						<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-twitter mb-0" href="#"><i class="fab fa-fw fa-twitter"></i></a> </li>
-						<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-linkedin mb-0" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a> </li>
+						<li class="list-inline-item"> <a class="btn btn-sm px-2 bg-twitter mb-0" href="#"><i class="fab fa-fw fa-twitter"></i></a> </li>
+						<li class="list-inline-item"> <a class="btn btn-sm px-2 bg-linkedin mb-0" href="#"><i class="fab fa-fw fa-linkedin"></i></a> </li>
 					</ul>	
 				</div>
 			</div>
@@ -99,9 +99,7 @@
 						<!-- copyright links-->
 						<div class="nav mt-2 mt-lg-0">
 							<ul class="list-inline text-primary-hover mx-auto mb-0">
-								<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="#">Privacy policy</a></li>
-								<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="#">Terms and conditions</a></li>
-								<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted pe-0" href="#">Refund policy</a></li>
+								<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="faq.php">FAQs</a></li>
 							</ul>
 						</div>
 					</div>

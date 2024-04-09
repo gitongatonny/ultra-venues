@@ -94,14 +94,14 @@
 
 					<!-- Nav item About Us -->
 					<li class="nav-item">
-						<a class="nav-link" href="#">About Us</a>
+						<a class="nav-link" href="about-us.php">About Us</a>
 					</li>
 					<!-- Nav item About Us -->
 
 
 					<!-- Nav item Contact Us -->
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact Us</a>
+						<a class="nav-link" href="contact-us.php">Contact Us</a>
 					</li>
 					<!-- Nav item Contact Us -->
 	
@@ -142,7 +142,7 @@
 								<ul class="list-group list-group-flush list-unstyled p-2">
 									<!-- Notification item -->
 									<li>
-										<a href="#" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3">
+										<a href="user-bookings.php" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3">
 											<h6 class="mb-2">Booking Confirmed for Green Hills Hotel 🏨</h6>
 											<p class="mb-0 small">Your 2-Day Venue for a Company Retreat has been booked</p>
 											<span>12th May 2024 - 13th May 2024</span>
@@ -150,7 +150,7 @@
 									</li>
 									<!-- Notification item -->
 									<li>
-										<a href="#" class="list-group-item list-group-item-action rounded border-0 mb-1 p-3">
+										<a href="user-bookings.php" class="list-group-item list-group-item-action rounded border-0 mb-1 p-3">
 											<h6 class="mb-2">Reminder! Your Event is 1 week away.</h6>
 											<span>12th May 2024</span>
 										</a>
@@ -161,7 +161,7 @@
 
 							<!-- Card footer -->
 							<div class="card-footer bg-transparent text-center border-top">
-								<a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activities</a>
+								<a href="user-bookings.php" class="btn btn-sm btn-link mb-0 p-0">See all incoming activities</a>
 							</div>
 						</div>
 					</div>
@@ -172,7 +172,7 @@
 				<!-- Profile dropdown START -->
 				<li class="nav-item ms-3 dropdown">
 					<!-- Avatar -->
-					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+					<a class="avatar avatar-sm p-0" href="user-profile.php" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
 						<img class="avatar-img rounded-2" src="assets/images/user.png" alt="avatar">
 					</a>
 
@@ -185,7 +185,7 @@
 									<img class="avatar-img rounded-circle shadow" src="assets/images/user.png" alt="avatar">
 								</div>
 								<div>
-									<a class="h6 mt-2 mt-sm-0" href="#">Con Williams</a>
+									<a class="h6 mt-2 mt-sm-0" href="user-profile.php">Con Williams</a>
 									<p class="small m-0">zakayo@ke.com</p>
 								</div>
 							</div>
@@ -193,10 +193,10 @@
 
 						<!-- Links -->
 						<li> <hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
+						<li><a class="dropdown-item" href="user-bookings.php"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
+						<li><a class="dropdown-item" href="user-wishlist.php"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
+						<li><a class="dropdown-item" href="user-payment-details.php"><i class="bi bi-cash-stack fa-fw me-2"></i>Payment Details</a></li>
+						<li><a class="dropdown-item" href="faq.php"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
 						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
 						<li> <hr class="dropdown-divider"></li>
 
