@@ -13,7 +13,7 @@
 
                 <!-- Edit profile button -->
                 <div class="position-absolute top-0 end-0 p-3">
-                    <a href="#" class="text-primary-hover" data-bs-toggle="tooltip" data-bs-title="Edit profile">
+                    <a href="user-profile.php" class="text-primary-hover" data-bs-toggle="tooltip" data-bs-title="Edit profile">
                         <i class="bi bi-pencil-square"></i>
                     </a>
                 </div>
@@ -34,23 +34,23 @@
                     <!-- Sidebar menu item START -->
                     <ul class="nav nav-pills-primary-soft flex-column">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($activeTab == 'my-profile') ? 'active' : ''; ?>" href="#"><i class="bi bi-person fa-fw me-2"></i>My Profile</a>
+                            <a class="nav-link <?php echo ($activeTab == 'my-profile') ? 'active' : ''; ?>" href="user-profile.php"><i class="bi bi-person fa-fw me-2"></i>My Profile</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($activeTab == 'my-bookings') ? 'active' : ''; ?>" href="#"><i class="bi bi-ticket-perforated fa-fw me-2"></i>My Bookings</a>
+                            <a class="nav-link <?php echo ($activeTab == 'my-bookings') ? 'active' : ''; ?>" href="user-bookings.php"><i class="bi bi-ticket-perforated fa-fw me-2"></i>My Bookings</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($activeTab == 'my-payment-details') ? 'active' : ''; ?>" href="#"><i class="bi bi-wallet fa-fw me-2"></i>My Payment Details</a>
+                            <a class="nav-link <?php echo ($activeTab == 'my-payment-details') ? 'active' : ''; ?>" href="user-payment-details.php"><i class="bi bi-wallet fa-fw me-2"></i>My Payment Details</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($activeTab == 'wishlist') ? 'active' : ''; ?>" href="#"><i class="bi bi-heart fa-fw me-2"></i>Wishlist</a>
+                            <a class="nav-link <?php echo ($activeTab == 'wishlist') ? 'active' : ''; ?>" href="user-wishlist.php"><i class="bi bi-heart fa-fw me-2"></i>Wishlist</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($activeTab == 'delete-profile') ? 'active' : ''; ?>" href="#"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
+                            <a class="nav-link <?php echo ($activeTab == 'delete-profile') ? 'active' : ''; ?>" href="user-delete-acc.php"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
                         </li>
 
                         <li class="nav-item">

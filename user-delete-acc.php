@@ -49,7 +49,7 @@ Content START -->
 					<div class="card-body">
 						<h6>Before you go...</h6>
 						<ul>
-							<li>If any issues lead to this, kindly visit our FAQs section for help first <a href="#">FAQs Page</a> </li>
+							<li>If any issues lead to this, kindly visit our FAQs section for help first <a href="faq.php">FAQs Page</a> </li>
 							<li>If you delete your account, you will lose your all data.</li>
 						</ul>
 						<div class="form-check form-check-md my-4">

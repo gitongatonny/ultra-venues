@@ -86,7 +86,7 @@ Content START -->
 	
 										<!-- Button -->
 										<div class="mt-2 mt-md-0">
-											<a href="#" class="btn btn-primary-soft mb-0">View Venue</a>
+											<a href="venue-details.php" class="btn btn-primary-soft mb-0">View Venue</a>
 										</div>
 									</div>
 	
@@ -131,7 +131,7 @@ Content START -->
 	
 										<!-- Button -->
 										<div class="mt-2 mt-md-0">
-											<a href="#" class="btn btn-primary-soft mb-0">View Venue</a>
+											<a href="venue-details.php" class="btn btn-primary-soft mb-0">View Venue</a>
 										</div>
 									</div>
 	
@@ -182,7 +182,7 @@ Content START -->
 	
 										<!-- Button -->
 										<div class="mt-2 mt-md-0">
-											<a href="#" class="btn btn-primary-soft mb-0">View Venue</a>
+											<a href="venue-details.php" class="btn btn-primary-soft mb-0">View Venue</a>
 											<p class="text-danger text-md-end mb-0">Booking cancelled</p>
 										</div>
 									</div>
@@ -234,7 +234,7 @@ Content START -->
 	
 										<!-- Button -->
 										<div class="mt-2 mt-md-0">
-											<a href="#" class="btn btn-primary-soft mb-0">View Venue</a>
+											<a href="venue-details.php" class="btn btn-primary-soft mb-0">View Venue</a>
 										</div>
 									</div>
 	

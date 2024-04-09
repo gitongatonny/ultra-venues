@@ -104,7 +104,7 @@ Content START -->
 										</div>
 	
 										<!-- Title -->
-										<h5 class="card-title mb-1"><a href="hotel-detail.html">FK Resort</a></h5>
+										<h5 class="card-title mb-1"><a href="venue-details.php">FK Resort</a></h5>
 										<small><i class="bi bi-geo-alt me-2"></i>Nyeri - Nairobi Highway</small>
 										
 										<!-- Price and Button -->
@@ -116,7 +116,7 @@ Content START -->
 											</div>
 											<!-- Price -->
 											<div class="mt-3 mt-sm-0">
-												<a href="hotel-detail.html" class="btn btn-sm btn-dark w-100 mb-0">View Venue</a>    
+												<a href="venue-details.php" class="btn btn-sm btn-dark w-100 mb-0">View Venue</a>    
 											</div>                  
 										</div>
 									</div>
@@ -166,7 +166,7 @@ Content START -->
 										</div>
 	
 										<!-- Title -->
-										<h5 class="card-title mb-1"><a href="hotel-detail.html">Legacy Gardens</a></h5>
+										<h5 class="card-title mb-1"><a href="venue-details.php">Legacy Gardens</a></h5>
 										<small><i class="bi bi-geo-alt me-2"></i>Mweiga, Nyeri</small>
 										
 										<!-- Price and Button -->
@@ -178,7 +178,7 @@ Content START -->
 											</div>
 											<!-- Price -->
 											<div class="mt-3 mt-sm-0">
-												<a href="hotel-detail.html" class="btn btn-sm btn-dark w-100 mb-0">View Venue</a>    
+												<a href="venue-details.php" class="btn btn-sm btn-dark w-100 mb-0">View Venue</a>    
 											</div>                  
 										</div>
 									</div>
