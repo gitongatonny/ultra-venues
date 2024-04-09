@@ -160,6 +160,33 @@ Content START -->
 
 					</div>
 					<!-- Card body END -->
+
+                    <!-- M-Pesa payment option START -->
+                    <div class="card border mt-4">
+                        <div class="card-header border-bottom">
+                            <h5 class="card-header-title">M-Pesa Payment</h5>
+                        </div>
+                        
+                        <div class="card-body">
+                            <form class="row text-start g-4">
+                                <!-- Phone number -->
+                                <div class="col-12">
+                                    <label class="form-label">Phone Number<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+254</span>
+                                        <input type="tel" class="form-control" placeholder="7xx xxx xxx" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+                                    </div>  
+                                    <div class="form-text">Enter your M-Pesa registered phone number.</div>
+                                </div>
+                                <!-- Button -->
+                                <div class="col-12">
+                                    <button class="btn btn-primary mb-0">Add M-Pesa Number</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- M-Pesa payment option END -->
+
 				</div>
 				<!-- Payment detail END -->
 
