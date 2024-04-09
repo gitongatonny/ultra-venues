@@ -67,9 +67,7 @@ Content START -->
 													</svg>
 												</a>               
 												<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="creditcardDropdown">
-													<li><a class="dropdown-item" href="#"><i class="bi bi-credit-card-2-front-fill me-2 fw-icon"></i>Edit card</a></li>
-													<li><a class="dropdown-item" href="#"><i class="bi bi-calculator me-2 fw-icon"></i>Currency converter</a></li>
-												</ul>
+													<li><a class="dropdown-item" href="#"><i class="bi bi-trash-fill text-danger me-2 fw-icon"></i>Remove Card</a></li>
 											</div>
 											<!-- Card action END -->
 										</div>
@@ -99,8 +97,7 @@ Content START -->
 													</svg>
 												</a>               
 												<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="creditcardDropdown2">
-													<li><a class="dropdown-item" href="#"><i class="bi bi-credit-card-2-front-fill fw-icon me-2"></i>Edit card</a></li>
-													<li><a class="dropdown-item" href="#"><i class="bi bi-calculator fw-icon me-2"></i>Currency converter</a></li>
+												<li><a class="dropdown-item" href="#"><i class="bi bi-trash-fill text-danger me-2 fw-icon"></i>Remove Card</a></li>
 												</ul>
 											</div>
 											<!-- Card action END -->
@@ -162,8 +159,8 @@ Content START -->
 					<!-- Card body END -->
 
                     <!-- M-Pesa payment option START -->
-                    <div class="card border mt-4">
-                        <div class="card-header border-bottom">
+					<div class="card border m-4">
+						<div class="card-header border-bottom">
                             <h5 class="card-header-title">M-Pesa Payment</h5>
                         </div>
                         
