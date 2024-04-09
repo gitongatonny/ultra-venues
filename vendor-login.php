@@ -67,8 +67,7 @@
                                                     <a href="forgot-pass.php">Forgot password?</a>
                                                 </div>
                                                 <div>
-                                                    <button type="button" class="btn btn-primary w-100 mb-0" href="vendor-dash.php">Login</button>
-                                                </div>
+                                                    <button type="button" class="btn btn-primary w-100 mb-0" onclick="window.location.href='vendor-dash.php'">Login</button>
 
                                             </form>
                                             <!-- Form END -->
