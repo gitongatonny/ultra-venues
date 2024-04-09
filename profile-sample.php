@@ -25,6 +25,7 @@ Content START -->
 		<div class="row">
 
         <!-- Profile Sidebar START -->
+        <?php $activeTab = 'my-profile'; ?>
         <?php include "includes/user-profile-sidebar.php";?>
         <!-- Profile Sidebar END -->
 
