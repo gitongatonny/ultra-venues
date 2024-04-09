@@ -27,7 +27,7 @@
                             <img class="avatar-img rounded-circle border border-2 border-white" src="assets/images/user.png" alt="">
                         </div>
                         <h6 class="mb-0">Con Williams</h6>
-                        <a href="#" class="text-reset text-primary-hover small">xakayo@ke.com</a>
+                        <a href="#" class="text-reset text-primary-hover small">zakayo@ke.com</a>
                         <hr>
                     </div>
 
@@ -47,10 +47,6 @@
 
                         <li class="nav-item">
                             <a class="nav-link <?php echo ($activeTab == 'wishlist') ? 'active' : ''; ?>" href="#"><i class="bi bi-heart fa-fw me-2"></i>Wishlist</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo ($activeTab == 'settings') ? 'active' : ''; ?>" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
                         </li>
 
                         <li class="nav-item">
