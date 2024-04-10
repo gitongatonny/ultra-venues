@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Vendor Dash | Ultra Venues</title>
+        <title>Venue Bookings | Ultra Venues</title>
 
         <!-- Head Content -->
         <?php include "includes/head-content.php";?>
@@ -49,13 +49,13 @@ Menu item START -->
 					<div class="navbar navbar-expand-xl">
 						<ul class="navbar-nav navbar-offcanvas-menu">
 
-							<li class="nav-item"> <a class="nav-link active" href="vendor-dash.php"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</a>	</li>
+							<li class="nav-item"> <a class="nav-link" href="vendor-dash.php"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</a>	</li>
 
-							<li class="nav-item"> <a class="nav-link" href="vendor-bookings.php"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
+							<li class="nav-item"> <a class="nav-link active" href="vendor-bookings.php"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
 
 							<li class="nav-item"> <a class="nav-link" href="vendor-notifications.php"><i class="bi bi-bell fa-fw me-1"></i>Activities</a> </li>
 		
-							<li class="nav-item"> <a class="nav-link" href="vendor-earnings.php"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
+							<li class="nav-item"> <a class="nav-link" href="vendor-earnings"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
 							
 							<li> <a class="nav-link" href="vendor-settings.php"><i class="bi bi-gear fa-fw me-1"></i>Settings</a></li>
 		
@@ -77,144 +77,18 @@ Content START -->
 		<!-- Title START -->
 		<div class="row">
 			<div class="col-12">
-				<h1 class="fs-4 mb-0"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</h1>
-			</div>
-		</div>	
-		<!-- Title END -->
-
-		<!-- Counter START -->
-		<div class="row g-4">
-			<!-- Counter item -->
-			<div class="col-sm-6 col-xl-3">
-				<div class="card card-body border">
-					<div class="d-flex align-items-center">
-						<!-- Icon -->
-						<div class="icon-xl bg-success rounded-3 text-white">
-							<i class="bi bi-journals"></i>
-						</div>
-						<!-- Content -->
-						<div class="ms-3">
-							<h4>25</h4>
-							<span>Total Bookings</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Counter item -->
-			<div class="col-sm-6 col-xl-3">
-				<div class="card card-body border">
-					<div class="d-flex align-items-center">
-						<!-- Icon -->
-						<div class="icon-xl bg-info rounded-3 text-white">
-							<i class="bi bi-graph-up-arrow"></i>
-						</div>
-						<!-- Content -->
-						<div class="ms-3">
-							<h4>150,000</h4>
-							<span>Earnings</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Counter item -->
-			<div class="col-sm-6 col-xl-3">
-				<div class="card card-body border">
-					<div class="d-flex align-items-center">
-						<!-- Icon -->
-						<div class="icon-xl bg-warning rounded-3 text-white">
-							<i class="bi bi-bar-chart-line-fill"></i>
-						</div>
-						<!-- Content -->
-						<div class="ms-3">
-							<h4>1,000</h4>
-							<span>Visitors</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Counter item -->
-			<div class="col-sm-6 col-xl-3">
-				<div class="card card-body border">
-					<div class="d-flex align-items-center">
-						<!-- Icon -->
-						<div class="icon-xl bg-primary rounded-3 text-white">
-							<i class="bi bi-star"></i>
-						</div>
-						<!-- Content -->
-						<div class="ms-3">
-							<h4>100</h4>
-							<span>Total Reviews</span>
-						</div>
-					</div>
-				</div>
+				<h1 class="fs-4 mb-0"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</h1>
 			</div>
 		</div>
-		<!-- Counter END -->
-
-		<!-- Graph START -->
-		<div class="row g-4">
-			<!-- Booking Chart START -->
-			<div class="col-lg-7 col-xl-8">
-				<!-- Chart START -->
-				<div class="card border h-100">
-					<!-- Card header -->
-					<div class="card-header border-bottom">
-						<h5 class="card-header-title">Booking stats</h5>
-					</div>
-					<!-- Card body -->
-					<div class="card-body">
-						<!-- Apex chart -->
-						<div id="apexChartTrafficStats" class="mt-2"></div>
-					</div>
-				</div>
-				<!-- Chart END -->
-			</div>
-			<!-- Booking Chart END -->
-
-			<!-- Booking graph START -->
-			<div class="col-lg-4">
-				<div class="card border h-100">
-
-					<!-- Card header -->
-					<div class="card-header border-bottom d-flex justify-content-between align-items-center">
-						<h5 class="card-header-title">Event Categories</h5>
-						<a href="#" class="btn btn-link p-0 mb-0">View all</a>
-					</div>
-
-					<!-- Card body START -->
-					<div class="card-body p-3">
-						<!-- Chart -->
-						<div class="col-sm-6 mx-auto">
-							<div class="d-flex justify-content-center" id="ChartTrafficViews"></div>
-						</div>
-
-						<!-- Content -->
-						<ul class="list-group list-group-borderless align-items-center mt-3">
-							<li class="list-group-item"><i class="text-primary fas fa-circle me-2"></i>Weddings</li>
-							<li class="list-group-item"><i class="text-success fas fa-circle me-2"></i>Corporate Seminars</li>
-							<li class="list-group-item"><i class="text-warning fas fa-circle me-2"></i>Birthday Parties</li>
-							<li class="list-group-item"><i class="text-danger fas fa-circle me-2"></i>Graduations</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- Booking graph END -->
-		</div>	
-		<!-- Graph END -->
+		<!-- Title END -->
 
 		<!-- Booking table START -->
 		<div class="row">
 			<div class="col-12">
-				<div class="card border rounded-3">
+				<div class="card border">
 					<!-- Card header START -->
 					<div class="card-header border-bottom">
-						<div class="d-sm-flex justify-content-between align-items-center">
-							<h5 class="mb-2 mb-sm-0">Upcoming Bookings</h5>
-							<a href="#" class="btn btn-sm btn-primary mb-0">View All</a>
-						</div>
+						<h5 class="card-header-title">Clients<span class="badge bg-primary bg-opacity-10 text-primary ms-2">3</span></h5>
 					</div>
 					<!-- Card header END -->
 
@@ -236,7 +110,6 @@ Content START -->
 								<form>
 									<select class="form-select js-choice" aria-label=".form-select-sm">
 										<option value="">Sort by</option>
-										<option>Free</option>
 										<option>Newest</option>
 										<option>Oldest</option>
 									</select>
@@ -255,7 +128,7 @@ Content START -->
 										<th scope="col" class="border-0">Name</th>
 										<th scope="col" class="border-0">Type</th>
 										<th scope="col" class="border-0">Date</th>
-										<th scope="col" class="border-0">status</th>
+										<th scope="col" class="border-0">Status</th>
 										<th scope="col" class="border-0">Payment</th>
 										<th scope="col" class="border-0 rounded-end">Action</th>
 									</tr>
@@ -268,9 +141,9 @@ Content START -->
 										<td> <h6 class="mb-0">01</h6> </td>
 										<td> <h6 class="mb-0"><a href="#">Finish Us Junior</a></h6> </td>
 										<td> Wedding </td>
-										<td> Aoril 22 - 23 </td>
+										<td> <h6 class="mb-0 fw-light">April 22 - 23</h6> </td>
 										<td> <div class="badge text-bg-success">Upcoming</div> </td>
-										<td> <div class="badge bg-success bg-opacity-10 text-success">Paid</div> </td>
+										<td> <div class="badge bg-success bg-opacity-10 text-success">Paid</div> </td> 
 										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
 									</tr>
 
@@ -279,7 +152,7 @@ Content START -->
 										<td> <h6 class="mb-0">02</h6> </td>
 										<td> <h6 class="mb-0"><a href="#">Kingslay Conman</a></h6> </td>
 										<td> Corporate Seminar </td>
-										<td> Jan 04 - 05 </td>
+										<td> <h6 class="mb-0 fw-light">Jan 04 - 05</h6> </td>
 										<td> <div class="badge text-bg-success">Done</div> </td>
 										<td> <div class="badge bg-orange bg-opacity-10 text-orange">Paid</div> </td>
 										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
@@ -290,11 +163,12 @@ Content START -->
 										<td> <h6 class="mb-0">03</h6> </td>
 										<td> <h6 class="mb-0"><a href="#">Post Maloan</a></h6> </td>
 										<td> Birthday Party </td>
-										<td> Feb 24 - 24 </td>
+										<td> <h6 class="mb-0 fw-light">Feb 24 - 24</h6> </td>
 										<td> <div class="badge text-bg-info">Done</div> </td>
 										<td> <div class="badge bg-info bg-opacity-10 text-info">Paid</div> </td>
 										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
 									</tr>
+
 								</tbody>
 								<!-- Table body END -->
 							</table>
@@ -308,7 +182,7 @@ Content START -->
 						<!-- Pagination and content -->
 						<div class="d-sm-flex justify-content-sm-between align-items-sm-center">
 							<!-- Content -->
-							<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 3 of 12 entries</p>
+							<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 1 of 3 entries</p>
 							<!-- Pagination -->
 							<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
 								<ul class="pagination pagination-sm pagination-primary-soft mb-0">
@@ -318,7 +192,7 @@ Content START -->
 									<li class="page-item"><a class="page-link" href="#">1</a></li>
 									<li class="page-item active"><a class="page-link" href="#">2</a></li>
 									<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
-									<li class="page-item"><a class="page-link" href="#">4</a></li>
+									<li class="page-item"><a class="page-link" href="#">5</a></li>
 									<li class="page-item">
 										<a class="page-link" href="#">Next</a>
 									</li>
@@ -329,13 +203,12 @@ Content START -->
 					<!-- Card footer END -->
 				</div>
 			</div>
-		</div>	
+		 </div> 
 		<!-- Booking table END -->
 	</div>
 </section>
 <!-- =======================
 Content END -->
-	
 
         </main>
 
