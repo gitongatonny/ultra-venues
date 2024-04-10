@@ -127,6 +127,7 @@
 	<script src="assets/vendor/jarallax/jarallax-video.min.js"></script>
 	<script src="assets/vendor/nouislider/nouislider.min.js"></script>
 	<script src="assets/vendor/sticky-js/sticky.min.js"></script>
+	<script src="assets/vendor/apexcharts/js/apexcharts.min.js"></script>
 
 
 	<!-- ThemeFunctions -->
