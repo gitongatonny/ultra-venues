@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Vendor Earnings | Ultra Venues</title>
+        <title>Venue Earnings | Ultra Venues</title>
 
         <!-- Head Content -->
         <?php include "includes/head-content.php";?>
@@ -29,7 +29,6 @@ Menu item START -->
 					<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="">
 				</div>
 				<h4 class="mb-2 mb-sm-0 ms-sm-3"><span class="fw-light">Welcome Back, </span> Green Hills Hotel</h4>
-				<a href="add-listing.html" class="btn btn-sm btn-primary-soft mb-0 ms-auto flex-shrink-0"><i class="bi bi-plus-lg fa-fw me-2"></i>Edit Listing</a>
 			</div>
 			<!-- Avatar and info START -->
 			
@@ -50,17 +49,15 @@ Menu item START -->
 					<div class="navbar navbar-expand-xl">
 						<ul class="navbar-nav navbar-offcanvas-menu">
 
-							<li class="nav-item"> <a class="nav-link" href="#"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</a>	</li>
+							<li class="nav-item"> <a class="nav-link" href="vendor-dash.php"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</a>	</li>
 
-							<li class="nav-item"> <a class="nav-link" href="#"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="vendor-bookings.php"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
 
-							<li class="nav-item"> <a class="nav-link" href="#"><i class="bi bi-bell fa-fw me-1"></i>Activities</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="vendor-notifications"><i class="bi bi-bell fa-fw me-1"></i>Activities</a> </li>
 		
-							<li class="nav-item"> <a class="nav-link active" href="#"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
-
-							<li class="nav-item"> <a class="nav-link" href="#"><i class="bi bi-star fa-fw me-1"></i>Reviews</a></li>
+							<li class="nav-item"> <a class="nav-link active" href="vendor-earnings.php"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
 							
-							<li> <a class="nav-link" href="#"><i class="bi bi-gear fa-fw me-1"></i>Settings</a></li>
+							<li> <a class="nav-link" href="vendor-settings.php"><i class="bi bi-gear fa-fw me-1"></i>Settings</a></li>
 		
 						</ul>
 					</div>
