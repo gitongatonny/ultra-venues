@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Vendor Dash | Ultra Venues</title>
+        <title>Vendor Notifications | Ultra Venues</title>
 
         <!-- Head Content -->
         <?php include "includes/head-content.php";?>
@@ -73,7 +73,206 @@ Menu item START -->
 <!-- =======================
 Menu item END -->
 
-	
+<!-- =======================
+Content START -->
+<section class="pt-0">
+	<div class="container vstack gap-4">
+		<!-- Title START -->
+		<div class="row">
+			<div class="col-12">
+				<h1 class="fs-4 mb-0"><i class="bi bi-bell fa-fw me-1"></i>Notifications</h1>
+			</div>
+		 </div> 
+		<!-- Title END -->
+
+			<!-- Activities START -->
+		<div class="row">
+			<div class="col-12">
+
+				<div class="card border">
+					<!-- Card header -->
+					<div class="card-header border-bottom">
+						<h5 class="card-header-title">Recent Notifications</h5>
+					</div>
+
+					<!-- Card body START -->
+					<div class="card-body">
+						
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<!-- Avatar -->
+								<div class="avatar flex-shrink-0">
+									<div class="avatar-img rounded-circle text-bg-success">
+										<span class="position-absolute top-50 start-50 translate-middle fw-bold"><i class="bi bi-check-lg fs-5"></i></span>
+									</div>
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Your payment was received successfully</h6>
+									<small class="me-3">April 22</small>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+						<hr> <!-- Divider -->
+
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<!-- Avatar image -->
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<div class="avatar flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="">
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Finish Us Junior booked your venue on <span class="fw-bold">April 22 </span>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+						<hr> <!-- Divider -->
+
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<!-- Avatar -->
+								<div class="avatar flex-shrink-0">
+									<div class="avatar-img rounded-circle text-bg-info">
+										<span class="position-absolute top-50 start-50 translate-middle fw-bold"><i class="bi bi-chat fs-5"></i></span>
+									</div>
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Someone left a review on <span class="fw-bold">Park Plaza Lodge Hotel </span> listing</h6>
+									<small class="me-3">March 03</small>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+						<hr> <!-- Divider -->
+
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<!-- Avatar image -->
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<div class="avatar flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="">
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Kingslay Conman booked your venue on <span class="fw-bold">Jan 04 </span>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+						<hr> <!-- Divider -->
+
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<!-- Avatar -->
+								<div class="avatar flex-shrink-0">
+									<div class="avatar-img rounded-circle text-bg-success">
+										<span class="position-absolute top-50 start-50 translate-middle fw-bold"><i class="bi bi-check-lg fs-5"></i></span>
+									</div>
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Your payment was received successfully</h6>
+									<small class="me-3">Feb 24</small>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+						<hr> <!-- Divider -->
+
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<!-- Avatar image -->
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<div class="avatar flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="">
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Post Maloan booked your venue on <span class="fw-bold">Feb 24 </span>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+						<hr> <!-- Divider -->
+
+
+						<!-- Activity item START -->
+						<div class="d-sm-flex justify-content-between align-items-center">
+							<div class="d-flex align-items-sm-center me-4 ms-sm-0">
+								<!-- Avatar -->
+								<div class="avatar flex-shrink-0">
+									<div class="avatar-img rounded-circle text-bg-success">
+										<span class="position-absolute top-50 start-50 translate-middle fw-bold"><i class="bi bi-check-lg fs-5"></i></span>
+									</div>
+								</div>
+								<!-- Title -->
+								<div class="ms-3">
+									<h6 class="fw-light m-0">Your listing <a href="#" class="text-primary">Green Hills Hotel </a>has been approved & an account created </h6>
+									<small>5 Months Ago</small>
+								</div>
+							</div>
+							<!-- Buttons -->
+							<div class="d-flex gap-2 mt-2 mt-sm-0">
+								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
+								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
+							</div>
+						</div>
+						<!-- Activity item END -->
+
+					</div>
+					<!-- Card body END -->
+				</div>
+			</div>
+		</div>
+		<!-- Activities END -->
+	</div>
+</section>
+<!-- =======================
+Content END -->	
 
         </main>
 
