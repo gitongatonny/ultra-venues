@@ -22,7 +22,7 @@
 	<nav class="navbar sidebar navbar-expand-xl navbar-light">
 		<!-- Navbar brand for xl START -->
 		<div class="d-flex align-items-center">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="index.php">
 				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
 				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
 			</a>
@@ -35,7 +35,7 @@
 				<!-- Sidebar menu START -->
 				<ul class="navbar-nav flex-column" id="navbar-sidebar">
 					<!-- Menu item -->
-					<li class="nav-item"><a href="admin-dashboard.html" class="nav-link active">Dashboard</a></li>
+					<li class="nav-item"><a href="admin-dashboard.php" class="nav-link active">Dashboard</a></li>
 
 					<!-- Title -->
 					<li class="nav-item ms-2 my-2">Pages</li>
@@ -48,7 +48,7 @@
 						<!-- Submenu -->
 						<ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
 							<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
-							<li class="nav-item"> <a class="nav-link" href="admin-booking-detail.php">Booking Detail</a></li>
+							<li class="nav-item"> <a class="nav-link" href="admin-booking-detail.php">Booking Details</a></li>
 						</ul>
 					</li>
 	
