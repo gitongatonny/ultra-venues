@@ -104,6 +104,10 @@
 
 </main>
 
+    <!-- Footer START -->
+        <?php include "includes/admin-dash-scripts.php";?>
+    <!-- Footer END -->
+
     </body>
 
 
