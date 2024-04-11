@@ -49,7 +49,7 @@
 						<!-- Submenu -->
 						<ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
 							<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
-							<li class="nav-item"> <a class="nav-link" href="admin-booking-detail.php">Booking Details</a></li>
+							<li class="nav-item"> <a class="nav-link" href="admin-booking-details.php">Booking Details</a></li>
 						</ul>
 					</li>
 	

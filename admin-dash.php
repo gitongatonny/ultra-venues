@@ -35,7 +35,8 @@
 				<!-- Sidebar menu START -->
 				<ul class="navbar-nav flex-column" id="navbar-sidebar">
 					<!-- Menu item -->
-					<li class="nav-item"><a href="admin-dashboard.php" class="nav-link active">Dashboard</a></li>
+					<li class="nav-item"><a href="admin-dash.php" class="nav-link active">Dashboard</a></li>
+                    <hr>
 
 					<!-- Title -->
 					<li class="nav-item ms-2 my-2">Pages</li>
@@ -48,7 +49,7 @@
 						<!-- Submenu -->
 						<ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
 							<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
-							<li class="nav-item"> <a class="nav-link" href="admin-booking-detail.php">Booking Details</a></li>
+							<li class="nav-item"> <a class="nav-link" href="admin-booking-details.php">Booking Details</a></li>
 						</ul>
 					</li>
 	
