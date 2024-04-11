@@ -79,10 +79,10 @@
 					
 	
 					<!-- Menu item -->
-					<li class="nav-item"> <a class="nav-link active" href="admin-earnings.php">Earnings</a></li>
+					<li class="nav-item"> <a class="nav-link" href="admin-earnings.php">Earnings</a></li>
 	
 					<!-- Menu item -->
-					<li class="nav-item active"> <a class="nav-link" href="admin-settings.php">Admin Settings</a></li>
+					<li class="nav-item"> <a class="nav-link active" href="admin-settings.php">Admin Settings</a></li>
 	
 				</ul>
 				<!-- Sidebar menu end -->
