@@ -295,6 +295,7 @@
 			</div>
 
 			<div class="row g-4">
+
 				<!-- Profile setting -->
 				<div class="col-lg-6">
 					<div class="card shadow">
@@ -352,6 +353,104 @@
 						</div>
 					</div>
 				</div>
+
+
+				<!-- Website settings -->
+					<div class="col-lg-6">
+					<div class="card shadow">
+						<!-- Card header -->
+						<div class="card-header border-bottom">
+							<h5 class="card-header-title">Website Settings</h5>
+						</div>
+
+						<!-- Card body START -->
+						<div class="card-body">
+							<form class="row g-4 align-items-center">
+	
+								<!-- Input item -->
+								<div class="col-xl-6">
+									<label class="form-label">Site Name</label>
+									<input type="text" class="form-control" placeholder="Ultra-Venues">
+								</div>
+
+								<!-- Input item -->
+								<div class="col-xl-6">
+									<label class="form-label">Site Copyrights</label>
+									<input type="text" class="form-control" placeholder="legal@ultra-venues.com">
+								</div>
+
+								<!-- Input item -->
+								<div class="col-12">
+									<label class="form-label">Site Email</label>
+									<input type="email" class="form-control" placeholder="info@ultra-venues.com"">
+									<div class="form-text">Main contact email for the website</div>
+								</div>
+	
+								<!-- Textarea item -->
+								<div class="col-12">
+									<label class="form-label">Site Description</label>
+									<textarea class="form-control" rows="3">Ultra-Venues is a venue booking and management website that integrates intelligent recommendations. It provides a beautiful interface for users to book venues for their personal/corporate events. It also caters for venue owners by providing exposure to their platforms and providing an efficient way to manage their bookings and drive traffic leading to more revenue.</textarea>
+								</div>
+
+								<!-- Input item -->
+								<div class="col-lg-6">
+									<label class="form-label">Contact Phone</label>
+									<input type="text" class="form-control" placeholder="Contact Phone">
+								</div>
+
+								<!-- Input item -->
+								<div class="col-lg-6">
+									<label class="form-label">Support Email</label>
+									<input type="email" class="form-control" placeholder="Support Email">
+								</div>
+
+								<!-- Radio items -->
+								<div class="col-lg-6">
+									<label class="form-label">Allow Registration</label>
+									<div class="d-sm-flex">
+										<!-- Radio -->
+										<div class="form-check radio-bg-light me-4">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
+											<label class="form-check-label" for="flexRadioDefault1">
+												Enable
+											</label>
+										</div>
+									<!-- Radio -->
+										<div class="form-check radio-bg-light me-4">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+											<label class="form-check-label" for="flexRadioDefault2">
+												Disable
+											</label>
+										</div>
+									<!-- Radio -->
+										<div class="form-check radio-bg-light">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+											<label class="form-check-label" for="flexRadioDefault3">
+												On Request
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<!-- Textarea item -->
+								<div class="col-12">
+									<label class="form-label">Contact Address</label>
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+	
+								<!-- Save button -->
+								<div class="d-sm-flex justify-content-end">
+									<button type="button" class="btn btn-primary mb-0">Update</button>
+								</div>
+							</form>
+						</div>
+						<!-- Card body END -->
+					</div>
+				</div>
+</div>
+		<!-- Page main content END -->
+	</div>
+	<!-- Page content END -->
 
 </main>
 
