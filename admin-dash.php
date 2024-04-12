@@ -245,38 +245,39 @@
 				</li>
 				<!-- Notification dropdown END -->
 		
-						<!-- Profile dropdown START -->
-						<li class="nav-item ms-3 dropdown">
-							<!-- Avatar -->
-							<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-								<img class="avatar-img rounded-2" src="assets/images/user.png" alt="avatar">
-							</a>
-		
-							<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
-								<!-- Profile info -->
-								<li class="px-3 mb-3">
-									<div class="d-flex align-items-center">
-										<!-- Avatar -->
-										<div class="avatar me-3">
-											<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
-										</div>
-										<div>
-											<a class="h6 mt-2 mt-sm-0" href="#">Lori Ferguson</a>
-											<p class="small m-0">example@gmail.com</p>
-										</div>
-									</div>
-								</li>
-		
-								<!-- Links -->
-								<li> <hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
-								<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
-							</ul>
+				<!-- Profile dropdown START -->
+				<li class="nav-item ms-3 dropdown">
+					<!-- Avatar -->
+					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+						<img class="avatar-img rounded-2" src="assets/images/user.png" alt="avatar">
+					</a>
+
+					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+						<!-- Profile info -->
+						<li class="px-3 mb-3">
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar me-3">
+									<img class="avatar-img rounded-circle shadow" src="assets/images/user.png" alt="avatar">
+								</div>
+								<div>
+									<a class="h6 mt-2 mt-sm-0" href="#">Admin</a>
+									<p class="small m-0">admin@ultra-venues.com</p>
+								</div>
+							</div>
 						</li>
-						<!-- Profile dropdown END -->
+
+						<!-- Links -->
+						<li> <hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-calendar-check fa-fw me-2"></i>Bookings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-people fa-fw me-2"></i>Customers</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-building fa-fw me-2"></i>Venues</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-cash-stack fa-fw me-2"></i>Earnings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
+						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+					</ul>
+				</li>
+				<!-- Profile dropdown END -->
 					</ul>
 					<!-- Top bar right END -->
 				</div>
