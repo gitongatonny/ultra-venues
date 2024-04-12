@@ -349,6 +349,214 @@
 			</div>
 			<!-- Counter boxes END -->
 	
+			<!-- Venues grid START -->
+			<div class="row g-4 mb-5">
+				<!-- Title -->
+				<div class="col-12">
+					<div class="d-flex justify-content-between">
+						<h4 class="mb-0">Popular Venues</h4>
+						<a href="#" class="btn btn-primary-soft mb-0">View All</a>
+					</div>	
+				</div>
+
+				<!-- Venue item -->
+				<div class="col-lg-6">
+					<div class="card shadow p-3">
+						<div class="row g-4">
+							<!-- Card img -->
+							<div class="col-md-3">
+								<img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
+							</div>
+
+							<!-- Card body -->
+							<div class="col-md-9">
+								<div class="card-body position-relative d-flex flex-column p-0 h-100">
+
+									<!-- Buttons -->
+									<div class="list-inline-item dropdown position-absolute top-0 end-0">
+										<!-- Share button -->
+										<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction1" data-bs-toggle="dropdown" aria-expanded="false">
+											<i class="bi bi-three-dots-vertical"></i>
+										</a>
+										<!-- dropdown button -->
+										<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow" aria-labelledby="dropdownAction1">
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-info-circle me-2"></i>Report</a></li>
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-slash-circle me-2"></i>Disable</a></li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Green Hills Hotel</a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Nyeri</small>
+
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Price -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 20,000</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Button -->
+										<div class="hstack gap-2 mt-3 mt-sm-0">
+											<a href="#" class="btn btn-sm btn-primary-soft px-2 mb-0"><i class="bi bi-pencil-square fa-fw"></i></a>    
+											<a href="#" class="btn btn-sm btn-danger-soft px-2 mb-0"><i class="bi bi-slash-circle fa-fw"></i></a>    
+										</div>                 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Venue item -->
+				<div class="col-lg-6">
+					<div class="card shadow p-3">
+						<div class="row g-4">
+							<!-- Card img -->
+							<div class="col-md-3">
+								<img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
+							</div>
+
+							<!-- Card body -->
+							<div class="col-md-9">
+								<div class="card-body position-relative d-flex flex-column p-0 h-100">
+
+									<!-- Buttons -->
+									<div class="list-inline-item dropdown position-absolute top-0 end-0">
+										<!-- Share button -->
+										<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction2" data-bs-toggle="dropdown" aria-expanded="false">
+											<i class="bi bi-three-dots-vertical"></i>
+										</a>
+										<!-- dropdown button -->
+										<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow" aria-labelledby="dropdownAction2">
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-info-circle me-2"></i>Report</a></li>
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-slash-circle me-2"></i>Disable</a></li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">The White Rhino Hotel</a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Nyeri</small>
+
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Price -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 17,500</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Button -->
+										<div class="hstack gap-2 mt-3 mt-sm-0">
+											<a href="#" class="btn btn-sm btn-primary-soft px-2 mb-0"><i class="bi bi-pencil-square fa-fw"></i></a>    
+											<a href="#" class="btn btn-sm btn-danger-soft px-2 mb-0"><i class="bi bi-slash-circle fa-fw"></i></a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Venue item -->
+				<div class="col-lg-6">
+					<div class="card shadow p-3">
+						<div class="row g-4">
+							<!-- Card img -->
+							<div class="col-md-3">
+								<img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
+							</div>
+
+							<!-- Card body -->
+							<div class="col-md-9">
+								<div class="card-body position-relative d-flex flex-column p-0 h-100">
+
+									<!-- Buttons -->
+									<div class="list-inline-item dropdown position-absolute top-0 end-0">
+										<!-- Share button -->
+										<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction3" data-bs-toggle="dropdown" aria-expanded="false">
+											<i class="bi bi-three-dots-vertical"></i>
+										</a>
+										<!-- dropdown button -->
+										<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow" aria-labelledby="dropdownAction3">
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-info-circle me-2"></i>Report</a></li>
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-slash-circle me-2"></i>Disable</a></li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Oriental Palace</a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Nyeri</small>
+
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Price -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 21,000</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Button -->
+										<div class="hstack gap-2 mt-3 mt-sm-0">
+											<a href="#" class="btn btn-sm btn-primary-soft px-2 mb-0"><i class="bi bi-pencil-square fa-fw"></i></a>    
+											<a href="#" class="btn btn-sm btn-danger-soft px-2 mb-0"><i class="bi bi-slash-circle fa-fw"></i></a>    
+										</div>                 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Venue item -->
+				<div class="col-lg-6">
+					<div class="card shadow p-3">
+						<div class="row g-4">
+							<!-- Card img -->
+							<div class="col-md-3">
+								<img src="assets/images/mt-kenya.jpg" class="rounded-2" alt="Card image">
+							</div>
+
+							<!-- Card body -->
+							<div class="col-md-9">
+								<div class="card-body position-relative d-flex flex-column p-0 h-100">
+
+									<!-- Buttons -->
+									<div class="list-inline-item dropdown position-absolute top-0 end-0">
+										<!-- Share button -->
+										<a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction4" data-bs-toggle="dropdown" aria-expanded="false">
+											<i class="bi bi-three-dots-vertical"></i>
+										</a>
+										<!-- dropdown button -->
+										<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow" aria-labelledby="dropdownAction4">
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-info-circle me-2"></i>Report</a></li>
+											<li><a class="dropdown-item small" href="#"><i class="bi bi-slash-circle me-2"></i>Disable</a></li>
+										</ul>
+									</div>
+
+									<!-- Title -->
+									<h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">FK Resort</a></h5>
+									<small><i class="bi bi-geo-alt me-2"></i>Nyeri</small>
+
+									<!-- Price and Button -->
+									<div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+										<!-- Price -->
+										<div class="d-flex align-items-center">
+											<h5 class="fw-bold mb-0 me-1">Ksh. 10,000</h5>
+											<span class="mb-0 me-2">/day</span>
+										</div>
+										<!-- Button -->
+										<div class="hstack gap-2 mt-3 mt-sm-0">
+											<a href="#" class="btn btn-sm btn-primary-soft px-2 mb-0"><i class="bi bi-pencil-square fa-fw"></i></a>    
+											<a href="#" class="btn btn-sm btn-danger-soft px-2 mb-0"><i class="bi bi-slash-circle fa-fw"></i></a>    
+										</div>                  
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Hotel grid END -->
+
 		</div>
 		<!-- Page main content END -->
 	</div>
