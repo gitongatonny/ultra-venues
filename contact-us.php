@@ -283,7 +283,7 @@
                             </svg>
                         </figure>
                         <!-- Image -->
-                        <img src="assets/images/golf-r.jpeg" class="rounded-3 position-relative" alt=""> <!--I'll change the image-->
+                        <img src="assets/images/mt-kenya.jpg" class="rounded-3 position-relative" alt="" style="height: 400px;">
                     </div>
                 </div>
                 <!-- Content and form END -->

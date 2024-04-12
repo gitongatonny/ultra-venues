@@ -193,6 +193,7 @@
 
 						<!-- Links -->
 						<li> <hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="user-profile.php"><i class="bi bi-person fa-fw me-2"></i>My Profile</a></li>
 						<li><a class="dropdown-item" href="user-bookings.php"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
 						<li><a class="dropdown-item" href="user-wishlist.php"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
 						<li><a class="dropdown-item" href="user-payment-details.php"><i class="bi bi-cash-stack fa-fw me-2"></i>Payment Details</a></li>

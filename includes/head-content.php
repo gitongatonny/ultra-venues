@@ -80,6 +80,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/nouislider/nouislider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/overlayscrollbars.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/apexcharts/css/apexcharts.css">
 
 
 	<!-- Theme CSS -->
