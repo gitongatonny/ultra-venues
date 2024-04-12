@@ -284,6 +284,167 @@
 		</nav>
 		<!-- Top bar END -->
 
+		<!-- Page main content START -->
+		<div class="page-content-wrapper p-xxl-4">
+	
+			<!-- Title -->
+			<div class="row">
+				<div class="col-12 mb-4 mb-sm-5">
+					<div class="d-sm-flex justify-content-between align-items-center">
+						<h1 class="h3 mb-2 mb-sm-0">Venue Details</h1>
+						<a href="#" class="btn btn-primary-soft text-nowrap mb-0"><i class="bi bi-pencil-square fa-fw"></i> Edit Venue</a>						
+					</div>
+				</div>
+			</div>
+
+			<!-- Booking detail START -->
+			<div class="row g-4 g-xl-5">
+				<!-- Image -->
+				<div class="col-xxl-6">
+					<div class="row g-2 g-sm-4">
+						<div class="col-6">
+							<a data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
+								<div class="card card-element-hover card-overlay-hover overflow-hidden">
+									<!-- Image -->
+									<img src="assets/images/mt-kenya.jpg" class="rounded-3" alt="">
+									<!-- Full screen button -->
+									<div class="hover-element w-100 h-100">
+										<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6">
+							<a data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
+								<div class="card card-element-hover card-overlay-hover overflow-hidden">
+									<!-- Image -->
+									<img src="assets/images/mt-kenya.jpg" class="rounded-3" alt="">
+									<!-- Full screen button -->
+									<div class="hover-element w-100 h-100">
+										<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6">
+							<a data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
+								<div class="card card-element-hover card-overlay-hover overflow-hidden">
+									<!-- Image -->
+									<img src="assets/images/mt-kenya.jpg" class="rounded-3" alt="">
+									<!-- Full screen button -->
+									<div class="hover-element w-100 h-100">
+										<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-6">
+							<a data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
+								<div class="card card-element-hover card-overlay-hover overflow-hidden">
+									<!-- Image -->
+									<img src="assets/images/mt-kenya.jpg" class="rounded-3" alt="">
+									<!-- Full screen button -->
+									<div class="hover-element w-100 h-100">
+										<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Content -->
+				<div class="col-xxl-6">
+					<h4><span class="fw-light"></span>Green Hills Hotel</h4>
+					<p class="fw-bold"><i class="bi bi-geo-alt me-2"></i>Nyeri </p>
+
+					<p class="mb-4">Green Hills Hotel is a luxurious hotel located in the beautiful city of Nyeri, Kenya. It offers a variety of amenities and services to ensure a comfortable and enjoyable event.</p>
+
+					<!-- Feature -->
+					<div class="row g-4">
+						<div class="col-sm-6 col-md-4">
+							<div class="d-flex align-items-center">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2"><i class="bi bi-building"></i></div>
+								<div class="ms-2">
+									<small>Type</small>
+									<h6 class="mb-0 mt-1">Hotel</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="d-flex align-items-center">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2"><i class="bi bi-people"></i></div>
+								<div class="ms-2">
+									<small>Capacity</small>
+									<h6 class="mb-0 mt-1">150</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="d-flex align-items-center">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2"><i class="bi bi-star"></i></div>
+								<div class="ms-2">
+									<small>Rating</small>
+									<h6 class="mb-0 mt-1">4.7</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="d-flex align-items-center">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2"><i class="bi bi-eye"></i></div>
+								<div class="ms-2">
+									<small>View</small>
+									<h6 class="mb-0 mt-1">Mt.Kenya</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="d-flex align-items-center">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-2"><i class="bi bi-rulers"></i></div>
+								<div class="ms-2">
+									<small>Size</small>
+									<h6 class="mb-0 mt-1">10 Acres</h6>
+								</div>
+							</div>
+						</div>
+
+					<!-- Booking info -->
+					<div class="bg-light border border-secondary border-opacity-25 p-3 rounded d-inline-block mt-4">
+						<h6 class="small">Current Reservation:</h6>
+						<!-- Avatar -->
+						<div class="d-sm-flex align-items-center">
+							<!-- Avatar -->
+							<div class="avatar avatar-xs flex-shrink-0">
+								<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+							</div>
+							<!-- Info -->
+							<h6 class="mb-0 ms-2">Finish Us Junior</h6>
+						</div>
+						<!-- Info -->
+						<div class="hstack gap-4 gap-md-5 flex-wrap mt-2">
+							<div>
+								<small>Start Date</small>
+								<h6 class="fw-normal mb-0">18 Dec 2024</h6>
+							</div>
+							<div>
+								<small>End Date:</small>
+								<h6 class="fw-normal mb-0">19 Dec 2024</h6>
+							</div>
+							<div>
+								<small>Total Amount:</small>
+								<h6 class="text-success mb-0">Ksh. 50,000</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Booking detail END -->
+
+
 </main>
 
     <!-- Footer START -->
