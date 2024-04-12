@@ -306,7 +306,7 @@
 							<!-- Full name -->
 							<div class="mb-3">
 								<label class="form-label">Name</label>
-								<input type="text" class="form-control" value="Ultra Venues Admin" placeholder="Name">
+								<input type="text" class="form-control" value="Ule Msee" placeholder="Name">
 							</div>
 							<!-- Profile picture -->
 							<div class="mb-3">
@@ -395,13 +395,13 @@
 								<!-- Input item -->
 								<div class="col-lg-6">
 									<label class="form-label">Contact Phone</label>
-									<input type="text" class="form-control" placeholder="Contact Phone">
+									<input type="text" class="form-control" placeholder="+254 400 400 400">
 								</div>
 
 								<!-- Input item -->
 								<div class="col-lg-6">
 									<label class="form-label">Support Email</label>
-									<input type="email" class="form-control" placeholder="Support Email">
+									<input type="email" class="form-control" placeholder="support@ultra-venues.com">
 								</div>
 
 								<!-- Radio items -->
@@ -410,7 +410,7 @@
 									<div class="d-sm-flex">
 										<!-- Radio -->
 										<div class="form-check radio-bg-light me-4">
-											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
 											<label class="form-check-label" for="flexRadioDefault1">
 												Enable
 											</label>
@@ -424,7 +424,7 @@
 										</div>
 									<!-- Radio -->
 										<div class="form-check radio-bg-light">
-											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"  checked="">
 											<label class="form-check-label" for="flexRadioDefault3">
 												On Request
 											</label>
@@ -435,7 +435,7 @@
 								<!-- Textarea item -->
 								<div class="col-12">
 									<label class="form-label">Contact Address</label>
-									<textarea class="form-control" rows="3"></textarea>
+									<textarea class="form-control" rows="3">DeKUT, Nyeri.</textarea>
 								</div>
 	
 								<!-- Save button -->
