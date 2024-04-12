@@ -284,6 +284,97 @@
 		</nav>
 		<!-- Top bar END -->
 
+
+		<!-- Page main content START -->
+		<div class="page-content-wrapper p-xxl-4">
+
+			<!-- Title -->
+			<div class="row">
+				<div class="col-12 mb-5">
+					<div class="d-sm-flex justify-content-between align-items-center">
+						<h1 class="h3 mb-2 mb-sm-0">Booking</h1>
+						<div class="d-grid"><a href="#" class="btn btn-primary-soft mb-0"><i class="bi bi-plus-lg fa-fw"></i> Add New Room</a></div>					
+					</div>
+				</div>
+			</div>
+
+			<!-- Counter START -->
+			<div class="row g-4 mb-5">
+				<!-- Counter item -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="card card-body shadow p-4">
+						<div class="d-flex justify-content-between align-items-center mb-3">
+							<!-- Number -->
+							<div class="me-2">
+								<span>New Venues</span>
+								<h3 class="mb-0 mt-2">16</h3>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle flex-shrink-0 bg-primary bg-opacity-10 text-primary mb-0">
+								<i class="bi bi-door-open fa-fw"></i>
+							</div>
+						</div>
+						<!-- Progress bar -->
+						<div class="progress progress-xs bg-primary bg-opacity-10 mb-2">
+							<div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+							</div>
+						</div>
+						<span><span class="text-primary">new rooms registred</span> this quarter</span>
+					</div>	
+				</div>
+
+				<!-- Counter item -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="card card-body shadow p-4">
+						<div class="d-flex justify-content-between align-items-center mb-3">
+							<!-- Number -->
+							<div class="me-2">
+								<span>Booked</span>
+								<h3 class="mb-0 mt-2">45</h3>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle flex-shrink-0 bg-success bg-opacity-10 text-success mb-0">
+								<i class="bi bi-box-arrow-in-right fa-fw"></i>
+							</div>
+						</div>
+						<!-- Progress bar -->
+						<div class="progress progress-xs bg-success bg-opacity-10 mb-2">
+							<div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+							</div>
+						</div>
+						<span><span class="text-success"></span> venues</span>
+					</div>	
+				</div>
+
+				<!-- Counter item -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="card card-body shadow p-4">
+						<div class="d-flex justify-content-between align-items-center mb-3">
+							<!-- Number -->
+							<div class="me-2">
+								<span>Available Venues</span>
+								<h3 class="mb-0 mt-2">30</h3>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle flex-shrink-0 bg-danger bg-opacity-10 text-danger mb-0">
+								<i class="bi bi-x-circle fa-fw"></i>
+							</div>
+						</div>
+						<!-- Progress bar -->
+						<div class="progress progress-xs bg-danger bg-opacity-10 mb-2">
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+							</div>
+						</div>
+						<span><span class="text-danger"></span> venues</span>
+					</div>	
+				</div>
+
+
+
+
+			</div>
+			<!-- Counter END -->
+
 </main>
 
     <!-- Footer START -->
