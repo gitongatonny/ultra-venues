@@ -12,9 +12,7 @@
     </head>
 
     <body>
-        <!-- Header START -->
-        <?php include "includes/header-main.php";?>
-        <!-- Header END -->
+
 
         <main>
 
