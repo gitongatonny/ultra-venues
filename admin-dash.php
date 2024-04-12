@@ -557,6 +557,64 @@
 			</div>
 			<!-- Hotel grid END -->
 
+			<!-- Widget START -->
+			<div class="row g-4">
+				<!-- Booking Chart START -->
+				<div class="col-xxl-8">
+					<!-- Chart START -->
+					<div class="card shadow h-100">
+						<!-- Card header -->
+						<div class="card-header border-bottom">
+							<h5 class="card-header-title">Booking Activity</h5>
+						</div>
+
+						<!-- Card body -->
+						<div class="card-body">
+							<!-- Content -->
+							<div class="d-flex gap-4 mb-3">
+								<h6><span class="fw-light"><i class="bi bi-square-fill text-primary"></i> Personal Events:</span> 22 Bookings</h6>
+								<h6><span class="fw-light"><i class="bi bi-square-fill text-info"></i> Corporate Events:</span> 12 Bookings</h6>
+							</div>
+							<!-- Apex chart -->
+							<div id="ChartGuesttraffic" class="mt-2"></div>
+						</div>
+					</div>
+					<!-- Chart END -->
+				</div>
+				<!-- Booking Chart END -->
+
+				<!-- Booking graph START -->
+				<div class="col-lg-6 col-xxl-4">
+					<div class="card shadow h-100">
+						<!-- Card header -->
+						<div class="card-header border-bottom">
+							<h5 class="card-header-title">Venue Availability</h5>
+						</div>
+
+						<!-- Card body START -->
+						<div class="card-body p-3">
+							<!-- Chart -->
+							<div class="col-sm-6 mx-auto">
+								<div class="d-flex justify-content-center" id="ChartTrafficRooms"></div>
+							</div>
+
+							<!-- Content -->
+							<ul class="list-group list-group-borderless mb-0">
+								<li class="list-group-item d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="text-success fas fa-circle me-2"></i> Available</span>
+									<span class="h6 fw-light mb-0">30 Venues</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between">
+									<span class="h6 fw-light mb-0"><i class="text-danger fas fa-circle me-2"></i> Booked</span>
+									<span class="h6 fw-light mb-0">45 Rooms</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Booking graph END -->
+
+
 		</div>
 		<!-- Page main content END -->
 	</div>
