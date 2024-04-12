@@ -606,7 +606,7 @@
 								</li>
 								<li class="list-group-item d-flex justify-content-between">
 									<span class="h6 fw-light mb-0"><i class="text-danger fas fa-circle me-2"></i> Booked</span>
-									<span class="h6 fw-light mb-0">45 Rooms</span>
+									<span class="h6 fw-light mb-0">45 Venues</span>
 								</li>
 							</ul>
 						</div>
@@ -614,6 +614,287 @@
 				</div>
 				<!-- Booking graph END -->
 
+
+				<!-- Venues START -->
+				<div class="col-lg-6 col-xxl-4">
+					<div class="card shadow h-60">
+						<!-- Card header -->
+						<div class="card-header border-bottom d-flex justify-content-between align-items-center">
+							<h5 class="card-header-title">Venues Notifications</h5>
+							<a href="#" class="btn btn-link p-0 mb-0">View all</a>
+						</div>
+
+						<!-- Card body START -->
+						<div class="card-body">
+							<!-- Venue item START -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Image and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="flex-shrink-0">
+										<img src="assets/images/category/hotel/4by3/04.jpg" class="rounded h-60px" alt="">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-1">Green Hills Hotel</h6>
+										<ul class="nav nav-divider small">
+											<li class="nav-item">18 Nov to 22 Nov</li>
+											<li class="nav-item"><span class="text-success">Booked</span></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0 ms-3">View</a>
+							</div>
+							<!-- Venue item END -->
+
+							<hr><!-- Divider -->
+
+							<!-- Venues item START -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Image and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="flex-shrink-0">
+										<img src="assets/images/category/hotel/4by3/05.jpg" class="rounded h-60px" alt="">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-1">Oriental Palace</h6>
+										<ul class="nav nav-divider small">
+											<li class="nav-item">16 Dec</li>
+											<li class="nav-item"><span class="text-success">Booked</span></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0 ms-3">View</a>
+							</div>
+							<!-- Venues item END -->
+
+							<hr><!-- Divider -->
+
+							<!-- Venues item START -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Image and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="flex-shrink-0">
+										<img src="assets/images/category/hotel/4by3/06.jpg" class="rounded h-60px" alt="">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-1">The White Rhino Hotel</h6>
+										<ul class="nav nav-divider small">
+											<li class="nav-item">19 Oct to 20 Oct</li>
+											<li class="nav-item"><span class="text-success">Booked</span></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0 ms-3">View</a>
+							</div>
+							<!-- Venues item END -->
+
+							<hr><!-- Divider -->
+
+						</div>
+						<!-- Card body END -->
+					</div>
+				</div>
+				<!-- Venues END -->
+
+				<!-- Payments Notifications START -->
+				<div class="col-lg-6 col-xxl-4">
+					<div class="card shadow h-60">
+						<!-- Card header -->
+						<div class="card-header border-bottom d-flex justify-content-between align-items-center p-3">
+							<h5 class="card-header-title">Payments Notifications</h5>
+							<a href="#" class="btn btn-link p-0 mb-0">View all</a>
+						</div>
+
+						<!-- Card body START -->
+						<div class="card-body p-3">
+
+							<!-- Payment item -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Avatar and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="avatar avatar-md flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-2 mt-2 mt-sm-0">
+										<h6 class="mb-1">Finish Us Junior</h6>
+										<ul class="nav nav-divider small">
+											<li class="nav-item">Green Hills Hotel</li>
+											<li class="nav-item">15 Nov</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light mb-0 ms-3 px-2"><i class="fa-solid fa-chevron-right fa-fw"></i></a>
+							</div>
+
+							<hr><!-- Divider -->
+
+							<!-- Payment item -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Avatar and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="avatar avatar-md flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-2 mt-2 mt-sm-0">
+										<h6 class="mb-1">Kingslay Conman</h6>
+										<ul class="nav nav-divider small">
+											<li class="nav-item">Oriental Palace</li>
+											<li class="nav-item">9 Dec</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light mb-0 ms-3 px-2"><i class="fa-solid fa-chevron-right fa-fw"></i></a>
+							</div>
+
+							<hr><!-- Divider -->
+
+							<!-- Payment item -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Avatar and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="avatar avatar-md flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-2 mt-2 mt-sm-0">
+										<h6 class="mb-1">Con Williams</h6>
+										<ul class="nav nav-divider small">
+											<li class="nav-item">The White Rhino Hotel</li>
+											<li class="nav-item">5th Oct</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light mb-0 ms-3 px-2"><i class="fa-solid fa-chevron-right fa-fw"></i></a>
+							</div>
+
+							<hr><!-- Divider -->
+
+
+						</div>
+						<!-- Card body END -->
+					</div>
+				</div>
+				<!-- Payments Notifications  END -->
+
+				<!-- Reviews START -->
+				<div class="col-lg-6 col-xxl-4">
+					<div class="card shadow h-60">
+						<!-- Card header -->
+						<div class="card-header border-bottom d-flex justify-content-between align-items-center p-3">
+							<h5 class="card-header-title">Reviews</h5>
+							<a href="#" class="btn btn-link p-0 mb-0">View all</a>
+						</div>
+
+						<!-- Card body START -->
+						<div class="card-body p-3">
+
+							<!-- Venues item START -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Image and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="flex-shrink-0">
+										<img src="assets/images/category/hotel/4by3/08.jpg" class="rounded h-60px" alt="">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-1">Green</h6>
+										<ul class="list-inline smaller mb-0">
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="far fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0">(35 reviews)</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0 ms-3">View</a>
+							</div>
+							<!-- Venues item END -->
+
+							<hr><!-- Divider -->
+
+							<!-- Venues item START -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Image and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="flex-shrink-0">
+										<img src="assets/images/category/hotel/4by3/09.jpg" class="rounded h-60px" alt="">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-1">The White Rhino Hotel</h6>
+										<ul class="list-inline smaller mb-0">
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="far fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0">(25 reviews)</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0 ms-3">View</a>
+							</div>
+							<!-- Venues item END -->
+
+							<hr><!-- Divider -->
+
+							<!-- Venues item START -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Image and info -->
+								<div class="d-sm-flex align-items-center mb-1 mb-sm-0">
+									<!-- Avatar -->
+									<div class="flex-shrink-0">
+										<img src="assets/images/category/hotel/4by3/01.jpg" class="rounded h-60px" alt="">
+									</div>
+									<!-- Info -->
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-1">Oriental Palace</h6>
+										<ul class="list-inline smaller mb-0">
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="fas fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0"><i class="far fa-star text-warning"></i></li>
+											<li class="list-inline-item me-0">(18 reviews)</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Button -->
+								<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0 ms-3">View</a>
+							</div>
+							<!-- Venues item END -->
+
+							<hr>
+							
+						</div>
+						<!-- Card body END -->
+					</div>
+				</div>
+				<!-- Reviews END -->
+			</div>	
+			<!-- Widget END -->
 
 		</div>
 		<!-- Page main content END -->
