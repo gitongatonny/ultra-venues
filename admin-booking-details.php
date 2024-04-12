@@ -443,7 +443,243 @@
 				</div>
 			</div>
 			<!-- Booking detail END -->
+			<!-- Booking table START -->
+			<div class="card shadow mt-5">
+				<!-- Card header START -->
+				<div class="card-header border-bottom">
+					<h5 class="card-header-title">Bookings</h5>
+				</div>
+				<!-- Card header END -->
 
+				<!-- Card body START -->
+				<div class="card-body">
+					<!-- Search and select START -->
+					<div class="row g-3 align-items-center justify-content-between mb-3">
+						<!-- Search -->
+						<div class="col-md-8">
+							<form class="rounded position-relative">
+								<input class="form-control pe-5" type="search" placeholder="Search" aria-label="Search">
+								<button class="btn border-0 px-3 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6"></i></button>
+							</form>
+						</div>
+
+						<!-- Select option -->
+						<div class="col-md-3">
+							<!-- Short by filter -->
+							<form>
+								<select class="form-select js-choice" aria-label=".form-select-sm">
+									<option value="">Sort by</option>
+									<option>Newest</option>
+									<option>Oldest</option>
+								</select>
+							</form>
+						</div>
+					</div>
+					<!-- Search and select END -->
+
+					<!-- Table head -->
+					<div class="bg-light rounded p-3 d-none d-lg-block">
+						<div class="row row-cols-7 g-4">
+							<div class="col"><h6 class="mb-0">Booked by</h6></div>
+							<div class="col"><h6 class="mb-0">Start Date</h6></div>
+							<div class="col"><h6 class="mb-0">End Date</h6></div>
+							<div class="col"><h6 class="mb-0">Guests</h6></div>
+							<div class="col"><h6 class="mb-0">Amount</h6></div>
+							<div class="col"><h6 class="mb-0">Payment</h6></div>
+							<div class="col"><h6 class="mb-0">Action</h6></div>
+						</div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
+								</div>
+							</div>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Start Date</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">End Date</small>
+							<h6 class="mb-0 fw-normal">19 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Guests:</small>
+							<h6 class="mb-0 fw-normal">50</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Amount:</small>
+							<h6 class="text-success mb-0">Ksh. 40,000</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Kingslay Conman</h6>
+								</div>
+							</div>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Start Date</small>
+							<h6 class="mb-0 fw-normal">23 Oct 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">23 Oct 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Guests:</small>
+							<h6 class="mb-0 fw-normal">65</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Amount:</small>
+							<h6 class="text-success mb-0">Ksh. 25,000</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Con Williams</h6>
+								</div>
+							</div>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Start Date</small>
+							<h6 class="mb-0 fw-normal">2 June 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">En Date</small>
+							<h6 class="mb-0 fw-normal">3 June 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Guests:</small>
+							<h6 class="mb-0 fw-normal">55</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Amount:</small>
+							<h6 class="text-success mb-0">Ksh. 37,000</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+
+				</div>
+				<!-- Card body END -->
+
+				<!-- Card footer START -->
+				<div class="card-footer pt-0">
+					<!-- Pagination and content -->
+					<div class="d-sm-flex justify-content-sm-between align-items-sm-center">
+						<!-- Content -->
+						<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 1 of 3 entries</p>
+						<!-- Pagination -->
+						<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
+							<ul class="pagination pagination-sm pagination-primary-soft mb-0">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1">Prev</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active"><a class="page-link" href="#">2</a></li>
+								<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
+								<li class="page-item"><a class="page-link" href="#">15</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- Card footer END -->
+			</div>
+			<!-- Booking table END -->
+
+		</div>
+		<!-- Page main content END -->
+	</div>
+	<!-- Page content END -->
 
 </main>
 
