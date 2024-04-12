@@ -257,21 +257,22 @@
 									<div class="d-flex align-items-center">
 										<!-- Avatar -->
 										<div class="avatar me-3">
-											<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
+											<img class="avatar-img rounded-circle shadow" src="assets/images/user.png" alt="avatar">
 										</div>
 										<div>
-											<a class="h6 mt-2 mt-sm-0" href="#">Lori Ferguson</a>
-											<p class="small m-0">example@gmail.com</p>
+											<a class="h6 mt-2 mt-sm-0" href="#">Admin</a>
+											<p class="small m-0">admin@ultra-venues.com</p>
 										</div>
 									</div>
 								</li>
 		
 								<!-- Links -->
 								<li> <hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
+								<li><a class="dropdown-item" href="#"><i class="bi bi-calendar-check fa-fw me-2"></i>Bookings</a></li>
+								<li><a class="dropdown-item" href="#"><i class="bi bi-people fa-fw me-2"></i>Customers</a></li>
+								<li><a class="dropdown-item" href="#"><i class="bi bi-building fa-fw me-2"></i>Venues</a></li>
+								<li><a class="dropdown-item" href="#"><i class="bi bi-cash-stack fa-fw me-2"></i>Earnings</a></li>
 								<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
-								<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
 								<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
 							</ul>
 						</li>
