@@ -269,11 +269,11 @@
 
 						<!-- Links -->
 						<li> <hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-calendar-check fa-fw me-2"></i>Bookings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-people fa-fw me-2"></i>Customers</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-building fa-fw me-2"></i>Venues</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-cash-stack fa-fw me-2"></i>Earnings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
+						<li><a class="dropdown-item" href="admin-booking-details.php"><i class="bi bi-calendar-check fa-fw me-2"></i>Bookings</a></li>
+						<li><a class="dropdown-item" href="admin-customer-list.php"><i class="bi bi-people fa-fw me-2"></i>Customers</a></li>
+						<li><a class="dropdown-item" href="admin-venues-list.php"><i class="bi bi-building fa-fw me-2"></i>Venues</a></li>
+						<li><a class="dropdown-item" href="admin-earnings.php"><i class="bi bi-cash-stack fa-fw me-2"></i>Earnings</a></li>
+						<li><a class="dropdown-item" href="admin-settings.php"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
 						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
 					</ul>
 				</li>
