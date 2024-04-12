@@ -287,7 +287,67 @@
 		</nav>
 		<!-- Top bar END -->
 	
+		<!-- Page main content START -->
+		<div class="page-content-wrapper p-xxl-4">
+	
+			<!-- Title -->
+			<div class="row">
+				<div class="col-12 mb-4 mb-sm-5">
+					<div class="d-sm-flex justify-content-between align-items-center">
+						<h1 class="h3 mb-2 mb-sm-0">Dashboard</h1>
+					</div>
+				</div>
+			</div>
 
+			<!-- Counter boxes START -->
+			<div class="row g-4 mb-5">
+				<!-- Counter item -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="card card-body bg-warning bg-opacity-10 border border-warning border-opacity-25 p-4 h-100">
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Digit -->
+							<div>
+								<h4 class="mb-0">75</h4>
+								<span class="h6 fw-light mb-0">Total Hotels</span>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle bg-warning text-white mb-0"><i class="fa-solid fa-hotel fa-fw"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Counter item -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="card card-body bg-success bg-opacity-10 border border-success border-opacity-25 p-4 h-100">
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Digit -->
+							<div>
+								<h4 class="mb-0">12,836,789</h4>
+								<span class="h6 fw-light mb-0">Total Income</span>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle bg-success text-white mb-0"><i class="fa-solid fa-hand-holding-dollar fa-fw"></i></div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Counter item -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="card card-body bg-info bg-opacity-10 border border-info border-opacity-25 p-4 h-100">
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Digit -->
+							<div>
+								<h4 class="mb-0">47</h4>
+								<span class="h6 fw-light mb-0">Booked Venues</span>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle bg-info text-white mb-0"><i class="fa-solid fa-building-circle-check fa-fw"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Counter boxes END -->
 	
 		</div>
 		<!-- Page main content END -->
