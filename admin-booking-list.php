@@ -440,7 +440,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -451,7 +451,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -487,7 +487,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -498,7 +498,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -534,7 +534,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -545,7 +545,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -581,7 +581,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -592,7 +592,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -628,7 +628,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -639,7 +639,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -675,7 +675,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -686,7 +686,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -722,7 +722,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -733,7 +733,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -769,7 +769,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -780,7 +780,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -816,7 +816,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -827,7 +827,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
@@ -863,7 +863,7 @@
 								<!-- Card body START -->
 								<div class="card-body px-3">
 									<!-- Title -->
-									<h5 class="card-title mb-1"><a href="admin-booking-detail.html">Green Hills Hotel</a></h5>
+									<h5 class="card-title mb-1"><a href="admin-booking-details.php">Green Hills Hotel</a></h5>
 								</div>
 								<!-- Card body END -->
 			
@@ -874,7 +874,7 @@
 										<h6 class="fw-normal mb-0">Ksh. 20,000</h6>
 										<small>/per day</small>
 									</div>
-									<a href="admin-booking-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+									<a href="admin-booking-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 								</div>
 							</div>
 						</div>
