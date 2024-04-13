@@ -403,7 +403,57 @@
 				</div>
 				<!-- Venue info END -->
 
+				<div class="col-md-8 col-xxl-9">
+					<!-- Description START -->
+					<div class="card shadow">
+						<!-- Card header -->
+						<div class="card-header border-bottom">
+							<h5 class="mb-0">Venue Description</h5>
+						</div>
+						<!-- Card body -->
+						<div class="card-body">
+							<div class="row">
+								<!-- Information item -->
+								<div class="col-md-6">
+									<ul class="list-group list-group-borderless">
+										<li class="list-group-item mb-3">
+											<span>Venue Name:</span>
+											<span class="h6 fw-normal ms-1 mb-0">The White Rhino Hotel</span>
+										</li>
+	
+										<li class="list-group-item mb-3">
+											<span>Phone:</span>
+											<span class="h6 fw-normal ms-1 mb-0">+254-404-586-854</span>
+										</li>
 
+										<li class="list-group-item mb-3">
+											<span>Venue Government License:</span>
+											<span class="h6 fw-normal ms-1 mb-0">258ED458962</span>
+										</li>
+
+										<li class="list-group-item mb-3">
+											<span>KRA PIN:</span>
+											<span class="h6 fw-normal ms-1 mb-0">ACG1548GG78952</span>
+										</li>
+									</ul>
+								</div>
+
+	
+								<!-- Information item -->
+								<div class="col-12">
+									<ul class="list-group list-group-borderless">
+										<li class="list-group-item">
+											<span>Description: </span>
+											<p class="h6 fw-normal mb-0">The White Rhino Hotel is a premier venue booking hotel located in Nyeri CBD, Kenya. With its luxurious amenities and stunning event spaces, it is the perfect choice for both personal and corporate events. Whether you are planning a wedding, conference, or any other special occasion, The White Rhino Hotel offers top-notch services and facilities to ensure a memorable experience for you and your guests. From elegant banquet halls to state-of-the-art audiovisual equipment, the hotel has everything you need to host a successful event. .</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Personal info END -->
+				</div>
+			</div> <!-- Row END -->
 
 
 
