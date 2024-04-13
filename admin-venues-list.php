@@ -356,7 +356,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -393,7 +393,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -430,7 +430,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -467,7 +467,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -504,7 +504,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -541,7 +541,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -578,7 +578,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -615,7 +615,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -652,7 +652,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
@@ -689,7 +689,7 @@
 						</div>
 						<!-- card footer -->
 						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+							<a href="admin-venue-details.php" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
 							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
 						</div>
 					</div>
