@@ -361,7 +361,7 @@
 						</div>
 
 						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+						<div class="col"><a href="admin-venue-details.php" class="btn btn-sm btn-light mb-0">View</a></div>
 					</div>
 
 					<!-- Table data -->
@@ -398,7 +398,7 @@
 						</div>
 
 						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+						<div class="col"><a href="admin-venue-details.php" class="btn btn-sm btn-light mb-0">View</a></div>
 					</div>
 
 					<!-- Table data -->
@@ -435,7 +435,7 @@
 						</div>
 
 						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+						<div class="col"><a href="admin-venue-details.php" class="btn btn-sm btn-light mb-0">View</a></div>
 					</div>
 					
 					<!-- Table data -->
@@ -472,7 +472,7 @@
 						</div>
 
 						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+						<div class="col"><a href="admin-venue-details.php" class="btn btn-sm btn-light mb-0">View</a></div>
 					</div>
 				</div>
 			</div>
