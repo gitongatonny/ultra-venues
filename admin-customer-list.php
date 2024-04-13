@@ -413,257 +413,27 @@
 								</div>
 								<!-- Info -->
 								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
+									<h6 class="mb-0 fw-light">John Doe</h6>
 								</div>
 							</div>
-						</div>	
+						</div>    
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
+							<h6 class="mb-0 fw-normal">johndoe@example.com</h6>
 						</div>
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
+							<h6 class="mb-0 fw-normal">+254-712-345-678</h6>
 						</div>
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
-						</div>
-
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Status</small>
-							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Name</small>
-							<div class="d-flex align-items-center">
-								<!-- Avatar -->
-								<div class="avatar avatar-xs flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
-								</div>
-							</div>
-						</div>	
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
-						</div>
-
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Status</small>
-							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Name</small>
-							<div class="d-flex align-items-center">
-								<!-- Avatar -->
-								<div class="avatar avatar-xs flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
-								</div>
-							</div>
-						</div>	
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
-						</div>
-
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Status</small>
-							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Name</small>
-							<div class="d-flex align-items-center">
-								<!-- Avatar -->
-								<div class="avatar avatar-xs flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
-								</div>
-							</div>
-						</div>	
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
-						</div>
-
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Status</small>
-							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Name</small>
-							<div class="d-flex align-items-center">
-								<!-- Avatar -->
-								<div class="avatar avatar-xs flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
-								</div>
-							</div>
-						</div>	
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
-						</div>
-
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Status</small>
-							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Name</small>
-							<div class="d-flex align-items-center">
-								<!-- Avatar -->
-								<div class="avatar avatar-xs flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
-								</div>
-							</div>
-						</div>	
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
+							<h6 class="mb-0 fw-normal">3</h6>
 						</div>
 
 
@@ -689,27 +459,27 @@
 								</div>
 								<!-- Info -->
 								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
+									<h6 class="mb-0 fw-light">Jane Smith</h6>
 								</div>
 							</div>
-						</div>	
+						</div>    
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
+							<h6 class="mb-0 fw-normal">janesmith@example.com</h6>
 						</div>
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
+							<h6 class="mb-0 fw-normal">+254-723-456-789</h6>
 						</div>
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
+							<h6 class="mb-0 fw-normal">2</h6>
 						</div>
 
 
@@ -735,27 +505,73 @@
 								</div>
 								<!-- Info -->
 								<div class="ms-2">
-									<h6 class="mb-0 fw-light">Finish Us Junior</h6>
+									<h6 class="mb-0 fw-light">Mark Johnson</h6>
 								</div>
 							</div>
-						</div>	
+						</div>    
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Email</small>
-							<h6 class="mb-0 fw-normal">finnyj@real.com</h6>
+							<h6 class="mb-0 fw-normal">markjohnson@example.com</h6>
 						</div>
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Phone</small>
-							<h6 class="mb-0 fw-normal">+254-709-876-543</h6>
+							<h6 class="mb-0 fw-normal">+254-734-567-890</h6>
 						</div>
 
 						<!-- Data item -->
 						<div class="col">
 							<small class="d-block d-lg-none">Bookings</small>
-							<h6 class="mb-0 fw-normal">5</h6>
+							<h6 class="mb-0 fw-normal">4</h6>
+						</div>
+
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Status</small>
+							<div class="badge bg-danger bg-opacity-10 text-danger">Not Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Name</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Sarah Williams</h6>
+								</div>
+							</div>
+						</div>    
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Email</small>
+							<h6 class="mb-0 fw-normal">sarahwilliams@example.com</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Phone</small>
+							<h6 class="mb-0 fw-normal">+254-745-678-901</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Bookings</small>
+							<h6 class="mb-0 fw-normal">1</h6>
 						</div>
 
 
