@@ -32,7 +32,7 @@
 				<!-- Sidebar menu START -->
 				<ul class="navbar-nav flex-column" id="navbar-sidebar">
 					<!-- Menu item -->
-					<li class="nav-item"><a href="admin-dash.php" class="nav-link active">Dashboard</a></li>
+					<li class="nav-item"><a href="admin-dash.php" class="nav-link active">Admin Dashboard</a></li>
                     <hr>
 
 					<!-- Title -->
@@ -292,7 +292,7 @@
 			<div class="row">
 				<div class="col-12 mb-4 mb-sm-5">
 					<div class="d-sm-flex justify-content-between align-items-center">
-						<h1 class="h3 mb-2 mb-sm-0">Dashboard</h1>
+						<h1 class="h3 mb-2 mb-sm-0">Admin Dashboard</h1>
 					</div>
 				</div>
 			</div>

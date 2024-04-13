@@ -33,7 +33,7 @@
 				<!-- Sidebar menu START -->
 				<ul class="navbar-nav flex-column" id="navbar-sidebar">
 					<!-- Menu item -->
-					<li class="nav-item"><a href="admin-dash.php" class="nav-link">Dashboard</a></li>
+					<li class="nav-item"><a href="admin-dash.php" class="nav-link">Admin Dashboard</a></li>
                     <hr>
 
 					<!-- Title -->
