@@ -12,9 +12,7 @@
     </head>
 
     <body>
-        <!-- Header START -->
-        <?php include "includes/header-main.php";?>
-        <!-- Header END -->
+
 
         <main>
 
@@ -274,7 +272,7 @@ Content END -->
         </main>
 
         <!-- Footer START -->
-            <?php include "includes/footer.php";?>
+		<?php include "includes/admin-dash-scripts.php";?>
         <!-- Footer END -->
     </body>
 
