@@ -285,6 +285,479 @@
 		</nav>
 		<!-- Top bar END -->
 
+		<!-- Page main content START -->
+		<div class="page-content-wrapper p-xxl-4">
+	
+			<!-- Title -->
+			<div class="row">
+				<div class="col-12 mb-4 mb-sm-5">
+					<h1 class="h3 mb-0">Total Earnings for All Venues</h1>
+				</div>
+			</div>
+
+			<!-- Earning block START -->
+			<div class="row g-4">
+				<!-- Block item -->
+				<div class="col-sm-6 col-xxl-4">
+					<div class="card card-body bg-light p-4 h-100">
+						<h6 class="mb-0">Average daily earnings</h6>
+						<h3 class="mb-2 mt-2">18,000</h3>
+						<p class="mt-auto mb-0">Increase <span class="badge bg-success bg-opacity-10 text-success">10% <i class="bi bi-graph-up"></i></span></p>
+					</div>
+				</div>
+
+				<!-- Block item -->
+				<div class="col-sm-6 col-xxl-4">
+					<div class="card card-body bg-light p-4 h-100">
+						<h6 class="mb-0">Revenue this month</h6>
+						<h3 class="mb-2 mt-2">500,000</h3>
+						<p class="mt-auto mb-0">Increase from last month <span class="badge bg-success bg-opacity-10 text-success">21% <i class="bi bi-graph-up"></i></span></p>
+					</div>
+				</div>
+	
+				<!-- Block item -->
+				<div class="col-sm-6 col-xxl-4">
+					<div class="card card-body bg-light p-4 h-100">
+						<h6>Exoected Revenue this Year
+							<a tabindex="0" class="h6 mb-0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-content="After US royalty withholding tax">
+								<i class="bi bi-info-circle-fill small"></i>
+							</a>
+						</h6>
+						<h3>6,500,000</h3>
+						<p class="mb-0 mt-auto">*This is just an estimation</p>
+					</div>
+				</div>
+	
+			</div>
+			<!-- Earning block END -->
+
+			<!-- Payment history START -->
+			<div class="card shadow mt-5">
+				<!-- Card header -->
+				<div class="card-header border-bottom">
+					<h5 class="card-title mb-0">Payment History</h5>
+				</div>
+
+				<!-- Card body START -->
+				<div class="card-body">
+					<!-- Table head -->
+					<div class="bg-light rounded p-3 d-none d-sm-block">
+						<div class="row row-cols-7 g-4">
+							<div class="col"><h6 class="mb-0">Booking ID</h6></div>
+							<div class="col"><h6 class="mb-0">Date</h6></div>
+							<div class="col"><h6 class="mb-0">Amount</h6></div>
+							<div class="col"><h6 class="mb-0">Status</h6></div>
+							<div class="col"><h6 class="mb-0">Action</h6></div>
+						</div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 g-4 align-items-sm-center border-bottom px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Booked by:</small>
+							<h6 class="fw-light mb-0">#0245896</h6>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col position-relative">
+							<small class="d-block d-sm-none">Amount:</small>
+
+							<div class="d-flex">
+								<h6 class="mb-0 me-1">45,000</h6>
+								<!-- Dropdown icon -->
+								<a href="#" class="h6 mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-info-circle-fill"></i>
+								</a>
+								<!-- Dropdown items -->
+								<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Commission</span>
+											<span class="h6 mb-0 small ms-2">2,500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+	
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="me-4 small">Tax</span>
+											<span class="text-danger small ms-2">-500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+									
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Earning</span>
+											<span class="h6 mb-0 small ms-2">2,000</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Status:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-light btn-round mb-0"><i class="bi bi-cloud-download"></i></a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 g-4 align-items-sm-center border-bottom px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Booked by:</small>
+							<h6 class="fw-light mb-0">#0245896</h6>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col position-relative">
+							<small class="d-block d-sm-none">Amount:</small>
+
+							<div class="d-flex">
+								<h6 class="mb-0 me-1">45,000</h6>
+								<!-- Dropdown icon -->
+								<a href="#" class="h6 mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-info-circle-fill"></i>
+								</a>
+								<!-- Dropdown items -->
+								<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Commission</span>
+											<span class="h6 mb-0 small ms-2">2,500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+	
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="me-4 small">Tax</span>
+											<span class="text-danger small ms-2">-500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+									
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Earning</span>
+											<span class="h6 mb-0 small ms-2">2,000</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Status:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-light btn-round mb-0"><i class="bi bi-cloud-download"></i></a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 g-4 align-items-sm-center border-bottom px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Booked by:</small>
+							<h6 class="fw-light mb-0">#0245896</h6>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col position-relative">
+							<small class="d-block d-sm-none">Amount:</small>
+
+							<div class="d-flex">
+								<h6 class="mb-0 me-1">45,000</h6>
+								<!-- Dropdown icon -->
+								<a href="#" class="h6 mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-info-circle-fill"></i>
+								</a>
+								<!-- Dropdown items -->
+								<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Commission</span>
+											<span class="h6 mb-0 small ms-2">2,500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+	
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="me-4 small">Tax</span>
+											<span class="text-danger small ms-2">-500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+									
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Earning</span>
+											<span class="h6 mb-0 small ms-2">2,000</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Status:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-light btn-round mb-0"><i class="bi bi-cloud-download"></i></a></div>
+					</div>
+
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 g-4 align-items-sm-center border-bottom px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Booked by:</small>
+							<h6 class="fw-light mb-0">#0245896</h6>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col position-relative">
+							<small class="d-block d-sm-none">Amount:</small>
+
+							<div class="d-flex">
+								<h6 class="mb-0 me-1">45,000</h6>
+								<!-- Dropdown icon -->
+								<a href="#" class="h6 mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-info-circle-fill"></i>
+								</a>
+								<!-- Dropdown items -->
+								<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Commission</span>
+											<span class="h6 mb-0 small ms-2">2,500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+	
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="me-4 small">Tax</span>
+											<span class="text-danger small ms-2">-500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+									
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Earning</span>
+											<span class="h6 mb-0 small ms-2">2,000</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Status:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-light btn-round mb-0"><i class="bi bi-cloud-download"></i></a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 g-4 align-items-sm-center border-bottom px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Booked by:</small>
+							<h6 class="fw-light mb-0">#0245896</h6>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col position-relative">
+							<small class="d-block d-sm-none">Amount:</small>
+
+							<div class="d-flex">
+								<h6 class="mb-0 me-1">45,000</h6>
+								<!-- Dropdown icon -->
+								<a href="#" class="h6 mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-info-circle-fill"></i>
+								</a>
+								<!-- Dropdown items -->
+								<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Commission</span>
+											<span class="h6 mb-0 small ms-2">2,500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+	
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="me-4 small">Tax</span>
+											<span class="text-danger small ms-2">-500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+									
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Earning</span>
+											<span class="h6 mb-0 small ms-2">2,000</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Status:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-light btn-round mb-0"><i class="bi bi-cloud-download"></i></a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 g-4 align-items-sm-center border-bottom px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Booked by:</small>
+							<h6 class="fw-light mb-0">#0245896</h6>
+						</div>	
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2024</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col position-relative">
+							<small class="d-block d-sm-none">Amount:</small>
+
+							<div class="d-flex">
+								<h6 class="mb-0 me-1">45,000</h6>
+								<!-- Dropdown icon -->
+								<a href="#" class="h6 mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-info-circle-fill"></i>
+								</a>
+								<!-- Dropdown items -->
+								<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Commission</span>
+											<span class="h6 mb-0 small ms-2">2,500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+	
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="me-4 small">Tax</span>
+											<span class="text-danger small ms-2">-500</span>
+										</div>
+										<hr class="my-1"> <!-- Divider -->
+									</li>
+									
+									<li>
+										<div class="d-flex justify-content-between">
+											<span class="small">Earning</span>
+											<span class="h6 mb-0 small ms-2">2,000</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-sm-none">Status:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="#" class="btn btn-light btn-round mb-0"><i class="bi bi-cloud-download"></i></a></div>
+					</div>
+				</div>
+				<!-- Card body END -->
+
+				<!-- Card footer START -->
+				<div class="card-footer pt-0">
+					<!-- Pagination and content -->
+					<div class="d-sm-flex justify-content-sm-between align-items-sm-center">
+						<!-- Content -->
+						<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
+						<!-- Pagination -->
+						<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
+							<ul class="pagination pagination-sm pagination-primary-soft mb-0">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1">Prev</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active"><a class="page-link" href="#">2</a></li>
+								<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
+								<li class="page-item"><a class="page-link" href="#">15</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- Card footer END -->
+			</div>
+			<!-- Payment history END -->
+
+		</div>
+		<!-- Page main content END -->
+
+</div>
+
 </main>
 
     <!-- Footer START -->
