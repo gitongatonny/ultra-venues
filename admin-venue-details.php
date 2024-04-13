@@ -284,6 +284,59 @@
 		</nav>
 		<!-- Top bar END -->
 
+		<!-- Page main content START -->
+		<div class="page-content-wrapper p-xxl-4">
+			
+			<!-- Counter START -->
+			<div class="row g-4 mb-4">
+				<!-- Counter item -->
+				<div class="col-lg-4">
+					<div class="card card-body border border-primary bg-primary bg-opacity-10 border-opacity-25 p-4 h-100">
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Digit -->
+							<div>
+								<h3 class="mb-0 fw-bold">08</h3>
+								<span class="mb-0 h6 fw-light">Total Amenities</span>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle flex-shrink-0 bg-primary text-white mb-0"><i class="bi bi-tools fa-fw"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Counter item -->
+				<div class="col-lg-4">
+					<div class="card card-body border border-warning bg-warning bg-opacity-10 border-opacity-25 p-4 h-100">
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Digit -->
+							<div>
+								<h3 class="mb-0 fw-bold">05</h3>
+								<span class="mb-0 h6 fw-light">Bookings this month</span>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle flex-shrink-0 bg-warning text-white mb-0"><i class="fa-regular fa-calendar-days fa-fw"></i></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Counter item -->
+				<div class="col-lg-4">
+					<div class="card card-body border border-success bg-success bg-opacity-10 border-opacity-25 p-4 h-100">
+						<div class="d-flex justify-content-between align-items-center">
+							<!-- Digit -->
+							<div>
+								<h3 class="mb-0 fw-bold">245,000</h3>
+								<span class="mb-0 h6 fw-light">Earnings this month</span>
+							</div>
+							<!-- Icon -->
+							<div class="icon-lg rounded-circle flex-shrink-0 bg-success text-white mb-0"><i class="fa-solid fa-money-bill-trend-up fa-fw"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Counter END -->
+	</div>
+
 </main>
 
     <!-- Footer START -->
