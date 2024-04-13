@@ -335,6 +335,79 @@
 				</div>
 			</div>
 			<!-- Counter END -->
+
+			<div class="row g-4 mb-5">
+				<!-- Venue info START -->
+				<div class="col-md-4 col-xxl-3">
+					<div class="card bg-light">
+						<!-- Dropdown button -->
+						<div class="dropdown position-absolute top-0 end-0 m-3">
+							<a href="#" class="btn btn-sm btn-white btn-round lh-lg mb-0" role="button" id="dropdownShare1" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bi bi-three-dots fa-fw"></i>
+							</a>
+							<!-- dropdown button -->
+							<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
+								<li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a></li>
+								<li><a class="dropdown-item" href="#"><i class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
+							</ul>
+						</div>
+						<!-- Card body -->
+						<div class="card-body text-center">
+							<!-- Avatar Image -->
+							<div class="avatar avatar-xl flex-shrink-0 mb-3">
+								<img class="avatar-img rounded-circle" src="assets/images/mt-kenya.jpg" alt="avatar">
+							</div>
+							<!-- Title -->
+							<h5 class="mb-2">The White Rhino Hotel</h5>
+							<ul class="list-inline small mb-0">
+								<li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+								<li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+								<li class="list-inline-item"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+							</ul>
+						</div>
+						<!-- Card footer -->
+						<div class="card-footer bg-light border-top">
+							<h6 class="mb-3">Contact Details</h6>
+							<!-- Email id -->
+							<div class="d-flex align-items-center mb-3">
+								<div class="icon-md bg-mode h6 mb-0 rounded-circle flex-shrink-0"><i class="bi bi-envelope-fill"></i></div>
+								<div class="ms-2">
+									<small>Email Address</small>
+									<h6 class="fw-normal small mb-0"><a href="#">info@thewhiterhinohotel.com</a></h6>
+								</div>
+							</div>
+
+							<!-- Phone -->
+							<div class="d-flex align-items-center mb-3">
+								<div class="icon-md bg-mode h6 mb-0 rounded-circle flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
+								<div class="ms-2">
+									<small>Phone</small>
+									<h6 class="fw-normal small mb-0"><a href="#">+254-404-586-854</a></h6>
+								</div>
+							</div>
+
+							<!-- Phone -->
+							<div class="d-flex align-items-center mb-3">
+								<div class="icon-md bg-mode h6 mb-0 rounded-circle flex-shrink-0"><i class="bi bi-geo-alt-fill"></i></div>
+								<div class="ms-2">
+									<small>Address</small>
+									<h6 class="fw-normal small mb-0">Nyeri CBD, Kenya</h6>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- Venue info END -->
+
+
+
+
+
+
 	</div>
 
 </main>
