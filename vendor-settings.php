@@ -12,9 +12,6 @@
     </head>
 
     <body>
-        <!-- Header START -->
-        <?php include "includes/header-main.php";?>
-        <!-- Header END -->
 
         <main>
 
@@ -58,6 +55,9 @@ Menu item START -->
 							<li class="nav-item"> <a class="nav-link" href="vendor-earnings.php"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
 							
 							<li> <a class="nav-link active" href="vendor-settings.php"><i class="bi bi-gear fa-fw me-1"></i>Settings</a></li>
+
+							<li> <a class="nav-link" href="index.php"><i class="bi bi-house fa-fw me-1"></i>Homepage</a></li>
+
 		
 						</ul>
 					</div>
@@ -304,7 +304,7 @@ Content END -->
         </main>
 
         <!-- Footer START -->
-            <?php include "includes/footer.php";?>
+		<?php include "includes/admin-dash-scripts.php";?>
         <!-- Footer END -->
     </body>
 

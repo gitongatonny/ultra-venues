@@ -52,6 +52,10 @@
                         <!-- Search -->
                         <a class="btn btn-lg btn-primary mb-0 mt-3" href="vendor-login.php">Vendor - Login</a>
                     </div>
+                    <div class="col-lg-7 d-flex justify-content-center mx-auto mt-5">
+                        <!-- Search -->
+                        <a class="btn btn-lg btn-primary mb-0 mt-3" href="admin-dash.php">Admin Dash</a>
+                    </div>
                 </div>
                 </div>
 
