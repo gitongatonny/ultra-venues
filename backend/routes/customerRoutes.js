@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const Customer = require("../models/customerModel");
-const { generateAccessToken, generateRefreshToken, authenticateToken}  = require("../middleware/authMiddleware");
+const { generateAccessToken, generateRefreshToken, authenticateToken}  = require("../middleware/authMiddleware.js");
+
 
 router.post("/register", async (req, res) => {
     const {fullName, email, phoneNumber, password} = req.body;

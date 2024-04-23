@@ -13,11 +13,11 @@ router.get("/bookings", async (req, res) => {
     }
 });
 
-// endpoint to list all bookings for a particular venue by venue email address
-router.get("/bookings/venue/:venueEmailAddress", async (req, res) => {
-    const venueEmailAddress = req.params.venueEmailAddress;
+// endpoint to list all bookings for a particular venue by venue id
+router.get("/bookings/venue/:id", async (req, res) => {
+    const id = req.params.id;
     try {
-        const bookings = await Booking.findAll({where: {venueEmailAddress}});
+        const bookings = await Booking.findAll({where: {id: id}});
         res.status(200).json(bookings);
     } catch (error) {
         console.error(error);
@@ -25,11 +25,11 @@ router.get("/bookings/venue/:venueEmailAddress", async (req, res) => {
     }
 });
 
-// endpoint to list all bookings for a particular user by their email address
-router.get("/bookings/user/:userEmailAddress", async (req, res) => {
-    const userEmailAddress = req.params.userEmailAddress;
+// endpoint to list all bookings for a particular user by their user id
+router.get("/bookings/user/:id", async (req, res) => {
+    const id = req.params.id;
     try {
-        const bookings = await Booking.findAll({where : {userEmailAddress}});
+        const bookings = await Booking.findAll({where : {id: id}});
         res.status(200).json(bookings);
     } catch (error) {
         console.error(error);

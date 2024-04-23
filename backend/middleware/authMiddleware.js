@@ -29,4 +29,15 @@ function authenticateToken(req, res, next) {
     });
 }
 
-module.exports = { generateAccessToken, generateRefreshToken, authenticateToken};
+// middleware to check if the user s an admin
+function isAdmin(req, res, next) {
+    const isAdmin = req.user.isAdmin;
+    if (!isAdmin) {
+        return res.status(403).json({
+            error: "Unauthorized"
+        });
+    }
+    next();
+}
+
+module.exports = { generateAccessToken, generateRefreshToken, authenticateToken, isAdmin};

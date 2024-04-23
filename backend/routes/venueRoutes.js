@@ -14,10 +14,10 @@ router.get("/venues", async (req, res) => {
 });
 
 // endpoint to get venue details
-router.get("/venues/:venueName", async (req, res) => {
-    const venueName = req.params.venueName;
+router.get("/venues/:id", async (req, res) => {
+    const id = req.params.id;
     try {
-        const venue = await Venue.findOne({ where : {venueName}});
+        const venue = await Venue.findOne({ where : {id: id}});
         if (!venue) {
             return res.status(404).json({ error: "Venue not found"});
         }

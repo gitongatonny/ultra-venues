@@ -49,9 +49,11 @@ const Venue = db.define("Venue", {
         }
     },
     rating: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.FLOAT,
         allowNull: true
-    }
+    },
+}, {
+    timestamps: false
 });
 
 module.exports = Venue;
