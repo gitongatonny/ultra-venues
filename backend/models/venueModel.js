@@ -34,7 +34,7 @@ const Venue = db.define("Venue", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    emailAddress: {
+    email: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -57,6 +57,11 @@ const Venue = db.define("Venue", {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "inactive"
     }
 }, {
     timestamps: false

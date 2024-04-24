@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const {generateAccessToken, generateRefreshToken} = require("../middleware/authMiddleware");
 const Venue = require("../models/venueModel");
+const bcrypt = require("bcrypt");
+
 
 // endpoint to register a venue
 router.post("/register", async (req, res) => {
@@ -14,7 +16,7 @@ router.post("/register", async (req, res) => {
         description,
         facilities,
         phoneNumber,
-        emailAddress,
+        email,
         websiteUrl,
     } = req.body;
 
@@ -28,14 +30,14 @@ router.post("/register", async (req, res) => {
             description,
             facilities,
             phoneNumber,
-            emailAddress,
+            email,
             websiteUrl,
         });
 
         return res.status(201).json({message: "Venue registration request created"});
     } catch (error) {
         console.error(error);
-        return res.status(500).json({ error: "Could nto create venue at this moment"});
+        return res.status(500).json({ error: "Could not create venue at this moment"});
     }
 });
 
