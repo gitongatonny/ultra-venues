@@ -247,7 +247,6 @@
                                             <label class="form-label">Number of Guests Attending</label>
                                             <div class="input-group">
                                                 <input type="number" class="form-control" placeholder="Adults">
-                                                <input type="number" class="form-control" placeholder="Children">
                                             </div>
                                         </div>
 

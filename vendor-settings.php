@@ -207,9 +207,27 @@ Content START -->
 											<input class="form-control" type="text" value="greenhillshotel.com">
 										</div>
 
-                                        <!-- Facilities -->
+                                        <!-- Government License Number -->
+										<div class="mb-3">
+											<label class="form-label">Government License Number</label>
+											<input class="form-control" type="text" value="25ED458962">
+										</div>
+
+                                        <!-- KRA PIN -->
+										<div class="mb-3">
+											<label class="form-label">KRA PIN</label>
+											<input class="form-control" type="text" value="ACG1548GG78952">
+										</div>
+
+                                        <!-- Venue Services -->
                                         <div class="mb-3">
-                                            <label class="form-label">Facilities</label>
+                                            <label class="form-label">Venue Services</label>
+                                            <textarea class="form-control" rows="5" placeholder="Enter a description"></textarea>
+                                        </div>
+
+                                        <!-- Additional Services -->
+                                        <div class="mb-3">
+                                            <label class="form-label">Additional Services</label>
                                             <textarea class="form-control" rows="5" placeholder="Enter a description"></textarea>
                                         </div>
 
