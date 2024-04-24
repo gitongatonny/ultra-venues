@@ -5,6 +5,7 @@ const {isAdmin, generateAccessToken, generateRefreshToken, authenticateToken} = 
 
 const Customer = require("../models/customerModel");
 const Admin = require("../models/adminModel");
+const Venue = require("../models/venueModel.js");
 
 // endpoint to login
 router.post("/login", async (req, res) => {
@@ -122,5 +123,74 @@ router.get("/customers/:id", async (req, res) => {
         res.status(500).json({error: "Cannot fetch customer details!"});
     }
 });
+
+// endpoint to list all venues
+router.get("/venues", async (req, res) => {
+    try {
+        const venues = await Venue.findAll({attributes: { exclude: ["password"]}});
+        res.status(200).json(venues);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: "Could not fetch venues at this moment"});
+    }
+});
+
+// endpoint to get venue details
+router.get("/venues/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+        const venue = await Venue.findOne({ where : {id: id}, attributes: { exclude: ["password"]}});
+        if (!venue) {
+            return res.status(404).json({ error: "Venue not found"});
+        }
+        res.status(200).json(venue);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Cound not fetch venue details!"});
+    }
+});
+
+// endpoint to accept and register a venue
+router.put("/venues/register/:id", async (req, res) => {
+    const {id} = req.params;
+
+    try {
+        const venue = await Venue.findByPk(id);
+        
+        if (!venue) {
+            return res.status(404).json({error: "Venue not found"});
+        }
+
+        venue.isActive = true;
+
+        await venue.save();
+
+        return res.status(200).json({message: "Venue registered successfully"});
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({error: "Could not register venue at this moment"});
+    }
+
+});
+
+// endpoint to delete a venue
+router.delete("/venues/:id", async (req, res) => {
+    const {id} = req.params;
+
+    try {
+        const venue = await Venue.findByPk(id);
+
+        if (!venue) {
+            return res.status(404).json({error : "Venue not found"});
+        }
+
+        await venue.destroy();
+
+        return res.status(200).json({message: "Venue deleted successfully"});
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({error: "Could not delete venue at this moment"});
+    }
+})
 
 module.exports = router;
