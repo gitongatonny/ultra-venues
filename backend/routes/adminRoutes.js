@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const {isAdmin, generateAccessToken, generateRefreshToken} = require("../middleware/authMiddleware.js");
+const {isAdmin, generateAccessToken, generateRefreshToken, authenticateToken} = require("../middleware/authMiddleware.js");
 
 const Customer = require("../models/customerModel");
 const Admin = require("../models/adminModel");
@@ -94,6 +94,7 @@ router.post("/refresh-token", async (req, res) => {
     }
 });
 
+router.use(authenticateToken);
 router.use(isAdmin);
 
 // endpoint to view all availabel customers
