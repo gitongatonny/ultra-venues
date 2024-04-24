@@ -50,8 +50,14 @@ const Venue = db.define("Venue", {
     },
     rating: {
         type: DataTypes.FLOAT,
-        allowNull: true
+        allowNull: true,
+        default: null
     },
+    isActive: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+    }
 }, {
     timestamps: false
 });
