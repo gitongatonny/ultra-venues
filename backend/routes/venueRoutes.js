@@ -5,7 +5,7 @@ const Venue = require("../models/venueModel");
 // endpoint to list all venues
 router.get("/venues", async (req, res) => {
     try {
-        const venues = await Venue.findAll();
+        const venues = await Venue.findAll({attributes: { exclude: ["password", "isActive"]}});
         res.status(200).json(venues);
     } catch (error) {
         console.error(error);
@@ -17,7 +17,7 @@ router.get("/venues", async (req, res) => {
 router.get("/venues/:id", async (req, res) => {
     const id = req.params.id;
     try {
-        const venue = await Venue.findOne({ where : {id: id}});
+        const venue = await Venue.findOne({ where : {id: id}, attributes: { exclude: ["password", "isActive"]}});
         if (!venue) {
             return res.status(404).json({ error: "Venue not found"});
         }
