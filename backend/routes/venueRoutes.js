@@ -5,7 +5,7 @@ const Venue = require("../models/venueModel");
 // endpoint to list all venues
 router.get("/venues", async (req, res) => {
     try {
-        const venues = await Venue.findAll({attributes: { exclude: ["password", "isActive"]}});
+        const venues = await Venue.findAll({ where: {isActive: true}, attributes: { exclude: ["password", "isActive"]}});
         res.status(200).json(venues);
     } catch (error) {
         console.error(error);
