@@ -6,6 +6,7 @@ const { generateAccessToken, generateRefreshToken, authenticateToken}  = require
 
 
 router.post("/register", async (req, res) => {
+    // #swagger.tags = ['Customers']
     const {fullName, email, phoneNumber, password} = req.body;
 
     try {
@@ -31,6 +32,7 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+    // #swagger.tags = ['Customers']
     const {email, password} = req.body;
 
     try {
@@ -67,6 +69,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/refresh-token", async (req, res) => {
+    // #swagger.tags = ['Customers']
     const {refreshToken} = req.body;
     if (!refreshToken) {
         return res.status(401).json({error: "Refresh token not provided"});

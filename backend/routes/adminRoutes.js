@@ -9,6 +9,7 @@ const Venue = require("../models/venueModel.js");
 
 // endpoint to login
 router.post("/login", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const {email, password} = req.body;
 
     try {
@@ -47,6 +48,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const {fullName, email, phoneNumber, password} = req.body;
 
     try {
@@ -73,6 +75,7 @@ router.post("/register", async (req, res) => {
 
 
 router.post("/refresh-token", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const {refreshToken} = req.body;
     if (!refreshToken) {
         return res.status(401).json({error: "Refresh token not provided"});
@@ -100,6 +103,7 @@ router.use(isAdmin);
 
 // endpoint to view all availabel customers
 router.get("/customers", async (req, res) => {
+    // #swagger.tags = ['Admin']
     try {
         const customers = await Customer.findAll({attributes: { exclude: ["password"]}});
         res.status(200).json(customers);
@@ -111,6 +115,7 @@ router.get("/customers", async (req, res) => {
 
 // endpoint to view the details of a particular customer by their email address
 router.get("/customers/:id", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const id = req.params.id;
     try {
         const customer = await Customer.findOne({ where : {id: id}, attributes: { exclude: ['password']}});
@@ -126,6 +131,7 @@ router.get("/customers/:id", async (req, res) => {
 
 // endpoint to list all venues
 router.get("/venues", async (req, res) => {
+    // #swagger.tags = ['Admin']
     try {
         const venues = await Venue.findAll({attributes: { exclude: ["password"]}});
         res.status(200).json(venues);
@@ -137,6 +143,7 @@ router.get("/venues", async (req, res) => {
 
 // endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const id = req.params.id;
     try {
         const venue = await Venue.findOne({ where : {id: id}, attributes: { exclude: ["password"]}});
@@ -152,6 +159,7 @@ router.get("/venues/:id", async (req, res) => {
 
 // endpoint to accept and register a venue
 router.put("/venues/register/:id", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const {id} = req.params;
 
     try {
@@ -175,6 +183,7 @@ router.put("/venues/register/:id", async (req, res) => {
 
 // endpoint to delete a venue
 router.delete("/venues/:id", async (req, res) => {
+    // #swagger.tags = ['Admin']
     const {id} = req.params;
 
     try {

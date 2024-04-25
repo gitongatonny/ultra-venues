@@ -4,6 +4,7 @@ const Venue = require("../models/venueModel");
 
 // endpoint to list all venues
 router.get("/venues", async (req, res) => {
+    // #swagger.tags = ['Venue']
     try {
         const venues = await Venue.findAll({ where: {isActive: true}, attributes: { exclude: ["password", "isActive"]}});
         res.status(200).json(venues);
@@ -15,6 +16,7 @@ router.get("/venues", async (req, res) => {
 
 // endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
+    // #swagger.tags = ['Venue']
     const id = req.params.id;
     try {
         const venue = await Venue.findOne({ where : {id: id}, attributes: { exclude: ["password", "isActive"]}});

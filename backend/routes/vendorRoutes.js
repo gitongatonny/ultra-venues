@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 
 // endpoint to register a venue
 router.post("/register", async (req, res) => {
+    // #swagger.tags = ['Vendor']
     const {
         venueType,
         venueName,
@@ -42,6 +43,7 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+    // #swagger.tags = ['Vendor']
     const {email, password} = req.body;
 
     try {

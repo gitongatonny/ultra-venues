@@ -3,6 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./config/database");
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerFile = require("./swagger-output.json");
+
 const customerRoutes = require("./routes/customerRoutes");
 const venueRoutes = require("./routes/venueRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
@@ -20,6 +23,7 @@ db.sync()
 	.catch((err) => console.error("Error synchronizing models: " + err));
 
 app.use(bodyParser.json());
+app.use("/api/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use("/api/customer", customerRoutes);
 app.use("/api", venueRoutes);
