@@ -464,20 +464,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         const venue = response.data;
 
         // Update the page with the fetched data
-        document.getElementById('total-amenities').textContent = venue.totalAmenities || 'N/A';
-        document.getElementById('bookings-this-month').textContent = venue.bookingsThisMonth || 'N/A';
-        document.getElementById('earnings-this-month').textContent = venue.earningsThisMonth || 'N/A';
+        document.getElementById('total-amenities').textContent = venue.totalAmenities || '0';
+        document.getElementById('bookings-this-month').textContent = venue.bookingsThisMonth || '0';
+        document.getElementById('earnings-this-month').textContent = venue.earningsThisMonth || 'Kshs 0.00';
 
-        document.getElementById('venue-avatar').src = venue.image || 'default-image-path.jpg';
-        document.getElementById('venue-name').textContent = venue.name || 'N/A';
+        document.getElementById('venue-avatar').src = venue.image || "assets/images/mt-kenya.jpg";
+        document.getElementById('venue-name').textContent = venue.venueName || 'N/A';
         document.getElementById('venue-email').textContent = venue.email || 'N/A';
         document.getElementById('venue-email').href = `mailto:${venue.email}`;
-        document.getElementById('venue-phone').textContent = venue.phone || 'N/A';
-        document.getElementById('venue-phone').href = `tel:${venue.phone}`;
+        document.getElementById('venue-phone').textContent = venue.phoneNumber || 'N/A';
+        document.getElementById('venue-phone').href = `tel:${venue.phoneNumber}`;
         document.getElementById('venue-address').textContent = venue.address || 'N/A';
 
-        document.getElementById('venue-info-name').textContent = venue.name || 'N/A';
-        document.getElementById('venue-info-phone').textContent = venue.phone || 'N/A';
+        document.getElementById('venue-info-name').textContent = venue.venueName || 'N/A';
+        document.getElementById('venue-info-phone').textContent = venue.phoneNumber || 'N/A';
         document.getElementById('venue-license').textContent = venue.governmentLicense || 'N/A';
         document.getElementById('venue-pin').textContent = venue.kraPin || 'N/A';
         document.getElementById('venue-description').textContent = venue.description || 'N/A';
