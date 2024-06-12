@@ -116,8 +116,8 @@ router.post("/refresh-token", async (req, res) => {
 	}
 });
 
-router.use(authenticateToken);
-router.use(isAdmin);
+// router.use(authenticateToken);
+// router.use(isAdmin);
 
 // endpoint to view all availabel customers
 router.get("/customers", async (req, res) => {
