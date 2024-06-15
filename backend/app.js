@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./config/database");
+const cors = require('cors');
 
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./swagger-output.json");
@@ -13,6 +14,9 @@ const adminRoutes = require("./routes/adminRoutes");
 const vendorRoutes = require("./routes/vendorRoutes");
 
 const app = express();
+
+ // Use CORS middleware
+ app.use(cors());
 
 db.authenticate()
 	.then(() => console.log("Database connected"))
