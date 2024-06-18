@@ -16,11 +16,11 @@ router.get("/bookings", async (req, res) => {
 });
 
 // endpoint to list all bookings for a particular venue by venue id
-router.get("/bookings/venue/:id", async (req, res) => {
+router.get("/bookings/venue/:email", async (req, res) => {
     // #swagger.tags = ['Booking']
-    const id = req.params.id;
+    const email = req.params.email;
     try {
-        const bookings = await Booking.findAll({where: {id: id}});
+        const bookings = await Booking.findAll({where: {venueEmailAddress: email}});
         res.status(200).json(bookings);
     } catch (error) {
         console.error(error);

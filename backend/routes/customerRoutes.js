@@ -68,6 +68,44 @@ router.post("/login", async (req, res) => {
     }
 });
 
+// Endpoint to create a new booking
+router.post('/bookings/create', async (req, res) => {
+    try {
+        const {
+            customerFullName,
+            eventType,
+            startDate,
+            endDate,
+            customerEmailAddress,
+            customerPhoneNumber,
+            venuePhoneNumber,
+            numberOfGuests,
+            venueEmailAddress,
+            price
+        } = req.body;
+
+        // Create booking in the database
+        const newBooking = await Booking.create({
+            customerFullName,
+            eventType,
+            startDate,
+            endDate,
+            customerEmailAddress,
+            customerPhoneNumber,
+            venuePhoneNumber,
+            numberOfGuests,
+            venueEmailAddress,
+            price
+        });
+
+        // Respond with success message or new booking data
+        res.status(201).json(newBooking);
+    } catch (error) {
+        console.error('Error creating booking:', error);
+        res.status(500).json({ error: 'Failed to create booking' });
+    }
+});
+
 router.post("/refresh-token", async (req, res) => {
     // #swagger.tags = ['Customers']
     const {refreshToken} = req.body;
