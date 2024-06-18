@@ -1,5 +1,6 @@
 const {DataTypes} = require("sequelize");
 const db = require("../config/database");
+const Customer = require("./customerModel");
 
 const Booking = db.define("Booking", {
     customerFullName: {
@@ -47,5 +48,9 @@ const Booking = db.define("Booking", {
     }
 
 });
+
+// Set up association
+Customer.hasMany(Booking, { foreignKey: 'customerEmailAddress', sourceKey: 'email' });
+Booking.belongsTo(Customer, { foreignKey: 'customerEmailAddress', targetKey: 'email' });
 
 module.exports = Booking;

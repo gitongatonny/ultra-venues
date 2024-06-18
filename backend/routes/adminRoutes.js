@@ -9,8 +9,10 @@ const {
 } = require("../middleware/authMiddleware.js");
 
 const Customer = require("../models/customerModel");
+const Booking = require("../models/bookingModel.js");
 const Admin = require("../models/adminModel");
 const Venue = require("../models/venueModel.js");
+const sequelize = require('../config/database');
 
 // endpoint to login
 router.post("/login", async (req, res) => {
@@ -119,21 +121,34 @@ router.post("/refresh-token", async (req, res) => {
 // router.use(authenticateToken);
 // router.use(isAdmin);
 
-// endpoint to view all availabel customers
-router.get("/customers", async (req, res) => {
-	// #swagger.tags = ['Admin']
-	/* #swagger.security = [{
+// Endpoint to get all customers with their total booking count
+router.get('/customers', async (req, res) => {
+    // #swagger.tags = ['Admin']
+    /* #swagger.security = [{
             "bearerAuth": []
     }] */
-	try {
-		const customers = await Customer.findAll({
-			attributes: { exclude: ["password"] },
-		});
-		res.status(200).json(customers);
-	} catch (error) {
-		console.error(error);
-		res.status(500).json({ error: "Could not fetch customers!" });
-	}
+    try {
+        const customersWithBookingCount = await Customer.findAll({
+            attributes: {
+                include: [
+                    [sequelize.fn('COUNT', sequelize.col('Bookings.id')), 'bookingCount']
+                ],
+                exclude: ['password']
+            },
+            include: [
+                {
+                    model: Booking,
+                    attributes: []
+                }
+            ],
+            group: ['Customer.id']
+        });
+
+        res.status(200).json(customersWithBookingCount);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Could not fetch customers!' });
+    }
 });
 
 // endpoint to view the details of a particular customer by their email address
