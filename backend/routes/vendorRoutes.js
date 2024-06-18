@@ -61,23 +61,27 @@ router.post("/login", async (req, res) => {
             return res.status(401).json({error: "Invalid credentials"});
         }
 
-        if (!vendor.isActive) {
-            return res.status(401).json({ error: "Your account has been disabled"});
-        }
+        // if (!vendor.isActive) {
+        //     return res.status(401).json({ error: "Your account has been disabled"});
+        // }
 
         const accessToken = generateAccessToken({
-            email: vendor.emailAddress,
+            email: vendor.email,
             name: vendor.venueName,
         });
 
         const refreshToken = generateRefreshToken({
-            email: vendor.emailAddress,
+            email: vendor.email,
             name: vendor.venueName,
         });
 
         return res.status(200).json({message: "Login successful", tokens: {
             access: accessToken,
             refresh: refreshToken
+        }, 
+        details: {
+            email: vendor.email,
+            venueName: vendor.venueName,
         }});
 
     } catch (error) {
