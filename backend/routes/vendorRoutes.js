@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const { Op } = require('sequelize');
 const {generateAccessToken, generateRefreshToken} = require("../middleware/authMiddleware");
 const Venue = require("../models/venueModel");
+const Booking = require("../models/bookingModel");
 const bcrypt = require("bcrypt");
+const db = require('../config/database');
 
 
 // endpoint to register a venue
@@ -87,6 +90,55 @@ router.post("/login", async (req, res) => {
     } catch (error) {
         console.error(error);
         return res.status(500).json({error: "Could not login at this moment"});
+    }
+});
+
+// Route to fetch venue details and statistics
+router.get('/dashboard/:venueEmail', async (req, res) => {
+    const venueEmail = req.params.venueEmail;
+
+    try {
+        // Total revenue
+        const totalRevenue = await Booking.sum('price', { where: { venueEmailAddress: venueEmail } });
+
+        // Total number of visitors
+        const totalVisitors = await Booking.sum('numberOfGuests', { where: { venueEmailAddress: venueEmail } });
+
+        // Upcoming bookings
+        const upcomingBookings = await Booking.findAll({
+            where: {
+                venueEmailAddress: venueEmail,
+                startDate: { [Op.gt]: new Date() } // Filter for bookings with start date in the future
+            },
+            order: [['startDate', 'ASC']] // Order by ascending start date
+        });
+
+        // Visitor counts by month
+        const visitorCountsByMonth = await Booking.findAll({
+            attributes: [
+                [db.fn('MONTH', db.col('startDate')), 'month'],
+                [db.fn('YEAR', db.col('startDate')), 'year'],
+                [db.fn('SUM', db.col('numberOfGuests')), 'visitorCount']
+            ],
+            where: {
+                venueEmailAddress: venueEmail
+            },
+            group: [db.fn('YEAR', db.col('startDate')), db.fn('MONTH', db.col('startDate'))],
+            raw: true
+        });
+
+        // Format response
+        const dashboardData = {
+            totalRevenue: totalRevenue || 0,
+            totalVisitors: totalVisitors || 0,
+            upcomingBookings,
+            visitorCountsByMonth
+        };
+
+        res.status(200).json(dashboardData);
+    } catch (error) {
+        console.error('Error fetching dashboard data:', error);
+        res.status(500).json({ error: 'Failed to fetch dashboard data' });
     }
 });
 
