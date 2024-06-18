@@ -1,5 +1,6 @@
-const { DataTypes} = require("sequelize");
+const { DataTypes } = require("sequelize");
 const db = require("../config/database");
+const bcrypt = require("bcrypt");
 
 const Venue = db.define("Venue", {
     venueType: {
@@ -37,6 +38,7 @@ const Venue = db.define("Venue", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true, // Ensure email is unique
         validate: {
             isEmail: true
         }
@@ -51,7 +53,7 @@ const Venue = db.define("Venue", {
     rating: {
         type: DataTypes.FLOAT,
         allowNull: true,
-        default: null
+        defaultValue: null
     },
     isActive: {
         type: DataTypes.BOOLEAN,
@@ -64,7 +66,21 @@ const Venue = db.define("Venue", {
         defaultValue: "inactive"
     }
 }, {
-    timestamps: false
+    timestamps: false,
+    hooks: {
+        beforeCreate: async (venue) => {
+            if (venue.password) {
+                const hashedPassword = await bcrypt.hash(venue.password, 10);
+                venue.password = hashedPassword;
+            }
+        },
+        beforeUpdate: async (venue) => {
+            if (venue.changed('password')) {
+                const hashedPassword = await bcrypt.hash(venue.password, 10);
+                venue.password = hashedPassword;
+            }
+        }
+    }
 });
 
 module.exports = Venue;

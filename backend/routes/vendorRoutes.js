@@ -19,6 +19,7 @@ router.post("/register", async (req, res) => {
         phoneNumber,
         email,
         websiteUrl,
+        password, // Assuming you are handling password hashing securely
     } = req.body;
 
     try {
@@ -33,14 +34,16 @@ router.post("/register", async (req, res) => {
             phoneNumber,
             email,
             websiteUrl,
+            password
         });
 
-        return res.status(201).json({message: "Venue registration request created"});
+        return res.status(201).json({ message: "Venue registration request created" });
     } catch (error) {
         console.error(error);
-        return res.status(500).json({ error: "Could not create venue at this moment"});
+        return res.status(500).json({ error: "Could not create venue at this moment" });
     }
 });
+
 
 router.post("/login", async (req, res) => {
     // #swagger.tags = ['Vendor']
