@@ -6,7 +6,7 @@ const Venue = require("../models/venueModel");
 router.get("/venues", async (req, res) => {
     // #swagger.tags = ['Venue']
     try {
-        const venues = await Venue.findAll({ where: {isActive: true}, attributes: { exclude: ["password", "isActive"]}});
+        const venues = await Venue.findAll({ attributes: { exclude: ["password", "isActive"]}});
         res.status(200).json(venues);
     } catch (error) {
         console.error(error);
