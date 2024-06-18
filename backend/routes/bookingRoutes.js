@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Booking = require("../models/bookingModel");
-
+const Venue = require("../models/venueModel");
+const Customer = require("../models/customerModel");
 // route to list all bookings
 router.get("/bookings", async (req, res) => {
     // #swagger.tags = ['Booking']
@@ -30,13 +31,36 @@ router.get("/bookings/venue/:id", async (req, res) => {
 // endpoint to list all bookings for a particular user by their user id
 router.get("/bookings/user/:id", async (req, res) => {
     // #swagger.tags = ['Booking']
-    const id = req.params.id;
+    const userId = req.params.id;
+
     try {
-        const bookings = await Booking.findAll({where : {id: id}});
-        res.status(200).json(bookings);
+        // Fetch user details
+        const user = await Customer.findByPk(userId);
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        // Fetch bookings associated with the user
+        const bookings = await Booking.findAll({
+            where: { customerEmailAddress: user.email },
+            include: [{ model: Venue }]
+        });
+
+        // Combine user details and bookings into a single response object
+        const userData = {
+            id: user.id,
+            fullName: user.fullName,
+            email: user.email,
+            phoneNumber: user.phoneNumber,
+            bookings: bookings // Include bookings data here
+        };
+
+        // Send combined data as JSON response
+        res.status(200).json(userData);
     } catch (error) {
         console.error(error);
-        res.status(500).json({error: "Server error"});
+        res.status(500).json({ error: "Server error" });
     }
 });
 
