@@ -5,7 +5,7 @@ def get_database_connection():
     connection = mysql.connector.connect(
         host='127.0.0.1',
         user='root',
-        password='',  # Your MySQL password (default is empty for XAMPP)
+        password='',
         database='venue_booking'  # Your database name
     )
     return connection
