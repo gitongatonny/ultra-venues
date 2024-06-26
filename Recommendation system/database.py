@@ -3,7 +3,7 @@ import pandas as pd
 
 def get_database_connection():
     connection = mysql.connector.connect(
-        host='127.0.0.1',  # Your XAMPP MySQL host
+        host='127.0.0.1',
         user='root',  # Your MySQL username (default is 'root' for XAMPP)
         password='',  # Your MySQL password (default is empty for XAMPP)
         database='venue_booking'  # Your database name
