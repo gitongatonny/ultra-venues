@@ -12,12 +12,7 @@ def get_database_connection():
 
 def get_data_from_db():
     connection = get_database_connection()
-    query = """
-    SELECT b.user_id, b.venue_id, b.rating
-    FROM bookings b
-    JOIN users u ON b.user_id = u.user_id
-    JOIN venues v ON b.venue_id = v.venue_id
-    """
+    query = ""
     data = pd.read_sql(query, connection)
     connection.close()
     return data
