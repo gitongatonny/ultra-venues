@@ -6,7 +6,7 @@ def get_database_connection():
         host='127.0.0.1',
         user='root',
         password='',
-        database='venue_booking'  # Your database name
+        database='venue_booking'
     )
     return connection
 
