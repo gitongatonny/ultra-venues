@@ -44,7 +44,8 @@ router.get("/bookings/user/:id", async (req, res) => {
         // Fetch bookings associated with the user
         const bookings = await Booking.findAll({
             where: { customerEmailAddress: user.email },
-            include: [{ model: Venue }]
+            // include: [{ model: Venue }],
+            // attributes: { exclude: ["password"] }
         });
 
         // Combine user details and bookings into a single response object

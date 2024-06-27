@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const Customer = require("../models/customerModel");
+const Booking = require("../models/bookingModel.js");
 const { generateAccessToken, generateRefreshToken, authenticateToken}  = require("../middleware/authMiddleware.js");
 
 
@@ -68,11 +69,11 @@ router.post("/login", async (req, res) => {
     }
 });
 
+// router.use(authenticateToken);
 // Endpoint to create a new booking
 router.post('/bookings/create', async (req, res) => {
     try {
         const {
-            customerFullName,
             eventType,
             startDate,
             endDate,
@@ -86,7 +87,6 @@ router.post('/bookings/create', async (req, res) => {
 
         // Create booking in the database
         const newBooking = await Booking.create({
-            customerFullName,
             eventType,
             startDate,
             endDate,

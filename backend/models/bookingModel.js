@@ -4,10 +4,6 @@ const Customer = require("./customerModel");
 const Venue = require("./venueModel");
 
 const Booking = db.define("Booking", {
-    customerFullName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     eventType: {
         type: DataTypes.STRING,
         allowNull: false
@@ -31,10 +27,6 @@ const Booking = db.define("Booking", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    venuePhoneNumber: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
     numberOfGuests: {
         type: DataTypes.INTEGER,
         allowNull: false
@@ -52,9 +44,8 @@ const Booking = db.define("Booking", {
     },
     paymentStatus: {
         type: DataTypes.INTEGER,
-        default: 0,
+        defaultValue: 0,
     }
-
 }, {
     timestamps: false
 });

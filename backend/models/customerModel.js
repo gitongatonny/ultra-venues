@@ -18,7 +18,7 @@ const Customer = db.define("Customer", {
     password: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
 });
 
 module.exports = Customer;

@@ -63,7 +63,10 @@ const Venue = db.define("Venue", {
     password: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: "inactive"
+    },
+    price: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     }
 }, {
     timestamps: false,

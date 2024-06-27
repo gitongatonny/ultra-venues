@@ -406,7 +406,7 @@
 					document.getElementById('userName').textContent = user.fullName || 'N/A';
 					document.getElementById('userEmail').textContent = user.email || 'N/A';
 					document.getElementById('userContact').textContent = user.phoneNumber || 'N/A';
-					document.getElementById('userAvatar').src = user.avatarUrl || 'assets/images/user.png';
+					// document.getElementById('userAvatar').src = user.avatarUrl || 'assets/images/user.png';
 				})
 				.catch(error => console.error('Error fetching user details:', error));
 
@@ -418,7 +418,8 @@
 
 					// Clear any placeholder data
 					bookingHistory.innerHTML = '';
-
+					bookings = bookings.bookings;
+					console.log(bookings);
 					bookings.forEach(booking => {
 						const bookingRow = `
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2 g-sm-4 align-items-md-center justify-content-between border-bottom px-2 py-4">
@@ -430,12 +431,12 @@
                                         <img src="${booking.image || 'assets/images/placeholder.jpg'}" class="rounded" alt="">
                                     </div>
                                     <!-- Title -->
-                                    <h6 class="mb-0 ms-2">${booking.venueName || 'N/A'}</h6>
+                                    <h6 class="mb-0 ms-2">${booking.venueEmailAddress || 'N/A'}</h6>
                                 </div>
                             </div>
                             <div class="col">
                                 <small class="d-block d-lg-none">Venue Type:</small>
-                                <h6 class="mb-0 fw-normal">${booking.venueType || 'N/A'}</h6>
+                                <h6 class="mb-0 fw-normal">${booking.eventType || 'N/A'}</h6>
                             </div>
                             <div class="col">
                                 <small class="d-block d-lg-none">Start Date:</small>

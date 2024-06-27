@@ -22,11 +22,6 @@ const Admin = db.define("Admin", {
         type: DataTypes.STRING,
         allowNull: false
     },
-    isAdmin: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: true
-    }
 });
 
 module.exports = Admin;

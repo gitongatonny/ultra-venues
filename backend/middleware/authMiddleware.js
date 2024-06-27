@@ -1,16 +1,17 @@
 const jwt = require('jsonwebtoken');
+const { Admin } = require('../models/adminModel');  // Import the Admin model
 
-// function to generate access token
+// Function to generate access token
 function generateAccessToken(payload) {
     return jwt.sign({payload}, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '2h'});
 }
 
-// function to generate refresh token
+// Function to generate refresh token
 function generateRefreshToken(payload) {
     return jwt.sign({payload}, process.env.REFRESH_TOKEN_SECRET);
 }
 
-// middleware to authenticate access token
+// Middleware to authenticate access token
 function authenticateToken(req, res, next) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
@@ -29,15 +30,20 @@ function authenticateToken(req, res, next) {
     });
 }
 
-// middleware to check if the user s an admin
-function isAdmin(req, res, next) {
-    const isAdmin = req.user.isAdmin;
-    if (!isAdmin) {
-        return res.status(403).json({
-            error: "Unauthorized"
-        });
+// Middleware to check if the user is an admin
+async function isAdmin(req, res, next) {
+    try {
+        const admin = await Admin.findOne({ where: { email: req.user.email } });
+        if (!admin) {
+            return res.status(403).json({
+                error: "Unauthorized"
+            });
+        }
+        next();
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({ error: "Internal server error" });
     }
-    next();
 }
 
-module.exports = { generateAccessToken, generateRefreshToken, authenticateToken, isAdmin};
+module.exports = { generateAccessToken, generateRefreshToken, authenticateToken, isAdmin };

@@ -354,11 +354,11 @@ Content END -->
 						const row = `
                     <tr>
                         <td><h6 class="mb-0">${index + 1}</h6></td>
-                        <td><h6 class="mb-0"><a href="#">${booking.eventName}</a></h6></td>
+                        <td><h6 class="mb-0"><a href="#">${booking.customerEmailAddress}</a></h6></td>
                         <td>${booking.eventType}</td>
                         <td>${formatDateRange(booking.startDate, booking.endDate)}</td>
-                        <td><div class="badge text-bg-${booking.status === 'Upcoming' ? 'success' : booking.status === 'Done' ? 'info' : 'danger'}">${booking.status}</div></td>
-                        <td><div class="badge bg-${booking.paymentStatus === 'Paid' ? 'success' : 'orange'} bg-opacity-10 text-${booking.paymentStatus === 'Paid' ? 'success' : 'orange'}">${booking.paymentStatus}</div></td>
+                        <td><div class="badge text-bg-${booking.status === 'Upcoming' ? 'success' : booking.status === 'Done' ? 'info' : 'danger'}">${Date(booking.endDate) < new Date()? "Done": Date(booking.endDate) > new Date()? "Upcoming": "In progress"}</div></td>
+                        <td><div class="badge bg-${booking.paymentStatus === '0' ? 'success' : 'orange'} bg-opacity-10 text-${booking.paymentStatus === '1' ? 'success' : 'orange'}">${booking.paymentStatus}</div></td>
                         <td><a href="#" class="btn btn-sm btn-light mb-0">View</a></td>
                     </tr>
                 `;
