@@ -68,12 +68,12 @@ const Venue = db.define("Venue", {
         type: DataTypes.INTEGER,
         defaultValue: 0
     },
-    licenseNumber: {
-        type: DataTypes.STRING
-    },
-    kraPin: {
-        type: DataTypes.STRING
-    }
+    // licenseNumber: {
+    //     type: DataTypes.STRING
+    // },
+    // kraPin: {
+    //     type: DataTypes.STRING
+    // }
 }, {
     timestamps: false,
     hooks: {
