@@ -170,6 +170,12 @@ Content START -->
 													<input type="text" id="venueKraPin" class="form-control" placeholder="KRA PIN">
 												</div>
 
+												<!-- Venue Price Per Day -->
+												<div class="mb-3">
+													<label class="form-label">Venue Price Per Day (KES)</label>
+													<input type="text" id="venuePrice" class="form-control" placeholder="Price Per Day">
+												</div>
+
 												<!-- Venue Services -->
 												<div class="mb-3">
 													<label class="form-label">Venue Services</label>
