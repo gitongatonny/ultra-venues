@@ -67,6 +67,12 @@ const Venue = db.define("Venue", {
     price: {
         type: DataTypes.INTEGER,
         defaultValue: 0
+    },
+    licenseNumber: {
+        type: DataTypes.STRING
+    },
+    kraPin: {
+        type: DataTypes.STRING
     }
 }, {
     timestamps: false,
