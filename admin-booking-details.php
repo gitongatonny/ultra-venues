@@ -451,7 +451,7 @@
 
 							<!-- Table head -->
 							<div class="bg-light rounded p-3 d-none d-lg-block">
-								<div class="row row-cols-7 g-4">
+								<div class="row row-cols-6 g-4">
 									<div class="col">
 										<h6 class="mb-0">Booked by</h6>
 									</div>
@@ -469,9 +469,6 @@
 									</div>
 									<div class="col">
 										<h6 class="mb-0">Payment</h6>
-									</div>
-									<div class="col">
-										<h6 class="mb-0">Action</h6>
 									</div>
 								</div>
 							</div>
@@ -523,8 +520,6 @@
 									<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
 								</div>
 
-								<!-- Data item -->
-								<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
 							</div>
 
 							<!-- Table data -->
@@ -574,8 +569,6 @@
 									<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
 								</div>
 
-								<!-- Data item -->
-								<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
 							</div>
 
 
@@ -627,8 +620,6 @@
 									<div class="badge bg-success bg-opacity-10 text-success">Paid</div>
 								</div>
 
-								<!-- Data item -->
-								<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
 							</div>
 
 
