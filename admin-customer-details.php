@@ -39,40 +39,21 @@
 						<li class="nav-item ms-2 my-2">Pages</li>
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link" data-bs-toggle="collapse" href="#collapsebooking" role="button" aria-expanded="false" aria-controls="collapsebooking">
-								Bookings
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-booking-details.php">Booking Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link active" data-bs-toggle="collapse" href="#collapseguest" role="button" aria-expanded="false" aria-controls="collapseguest">
-								Customers
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-customer-list.php">Customer List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-customer-details.php">Customer Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link active" href="admin-customer-list.php">Customers List</a></li>
+
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link" data-bs-toggle="collapse" href="#collapseagent" role="button" aria-expanded="false" aria-controls="collapseagent">
-								Venues
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapseagent" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-venues-list.php">Venues List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-venue-details.php">Venue Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="admin-venues-list.php">Venues List</a></li>
+
+
+						<!-- Menu item -->
+						<li class="nav-item"> <a class="nav-link" href="admin-earnings.php">Earnings</a></li>
+
+						<!-- Menu item -->
+						<li class="nav-item"> <a class="nav-link" href="admin-settings.php">Admin Settings</a></li>
 
 
 						<!-- Menu item -->

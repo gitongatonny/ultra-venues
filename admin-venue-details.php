@@ -42,40 +42,14 @@
 						<li class="nav-item ms-2 my-2">Pages</li>
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link" data-bs-toggle="collapse" href="#collapsebooking" role="button" aria-expanded="false" aria-controls="collapsebooking">
-								Bookings
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-booking-details.php">Booking Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link" data-bs-toggle="collapse" href="#collapseguest" role="button" aria-expanded="false" aria-controls="collapseguest">
-								Customers
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-customer-list.php">Customer List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-customer-details.php">Customer Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="admin-customer-list.php">Customers List</a></li>
+
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link active" data-bs-toggle="collapse" href="#collapseagent" role="button" aria-expanded="false" aria-controls="collapseagent">
-								Venues
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapseagent" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-venues-list.php">Venues List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-venue-details.php">Venue Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link active" href="admin-venues-list.php">Venues List</a></li>
 
 
 						<!-- Menu item -->
@@ -443,51 +417,51 @@
 
 	</main>
 	<script>
-document.addEventListener("DOMContentLoaded", async () => {
-    // Get venue id from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const venueId = urlParams.get('id');
+		document.addEventListener("DOMContentLoaded", async () => {
+			// Get venue id from the URL
+			const urlParams = new URLSearchParams(window.location.search);
+			const venueId = urlParams.get('id');
 
-    if (!venueId) {
-        console.error("No venue ID found in URL.");
-        return;
-    }
+			if (!venueId) {
+				console.error("No venue ID found in URL.");
+				return;
+			}
 
-    try {
-        // Fetch venue details
-        const response = await axios.get(`http://localhost:5000/api/admin/venues/${venueId}`, {
-            headers: {
-                'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Replace with actual token if needed
-            }
-        });
+			try {
+				// Fetch venue details
+				const response = await axios.get(`http://localhost:5000/api/admin/venues/${venueId}`, {
+					headers: {
+						'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Replace with actual token if needed
+					}
+				});
 
-        const venue = response.data;
+				const venue = response.data;
 
-        // Update the page with the fetched data
-        document.getElementById('total-amenities').textContent = venue.totalAmenities || '0';
-        document.getElementById('bookings-this-month').textContent = venue.bookingsThisMonth || '0';
-        document.getElementById('earnings-this-month').textContent = venue.earningsThisMonth || 'Kshs 0.00';
+				// Update the page with the fetched data
+				document.getElementById('total-amenities').textContent = venue.totalAmenities || '0';
+				document.getElementById('bookings-this-month').textContent = venue.bookingsThisMonth || '0';
+				document.getElementById('earnings-this-month').textContent = venue.earningsThisMonth || 'Kshs 0.00';
 
-        document.getElementById('venue-avatar').src = venue.image || "assets/images/mt-kenya.jpg";
-        document.getElementById('venue-name').textContent = venue.venueName || 'N/A';
-        document.getElementById('venue-email').textContent = venue.email || 'N/A';
-        document.getElementById('venue-email').href = `mailto:${venue.email}`;
-        document.getElementById('venue-phone').textContent = venue.phoneNumber || 'N/A';
-        document.getElementById('venue-phone').href = `tel:${venue.phoneNumber}`;
-        document.getElementById('venue-address').textContent = venue.address || 'N/A';
+				document.getElementById('venue-avatar').src = venue.image || "assets/images/mt-kenya.jpg";
+				document.getElementById('venue-name').textContent = venue.venueName || 'N/A';
+				document.getElementById('venue-email').textContent = venue.email || 'N/A';
+				document.getElementById('venue-email').href = `mailto:${venue.email}`;
+				document.getElementById('venue-phone').textContent = venue.phoneNumber || 'N/A';
+				document.getElementById('venue-phone').href = `tel:${venue.phoneNumber}`;
+				document.getElementById('venue-address').textContent = venue.address || 'N/A';
 
-        document.getElementById('venue-info-name').textContent = venue.venueName || 'N/A';
-        document.getElementById('venue-info-phone').textContent = venue.phoneNumber || 'N/A';
-        document.getElementById('venue-license').textContent = venue.governmentLicense || 'N/A';
-        document.getElementById('venue-pin').textContent = venue.kraPin || 'N/A';
-        document.getElementById('venue-description').textContent = venue.description || 'N/A';
+				document.getElementById('venue-info-name').textContent = venue.venueName || 'N/A';
+				document.getElementById('venue-info-phone').textContent = venue.phoneNumber || 'N/A';
+				document.getElementById('venue-license').textContent = venue.governmentLicense || 'N/A';
+				document.getElementById('venue-pin').textContent = venue.kraPin || 'N/A';
+				document.getElementById('venue-description').textContent = venue.description || 'N/A';
 
-    } catch (error) {
-        console.error('Error fetching venue details:', error);
-        alert('Could not load venue details at this moment.');
-    }
-});
-</script>
+			} catch (error) {
+				console.error('Error fetching venue details:', error);
+				alert('Could not load venue details at this moment.');
+			}
+		});
+	</script>
 
 	<!-- Footer START -->
 	<?php include "includes/admin-dash-scripts.php"; ?>
