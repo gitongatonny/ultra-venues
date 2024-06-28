@@ -71,11 +71,13 @@ router.post("/login", async (req, res) => {
         const accessToken = generateAccessToken({
             email: vendor.email,
             name: vendor.venueName,
+            id: vendor.id,
         });
 
         const refreshToken = generateRefreshToken({
             email: vendor.email,
             name: vendor.venueName,
+            id: vendor.id,
         });
 
         return res.status(200).json({message: "Login successful", tokens: {
