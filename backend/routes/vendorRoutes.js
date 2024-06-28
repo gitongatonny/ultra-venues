@@ -4,6 +4,7 @@ const { Op } = require('sequelize');
 const {generateAccessToken, generateRefreshToken} = require("../middleware/authMiddleware");
 const Venue = require("../models/venueModel");
 const Booking = require("../models/bookingModel");
+const Payment = require("../models/paymentModel");
 const bcrypt = require("bcrypt");
 const db = require('../config/database');
 
@@ -141,6 +142,55 @@ router.get('/dashboard/:venueEmail', async (req, res) => {
     } catch (error) {
         console.error('Error fetching dashboard data:', error);
         res.status(500).json({ error: 'Failed to fetch dashboard data' });
+    }
+});
+
+// Endpoint to get all transactions for a specific email
+router.get('/transactions/:email', async (req, res) => {
+    const email = req.params.email;
+    try {
+        const transactions = await Payment.findAll({
+            where: {
+                to: email
+            }
+        });
+
+        // Calculate total revenue
+        const totalRevenue = await Payment.sum('amount', { where: { to: email } });
+
+        // Calculate current month revenue
+        const currentMonthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+        const currentMonthRevenue = await Payment.sum('amount', {
+            where: {
+                to: email,
+                data: {
+                    [Op.gte]: currentMonthStart
+                }
+            }
+        });
+
+        // Calculate previous month revenue
+        const previousMonthStart = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1);
+        const previousMonthEnd = new Date(new Date().getFullYear(), new Date().getMonth(), 0);
+        const previousMonthRevenue = await Payment.sum('amount', {
+            where: {
+                to: email,
+                data: {
+                    [Op.gte]: previousMonthStart,
+                    [Op.lt]: currentMonthStart
+                }
+            }
+        });
+
+        res.status(200).json({
+            transactions,
+            totalRevenue,
+            currentMonthRevenue,
+            previousMonthRevenue
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Server error" });
     }
 });
 
