@@ -38,7 +38,7 @@ const Venue = db.define("Venue", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true, // Ensure email is unique
+        unique: true,
         validate: {
             isEmail: true
         }
@@ -68,12 +68,10 @@ const Venue = db.define("Venue", {
         type: DataTypes.INTEGER,
         defaultValue: 0
     },
-    // licenseNumber: {
-    //     type: DataTypes.STRING
-    // },
-    // kraPin: {
-    //     type: DataTypes.STRING
-    // }
+    pictures: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: true
+    }
 }, {
     timestamps: false,
     hooks: {

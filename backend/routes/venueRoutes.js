@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Venue = require("../models/venueModel");
+const upload = require("../config/multer");
 
-// endpoint to list all venues
+// Endpoint to list all venues
 router.get("/venues", async (req, res) => {
     // #swagger.tags = ['Venue']
     try {
@@ -14,33 +15,36 @@ router.get("/venues", async (req, res) => {
     }
 });
 
-// endpoint to get venue details
+// Endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
     // #swagger.tags = ['Venue']
     const id = req.params.id;
     try {
-        const venue = await Venue.findOne({ where : {id: id}, attributes: { exclude: ["password", "isActive"]}});
+        const venue = await Venue.findOne({ where: {id: id}, attributes: { exclude: ["password", "isActive"]}});
         if (!venue) {
-            return res.status(404).json({ error: "Venue not found"});
+            return res.status(404).json({ error: "Venue not found" });
         }
         res.status(200).json(venue);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: "Cound not fetch venue details!"});
+        res.status(500).json({ error: "Could not fetch venue details!" });
     }
 });
 
-router.put("/venues/:id", async (req, res) => {
+// Endpoint to update venue details including pictures
+router.put("/venues/:id", upload, async (req, res) => {
     // #swagger.tags = ['Venue']
     const id = req.params.id;
-    const {
-        name, type, email, mobile, location, website, license, kraPin, services, additionalServices
-    } = req.body;
+    const { name, type, email, mobile, location, website, license, kraPin, services, additionalServices } = req.body;
+
     try {
         const venue = await Venue.findOne({ where: { id: id } });
         if (!venue) {
             return res.status(404).json({ error: "Venue not found" });
         }
+        
+        let pictures = req.files.map(file => file.path);
+
         venue.venueName = name;
         venue.venueType = type;
         venue.email = email;
@@ -51,7 +55,7 @@ router.put("/venues/:id", async (req, res) => {
         // venue.kraPin = kraPin;
         venue.facilities = services;
         // venue.additionalServices = additionalServices;
-        // venue.pictures = pictures; // Ensure pictures handling logic is in place
+        venue.pictures = pictures;
 
         await venue.save();
         res.status(200).json(venue);
@@ -64,7 +68,7 @@ router.put("/venues/:id", async (req, res) => {
 router.post("/venues/update-email/:id", async (req, res) => {
     // #swagger.tags = ['Venue']
     const { newEmail } = req.body;
-    const venueId = req.params.id; // Replace with actual venue ID retrieval logic
+    const venueId = req.params.id;
     try {
         const venue = await Venue.findOne({ where: { id: venueId } });
         if (!venue) {
@@ -78,6 +82,5 @@ router.post("/venues/update-email/:id", async (req, res) => {
         res.status(500).json({ error: "Could not update email!" });
     }
 });
-
 
 module.exports = router;
