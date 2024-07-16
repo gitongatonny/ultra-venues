@@ -40,40 +40,14 @@
 						<li class="nav-item ms-2 my-2">Pages</li>
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link" data-bs-toggle="collapse" href="#collapsebooking" role="button" aria-expanded="false" aria-controls="collapsebooking">
-								Bookings
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-booking-details.php">Booking Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="admin-booking-list.php">Booking List</a></li>
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link active" data-bs-toggle="collapse" href="#collapseguest" role="button" aria-expanded="false" aria-controls="collapseguest">
-								Customers
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-customer-list.php">Customer List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-customer-details.php">Customer Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link active" href="admin-customer-list.php">Customers List</a></li>
+
 
 						<!-- Menu item -->
-						<li class="nav-item">
-							<a class="nav-link" data-bs-toggle="collapse" href="#collapseagent" role="button" aria-expanded="false" aria-controls="collapseagent">
-								Venues
-							</a>
-							<!-- Submenu -->
-							<ul class="nav collapse flex-column" id="collapseagent" data-bs-parent="#navbar-sidebar">
-								<li class="nav-item"> <a class="nav-link" href="admin-venues-list.php">Venues List</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-venue-details.php">Venue Details</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="admin-venues-list.php">Venues List</a></li>
 
 
 						<!-- Menu item -->
@@ -406,22 +380,22 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-    // Fetch data from the endpoint
-    fetch('http://localhost:5000/api/admin/customers')
-        .then(response => response.json())
-        .then(data => {
-            const customerDataContainer = document.getElementById('customer-data');
-            customerDataContainer.innerHTML = '';
+			// Fetch data from the endpoint
+			fetch('http://localhost:5000/api/admin/customers')
+				.then(response => response.json())
+				.then(data => {
+					const customerDataContainer = document.getElementById('customer-data');
+					customerDataContainer.innerHTML = '';
 
-            data.forEach(customer => {
-                // Create a row for each customer
-                const customerRow = document.createElement('div');
-                customerRow.className = 'row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4';
+					data.forEach(customer => {
+						// Create a row for each customer
+						const customerRow = document.createElement('div');
+						customerRow.className = 'row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4';
 
-                const bookingStatus = customer.bookingCount > 0 ? 'Booked' : 'Not Booked';
-                const statusClass = customer.bookingCount > 0 ? 'badge bg-success bg-opacity-10 text-success' : 'badge bg-danger bg-opacity-10 text-danger';
+						const bookingStatus = customer.bookingCount > 0 ? 'Booked' : 'Not Booked';
+						const statusClass = customer.bookingCount > 0 ? 'badge bg-success bg-opacity-10 text-success' : 'badge bg-danger bg-opacity-10 text-danger';
 
-                customerRow.innerHTML = `
+						customerRow.innerHTML = `
                     <!-- Data item -->
                     <div class="col">
                         <small class="d-block d-lg-none">Name</small>
@@ -467,12 +441,12 @@
                     </div>
                 `;
 
-                // Append the row to the container
-                customerDataContainer.appendChild(customerRow);
-            });
-        })
-        .catch(error => console.error('Error fetching customer data:', error));
-});
+						// Append the row to the container
+						customerDataContainer.appendChild(customerRow);
+					});
+				})
+				.catch(error => console.error('Error fetching customer data:', error));
+		});
 	</script>
 	<!-- Footer START -->
 	<?php include "includes/admin-dash-scripts.php"; ?>

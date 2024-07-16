@@ -113,7 +113,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
@@ -135,7 +134,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
@@ -160,7 +158,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
@@ -182,7 +179,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
@@ -207,7 +203,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
@@ -229,7 +224,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
@@ -255,7 +249,6 @@ Content START -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex gap-2 mt-2 mt-sm-0">
-								<a href="#" class="btn btn-sm btn-primary-soft">View</a>
 								<a href="#" class="btn btn-sm btn-danger-soft"><i class="bi bi-trash"></i></a>
 							</div>
 						</div>
