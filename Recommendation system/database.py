@@ -3,16 +3,16 @@ import pandas as pd
 
 def get_database_connection():
     connection = mysql.connector.connect(
-        host='127.0.0.1',
+        host='localhost',
         user='root',
         password='',
-        database='venue_booking'
+        database='ultra-venues'
     )
     return connection
 
-def get_data_from_db():
+def get_venue_data():
     connection = get_database_connection()
-    query = ""
+    query = "SELECT * FROM venues"
     data = pd.read_sql(query, connection)
     connection.close()
     return data

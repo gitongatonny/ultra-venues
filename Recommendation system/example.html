@@ -7,12 +7,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- examples of venues listed -->
     <div class="container">
         <h1 class="mt-5">Venue Recommendations</h1>
         <div class="form-group">
             <label for="venueSelect">Select Venue:</label>
             <select id="venueSelect" class="form-control" onchange="getRecommendations()">
+                <option value="">Popular Venues</option>
                 <option value="1">Venue A</option>
                 <option value="2">Venue B</option>
                 <option value="3">Venue C</option>
@@ -27,11 +27,12 @@
     <script>
         function getRecommendations() {
             const venueId = document.getElementById('venueSelect').value;
-            const url = `http://127.0.0.1:5000/recommend?venue_id=${venueId}&n=3`;
+            const url = venueId ? `http://127.0.0.1:5000/recommend?venue_id=${venueId}&n=5` : `http://127.0.0.1:5000/recommend?n=5`;
 
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data); // Check if data is being fetched correctly
                     const recommendationsList = document.getElementById('recommendationsList');
                     recommendationsList.innerHTML = '';
 
@@ -39,7 +40,12 @@
                         data.forEach(rec => {
                             const listItem = document.createElement('li');
                             listItem.className = 'list-group-item';
-                            listItem.textContent = `${rec.name} - ${rec.location} (${rec.type})`;
+                            listItem.innerHTML = `<strong>${rec.venueName}</strong><br>
+                                                  ${rec.description}<br>
+                                                  <em>${rec.location}</em><br>
+                                                  Type: ${rec.venueType}<br>
+                                                  Facilities: ${rec.facilities}<br>
+                                                  Website: <a href="${rec.websiteUrl}" target="_blank">${rec.websiteUrl}</a>`;
                             recommendationsList.appendChild(listItem);
                         });
                     } else {
@@ -48,6 +54,10 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
+
+        // Initially load popular venues
+        getRecommendations();
     </script>
 </body>
 </html>
+
