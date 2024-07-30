@@ -6,6 +6,8 @@ const upload = require("../config/multer");
 // Endpoint to list all venues
 router.get("/venues", async (req, res) => {
     // #swagger.tags = ['Venue']
+    // #swagger.summary = 'List all venues'
+    // #swagger.description = 'This endpoint retrieves a list of all venues, excluding sensitive information like password and isActive status.'
     try {
         const venues = await Venue.findAll({ attributes: { exclude: ["password", "isActive"]}});
         res.status(200).json(venues);
@@ -18,6 +20,9 @@ router.get("/venues", async (req, res) => {
 // Endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
     // #swagger.tags = ['Venue']
+    // #swagger.summary = 'Get venue details'
+    // #swagger.description = 'This endpoint retrieves details of a specific venue by its ID, excluding sensitive information like password and isActive status.'
+    // #swagger.parameters['id'] = { description: 'ID of the venue to retrieve details for' }
     const id = req.params.id;
     try {
         const venue = await Venue.findOne({ where: {id: id}, attributes: { exclude: ["password", "isActive"]}});
@@ -34,8 +39,18 @@ router.get("/venues/:id", async (req, res) => {
 // Endpoint to update venue details including pictures
 router.put("/venues/:id", upload, async (req, res) => {
     // #swagger.tags = ['Venue']
+    // #swagger.summary = 'Update venue details'
+    // #swagger.description = 'This endpoint updates the details of a specific venue by its ID, including uploading new pictures.'
+    // #swagger.parameters['id'] = { description: 'ID of the venue to update' }
+    // #swagger.parameters['name'] = { in: 'body', description: 'Name of the venue' }
+    // #swagger.parameters['type'] = { in: 'body', description: 'Type of the venue' }
+    // #swagger.parameters['email'] = { in: 'body', description: 'Email of the venue' }
+    // #swagger.parameters['mobile'] = { in: 'body', description: 'Mobile number of the venue' }
+    // #swagger.parameters['location'] = { in: 'body', description: 'Location of the venue' }
+    // #swagger.parameters['website'] = { in: 'body', description: 'Website URL of the venue' }
+    // #swagger.parameters['services'] = { in: 'body', description: 'Services provided by the venue' }
     const id = req.params.id;
-    const { name, type, email, mobile, location, website, license, kraPin, services, additionalServices } = req.body;
+    const { name, type, email, mobile, location, website, services } = req.body;
 
     try {
         const venue = await Venue.findOne({ where: { id: id } });
@@ -51,10 +66,7 @@ router.put("/venues/:id", upload, async (req, res) => {
         venue.phoneNumber = mobile;
         venue.location = location;
         venue.websiteUrl = website;
-        // venue.license = license;
-        // venue.kraPin = kraPin;
         venue.facilities = services;
-        // venue.additionalServices = additionalServices;
         venue.pictures = pictures;
 
         await venue.save();
@@ -65,10 +77,16 @@ router.put("/venues/:id", upload, async (req, res) => {
     }
 });
 
+// Endpoint to update venue email
 router.post("/venues/update-email/:id", async (req, res) => {
     // #swagger.tags = ['Venue']
+    // #swagger.summary = 'Update venue email'
+    // #swagger.description = 'This endpoint updates the email address of a specific venue by its ID.'
+    // #swagger.parameters['id'] = { description: 'ID of the venue to update email for' }
+    // #swagger.parameters['newEmail'] = { in: 'body', description: 'New email address of the venue', required: true, type: 'string' }
     const { newEmail } = req.body;
     const venueId = req.params.id;
+
     try {
         const venue = await Venue.findOne({ where: { id: venueId } });
         if (!venue) {

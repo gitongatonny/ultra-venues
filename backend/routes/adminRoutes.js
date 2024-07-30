@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const {
 	isAdmin,
 	generateAccessToken,
@@ -17,6 +18,16 @@ const sequelize = require('../config/database');
 // endpoint to login
 router.post("/login", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Admin login endpoint'
+	// #swagger.description = 'This endpoint allows an admin to login by providing email and password. On successful login, it returns access and refresh tokens.'
+	/* #swagger.parameters['body'] = {
+		in: 'body',
+		description: 'Admin login credentials',
+		schema: {
+			email: 'admin@example.com',
+			password: 'password123'
+		}
+	} */
 	const { email, password } = req.body;
 
 	try {
@@ -34,13 +45,13 @@ router.post("/login", async (req, res) => {
 		const accessToken = generateAccessToken({
 			email: admin.email,
 			name: admin.fullName,
-			isAdmin: admin.isAdmin,
+			isAdmin: true,
 		});
 
 		const refreshToken = generateRefreshToken({
 			email: admin.email,
 			name: admin.fullName,
-			isAdmin: admin.isAdmin,
+			isAdmin: true,
 		});
 
 		return res.status(200).json({
@@ -60,6 +71,18 @@ router.post("/login", async (req, res) => {
 
 router.post("/register", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Admin registration endpoint'
+	// #swagger.description = 'This endpoint allows an admin to register by providing full name, email, phone number, and password. On successful registration, it returns a success message.'
+	/* #swagger.parameters['body'] = {
+		in: 'body',
+		description: 'Admin registration details',
+		schema: {
+			fullName: 'John Doe',
+			email: 'admin@example.com',
+			phoneNumber: '1234567890',
+			password: 'password123'
+		}
+	} */
 	const { fullName, email, phoneNumber, password } = req.body;
 
 	try {
@@ -88,6 +111,15 @@ router.post("/register", async (req, res) => {
 
 router.post("/refresh-token", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Refresh token endpoint'
+	// #swagger.description = 'This endpoint allows an admin to refresh their access token using a refresh token.'
+	/* #swagger.parameters['body'] = {
+		in: 'body',
+		description: 'Refresh token',
+		schema: {
+			refreshToken: 'some-refresh-token'
+		}
+	} */
 	const { refreshToken } = req.body;
 	if (!refreshToken) {
 		return res.status(401).json({ error: "Refresh token not provided" });
@@ -118,12 +150,14 @@ router.post("/refresh-token", async (req, res) => {
 	}
 });
 
-// router.use(authenticateToken);
-// router.use(isAdmin);
+router.use(authenticateToken);
+router.use(isAdmin);
 
 // Endpoint to get all customers with their total booking count
 router.get('/customers', async (req, res) => {
     // #swagger.tags = ['Admin']
+	// #swagger.summary = 'Get all customers with booking count'
+	// #swagger.description = 'This endpoint returns all customers along with their total booking count. Admin authentication is required.'
     /* #swagger.security = [{
             "bearerAuth": []
     }] */
@@ -154,6 +188,8 @@ router.get('/customers', async (req, res) => {
 // endpoint to view the details of a particular customer by their email address
 router.get("/customers/:id", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Get customer details'
+	// #swagger.description = 'This endpoint returns the details of a particular customer by their ID. Admin authentication is required.'
     /* #swagger.security = [{
             "bearerAuth": []
     }] */
@@ -176,6 +212,8 @@ router.get("/customers/:id", async (req, res) => {
 // endpoint to list all venues
 router.get("/venues", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Get all venues'
+	// #swagger.description = 'This endpoint returns all venues. Admin authentication is required.'
     	/* #swagger.security = [{
             "bearerAuth": []
     }] */
@@ -195,6 +233,8 @@ router.get("/venues", async (req, res) => {
 // endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Get venue details'
+	// #swagger.description = 'This endpoint returns the details of a particular venue by its ID. Admin authentication is required.'
     	/* #swagger.security = [{
             "bearerAuth": []
     }] */
@@ -217,6 +257,8 @@ router.get("/venues/:id", async (req, res) => {
 // endpoint to accept and register a venue
 router.put("/venues/register/:id", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Register a venue'
+	// #swagger.description = 'This endpoint allows an admin to register a venue by setting its isActive status to true. Admin authentication is required.'
     	/* #swagger.security = [{
             "bearerAuth": []
     }] */
@@ -247,6 +289,8 @@ router.put("/venues/register/:id", async (req, res) => {
 // endpoint to delete a venue
 router.delete("/venues/:id", async (req, res) => {
 	// #swagger.tags = ['Admin']
+	// #swagger.summary = 'Delete a venue'
+	// #swagger.description = 'This endpoint allows an admin to delete a venue by its ID. Admin authentication is required.'
     	/* #swagger.security = [{
             "bearerAuth": []
     }] */

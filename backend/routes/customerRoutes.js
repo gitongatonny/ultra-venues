@@ -3,17 +3,30 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const Customer = require("../models/customerModel");
 const Booking = require("../models/bookingModel.js");
-const { generateAccessToken, generateRefreshToken, authenticateToken}  = require("../middleware/authMiddleware.js");
+const { generateAccessToken, generateRefreshToken, authenticateToken } = require("../middleware/authMiddleware.js");
 
-
+// endpoint to register a new customer
 router.post("/register", async (req, res) => {
     // #swagger.tags = ['Customers']
-    const {fullName, email, phoneNumber, password} = req.body;
+	// #swagger.summary = 'Register a new customer'
+	// #swagger.description = 'This endpoint allows a new customer to register by providing their full name, email, phone number, and password.'
+	/* #swagger.parameters['obj'] = {
+		in: 'body',
+		description: 'Customer registration details',
+		required: true,
+		schema: {
+			$fullName: 'John Doe',
+			$email: 'john.doe@example.com',
+			$phoneNumber: '1234567890',
+			$password: 'password123'
+		}
+	} */
+    const { fullName, email, phoneNumber, password } = req.body;
 
     try {
-        const existingCustomer = await Customer.findOne({where: {email}});
+        const existingCustomer = await Customer.findOne({ where: { email } });
         if (existingCustomer) {
-            return res.status(400).json({error: "Email already exists"});
+            return res.status(400).json({ error: "Email already exists" });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -28,24 +41,36 @@ router.post("/register", async (req, res) => {
         return res.status(201).json(newCustomer);
     } catch (error) {
         console.error(error);
-        return res.status(500).json({error: "Could not create user at this moment"});
+        return res.status(500).json({ error: "Could not create user at this moment" });
     }
 });
 
+// endpoint to login a customer
 router.post("/login", async (req, res) => {
     // #swagger.tags = ['Customers']
-    const {email, password} = req.body;
+	// #swagger.summary = 'Customer login'
+	// #swagger.description = 'This endpoint allows a customer to login by providing their email and password.'
+	/* #swagger.parameters['obj'] = {
+		in: 'body',
+		description: 'Customer login details',
+		required: true,
+		schema: {
+			$email: 'john.doe@example.com',
+			$password: 'password123'
+		}
+	} */
+    const { email, password } = req.body;
 
     try {
-        const customer = await Customer.findOne({where: {email}});
+        const customer = await Customer.findOne({ where: { email } });
         if (!customer) {
-            return res.status(401).json({error: "User does not exist"});
+            return res.status(401).json({ error: "User does not exist" });
         }
 
         const isPasswordValid = await bcrypt.compare(password, customer.password);
 
         if (!isPasswordValid) {
-            return res.status(401).json({error: "Invalid credentials"});
+            return res.status(401).json({ error: "Invalid credentials" });
         }
 
         const accessToken = generateAccessToken({
@@ -58,20 +83,41 @@ router.post("/login", async (req, res) => {
             name: customer.fullName,
         });
 
-        return res.status(200).json({message: "Login successful", tokens: {
-            access: accessToken,
-            refresh: refreshToken
-        }});
+        return res.status(200).json({
+            message: "Login successful",
+            tokens: {
+                access: accessToken,
+                refresh: refreshToken
+            }
+        });
 
     } catch (error) {
         console.error(error);
-        return res.status(500).json({error: "Could not login at this moment"});
+        return res.status(500).json({ error: "Could not login at this moment" });
     }
 });
 
-// router.use(authenticateToken);
 // Endpoint to create a new booking
 router.post('/bookings/create', async (req, res) => {
+    // #swagger.tags = ['Booking']
+	// #swagger.summary = 'Create a new booking'
+	// #swagger.description = 'This endpoint allows a customer to create a new booking by providing the necessary details.'
+	/* #swagger.parameters['obj'] = {
+		in: 'body',
+		description: 'Booking details',
+		required: true,
+		schema: {
+			$eventType: 'Wedding',
+			$startDate: '2024-07-20T00:00:00.000Z',
+			$endDate: '2024-07-21T00:00:00.000Z',
+			$customerEmailAddress: 'john.doe@example.com',
+			$customerPhoneNumber: '1234567890',
+			$venuePhoneNumber: '0987654321',
+			$numberOfGuests: 150,
+			$venueEmailAddress: 'venue@example.com',
+			$price: 5000
+		}
+	} */
     try {
         const {
             eventType,
@@ -106,11 +152,22 @@ router.post('/bookings/create', async (req, res) => {
     }
 });
 
+// endpoint to refresh token
 router.post("/refresh-token", async (req, res) => {
     // #swagger.tags = ['Customers']
-    const {refreshToken} = req.body;
+	// #swagger.summary = 'Refresh access token'
+	// #swagger.description = 'This endpoint allows a customer to refresh their access token using a refresh token.'
+	/* #swagger.parameters['obj'] = {
+		in: 'body',
+		description: 'Refresh token',
+		required: true,
+		schema: {
+			$refreshToken: 'your-refresh-token-here'
+		}
+	} */
+    const { refreshToken } = req.body;
     if (!refreshToken) {
-        return res.status(401).json({error: "Refresh token not provided"});
+        return res.status(401).json({ error: "Refresh token not provided" });
     }
 
     try {
@@ -119,13 +176,13 @@ router.post("/refresh-token", async (req, res) => {
         const accessToken = jwt.sign({
             email: decoded.email,
             name: decoded.fullName
-        }, process.env.ACCESS_TOKEN_SECRET, 
-    {expiresIn: "2h"});
+        }, process.env.ACCESS_TOKEN_SECRET,
+        { expiresIn: "2h" });
 
-    return res.status(200).json({accessToken});
+        return res.status(200).json({ accessToken });
     } catch (error) {
         console.error(error);
-        return res.status(403).json({error: "Could not validate refresh token"});
+        return res.status(403).json({ error: "Could not validate refresh token" });
     }
 });
 
