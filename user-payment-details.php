@@ -158,31 +158,56 @@ Content START -->
 					</div>
 					<!-- Card body END -->
 
-                    <!-- M-Pesa payment option START -->
-					<div class="card border m-4">
-						<div class="card-header border-bottom">
-                            <h5 class="card-header-title">M-Pesa Payment</h5>
-                        </div>
-                        
-                        <div class="card-body">
-                            <form class="row text-start g-4">
-                                <!-- Phone number -->
-                                <div class="col-12">
-                                    <label class="form-label">Phone Number<span class="text-danger">*</span></label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">+254</span>
-                                        <input type="tel" class="form-control" placeholder="7xx xxx xxx" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
-                                    </div>  
-                                    <div class="form-text">Enter your M-Pesa registered phone number.</div>
-                                </div>
-                                <!-- Button -->
-                                <div class="col-12">
-                                    <button class="btn btn-primary mb-0">Add M-Pesa Number</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- M-Pesa payment option END -->
+                   <!-- M-Pesa payment option START -->
+<div class="card border m-4">
+    <div class="card-header border-bottom">
+        <h5 class="card-header-title">M-Pesa Payment</h5>
+    </div>
+    
+    <div class="card-body">
+        <form class="row text-start g-4" id="mpesa-form">
+            <!-- Phone number -->
+            <div class="col-12">
+                <label class="form-label" for="mpesa-phone">Phone Number<span class="text-danger">*</span></label>
+                <div class="input-group">
+                    <span class="input-group-text">+254</span>
+                    <input type="tel" class="form-control" id="mpesa-phone" placeholder="7xx xxx xxx" pattern="[7][0-9]{2} [0-9]{3} [0-9]{3}" required>
+                </div>  
+                <div class="form-text">Enter your M-Pesa registered phone number.</div>
+            </div>
+            <!-- Amount -->
+            <div class="col-12">
+                <label class="form-label" for="mpesa-amount">Amount<span class="text-danger">*</span></label>
+                <div class="input-group">
+                    <span class="input-group-text">KSh</span>
+                    <input type="number" class="form-control" id="mpesa-amount" placeholder="Amount" required>
+                </div>  
+                <div class="form-text">Enter the amount you want to pay.</div>
+            </div>
+            <!-- Button -->
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary mb-0">Submit Payment</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- M-Pesa payment option END -->
+
+<script>
+document.getElementById('mpesa-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    const phoneNumber = document.getElementById('mpesa-phone').value;
+    const amount = document.getElementById('mpesa-amount').value;
+    
+    // Handle the form data as needed
+    alert('M-Pesa Phone Number: ' + phoneNumber + '\nAmount: ' + amount);
+
+    // Optionally clear the form
+    document.getElementById('mpesa-form').reset();
+});
+</script>
+
 
 				</div>
 				<!-- Payment detail END -->

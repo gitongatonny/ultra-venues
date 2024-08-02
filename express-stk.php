@@ -14,7 +14,7 @@ $config = array(
     "TransactionType"  => "CustomerPayBillOnline",
     "passkey"          => "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919", //Enter your passkey here
     "CallBackURL"      => "https://f899-41-90-64-220.ngrok.io/mpesa/callback.php", //When using Localhost, Use Ngrok to forward the response to your Localhost
-    "AccountReference" => "HealthPro Hospital",
+    "AccountReference" => "Ultra Venues",
     "TransactionDesc"  => "Payment of X" ,
 );
 
@@ -82,6 +82,8 @@ if (isset($_POST['phone_number'])) {
         $MerchantRequestID = $result['MerchantRequestID'];
         $CheckoutRequestID = $result['CheckoutRequestID'];
 
+        // Comment out the database connection
+        /*
         $conn = mysqli_connect("localhost","root","","mpesa");
        
         $sql = "INSERT INTO orders(ID, OrderNo, Amount, Phone, CheckoutRequestID, MerchantRequestID) VALUES ('','".$orderNo."','".$amount."','".$phone."','".$CheckoutRequestID."','".$MerchantRequestID."');";
@@ -99,6 +101,7 @@ if (isset($_POST['phone_number'])) {
                 $errmsg .= $error . '<br />';
             } 
         }
+        */
         
     }else{
         $errors['mpesastk'] = $result['errorMessage'];
