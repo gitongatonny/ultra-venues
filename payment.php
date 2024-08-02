@@ -1,218 +1,200 @@
+<?php
+include_once('express-stk.php'); // Ensure this file is included once to avoid redeclaration
+
+$errmsg = '';
+$successmsg = '';
+
+// Retrieve phone number from query string if available
+$phone_number = isset($_GET['phone_number']) ? $_GET['phone_number'] : '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve POST data
+    $phone_number = $_POST['phone_number'];
+    $amount = $_POST['amount'];
+    $orderNo = $_POST['orderNo'];
+
+    // Validate inputs
+    if (empty($phone_number) || empty($amount) || empty($orderNo)) {
+        $errmsg = 'All fields are required.';
+    } else {
+        // Call the function to initiate M-Pesa payment (uncomment when ready)
+        // $response = initiateMpesaPayment($phone_number, $amount, $orderNo);
+        
+        // Mock success message (remove when integrating with M-Pesa API)
+        $successmsg = 'Payment request sent successfully. Check your phone to complete the transaction.';
+    }
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+    <style>
+        /* Include CSS styling here */
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+        @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900);
 
-    <head>
-        <title>Payment | Ultra Venues</title>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
 
-        <!-- Head Content -->
-        <?php include "includes/head-content.php";?>
+        * {
+            box-sizing: border-box;
+        }
 
+        html {
+            font-family: 'Lato', sans-serif;
+        }
 
+        .price h1 {
+            font-weight: 300;
+            color: #18C2C0;
+            letter-spacing: 2px;
+            text-align: center;
+        }
 
-    </head>
+        .card {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 520px;
+        }
 
-    <body>
-        <!-- Header START -->
-        <?php include "includes/header-main.php";?>
-        <!-- Header END -->
+        .card .row {
+            width: 100%;
+            padding: 1rem 0;
+            border-bottom: 1.2px solid #292C58;
+        }
 
-        <main>
+        .card .row.number {
+            background-color: #242852;
+        }
 
-           	<!-- =======================
-Main Content START -->
-<section class="pt-4 pt-lg-5">
-	<div class="container">
+        .cardholder .info,
+        .number .info {
+            position: relative;
+            margin-left: 40px;
+        }
 
-		<div class="row g-4 g-xl-5">
-			<!-- Left Content START -->
-			<div class="col-xl-8">
-				<div class="card bg-transparent p-0">
-					<!-- Card header START -->
-					<div class="card-header bg-transparent p-0">
-						<h1 class="card-title fs-2 mb-0">Choose a payment option below:</h1>
-					</div>
-					<!-- Card header END -->
+        .cardholder .info label,
+        .number .info label {
+            display: inline-block;
+            letter-spacing: 0.5px;
+            color: #8F92C3;
+            width: 40%;
+        }
 
-					<br>
+        .cardholder .info input,
+        .number .info input {
+            display: inline-block;
+            width: 55%;
+            background-color: transparent;
+            font-family: 'Source Code Pro';
+            border: none;
+            outline: none;
+            margin-left: 1%;
+            color: white;
+        }
 
+        .cardholder .info input::placeholder,
+        .number .info input::placeholder {
+            font-family: 'Source Code Pro';
+            color: #444880;
+        }
 
-				<!-- Card for Mpesa Payment START -->
-				<div class="card bg-transparent p-0 mt-4">
-					<!-- Card header START -->
-					<div class="card-header bg-transparent p-0">
-					<br>
-					<br>
-						<h2 class="card-title fs-4 mb-0">Mpesa Express Payment</h1>
-					</div>
-					<!-- Card header END -->
+        #cardnumber,
+        #cardnumber::placeholder {
+            letter-spacing: 2px;
+            font-size: 16px;
+        }
 
-					<!-- Card body START -->
-					<div class="card-body p-0 mt-3">
-						<!-- Alert box -->
-						<div class="alert alert-success" role="alert">
-							Accept the Mpesa prompt that'll be sent to your phone to complete the payment.
-						</div>
+        .button button {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            width: 520px;
+            background-color: #18C2C0;
+            border: none;
+            color: #fff;
+            padding: 18px;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-						<form class="bg-light rounded-3 p-4">
-							<!-- Form START -->
-							<div class="row g-3">
-								<!-- Mpesa Phone Number -->
-								<div class="col-12">
-									<label class="form-label"><span class="h6 fw-normal">Mpesa Phone Number *</span></label>
-									<input type="tel" class="form-control" aria-label="Mpesa Phone Number" placeholder="Enter your Mpesa phone number +254 712 345 678">
-								</div>
+        .button button:hover {
+            background-color: #15aeac;
+        }
 
-								<!-- Buttons -->
-								<div class="col-12">
-									<a href="payment-confirmation.php" class="btn btn-primary w-100 mb-0">Pay with Mpesa Express</a>
-								</div>
-							</div>
-							<!-- Form END -->
-						</form>
-					</div>
-					<!-- Card body END -->
-				</div>
-				<!-- Card for Mpesa Payment END -->
+        .button button:active {
+            background-color: #139b99;
+        }
 
+        .button button i {
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
 
+        .response-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+        }
 
-					
+        .success {
+            background-color: #28a745;
+        }
 
-					<!-- Card header START -->
-					<div class="card-header bg-transparent p-0">
-						<br>
-						<br>
-						<br>
-						<h2 class="card-title fs-4 mb-4">Card Payment</h2>
-					</div>
-
-					<!-- Card body START -->
-					<div class="card-body p-0 mt-3">
-						<!-- Alert box -->
-						<div class="alert alert-success" role="alert">
-							Fill in your card information below.
-						</div>
-
-						<form class="bg-light rounded-3 p-4">
-							<!-- Card options -->
-							<div class="d-sm-flex justify-content-sm-between align-items-center mb-1">
-								<h6 class="mb-2 mb-sm-0">We Accept:</h6>
-								<ul class="list-inline mb-0">
-									<li class="list-inline-item"> <a href="#"><img src="assets/images/element/visa.svg" class="h-30px" alt=""></a></li>
-									<li class="list-inline-item"> <a href="#"><img src="assets/images/element/mastercard.svg" class="h-30px" alt=""></a></li>
-									<li class="list-inline-item"> <a href="#"><img src="assets/images/element/expresscard.svg" class="h-30px" alt=""></a></li>
-								</ul>
-							</div>
-
-							<!-- Form START -->
-							<div class="row g-3">
-								<!-- Card number -->
-								<div class="col-12">
-									<label class="form-label"><span class="h6 fw-normal">Card Number *</span></label>
-									<div class="position-relative">
-										<input type="text" class="form-control" maxlength="14" placeholder="XXXX XXXX XXXX XXXX">
-										<img src="assets/images/element/visa.svg" class="w-30px position-absolute top-50 end-0 translate-middle-y me-2 d-none d-sm-block" alt="">
-									</div>	
-								</div>
-								<!-- Expiration Date -->
-								<div class="col-md-6">
-									<label class="form-label"><span class="h6 fw-normal">Expiration date *</span></label>
-									<div class="input-group">
-										<input type="text" class="form-control" maxlength="2" placeholder="Month">
-										<input type="text" class="form-control" maxlength="4" placeholder="Year">
-									</div>
-								</div>	
-								<!--Cvv code  -->
-								<div class="col-md-6">
-									<label class="form-label"><span class="h6 fw-normal">CVV / CVC *</span></label>
-									<input type="text" class="form-control" maxlength="3" placeholder="XXX">
-								</div>
-								<!-- Card name -->
-								<div class="col-12">
-									<label class="form-label"><span class="h6 fw-normal">Name on Card *</span></label>
-									<input type="text" class="form-control" aria-label="name of card holder" placeholder="Enter card holder name">
-								</div>
-
-								<!-- Buttons -->
-								<div class="col-12">
-									<a href="payment-confirmation.php" class="btn btn-primary w-100 mb-0">Pay with your Card</a>
-								</div>
-							</div>
-							<!-- Form END -->
-						</form>
-					</div>
-					<!-- Card body END -->
-				</div>
-
-				<br>
-				<br>
-
-
-			</div>
-			<!-- Left Content END -->
-
-			<!-- Right content START -->
-			<aside class="col-xl-4">
-				<div data-sticky data-margin-top="150" data-sticky-for="1199" class="row g-4">
-					<!-- Price summary START -->
-					<div class="col-md-6 col-xl-12">
-						<div class="card bg-light rounded-2">
-							<!-- card header -->
-							<div class="card-header border-bottom bg-light">
-								<h5 class="card-title mb-0">Price Summary</h5>
-							</div>
-
-							<!-- Card body -->
-							<div class="card-body">
-								<ul class="list-group list-group-borderless">
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-normal mb-0">Base Booking Cost
-											<a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-content="COVID-19 test required Vaccinated travelers can visit">
-												<i class="bi bi-info-circle"></i>
-											</a>
-										</span>
-										<span class="fs-5">Ksh. 15,000</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-normal mb-0">Other Services</span>
-										<span class="fs-5 text-success">+Ksh. 5000</span>
-									</li>
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										<span class="h6 fw-normal mb-0">Discount</span>
-										<span class="fs-5 text-danger">-Ksh. 2,500</span>
-									</li>
-
-								</ul>
-							</div>
-
-							<!-- Card footer -->
-							<div class="card-footer border-top bg-light">
-								<div class="d-flex justify-content-between align-items-center">
-									<span class="h5 fw-normal mb-0">Total Cost</span>
-									<span class="h5 fw-normal mb-0">Ksh. 17,500</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Price summary END -->
-
-				</div>	
-			</aside>
-			<!-- Right content END -->
-		</div>
-	</div>
-</section>
-<!-- =======================
-Main Content END -->
-
-        </main>
-
-        <!-- Footer START -->
-            <?php include "includes/footer.php";?>
-        <!-- Footer END -->
-		<script src="assets/vendor/sticky-js/sticky.min.js"></script>
-
-    </body>
-
-
+        .error {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action='<?php echo $_SERVER['PHP_SELF'] ?>' method='POST'>
+            <div class="price"></div>
+            <div class="card__container">
+                <div class="card">
+                    <div class="row">
+                        <img src="mpesa.png" style="width:30%;margin: 0 35%;">
+                        <p style="color:#8F92C3;line-height:1.7;">
+                            1. Enter the <b>phone number</b> and <b>amount</b>, then press "<b>Confirm and Pay</b>"<br>
+                            2. You will receive a popup on your phone. Enter your <b>MPESA PIN</b>
+                        </p>
+                        <?php if ($errmsg != ''): ?>
+                        <p class="response-message error"><?php echo $errmsg; ?></p>
+                        <?php endif; ?>
+                        
+                        <?php if ($successmsg != ''): ?>
+                        <p class="response-message success"><?php echo $successmsg; ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="row number">
+                        <div class="info">
+                            <input type="hidden" name="orderNo" value="#O2JDI2I3R" />
+                            <label for="cardnumber">Phone number</label>
+                            <input id="cardnumber" type="text" name="phone_number" maxlength="10" placeholder="0700000000" value="<?php echo htmlspecialchars($phone_number); ?>" required />
+                        </div>
+                    </div>
+                    <div class="row number">
+                        <div class="info">
+                            <label for="amount">Amount</label>
+                            <input id="amount" type="number" name="amount" placeholder="Enter amount" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit"><i class="ion-locked"></i> Confirm and Pay</button>
+            </div>
+        </form>
+    </div>
+</body>
 </html>
