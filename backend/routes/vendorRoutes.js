@@ -214,4 +214,34 @@ router.get('/transactions/:email', async (req, res) => {
     }
 });
 
+router.get('/venues/booking-trends', async (req, res) => {
+    // #swagger.tags = ['Analytics']
+    // #swagger.summary = 'Track booking trends over time'
+    // #swagger.description = 'This endpoint provides insights into booking trends over a specified date range.'
+    // #swagger.parameters['startDate'] = { description: 'Start date for tracking trends', required: true, type: 'string', format: 'date' }
+    // #swagger.parameters['endDate'] = { description: 'End date for tracking trends', required: true, type: 'string', format: 'date' }
+    const { startDate, endDate } = req.query;
+
+    try {
+        const trends = await Booking.findAll({
+            attributes: [
+                [db.fn('DATE_TRUNC', 'month', db.col('startDate')), 'month'],
+                [db.fn('COUNT', db.col('id')), 'bookingCount']
+            ],
+            where: {
+                startDate: { [Op.between]: [new Date(startDate), new Date(endDate)] }
+            },
+            group: [db.fn('DATE_TRUNC', 'month', db.col('startDate'))],
+            order: [[db.fn('DATE_TRUNC', 'month', db.col('startDate')), 'ASC']],
+            raw: true
+        });
+
+        res.status(200).json(trends);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to retrieve booking trends' });
+    }
+});
+
+
 module.exports = router;

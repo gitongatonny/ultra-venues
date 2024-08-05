@@ -430,6 +430,93 @@
         }
       }
     },
+    "/api/venues/reports": {
+      "get": {
+        "tags": [
+          "Analytics"
+        ],
+        "summary": "Generate performance reports for venues",
+        "description": "This endpoint generates performance reports, including metrics like total bookings, revenue, and visitor counts, for the specified date range.",
+        "parameters": [
+          {
+            "name": "startDate",
+            "description": "Start date for the report",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          },
+          {
+            "name": "endDate",
+            "description": "End date for the report",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/payments/{email}/history": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "summary": "Fetch payment history for a specific vendor",
+        "description": "This endpoint retrieves all payment transactions for a specific vendor based on their email address.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the vendor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/payments/summary/{email}": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "summary": "Payment summary for a specific vendor",
+        "description": "This endpoint provides a summary of payments for a vendor, including total revenue, current month’s revenue, and previous month’s revenue.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the vendor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/api/bookings": {
       "get": {
         "tags": [
@@ -1008,6 +1095,41 @@
             "required": true,
             "type": "string",
             "description": "Email address of the venue"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/vendor/venues/booking-trends": {
+      "get": {
+        "tags": [
+          "Analytics"
+        ],
+        "summary": "Track booking trends over time",
+        "description": "This endpoint provides insights into booking trends over a specified date range.",
+        "parameters": [
+          {
+            "name": "startDate",
+            "description": "Start date for tracking trends",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          },
+          {
+            "name": "endDate",
+            "description": "End date for tracking trends",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
           }
         ],
         "responses": {

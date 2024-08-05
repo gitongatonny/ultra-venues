@@ -12,6 +12,7 @@ const venueRoutes = require("./routes/venueRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const vendorRoutes = require("./routes/vendorRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use("/api/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use("/api/customer", customerRoutes);
 app.use("/api", venueRoutes);
+app.use("/api", paymentRoutes);
 app.use("/api", bookingRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/vendor", vendorRoutes);

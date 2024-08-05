@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Venue = require("../models/venueModel");
+const Booking = require("../models/bookingModel");
 const upload = require("../config/multer");
 
 // Endpoint to list all venues
@@ -100,5 +101,35 @@ router.post("/venues/update-email/:id", async (req, res) => {
         res.status(500).json({ error: "Could not update email!" });
     }
 });
+
+router.get('/venues/reports', async (req, res) => {
+    // #swagger.tags = ['Analytics']
+    // #swagger.summary = 'Generate performance reports for venues'
+    // #swagger.description = 'This endpoint generates performance reports, including metrics like total bookings, revenue, and visitor counts, for the specified date range.'
+    // #swagger.parameters['startDate'] = { description: 'Start date for the report', required: true, type: 'string', format: 'date' }
+    // #swagger.parameters['endDate'] = { description: 'End date for the report', required: true, type: 'string', format: 'date' }
+    const { startDate, endDate } = req.query;
+
+    try {
+        const bookings = await Booking.findAll({
+            attributes: [
+                [db.fn('SUM', db.col('price')), 'totalRevenue'],
+                [db.fn('COUNT', db.col('id')), 'totalBookings'],
+                [db.fn('SUM', db.col('numberOfGuests')), 'totalVisitors']
+            ],
+            where: {
+                startDate: { [Op.between]: [new Date(startDate), new Date(endDate)] }
+            },
+            raw: true
+        });
+
+        console.log(bookings);
+        res.status(200).json(bookings[0]);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to generate report' });
+    }
+});
+
 
 module.exports = router;
