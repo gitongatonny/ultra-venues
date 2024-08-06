@@ -23,13 +23,10 @@ external_df['features'] = external_df['Place'] + ' ' + external_df['Price'] + ' 
 vectorizer = TfidfVectorizer(stop_words='english')
 external_feature_matrix = vectorizer.fit_transform(external_df['features'])
 
-# Compute cosine similarity matrix
-cosine_sim_external = cosine_similarity(external_feature_matrix, external_feature_matrix)
-
-# Save the model (vectorizer and cosine similarity matrix)
+# Save the vectorizer and feature matrix
 with open('vectorizer.pkl', 'wb') as f:
     pickle.dump(vectorizer, f)
-with open('cosine_sim_external.pkl', 'wb') as f:
-    pickle.dump(cosine_sim_external, f)
+with open('external_feature_matrix.pkl', 'wb') as f:
+    pickle.dump(external_feature_matrix, f)
 
 print("Model training complete and saved.")
