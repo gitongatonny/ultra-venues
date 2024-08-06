@@ -6,6 +6,8 @@
 
 	<!-- Head Content -->
 	<?php include "includes/head-content.php"; ?>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 
 
 
@@ -177,7 +179,6 @@ Content START -->
 					<!-- Booking graph START -->
 					<div class="col-lg-4">
 						<div class="card border h-100">
-
 							<!-- Card header -->
 							<div class="card-header border-bottom d-flex justify-content-between align-items-center">
 								<h5 class="card-header-title">Event Categories</h5>
@@ -193,10 +194,7 @@ Content START -->
 
 								<!-- Content -->
 								<ul class="list-group list-group-borderless align-items-center mt-3" id="eventCategories">
-									<li class="list-group-item"><i class="text-primary fas fa-circle me-2"></i>Weddings</li>
-									<li class="list-group-item"><i class="text-success fas fa-circle me-2"></i>Corporate Seminars</li>
-									<li class="list-group-item"><i class="text-warning fas fa-circle me-2"></i>Birthday Parties</li>
-									<li class="list-group-item"><i class="text-danger fas fa-circle me-2"></i>Graduations</li>
+									<!-- Event categories will be dynamically added here -->
 								</ul>
 							</div>
 						</div>
@@ -204,6 +202,7 @@ Content START -->
 					<!-- Booking graph END -->
 				</div>
 				<!-- Graph END -->
+
 
 				<!-- Booking table START -->
 				<div class="row">
@@ -320,13 +319,11 @@ Content END -->
 				const data = await response.json();
 				console.log(data);
 
-				// document.getElementById("venueName").textContent = userDetails.venueName;
-
 				// Update total bookings
 				document.getElementById('totalBookings').textContent = data.totalBookings || 0;
 
 				// Update total earnings
-				document.getElementById('totalEarnings').textContent = `Ksh. ${data.totalRevenue}` || 'Kshs. 0.00';
+				document.getElementById('totalEarnings').textContent = `Ksh. ${data.totalRevenue}` || 'Ksh. 0.00';
 
 				// Update total visitors
 				document.getElementById('totalVisitors').textContent = data.totalVisitors || 0;
@@ -336,15 +333,40 @@ Content END -->
 
 				// Update event categories list
 				const eventCategories = document.getElementById('eventCategories');
+				eventCategories.innerHTML = ''; // Clear existing categories
+				const eventTypes = [];
+				const eventCounts = [];
 				if (data.eventCategories) {
-					const categories = ['Weddings', 'Corporate Seminars', 'Birthday Parties', 'Graduations'];
-					categories.forEach((category, index) => {
-						const listItem = eventCategories.children[index];
-						if (listItem) {
-							listItem.innerHTML = `<i class="text-${data.eventCategories[index].color} fas fa-circle me-2"></i>${category}`;
-						}
+					const colors = ['primary', 'success', 'warning', 'danger'];
+					data.eventCategories.forEach((category, index) => {
+						const listItem = document.createElement('li');
+						listItem.className = "list-group-item";
+						listItem.innerHTML = `<i class="text-${colors[index % colors.length]} fas fa-circle me-2"></i>${category.eventType} (${category.count})`;
+						eventCategories.appendChild(listItem);
+						eventTypes.push(category.eventType);
+						eventCounts.push(category.count);
 					});
 				}
+
+				// Render event categories chart
+				const eventCategoryChartOptions = {
+					chart: {
+						type: 'pie'
+					},
+					series: eventCounts,
+					labels: eventTypes
+				};
+
+				const eventCategoryChart = new ApexCharts(document.getElementById('ChartTrafficViews'), eventCategoryChartOptions);
+				eventCategoryChart.render();
+
+				// Update visitor counts by month chart
+				const months = [];
+				const visitors = [];
+				data.visitorCountsByMonth.forEach((item) => {
+					months.push(`${item.year}-${item.month}`);
+					visitors.push(item.visitorCount);
+				});
 
 				// Update upcoming bookings table
 				const upcomingBookingsBody = document.getElementById('upcomingBookingsBody');
@@ -357,8 +379,8 @@ Content END -->
                         <td><h6 class="mb-0"><a href="#">${booking.customerEmailAddress}</a></h6></td>
                         <td>${booking.eventType}</td>
                         <td>${formatDateRange(booking.startDate, booking.endDate)}</td>
-                        <td><div class="badge text-bg-${booking.status === 'Upcoming' ? 'success' : booking.status === 'Done' ? 'info' : 'danger'}">${Date(booking.endDate) < new Date()? "Done": Date(booking.endDate) > new Date()? "Upcoming": "In progress"}</div></td>
-                        <td><div class="badge bg-${booking.paymentStatus === '0' ? 'success' : 'orange'} bg-opacity-10 text-${booking.paymentStatus === '1' ? 'success' : 'orange'}">${booking.paymentStatus}</div></td>
+                        <td><div class="badge text-bg-${booking.status === 'Upcoming' ? 'success' : booking.status === 'Done' ? 'info' : 'danger'}">${new Date(booking.endDate) < new Date() ? "Done" : new Date(booking.endDate) > new Date() ? "Upcoming" : "In progress"}</div></td>
+                        <td><div class="badge bg-${booking.paymentStatus === 0 ? 'success' : 'orange'} bg-opacity-10 text-${booking.paymentStatus === 0 ? 'success' : 'orange'}">${booking.paymentStatus}</div></td>
                         <td><a href="#" class="btn btn-sm btn-light mb-0">View</a></td>
                     </tr>
                 `;
@@ -366,27 +388,28 @@ Content END -->
 					});
 				}
 
-				// Update pagination
-				const bookingPagination = document.getElementById('bookingPagination');
-				if (data.pagination) {
-					bookingPagination.textContent = `Showing ${data.pagination.startIndex + 1} to ${Math.min(data.pagination.endIndex, data.pagination.totalEntries)} of ${data.pagination.totalEntries} entries`;
-
-					const bookingPaginationList = document.getElementById('bookingPaginationList');
-					bookingPaginationList.innerHTML = '';
-					if (data.pagination.pages.length > 1) {
-						data.pagination.pages.forEach(page => {
-							const liClass = page === data.pagination.currentPage ? 'page-item active' : 'page-item';
-							const pageLink = `<a class="page-link" href="#">${page}</a>`;
-							const liElement = `<li class="${liClass}">${pageLink}</li>`;
-							bookingPaginationList.insertAdjacentHTML('beforeend', liElement);
-						});
+				const visitorChartOptions = {
+					chart: {
+						type: 'bar'
+					},
+					series: [{
+						name: 'Visitors',
+						data: visitors
+					}],
+					xaxis: {
+						categories: months
 					}
-				}
+				};
+
+				const visitorChart = new ApexCharts(document.getElementById('apexChartTrafficStats'), visitorChartOptions);
+				visitorChart.render();
+
 			} catch (error) {
 				console.error('Error fetching dashboard data:', error);
 				// Handle error scenario (e.g., display error message to user)
 			}
 		}
+
 
 		// Helper function to format date range
 		function formatDateRange(startDate, endDate) {

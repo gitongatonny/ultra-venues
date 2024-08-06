@@ -100,26 +100,29 @@ router.post("/login", async (req, res) => {
 // Endpoint to create a new booking
 router.post('/bookings/create', async (req, res) => {
     // #swagger.tags = ['Booking']
-	// #swagger.summary = 'Create a new booking'
-	// #swagger.description = 'This endpoint allows a customer to create a new booking by providing the necessary details.'
-	/* #swagger.parameters['obj'] = {
-		in: 'body',
-		description: 'Booking details',
-		required: true,
-		schema: {
-			$eventType: 'Wedding',
-			$startDate: '2024-07-20T00:00:00.000Z',
-			$endDate: '2024-07-21T00:00:00.000Z',
-			$customerEmailAddress: 'john.doe@example.com',
-			$customerPhoneNumber: '1234567890',
-			$venuePhoneNumber: '0987654321',
-			$numberOfGuests: 150,
-			$venueEmailAddress: 'venue@example.com',
-			$price: 5000
-		}
-	} */
+    // #swagger.summary = 'Create a new booking'
+    // #swagger.description = 'This endpoint allows a customer to create a new booking by providing the necessary details.'
+    /* #swagger.parameters['obj'] = {
+        in: 'body',
+        description: 'Booking details',
+        required: true,
+        schema: {
+            $customerFullName: 'John Doe',
+            $eventType: 'Wedding',
+            $startDate: '2024-07-20T00:00:00.000Z',
+            $endDate: '2024-07-21T00:00:00.000Z',
+            $customerEmailAddress: 'john.doe@example.com',
+            $customerPhoneNumber: '1234567890',
+            $venuePhoneNumber: '0987654321',
+            $numberOfGuests: 150,
+            $venueEmailAddress: 'venue@example.com',
+            $price: 5000,
+            $paymentStatus: 0
+        }
+    } */
     try {
         const {
+            customerFullName,
             eventType,
             startDate,
             endDate,
@@ -128,11 +131,13 @@ router.post('/bookings/create', async (req, res) => {
             venuePhoneNumber,
             numberOfGuests,
             venueEmailAddress,
-            price
+            price,
+            paymentStatus
         } = req.body;
 
         // Create booking in the database
         const newBooking = await Booking.create({
+            customerFullName,
             eventType,
             startDate,
             endDate,
@@ -141,7 +146,8 @@ router.post('/bookings/create', async (req, res) => {
             venuePhoneNumber,
             numberOfGuests,
             venueEmailAddress,
-            price
+            price,
+            paymentStatus
         });
 
         // Respond with success message or new booking data
@@ -151,6 +157,7 @@ router.post('/bookings/create', async (req, res) => {
         res.status(500).json({ error: 'Failed to create booking' });
     }
 });
+
 
 // endpoint to refresh token
 router.post("/refresh-token", async (req, res) => {

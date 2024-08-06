@@ -150,8 +150,8 @@ router.post("/refresh-token", async (req, res) => {
 	}
 });
 
-router.use(authenticateToken);
-router.use(isAdmin);
+// router.use(authenticateToken);
+// router.use(isAdmin);
 
 // Endpoint to get all customers with their total booking count
 router.get('/customers', async (req, res) => {

@@ -69,8 +69,9 @@ const Venue = db.define("Venue", {
         defaultValue: 0
     },
     pictures: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: true
+        type: DataTypes.JSON,
+        allowNull: true,
+        defaultValue: [""]
     }
 }, {
     timestamps: false,

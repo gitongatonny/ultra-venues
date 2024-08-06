@@ -133,16 +133,16 @@
                 customerPhoneNumber: document.getElementById('customerPhoneNumber').value,
                 venuePhoneNumber: document.getElementById('venuePhoneNumber').value,
                 numberOfGuests: document.getElementById('numberOfGuests').value,
-                venueEmailAddress: "document.getElementById('venueEmailAddress').value",
-                // price: document.getElementById('price').value,
-                price: 0,
+                venueEmailAddress: document.getElementById('venueEmailAddress').value,
+                price: document.getElementById('price').value,
                 paymentStatus: 0 // Default value for payment status
             };
+
 
             console.log(formData);
             try {
                 // Send POST request to create booking endpoint
-                const response = await fetch('/api/bookings/create', {
+                const response = await fetch('http://localhost:5000/api/customer/bookings/create', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

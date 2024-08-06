@@ -125,22 +125,19 @@ router.post("/login", async (req, res) => {
     }
 });
 
-// Route to fetch venue details and statistics
 router.get('/dashboard/:venueEmail', async (req, res) => {
-    // #swagger.tags = ['Vendor']
-    // #swagger.summary = 'Fetch venue dashboard data'
-    // #swagger.description = 'This endpoint provides venue details and statistics, including total revenue, total visitors, upcoming bookings, and visitor counts by month.'
-    // #swagger.parameters['venueEmail'] = { description: 'Email address of the venue' }
     const venueEmail = req.params.venueEmail;
 
     try {
         const totalRevenue = await Booking.sum('price', { where: { venueEmailAddress: venueEmail } });
         const totalVisitors = await Booking.sum('numberOfGuests', { where: { venueEmailAddress: venueEmail } });
+        const totalBookings = await Booking.count({ where: { venueEmailAddress: venueEmail } });
+        // const totalReviews = await Review.count({ where: { venueEmailAddress: venueEmail } });
 
         const upcomingBookings = await Booking.findAll({
             where: {
                 venueEmailAddress: venueEmail,
-                startDate: { [Op.gt]: new Date() }
+                endDate: { [Op.gte]: new Date() }
             },
             order: [['startDate', 'ASC']]
         });
@@ -156,11 +153,24 @@ router.get('/dashboard/:venueEmail', async (req, res) => {
             raw: true
         });
 
+        const eventCategories = await Booking.findAll({
+            attributes: [
+                'eventType',
+                [db.fn('COUNT', db.col('eventType')), 'count']
+            ],
+            where: { venueEmailAddress: venueEmail },
+            group: ['eventType'],
+            raw: true
+        });
+
         const dashboardData = {
             totalRevenue: totalRevenue || 0,
             totalVisitors: totalVisitors || 0,
+            totalBookings: totalBookings || 0,
+            // totalReviews: totalReviews || 0,
             upcomingBookings,
-            visitorCountsByMonth
+            visitorCountsByMonth,
+            eventCategories
         };
 
         res.status(200).json(dashboardData);
@@ -169,6 +179,8 @@ router.get('/dashboard/:venueEmail', async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch dashboard data' });
     }
 });
+
+
 
 // Endpoint to get all transactions for a specific email
 router.get('/transactions/:email', async (req, res) => {
