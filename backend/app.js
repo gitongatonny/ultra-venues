@@ -7,6 +7,7 @@ const cors = require('cors');
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./swagger-output.json");
 
+const path = require('path');
 const customerRoutes = require("./routes/customerRoutes");
 const venueRoutes = require("./routes/venueRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
@@ -19,6 +20,9 @@ const app = express();
  // Use CORS middleware
  app.use(cors());
 
+// Serve static files from the 'uploads' directory
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 db.authenticate()
 	.then(() => console.log("Database connected"))
 	.catch((err) => console.error("Error: " + err));

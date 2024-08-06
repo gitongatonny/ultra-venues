@@ -2,7 +2,22 @@ const express = require('express');
 const router = express.Router();
 const Venue = require("../models/venueModel");
 const Booking = require("../models/bookingModel");
-const upload = require("../config/multer");
+// const upload = require("../config/multer");
+const multer = require('multer');
+const path = require('path');
+const { v4: uuidv4 } = require('uuid');
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/'); // Directory to store uploaded files
+    },
+    filename: function (req, file, cb) {
+        const ext = path.extname(file.originalname);
+        cb(null, uuidv4() + ext); // Unique filename
+    }
+});
+
+const upload = multer({ storage: storage });
 
 // Endpoint to list all venues
 router.get("/venues", async (req, res) => {
@@ -25,11 +40,24 @@ router.get("/venues", async (req, res) => {
             offset: offset
         });
 
+        // Get the base URL from the request
+        const baseUrl = `${req.protocol}://${req.get('host')}`;
+
+        // Map venues to include image URLs
+        const venuesWithImagePaths = venues.map(venue => {
+            // Parse pictures JSON string if needed
+            const pictures = JSON.parse(venue.pictures || '[]');
+            return {
+                ...venue.toJSON(),
+                pictures: pictures.map(picture => `${baseUrl}/${picture}`) // Full URL
+            };
+        });
+
         // Calculate total pages
         const totalPages = Math.ceil(count / limit);
 
         res.status(200).json({
-            venues: venues,
+            venues: venuesWithImagePaths,
             pagination: {
                 totalItems: count,
                 totalPages: totalPages,
@@ -42,8 +70,6 @@ router.get("/venues", async (req, res) => {
         res.status(500).json({ error: "Could not fetch venues at this moment" });
     }
 });
-
-
 // Endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
     // #swagger.tags = ['Venue']
@@ -56,37 +82,38 @@ router.get("/venues/:id", async (req, res) => {
         if (!venue) {
             return res.status(404).json({ error: "Venue not found" });
         }
-        res.status(200).json(venue);
+
+        // Get the base URL from the request
+        const baseUrl = `${req.protocol}://${req.get('host')}`;
+
+        // Parse pictures JSON string if needed
+        const pictures = JSON.parse(venue.pictures || '[]');
+
+        // Include image paths in the response
+        const venueWithImagePaths = {
+            ...venue.toJSON(),
+            pictures: pictures.map(picture => `${baseUrl}/${picture}`) // Full URL
+        };
+
+        res.status(200).json(venueWithImagePaths);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Could not fetch venue details!" });
     }
 });
 
+
+
 // Endpoint to update venue details including pictures
-router.put("/venues/:id", upload, async (req, res) => {
-    // #swagger.tags = ['Venue']
-    // #swagger.summary = 'Update venue details'
-    // #swagger.description = 'This endpoint updates the details of a specific venue by its ID, including uploading new pictures.'
-    // #swagger.parameters['id'] = { description: 'ID of the venue to update' }
-    // #swagger.parameters['name'] = { in: 'body', description: 'Name of the venue' }
-    // #swagger.parameters['type'] = { in: 'body', description: 'Type of the venue' }
-    // #swagger.parameters['email'] = { in: 'body', description: 'Email of the venue' }
-    // #swagger.parameters['mobile'] = { in: 'body', description: 'Mobile number of the venue' }
-    // #swagger.parameters['location'] = { in: 'body', description: 'Location of the venue' }
-    // #swagger.parameters['website'] = { in: 'body', description: 'Website URL of the venue' }
-    // #swagger.parameters['services'] = { in: 'body', description: 'Services provided by the venue' }
+router.put("/venues/:id", upload.array('pictures'), async (req, res) => {
     const id = req.params.id;
     const { name, type, email, mobile, location, website, services, price } = req.body;
-    console.log(price);
 
     try {
         const venue = await Venue.findOne({ where: { id: id } });
         if (!venue) {
             return res.status(404).json({ error: "Venue not found" });
         }
-        
-        // let pictures = req.files.map(file => file.path);
 
         venue.venueName = name;
         venue.venueType = type;
@@ -96,7 +123,11 @@ router.put("/venues/:id", upload, async (req, res) => {
         venue.websiteUrl = website;
         venue.facilities = services;
         venue.price = price;
-        // venue.pictures = pictures;
+
+        if (req.files.length > 0) {
+            const pictures = req.files.map(file => file.path);
+            venue.pictures = pictures;
+        }
 
         await venue.save();
         res.status(200).json(venue);

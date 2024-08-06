@@ -131,8 +131,9 @@ Content START -->
 												<!-- Venue Pictures -->
 												<div class="mb-3">
 													<label class="form-label">Venue Pictures</label>
-													<div class="d-flex align-items-center" id="venuePictures">
-														<!-- Dynamic content will be inserted here -->
+													<input type="file" id="venuePicturesInput" class="form-control" multiple>
+													<div class="d-flex align-items-center mt-2" id="venuePicturesPreview">
+														<!-- Dynamic image previews will be inserted here -->
 													</div>
 												</div>
 
@@ -278,6 +279,25 @@ Content END -->
 	<!-- Footer END -->
 
 	<script>
+		document.getElementById('venuePicturesInput').addEventListener('change', (e) => {
+			const files = e.target.files;
+			const venuePicturesPreview = document.getElementById('venuePicturesPreview');
+			venuePicturesPreview.innerHTML = ''; // Clear previous previews
+
+			Array.from(files).forEach(file => {
+				const reader = new FileReader();
+				reader.onload = function(event) {
+					const img = document.createElement('img');
+					img.src = event.target.result;
+					img.className = 'avatar-img rounded-circle border border-white border-3 shadow';
+					img.width = 100;
+					img.height = 100;
+					venuePicturesPreview.appendChild(img);
+				};
+				reader.readAsDataURL(file);
+			});
+		});
+
 		const venueDetails = JSON.parse(localStorage.getItem("userDetails"));
 		const venueId = venueDetails.id; // Replace with the actual venue ID
 		document.addEventListener('DOMContentLoaded', async () => {
@@ -322,29 +342,28 @@ Content END -->
 		// Handle form submissions
 		document.getElementById('saveChangesButton').addEventListener('click', async (e) => {
 			e.preventDefault();
-			const updatedData = {
-				name: document.getElementById('venueName').value,
-				type: document.getElementById('venueType').value,
-				email: document.getElementById('venueEmail').value,
-				mobile: document.getElementById('venueMobile').value,
-				location: document.getElementById('venueLocation').value,
-				website: document.getElementById('venueWebsite').value,
-				license: document.getElementById('venueLicense').value,
-				kraPin: document.getElementById('venueKraPin').value,
-				services: document.getElementById('venueServices').value,
-				additionalServices: document.getElementById('venueAdditionalServices').value,
-				price: document.getElementById('venuePrice').value,
+			const formData = new FormData();
+			formData.append('name', document.getElementById('venueName').value);
+			formData.append('type', document.getElementById('venueType').value);
+			formData.append('email', document.getElementById('venueEmail').value);
+			formData.append('mobile', document.getElementById('venueMobile').value);
+			formData.append('location', document.getElementById('venueLocation').value);
+			formData.append('website', document.getElementById('venueWebsite').value);
+			formData.append('license', document.getElementById('venueLicense').value);
+			formData.append('kraPin', document.getElementById('venueKraPin').value);
+			formData.append('services', document.getElementById('venueServices').value);
+			formData.append('additionalServices', document.getElementById('venueAdditionalServices').value);
+			formData.append('price', document.getElementById('venuePrice').value);
 
-				// pictures: [] // Handle pictures upload logic here
-			};
+			const picturesInput = document.getElementById('venuePicturesInput').files;
+			Array.from(picturesInput).forEach(file => {
+				formData.append('pictures', file);
+			});
 
 			try {
 				const response = await fetch(`http://localhost:5000/api/venues/${venueId}`, {
 					method: 'PUT',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify(updatedData)
+					body: formData
 				});
 				if (!response.ok) {
 					throw new Error('Network response was not ok ' + response.statusText);
@@ -356,6 +375,7 @@ Content END -->
 				console.error('There was a problem with the fetch operation:', error);
 			}
 		});
+
 
 		document.getElementById('updateEmailForm').addEventListener('submit', async (e) => {
 			e.preventDefault();
