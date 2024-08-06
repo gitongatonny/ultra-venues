@@ -206,9 +206,9 @@ echo "</pre>";
                                                         <li class="list-group-item small pb-0">
                                                             <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> <?= htmlspecialchars($venue['location']) ?>
                                                         </li>
-                                                        <li class="list-group-item small pb-0">
+                                                        <!-- <li class="list-group-item small pb-0">
                                                             <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: <?= htmlspecialchars($venue['Capacity']) ?> guests
-                                                        </li>
+                                                        </li> -->
                                                         <br>
                                                         <!-- Price -->
                                                         <p class="mb-0">Starts at <span class="text-success">Ksh <?= htmlspecialchars($venue['price']) ?></span> per/day</p>
