@@ -1,0 +1,1159 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Ultra Venues API Docs",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/api/customer/register": {
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Register a new customer",
+        "description": "This endpoint allows a new customer to register by providing their full name, email, phone number, and password.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Customer registration details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fullName": {
+                  "type": "string",
+                  "example": "John Doe"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "john.doe@example.com"
+                },
+                "phoneNumber": {
+                  "type": "string",
+                  "example": "1234567890"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "password123"
+                }
+              },
+              "required": [
+                "fullName",
+                "email",
+                "phoneNumber",
+                "password"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/customer/login": {
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Customer login",
+        "description": "This endpoint allows a customer to login by providing their email and password.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Customer login details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "john.doe@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "password123"
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/customer/bookings/create": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Create a new booking",
+        "description": "This endpoint allows a customer to create a new booking by providing the necessary details.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Booking details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "eventType": {
+                  "type": "string",
+                  "example": "Wedding"
+                },
+                "startDate": {
+                  "type": "string",
+                  "example": "2024-07-20T00:00:00.000Z"
+                },
+                "endDate": {
+                  "type": "string",
+                  "example": "2024-07-21T00:00:00.000Z"
+                },
+                "customerEmailAddress": {
+                  "type": "string",
+                  "example": "john.doe@example.com"
+                },
+                "customerPhoneNumber": {
+                  "type": "string",
+                  "example": "1234567890"
+                },
+                "venuePhoneNumber": {
+                  "type": "string",
+                  "example": "0987654321"
+                },
+                "numberOfGuests": {
+                  "type": "number",
+                  "example": 150
+                },
+                "venueEmailAddress": {
+                  "type": "string",
+                  "example": "venue@example.com"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 5000
+                }
+              },
+              "required": [
+                "eventType",
+                "startDate",
+                "endDate",
+                "customerEmailAddress",
+                "customerPhoneNumber",
+                "venuePhoneNumber",
+                "numberOfGuests",
+                "venueEmailAddress",
+                "price"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/customer/refresh-token": {
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Refresh access token",
+        "description": "This endpoint allows a customer to refresh their access token using a refresh token.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Refresh token",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "refreshToken": {
+                  "type": "string",
+                  "example": "your-refresh-token-here"
+                }
+              },
+              "required": [
+                "refreshToken"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/venues": {
+      "get": {
+        "tags": [
+          "Venue"
+        ],
+        "summary": "List all venues",
+        "description": "This endpoint retrieves a list of all venues, excluding sensitive information like password and isActive status.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/venues/{id}": {
+      "get": {
+        "tags": [
+          "Venue"
+        ],
+        "summary": "Get venue details",
+        "description": "This endpoint retrieves details of a specific venue by its ID, excluding sensitive information like password and isActive status.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID of the venue to retrieve details for"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Venue"
+        ],
+        "summary": "Update venue details",
+        "description": "This endpoint updates the details of a specific venue by its ID, including uploading new pictures.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID of the venue to update"
+          },
+          {
+            "name": "name",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "type": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "mobile": {
+                  "example": "any"
+                },
+                "location": {
+                  "example": "any"
+                },
+                "website": {
+                  "example": "any"
+                },
+                "services": {
+                  "example": "any"
+                }
+              }
+            },
+            "description": "Name of the venue"
+          },
+          {
+            "name": "type",
+            "in": "body",
+            "description": "Type of the venue",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "email",
+            "in": "body",
+            "description": "Email of the venue",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "mobile",
+            "in": "body",
+            "description": "Mobile number of the venue",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "location",
+            "in": "body",
+            "description": "Location of the venue",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "website",
+            "in": "body",
+            "description": "Website URL of the venue",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "services",
+            "in": "body",
+            "description": "Services provided by the venue",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/venues/update-email/{id}": {
+      "post": {
+        "tags": [
+          "Venue"
+        ],
+        "summary": "Update venue email",
+        "description": "This endpoint updates the email address of a specific venue by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID of the venue to update email for"
+          },
+          {
+            "name": "newEmail",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "newEmail": {
+                  "example": "any"
+                }
+              }
+            },
+            "description": "New email address of the venue",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/venues/reports": {
+      "get": {
+        "tags": [
+          "Analytics"
+        ],
+        "summary": "Generate performance reports for venues",
+        "description": "This endpoint generates performance reports, including metrics like total bookings, revenue, and visitor counts, for the specified date range.",
+        "parameters": [
+          {
+            "name": "startDate",
+            "description": "Start date for the report",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          },
+          {
+            "name": "endDate",
+            "description": "End date for the report",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/payments/{email}/history": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "summary": "Fetch payment history for a specific vendor",
+        "description": "This endpoint retrieves all payment transactions for a specific vendor based on their email address.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the vendor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/payments/summary/{email}": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "summary": "Payment summary for a specific vendor",
+        "description": "This endpoint provides a summary of payments for a vendor, including total revenue, current month’s revenue, and previous month’s revenue.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the vendor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/bookings": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Get all bookings",
+        "description": "This endpoint returns all bookings available in the system.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/bookings/venue/{email}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Get all bookings for a particular venue",
+        "description": "This endpoint returns all bookings for a specific venue identified by its email address.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the venue"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/bookings/user/{id}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Get all bookings for a particular user",
+        "description": "This endpoint returns all bookings for a specific user identified by their user ID. The response includes user details and their bookings.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID of the user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/admin/login": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Admin login endpoint",
+        "description": "This endpoint allows an admin to login by providing email and password. On successful login, it returns access and refresh tokens.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Admin login credentials",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "admin@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "password123"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/admin/register": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Admin registration endpoint",
+        "description": "This endpoint allows an admin to register by providing full name, email, phone number, and password. On successful registration, it returns a success message.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Admin registration details",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fullName": {
+                  "type": "string",
+                  "example": "John Doe"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "admin@example.com"
+                },
+                "phoneNumber": {
+                  "type": "string",
+                  "example": "1234567890"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "password123"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/admin/refresh-token": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Refresh token endpoint",
+        "description": "This endpoint allows an admin to refresh their access token using a refresh token.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Refresh token",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "refreshToken": {
+                  "type": "string",
+                  "example": "some-refresh-token"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/api/admin/customers": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get all customers with booking count",
+        "description": "This endpoint returns all customers along with their total booking count. Admin authentication is required.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/admin/customers/{id}": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get customer details",
+        "description": "This endpoint returns the details of a particular customer by their ID. Admin authentication is required.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/admin/venues": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get all venues",
+        "description": "This endpoint returns all venues. Admin authentication is required.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/admin/venues/{id}": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Get venue details",
+        "description": "This endpoint returns the details of a particular venue by its ID. Admin authentication is required.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Delete a venue",
+        "description": "This endpoint allows an admin to delete a venue by its ID. Admin authentication is required.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/admin/venues/register/{id}": {
+      "put": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Register a venue",
+        "description": "This endpoint allows an admin to register a venue by setting its isActive status to true. Admin authentication is required.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/api/vendor/register": {
+      "post": {
+        "tags": [
+          "Vendor"
+        ],
+        "summary": "Register a new venue",
+        "description": "This endpoint allows a new venue to register by providing details such as venue type, name, address, location, postal code, description, facilities, phone number, email, website URL, and password.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Venue registration details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "venueType": {
+                  "type": "string",
+                  "example": "Conference Hall"
+                },
+                "venueName": {
+                  "type": "string",
+                  "example": "Grand Conference Center"
+                },
+                "address": {
+                  "type": "string",
+                  "example": "123 Main St"
+                },
+                "location": {
+                  "type": "string",
+                  "example": "Cityville"
+                },
+                "postalCode": {
+                  "type": "string",
+                  "example": "12345"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "A spacious conference hall"
+                },
+                "facilities": {
+                  "type": "string",
+                  "example": "WiFi, Parking, AV Equipment"
+                },
+                "phoneNumber": {
+                  "type": "string",
+                  "example": "1234567890"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "venue@example.com"
+                },
+                "websiteUrl": {
+                  "type": "string",
+                  "example": "http://venue.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "securepassword"
+                }
+              },
+              "required": [
+                "venueType",
+                "venueName",
+                "address",
+                "location",
+                "postalCode",
+                "description",
+                "facilities",
+                "phoneNumber",
+                "email",
+                "websiteUrl",
+                "password"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/vendor/login": {
+      "post": {
+        "tags": [
+          "Vendor"
+        ],
+        "summary": "Venue login",
+        "description": "This endpoint allows a venue to login by providing their email and password.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Venue login details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "venue@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "securepassword"
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/vendor/dashboard/{venueEmail}": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "summary": "Fetch venue dashboard data",
+        "description": "This endpoint provides venue details and statistics, including total revenue, total visitors, upcoming bookings, and visitor counts by month.",
+        "parameters": [
+          {
+            "name": "venueEmail",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the venue"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/vendor/transactions/{email}": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "summary": "Fetch transactions for a specific email",
+        "description": "This endpoint provides all transactions for a specific email, including total revenue, current month revenue, and previous month revenue.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Email address of the venue"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/vendor/venues/booking-trends": {
+      "get": {
+        "tags": [
+          "Analytics"
+        ],
+        "summary": "Track booking trends over time",
+        "description": "This endpoint provides insights into booking trends over a specified date range.",
+        "parameters": [
+          {
+            "name": "startDate",
+            "description": "Start date for tracking trends",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          },
+          {
+            "name": "endDate",
+            "description": "End date for tracking trends",
+            "required": true,
+            "type": "string",
+            "format": "date",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
