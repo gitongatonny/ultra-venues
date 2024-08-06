@@ -103,6 +103,9 @@
             }
         }
 
+        const urlParams = new URLSearchParams(window.location.search);
+        const venueId = urlParams.get('id');
+
         // Event listeners to update the price when dates are changed
         document.getElementById('startDate').addEventListener('change', updatePrice);
         document.getElementById('endDate').addEventListener('change', updatePrice);
@@ -110,17 +113,19 @@
         document.getElementById('bookingForm').addEventListener('submit', async function(event) {
             event.preventDefault();
 
+        
             // Collect form data
             const formData = {
-                customerFullName: document.getElementById('customerFullName').value,
+                // customerFullName: document.getElementById('customerFullName').value,
                 eventType: document.getElementById('eventType').value,
                 startDate: document.getElementById('startDate').value,
                 endDate: document.getElementById('endDate').value,
-                customerEmailAddress: document.getElementById('customerEmailAddress').value,
-                customerPhoneNumber: document.getElementById('customerPhoneNumber').value,
-                venuePhoneNumber: document.getElementById('venuePhoneNumber').value,
+                venueId: venueId,
+                // customerEmailAddress: document.getElementById('customerEmailAddress').value,
+                // customerPhoneNumber: document.getElementById('customerPhoneNumber').value,
+                // venuePhoneNumber: document.getElementById('venuePhoneNumber').value,
                 numberOfGuests: document.getElementById('numberOfGuests').value,
-                venueEmailAddress: document.getElementById('venueEmailAddress').value,
+                // venueEmailAddress: document.getElementById('venueEmailAddress').value,
                 price: document.getElementById('price').value,
                 paymentStatus: 0 // Default value for payment status
             };

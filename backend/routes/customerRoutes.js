@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const Customer = require("../models/customerModel");
 const Booking = require("../models/bookingModel.js");
+const Venue = require("../models/venueModel.js");
 const { generateAccessToken, generateRefreshToken, authenticateToken } = require("../middleware/authMiddleware.js");
 
 // endpoint to register a new customer
@@ -122,19 +123,28 @@ router.post('/bookings/create', async (req, res) => {
     } */
     try {
         const {
-            customerFullName,
+            // customerFullName,
             eventType,
             startDate,
             endDate,
-            customerEmailAddress,
-            customerPhoneNumber,
-            venuePhoneNumber,
+            // customerEmailAddress,
+            // customerPhoneNumber,
+            venueId,
+            // venuePhoneNumber,
             numberOfGuests,
-            venueEmailAddress,
+            // venueEmailAddress,
             price,
             paymentStatus
         } = req.body;
 
+        const customerEmailAddress = "test@gmail.com";
+        const venue = await Venue.findOne({where : {id: venueId}});
+        const customer = await Customer.findOne({where: {email: customerEmailAddress}});
+        const customerFullName = customer.fullName;
+        const customerPhoneNumber = customer.phoneNumber;
+        const venuePhoneNumber = venue.phoneNumber;
+        const venueEmailAddress = venue.email;
+        
         // Create booking in the database
         const newBooking = await Booking.create({
             customerFullName,

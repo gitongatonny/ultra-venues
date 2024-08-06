@@ -7,16 +7,42 @@ const upload = require("../config/multer");
 // Endpoint to list all venues
 router.get("/venues", async (req, res) => {
     // #swagger.tags = ['Venue']
-    // #swagger.summary = 'List all venues'
-    // #swagger.description = 'This endpoint retrieves a list of all venues, excluding sensitive information like password and isActive status.'
+    // #swagger.summary = 'List all venues with pagination'
+    // #swagger.description = 'This endpoint retrieves a list of all venues, excluding sensitive information like password and isActive status. Supports pagination.'
+
     try {
-        const venues = await Venue.findAll({ attributes: { exclude: ["password", "isActive"]}});
-        res.status(200).json(venues);
+        // Default values for page and limit
+        const page = parseInt(req.query.page, 10) || 1;
+        const limit = parseInt(req.query.limit, 10) || 4;
+
+        // Calculate offset
+        const offset = (page - 1) * limit;
+
+        // Fetch venues with pagination
+        const { count, rows: venues } = await Venue.findAndCountAll({
+            attributes: { exclude: ["password", "isActive"]},
+            limit: limit,
+            offset: offset
+        });
+
+        // Calculate total pages
+        const totalPages = Math.ceil(count / limit);
+
+        res.status(200).json({
+            venues: venues,
+            pagination: {
+                totalItems: count,
+                totalPages: totalPages,
+                currentPage: page,
+                itemsPerPage: limit
+            }
+        });
     } catch (error) {
         console.error(error);
-        res.status(500).json({error: "Could not fetch venues at this moment"});
+        res.status(500).json({ error: "Could not fetch venues at this moment" });
     }
 });
+
 
 // Endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {

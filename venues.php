@@ -284,56 +284,19 @@ Hotel list END -->
 		}
 		document.addEventListener('DOMContentLoaded', () => {
 			let venues = [];
+			const pageSize = 4;
+			let currentPage = 1;
 
-			// Fetch venues and store them in a list
-			fetch('http://localhost:5000/api/venues/')
-				.then(response => response.json())
-				.then(data => {
-					venues = data;
-					displayVenues(venues);
-				})
-				.catch(error => console.error('Error fetching venues:', error));
-
-			const filterForm = document.getElementById('filterForm');
-
-			filterForm.addEventListener('change', () => {
-				let filteredVenues = venues;
-
-				// Filter by venue type
-				const venueTypeInputs = filterForm.querySelectorAll('input[name="venueType"]:checked');
-				const venueTypes = Array.from(venueTypeInputs).map(input => input.value);
-				if (venueTypes.length && !venueTypes.includes('All')) {
-					filteredVenues = filteredVenues.filter(venue => venueTypes.includes(venue.venueType));
-				}
-
-				// Filter by price range
-				const priceRangeInputs = filterForm.querySelectorAll('input[name="priceRange"]:checked');
-				const priceRanges = Array.from(priceRangeInputs).map(input => input.value.split('-').map(Number));
-				if (priceRanges.length) {
-					filteredVenues = filteredVenues.filter(venue => {
-						return priceRanges.some(range => venue.price >= range[0] && venue.price <= range[1]);
-					});
-				}
-
-				// Filter by rating
-				const ratingInputs = filterForm.querySelectorAll('input[name="rating"]:checked');
-				const ratings = Array.from(ratingInputs).map(input => parseInt(input.value));
-				if (ratings.length) {
-					filteredVenues = filteredVenues.filter(venue => ratings.includes(venue.rating));
-				}
-
-				// Filter by amenities
-				const amenitiesInputs = filterForm.querySelectorAll('input[name="amenities"]:checked');
-				const amenities = Array.from(amenitiesInputs).map(input => input.value);
-				if (amenities.length) {
-					filteredVenues = filteredVenues.filter(venue => {
-						return amenities.every(amenity => venue.facilities.includes(amenity));
-					});
-				}
-
-				// Display the filtered venues
-				displayVenues(filteredVenues);
-			});
+			function fetchVenues(page = 1) {
+				fetch(`http://localhost:5000/api/venues?page=${page}&pageSize=${pageSize}`)
+					.then(response => response.json())
+					.then(data => {
+						venues = data.venues;
+						displayVenues(venues);
+						createPagination(data.pagination);
+					})
+					.catch(error => console.error('Error fetching venues:', error));
+			}
 
 			function displayVenues(venues) {
 				const venueContainer = document.getElementById('venue-container');
@@ -397,6 +360,36 @@ Hotel list END -->
 				});
 			}
 
+			function createPagination(pagination) {
+				const paginationContainer = document.querySelector('.pagination');
+				paginationContainer.innerHTML = '';
+
+				if (pagination.currentPage > 1) {
+					const prevPage = document.createElement('li');
+					prevPage.classList.add('page-item', 'mb-0');
+					prevPage.innerHTML = `<a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a>`;
+					prevPage.addEventListener('click', () => fetchVenues(pagination.currentPage - 1));
+					paginationContainer.appendChild(prevPage);
+				}
+
+				for (let i = 1; i <= pagination.totalPages; i++) {
+					const pageItem = document.createElement('li');
+					pageItem.classList.add('page-item', 'mb-0', pagination.currentPage === i ? 'active' : 'inactive');
+					pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+					pageItem.addEventListener('click', () => fetchVenues(i));
+					paginationContainer.appendChild(pageItem);
+				}
+
+				if (pagination.currentPage < pagination.totalPages) {
+					const nextPage = document.createElement('li');
+					nextPage.classList.add('page-item', 'mb-0');
+					nextPage.innerHTML = `<a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a>`;
+					nextPage.addEventListener('click', () => fetchVenues(pagination.currentPage + 1));
+					paginationContainer.appendChild(nextPage);
+				}
+			}
+
+			fetchVenues();
 		});
 	</script>
 
