@@ -6,6 +6,7 @@
 
 	<!-- Head Content -->
 	<?php include "includes/head-content.php"; ?>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 
 
@@ -167,8 +168,8 @@ Content START -->
 							</div>
 							<!-- Card body -->
 							<div class="card-body">
-								<!-- chart -->
-								<div id="" class="mt-2"></div>
+								<!-- Apex chart -->
+								<div id="apexChartTrafficStats1" class="mt-2"></div>
 							</div>
 						</div>
 						<!-- Chart END -->
@@ -187,8 +188,8 @@ Content START -->
 							<!-- Card body START -->
 							<div class="card-body p-3">
 								<!-- Chart -->
-								<div class="col-sm-6 mx-auto">
-									<div class="d-flex justify-content-center" id=""></div>
+								<div class="">
+									<div class="d-flex justify-content-center" id="ChartTrafficViews1"></div>
 								</div>
 
 								<!-- Content -->
@@ -341,7 +342,7 @@ Content END -->
 						const listItem = document.createElement('li');
 						listItem.className = "list-group-item";
 						listItem.innerHTML = `<i class="text-${colors[index % colors.length]} fas fa-circle me-2"></i>${category.eventType} (${category.count})`;
-						eventCategories.appendChild(listItem);
+						// eventCategories.appendChild(listItem);
 						eventTypes.push(category.eventType);
 						eventCounts.push(category.count);
 					});
@@ -356,7 +357,7 @@ Content END -->
 					labels: eventTypes
 				};
 
-				const eventCategoryChart = new ApexCharts(document.getElementById('ChartTrafficViews'), eventCategoryChartOptions);
+				const eventCategoryChart = new ApexCharts(document.getElementById('ChartTrafficViews1'), eventCategoryChartOptions);
 				eventCategoryChart.render();
 
 				// Update visitor counts by month chart
@@ -400,7 +401,7 @@ Content END -->
 					}
 				};
 
-				const visitorChart = new ApexCharts(document.getElementById('apexChartTrafficStats'), visitorChartOptions);
+				const visitorChart = new ApexCharts(document.getElementById('apexChartTrafficStats1'), visitorChartOptions);
 				visitorChart.render();
 
 			} catch (error) {
