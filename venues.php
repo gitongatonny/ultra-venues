@@ -123,211 +123,122 @@ Hotel list START -->
 								<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasSidebar" aria-label="Close"></button>
 							</div>
 							<div class="offcanvas-body flex-column p-3 p-xl-0">
-								<form class="rounded-3 shadow">
-									<!-- Hotel type START -->
+								<form id="filterForm" class="rounded-3 shadow">
+									<!-- Venue Type START -->
 									<div class="card card-body rounded-0 rounded-top p-4">
-										<!-- Title -->
-										<h6 class="mb-2">Hotel Type</h6>
-										<!-- Hotel Type group -->
+										<h6 class="mb-2">Venue Type</h6>
 										<div class="col-12">
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="hotelType1">
-												<label class="form-check-label" for="hotelType1">All</label>
+												<input class="form-check-input" type="checkbox" name="venueType" value="All" id="venueType1">
+												<label class="form-check-label" for="venueType1">All</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="hotelType2">
-												<label class="form-check-label" for="hotelType2">Hotel</label>
+												<input class="form-check-input" type="checkbox" name="venueType" value="Hotel" id="venueType2">
+												<label class="form-check-label" for="venueType2">Hotel</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="hotelType4">
-												<label class="form-check-label" for="hotelType4">Resort</label>
+												<input class="form-check-input" type="checkbox" name="venueType" value="Resort" id="venueType4">
+												<label class="form-check-label" for="venueType4">Resort</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="hotelType6">
-												<label class="form-check-label" for="hotelType6">Lodge</label>
+												<input class="form-check-input" type="checkbox" name="venueType" value="Lodge" id="venueType6">
+												<label class="form-check-label" for="venueType6">Lodge</label>
 											</div>
-
-											<!-- Collapse body -->
-											<div class="multi-collapse collapse" id="hotelType">
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="hotelType10">
-													<label class="form-check-label" for="hotelType10">Palace</label>
-												</div>
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="hotelType8">
-													<label class="form-check-label" for="hotelType8">Garden</label>
-												</div>
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="hotelType9">
-													<label class="form-check-label" for="hotelType9">Conference Room</label>
-												</div>
-											</div>
-											<!-- Collapse button -->
-											<a class="p-0 mb-0 mt-2 btn-more d-flex align-items-center collapsed" data-bs-toggle="collapse" href="#hotelType" role="button" aria-expanded="false" aria-controls="hotelType">
-												See <span class="see-more ms-1">more</span><span class="see-less ms-1">less</span><i class="fa-solid fa-angle-down ms-2"></i>
-											</a>
 										</div>
 									</div>
-									<!-- Hotel type END -->
 
-									<hr class="my-0"> <!-- Divider -->
+									<hr class="my-0">
 
 									<!-- Price range START -->
 									<div class="card card-body rounded-0 p-4">
-										<!-- Title -->
 										<h6 class="mb-2">Price range</h6>
-										<!-- Price range group -->
 										<div class="col-12">
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="priceRange1">
+												<input class="form-check-input" type="checkbox" name="priceRange" value="0-5000" id="priceRange1">
 												<label class="form-check-label" for="priceRange1">Up to Ksh. 5,000</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="priceRange2">
+												<input class="form-check-input" type="checkbox" name="priceRange" value="5000-10000" id="priceRange2">
 												<label class="form-check-label" for="priceRange2">Ksh. 5,000 - 10,000</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="priceRange3">
+												<input class="form-check-input" type="checkbox" name="priceRange" value="10000-15000" id="priceRange3">
 												<label class="form-check-label" for="priceRange3">Ksh. 10,000 - 15,000</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="priceRange4">
+												<input class="form-check-input" type="checkbox" name="priceRange" value="15000-20000" id="priceRange4">
 												<label class="form-check-label" for="priceRange4">Ksh. 15,000 - 20,000</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="priceRange5">
+												<input class="form-check-input" type="checkbox" name="priceRange" value="20000-35000" id="priceRange5">
 												<label class="form-check-label" for="priceRange5">Ksh. 20,000 - 35,000</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="priceRange5">
-												<label class="form-check-label" for="priceRange5">Ksh. 35,000 +</label>
+												<input class="form-check-input" type="checkbox" name="priceRange" value="35000-1000000" id="priceRange6">
+												<label class="form-check-label" for="priceRange6">Ksh. 35,000 +</label>
 											</div>
 										</div>
 									</div>
-									<!-- Price range END -->
 
-
-
-									<hr class="my-0"> <!-- Divider -->
+									<hr class="my-0">
 
 									<!-- Rating Star START -->
 									<div class="card card-body rounded-0 p-4">
-										<!-- Title -->
 										<h6 class="mb-2">Rating Star</h6>
-										<!-- Rating Star group -->
 										<ul class="list-inline mb-0 g-3">
-											<!-- Item -->
 											<li class="list-inline-item mb-0">
-												<input type="checkbox" class="btn-check" id="btn-check-6">
+												<input type="checkbox" class="btn-check" name="rating" value="1" id="btn-check-6">
 												<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-6">1<i class="bi bi-star-fill"></i></label>
 											</li>
-											<!-- Item -->
 											<li class="list-inline-item mb-0">
-												<input type="checkbox" class="btn-check" id="btn-check-7">
+												<input type="checkbox" class="btn-check" name="rating" value="2" id="btn-check-7">
 												<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-7">2<i class="bi bi-star-fill"></i></label>
 											</li>
-											<!-- Item -->
 											<li class="list-inline-item mb-0">
-												<input type="checkbox" class="btn-check" id="btn-check-8">
+												<input type="checkbox" class="btn-check" name="rating" value="3" id="btn-check-8">
 												<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-8">3<i class="bi bi-star-fill"></i></label>
 											</li>
-											<!-- Item -->
 											<li class="list-inline-item mb-0">
-												<input type="checkbox" class="btn-check" id="btn-check-15">
+												<input type="checkbox" class="btn-check" name="rating" value="4" id="btn-check-15">
 												<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-15">4<i class="bi bi-star-fill"></i></label>
 											</li>
-											<!-- Item -->
 											<li class="list-inline-item mb-0">
-												<input type="checkbox" class="btn-check" id="btn-check-16">
+												<input type="checkbox" class="btn-check" name="rating" value="5" id="btn-check-16">
 												<label class="btn btn-sm btn-light btn-primary-soft-check" for="btn-check-16">5<i class="bi bi-star-fill"></i></label>
 											</li>
 										</ul>
 									</div>
-									<!-- Rating Star END -->
 
-									<hr class="my-0"> <!-- Divider -->
+									<hr class="my-0">
 
 									<!-- Amenities START -->
 									<div class="card card-body rounded-0 rounded-bottom p-4">
-										<!-- Title -->
 										<h6 class="mb-2">Amenities</h6>
-										<!-- Amenities group -->
 										<div class="col-12">
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="amenitiesType2">
+												<input class="form-check-input" type="checkbox" name="amenities" value="Large Open Space" id="amenitiesType2">
 												<label class="form-check-label" for="amenitiesType2">Large Open Space</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="amenitiesType3">
+												<input class="form-check-input" type="checkbox" name="amenities" value="MC Available" id="amenitiesType3">
 												<label class="form-check-label" for="amenitiesType3">MC Available</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="amenitiesType4">
+												<input class="form-check-input" type="checkbox" name="amenities" value="Large Parking Space" id="amenitiesType4">
 												<label class="form-check-label" for="amenitiesType4">Large Parking Space</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="amenitiesType5">
+												<input class="form-check-input" type="checkbox" name="amenities" value="Catering Services" id="amenitiesType5">
 												<label class="form-check-label" for="amenitiesType5">Catering Services</label>
 											</div>
-											<!-- Checkbox -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="amenitiesType6">
+												<input class="form-check-input" type="checkbox" name="amenities" value="Extra Security" id="amenitiesType6">
 												<label class="form-check-label" for="amenitiesType6">Extra Security</label>
 											</div>
-
-											<!-- Collapse body -->
-											<div class="multi-collapse collapse" id="amenitiesCollapes">
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="amenitiesType7">
-													<label class="form-check-label" for="amenitiesType7">Disabled Accessibility</label>
-												</div>
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="amenitiesType8">
-													<label class="form-check-label" for="amenitiesType8">DJ Service</label>
-												</div>
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="amenitiesType9">
-													<label class="form-check-label" for="amenitiesType9">Tents Provision</label>
-												</div>
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="amenitiesType10">
-													<label class="form-check-label" for="amenitiesType10">Photograghy</label>
-												</div>
-												<!-- Checkbox -->
-												<div class="form-check">
-													<input class="form-check-input" type="checkbox" value="" id="amenitiesType10">
-													<label class="form-check-label" for="amenitiesType10">Videograghy</label>
-												</div>
-											</div>
-											<!-- Collapse button -->
-											<a class="p-0 mb-0 mt-2 btn-more d-flex align-items-center collapsed" data-bs-toggle="collapse" href="#amenitiesCollapes" role="button" aria-expanded="false" aria-controls="amenitiesCollapes">
-												See <span class="see-more ms-1">more</span><span class="see-less ms-1">less</span><i class="fa-solid fa-angle-down ms-2"></i>
-											</a>
 										</div>
 									</div>
-									<!-- Amenities END -->
-								</form><!-- Form End -->
+								</form>
+								<!-- Form End -->
 							</div>
 							<!-- Buttons -->
 							<div class="d-flex justify-content-between p-2 p-xl-0 mt-xl-4">
@@ -369,71 +280,121 @@ Hotel list END -->
 
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
-			fetch('http://localhost:5000/api/venues/')
-				.then(response => response.json())
-				.then(data => {
-					const venueContainer = document.getElementById('venue-container');
-					data.forEach(venue => {
-						venue.amenities = [];
-						const card = document.createElement('div');
-						card.classList.add('card', 'shadow', 'p-2');
-						card.innerHTML = `
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
-                            </div>
-                            <div class="position-absolute top-0 start-0 z-index-1 m-2">
-                                <div class="badge text-bg-danger">${venue.location}</div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <ul class="list-inline mb-0">
-                                            ${[...Array(5)].map((_, i) => `
-                                                <li class="list-inline-item me-0 small">
-                                                    <i class="fa-solid fa-star ${i < Math.floor(venue.rating) ? 'text-warning' : 'text-muted'}"></i>
-                                                </li>`).join('')}
+    let venues = [];
+
+    // Fetch venues and store them in a list
+    fetch('http://localhost:5000/api/venues/')
+        .then(response => response.json())
+        .then(data => {
+            venues = data;
+            displayVenues(venues);
+        })
+        .catch(error => console.error('Error fetching venues:', error));
+
+    const filterForm = document.getElementById('filterForm');
+
+    filterForm.addEventListener('change', () => {
+        let filteredVenues = venues;
+
+        // Filter by venue type
+        const venueTypeInputs = filterForm.querySelectorAll('input[name="venueType"]:checked');
+        const venueTypes = Array.from(venueTypeInputs).map(input => input.value);
+        if (venueTypes.length && !venueTypes.includes('All')) {
+            filteredVenues = filteredVenues.filter(venue => venueTypes.includes(venue.venueType));
+        }
+
+        // Filter by price range
+        const priceRangeInputs = filterForm.querySelectorAll('input[name="priceRange"]:checked');
+        const priceRanges = Array.from(priceRangeInputs).map(input => input.value.split('-').map(Number));
+        if (priceRanges.length) {
+            filteredVenues = filteredVenues.filter(venue => {
+                return priceRanges.some(range => venue.price >= range[0] && venue.price <= range[1]);
+            });
+        }
+
+        // Filter by rating
+        const ratingInputs = filterForm.querySelectorAll('input[name="rating"]:checked');
+        const ratings = Array.from(ratingInputs).map(input => parseInt(input.value));
+        if (ratings.length) {
+            filteredVenues = filteredVenues.filter(venue => ratings.includes(venue.rating));
+        }
+
+        // Filter by amenities
+        const amenitiesInputs = filterForm.querySelectorAll('input[name="amenities"]:checked');
+        const amenities = Array.from(amenitiesInputs).map(input => input.value);
+        if (amenities.length) {
+            filteredVenues = filteredVenues.filter(venue => {
+                return amenities.every(amenity => venue.facilities.includes(amenity));
+            });
+        }
+
+        // Display the filtered venues
+        displayVenues(filteredVenues);
+    });
+
+    function displayVenues(venues) {
+        const venueContainer = document.getElementById('venue-container');
+        venueContainer.innerHTML = '';
+        venues.forEach(venue => {
+            const card = document.createElement('div');
+            card.classList.add('card', 'shadow', 'p-2');
+            card.innerHTML = `
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+                    </div>
+                    <div class="position-absolute top-0 start-0 z-index-1 m-2">
+                        <div class="badge text-bg-danger">${venue.location}</div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body py-md-2 d-flex flex-column h-100 position-relative">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <ul class="list-inline mb-0">
+                                    ${[...Array(5)].map((_, i) => `
+                                        <li class="list-inline-item me-0 small">
+                                            <i class="fa-solid fa-star ${i < Math.floor(venue.rating) ? 'text-warning' : 'text-muted'}"></i>
+                                        </li>`).join('')}
+                                </ul>
+                                <ul class="list-inline mb-0 z-index-2">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
+                                    </li>
+                                    <li class="list-inline-item dropdown">
+                                        <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-fw fa-share-alt"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
+                                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
                                         </ul>
-                                        <ul class="list-inline mb-0 z-index-2">
-                                            <li class="list-inline-item">
-                                                <a href="#" class="btn btn-sm btn-round btn-light"><i class="fa-solid fa-fw fa-heart"></i></a>
-                                            </li>
-                                            <li class="list-inline-item dropdown">
-                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownShare" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="fa-solid fa-fw fa-share-alt"></i>
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare">
-                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-copy me-2"></i>Copy link</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h5 class="card-title mb-1"><a href="venue-details.php?id=${venue.id}">${venue.venueName}</a></h5>
-                                    <small><i class="bi bi-geo-alt me-2"></i>${venue.address}, ${venue.location}</small>
-                                    <ul class="list-group list-group-borderless small mb-0 mt-2">
-                                        ${venue.amenities.map(amenity => `
-                                            <li class="list-group-item d-flex text-success p-0">
-                                                <i class="bi bi-patch-check-fill me-2"></i>${amenity}
-                                            </li>`).join('')}
-                                    </ul>
-                                    <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                        <div class="d-flex align-items-center">
-                                            <h5 class="fw-bold mb-0 me-1">Ksh. ${venue.price}</h5>
-                                            <span class="mb-0 me-2">/day</span>
-                                        </div>
-                                        <div class="mt-3 mt-sm-0">
-                                            <a href="booking.php?id=${venue.id}" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>    
-                                        </div>                  
-                                    </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="card-title mb-1"><a href="venue-details.php?id=${venue.id}">${venue.venueName}</a></h5>
+                            <small><i class="bi bi-geo-alt me-2"></i>${venue.address}, ${venue.location}</small>
+                            <ul class="list-group list-group-borderless small mb-0 mt-2">
+                                ${venue.facilities.split(/\n|,/).map(facility => `
+                                    <li class="list-group-item d-flex text-success p-0">
+                                        <i class="bi bi-patch-check-fill me-2"></i>${facility}
+                                    </li>`).join('')}
+                            </ul>
+                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="fw-bold mb-0 me-1">Ksh. ${venue.price}</h5>
+                                    <span class="mb-0 me-2">/day</span>
                                 </div>
+                                <div class="mt-3 mt-sm-0">
+                                    <a href="booking.php?id=${venue.id}" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>
+                                </div>                  
                             </div>
                         </div>
-                    `;
-						venueContainer.appendChild(card);
-					});
-				})
-				.catch(error => console.error('Error fetching venues:', error));
-		});
+                    </div>
+                </div>
+            `;
+            venueContainer.appendChild(card);
+        });
+    }
+});
+
 	</script>
 
 	<!-- Footer START -->
