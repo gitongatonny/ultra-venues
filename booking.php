@@ -6,9 +6,6 @@
 
     <!-- Head Content -->
     <?php include "includes/head-content.php"; ?>
-
-
-
 </head>
 
 <body>
@@ -34,7 +31,6 @@
 
                 <!-- Form START -->
                 <div class="row g-4">
-
                     <!-- Select item -->
                     <div class="col-md-6">
                         <label class="form-label" for="eventType">Event Type</label>
@@ -58,18 +54,16 @@
                         <input type="date" id="endDate" name="endDate" class="form-control">
                     </div>
 
-
                     <!-- Input item -->
                     <div class="col-md-6">
                         <label class="form-label" for="numberOfGuests">Number of Guests Attending</label>
                         <input type="number" id="numberOfGuests" name="numberOfGuests" class="form-control" placeholder="Number of Guests">
                     </div>
 
-
                     <!-- Input item -->
                     <div class="col-md-6">
                         <label class="form-label" for="price">Price</label>
-                        <input type="number" id="price" name="price" class="form-control" placeholder="Enter price">
+                        <input type="number" id="price" name="price" class="form-control" placeholder="Enter price" readonly>
                     </div>
                 </div>
                 <!-- Form END -->
@@ -78,19 +72,41 @@
                 <div class="d-grid mt-4">
                     <button type="submit" class="btn btn-primary mb-0">Proceed To Payment</button>
                 </div>
-
             </div>
             <!-- Card body END -->
         </form>
         <!-- Booking form END -->
 
-
         <br>
         <br>
-
     </main>
 
     <script>
+        // Function to calculate the number of days between two dates
+        function calculateNumberOfDays(startDate, endDate) {
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+            const diffTime = Math.abs(end - start);
+            return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // Adding 1 to include both start and end date
+        }
+
+        // Function to update the price field based on the number of days
+        function updatePrice() {
+            const venuePrice = parseFloat(localStorage.getItem('venuePrice'));
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+
+            if (startDate && endDate) {
+                const numberOfDays = calculateNumberOfDays(startDate, endDate);
+                const totalPrice = venuePrice * numberOfDays;
+                document.getElementById('price').value = totalPrice.toFixed(2);
+            }
+        }
+
+        // Event listeners to update the price when dates are changed
+        document.getElementById('startDate').addEventListener('change', updatePrice);
+        document.getElementById('endDate').addEventListener('change', updatePrice);
+
         document.getElementById('bookingForm').addEventListener('submit', async function(event) {
             event.preventDefault();
 
@@ -108,7 +124,6 @@
                 price: document.getElementById('price').value,
                 paymentStatus: 0 // Default value for payment status
             };
-
 
             console.log(formData);
             try {
@@ -138,12 +153,13 @@
                 alert('Failed to create booking. Please try again.'); // Example error handling
             }
         });
+
+        // Initial call to update the price field
+        updatePrice();
     </script>
 
     <!-- Footer START -->
     <?php include "includes/footer.php"; ?>
     <!-- Footer END -->
 </body>
-
-
 </html>

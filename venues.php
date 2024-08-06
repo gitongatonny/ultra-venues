@@ -279,66 +279,69 @@ Hotel list END -->
 	</main>
 
 	<script>
+		function savePriceToLocalStorage(price) {
+			localStorage.setItem('venuePrice', price);
+		}
 		document.addEventListener('DOMContentLoaded', () => {
-    let venues = [];
+			let venues = [];
 
-    // Fetch venues and store them in a list
-    fetch('http://localhost:5000/api/venues/')
-        .then(response => response.json())
-        .then(data => {
-            venues = data;
-            displayVenues(venues);
-        })
-        .catch(error => console.error('Error fetching venues:', error));
+			// Fetch venues and store them in a list
+			fetch('http://localhost:5000/api/venues/')
+				.then(response => response.json())
+				.then(data => {
+					venues = data;
+					displayVenues(venues);
+				})
+				.catch(error => console.error('Error fetching venues:', error));
 
-    const filterForm = document.getElementById('filterForm');
+			const filterForm = document.getElementById('filterForm');
 
-    filterForm.addEventListener('change', () => {
-        let filteredVenues = venues;
+			filterForm.addEventListener('change', () => {
+				let filteredVenues = venues;
 
-        // Filter by venue type
-        const venueTypeInputs = filterForm.querySelectorAll('input[name="venueType"]:checked');
-        const venueTypes = Array.from(venueTypeInputs).map(input => input.value);
-        if (venueTypes.length && !venueTypes.includes('All')) {
-            filteredVenues = filteredVenues.filter(venue => venueTypes.includes(venue.venueType));
-        }
+				// Filter by venue type
+				const venueTypeInputs = filterForm.querySelectorAll('input[name="venueType"]:checked');
+				const venueTypes = Array.from(venueTypeInputs).map(input => input.value);
+				if (venueTypes.length && !venueTypes.includes('All')) {
+					filteredVenues = filteredVenues.filter(venue => venueTypes.includes(venue.venueType));
+				}
 
-        // Filter by price range
-        const priceRangeInputs = filterForm.querySelectorAll('input[name="priceRange"]:checked');
-        const priceRanges = Array.from(priceRangeInputs).map(input => input.value.split('-').map(Number));
-        if (priceRanges.length) {
-            filteredVenues = filteredVenues.filter(venue => {
-                return priceRanges.some(range => venue.price >= range[0] && venue.price <= range[1]);
-            });
-        }
+				// Filter by price range
+				const priceRangeInputs = filterForm.querySelectorAll('input[name="priceRange"]:checked');
+				const priceRanges = Array.from(priceRangeInputs).map(input => input.value.split('-').map(Number));
+				if (priceRanges.length) {
+					filteredVenues = filteredVenues.filter(venue => {
+						return priceRanges.some(range => venue.price >= range[0] && venue.price <= range[1]);
+					});
+				}
 
-        // Filter by rating
-        const ratingInputs = filterForm.querySelectorAll('input[name="rating"]:checked');
-        const ratings = Array.from(ratingInputs).map(input => parseInt(input.value));
-        if (ratings.length) {
-            filteredVenues = filteredVenues.filter(venue => ratings.includes(venue.rating));
-        }
+				// Filter by rating
+				const ratingInputs = filterForm.querySelectorAll('input[name="rating"]:checked');
+				const ratings = Array.from(ratingInputs).map(input => parseInt(input.value));
+				if (ratings.length) {
+					filteredVenues = filteredVenues.filter(venue => ratings.includes(venue.rating));
+				}
 
-        // Filter by amenities
-        const amenitiesInputs = filterForm.querySelectorAll('input[name="amenities"]:checked');
-        const amenities = Array.from(amenitiesInputs).map(input => input.value);
-        if (amenities.length) {
-            filteredVenues = filteredVenues.filter(venue => {
-                return amenities.every(amenity => venue.facilities.includes(amenity));
-            });
-        }
+				// Filter by amenities
+				const amenitiesInputs = filterForm.querySelectorAll('input[name="amenities"]:checked');
+				const amenities = Array.from(amenitiesInputs).map(input => input.value);
+				if (amenities.length) {
+					filteredVenues = filteredVenues.filter(venue => {
+						return amenities.every(amenity => venue.facilities.includes(amenity));
+					});
+				}
 
-        // Display the filtered venues
-        displayVenues(filteredVenues);
-    });
+				// Display the filtered venues
+				displayVenues(filteredVenues);
+			});
 
-    function displayVenues(venues) {
-        const venueContainer = document.getElementById('venue-container');
-        venueContainer.innerHTML = '';
-        venues.forEach(venue => {
-            const card = document.createElement('div');
-            card.classList.add('card', 'shadow', 'p-2');
-            card.innerHTML = `
+			function displayVenues(venues) {
+				const venueContainer = document.getElementById('venue-container');
+				venueContainer.innerHTML = '';
+				venues.forEach(venue => {
+					const card = document.createElement('div');
+					card.classList.add('card', 'shadow', 'p-2');
+					card.innerHTML = `
                 <div class="row g-0">
                     <div class="col-md-5">
                         <img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
@@ -383,18 +386,18 @@ Hotel list END -->
                                     <span class="mb-0 me-2">/day</span>
                                 </div>
                                 <div class="mt-3 mt-sm-0">
-                                    <a href="booking.php?id=${venue.id}" class="btn btn-sm btn-dark mb-0 w-100">View Details</a>
-                                </div>                  
+									<a href="booking.php?id=${venue.id}" class="btn btn-sm btn-dark mb-0 w-100" onclick="savePriceToLocalStorage(${venue.price})">View Details</a>
+								</div>                
                             </div>
                         </div>
                     </div>
                 </div>
             `;
-            venueContainer.appendChild(card);
-        });
-    }
-});
+					venueContainer.appendChild(card);
+				});
+			}
 
+		});
 	</script>
 
 	<!-- Footer START -->
