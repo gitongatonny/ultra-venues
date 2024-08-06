@@ -38,7 +38,7 @@ router.get('/payments/summary/:email', async (req, res) => {
         const currentMonthRevenue = await Payment.sum('amount', {
             where: {
                 to: email,
-                data: { [Op.gte]: currentMonthStart }
+                date: { [Op.gte]: currentMonthStart }
             }
         });
 
@@ -47,7 +47,7 @@ router.get('/payments/summary/:email', async (req, res) => {
         const previousMonthRevenue = await Payment.sum('amount', {
             where: {
                 to: email,
-                data: {
+                date: {
                     [Op.gte]: previousMonthStart,
                     [Op.lt]: currentMonthStart
                 }

@@ -12,7 +12,7 @@ const Payment = db.define("Payment", {
     paymentType: {
         type: DataTypes.STRING
     },
-    data: {
+    date: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
     },

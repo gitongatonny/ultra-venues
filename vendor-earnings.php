@@ -120,7 +120,7 @@ Menu item END -->
 				</div>
 			</div>
 		</div>
-		<!-- Chart END -->
+
 
 		<!-- Invoice history START -->
 		<div class="row">
@@ -246,17 +246,28 @@ Content END -->
 		function updateDashboard(data) {
 			// Update Sales this month
 			const salesThisMonth = data.currentMonthRevenue || 0;
-			document.querySelector('.card h3.mb-2.mt-2').innerText = formatCurrency(salesThisMonth);
+			document.getElementById('salesThisMonth').innerText = formatCurrency(salesThisMonth);
 
 			// Update Total Earnings
 			const totalEarnings = data.totalRevenue || 0;
-			document.querySelector('.card h3.mb-2.mt-2').innerText = formatCurrency(totalEarnings);
+			document.getElementById('totalEarnings').innerText = formatCurrency(totalEarnings);
 
 			// Update Current Month and Last Month Revenue
 			const currentMonthRevenue = data.currentMonthRevenue || 0;
 			const lastMonthRevenue = data.previousMonthRevenue || 0;
-			document.querySelector('.col-sm-6.col-md-4 .text-primary.my-2').innerText = formatCurrency(currentMonthRevenue);
-			document.querySelector('.col-sm-6.col-md-4 .my-2').innerText = formatCurrency(lastMonthRevenue);
+			document.getElementById('currentMonthRevenue').innerText = formatCurrency(currentMonthRevenue);
+			document.getElementById('lastMonthRevenue').innerText = formatCurrency(lastMonthRevenue);
+
+			// Calculate percentage change
+			const percentageChange = ((currentMonthRevenue - lastMonthRevenue) / (lastMonthRevenue || 1)) * 100;
+			const currentMonthChange = document.getElementById('currentMonthChange');
+			const lastMonthChange = document.getElementById('lastMonthChange');
+			currentMonthChange.innerText = `${percentageChange.toFixed(2)}%`;
+			currentMonthChange.className = `text-${percentageChange >= 0 ? 'success' : 'danger'} me-1`;
+			currentMonthChange.innerHTML += `<i class="bi bi-arrow-${percentageChange >= 0 ? 'up' : 'down'}"></i>`;
+			lastMonthChange.innerText = `${(-percentageChange).toFixed(2)}%`;
+			lastMonthChange.className = `text-${percentageChange < 0 ? 'success' : 'danger'} me-1`;
+			lastMonthChange.innerHTML += `<i class="bi bi-arrow-${percentageChange < 0 ? 'up' : 'down'}"></i>`;
 
 			// Update Invoice History
 			const tableBody = document.querySelector('.table-responsive tbody');
@@ -264,38 +275,38 @@ Content END -->
 			data.transactions.forEach(transaction => {
 				const tr = document.createElement('tr');
 				tr.innerHTML = `
-			<td> #${transaction.id} </td>
-			<td> ${new Date(transaction.data).toLocaleDateString()}</td>
-			<td>${formatCurrency(transaction.amount)}
-				<a href="#" class="h6 mb-0" role="button" id="dropdownShare${transaction.id}" data-bs-toggle="dropdown" aria-expanded="false">
-					<i class="bi bi-info-circle-fill"></i>
-				</a>
-				<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare${transaction.id}">
-					<li>
-						<div class="d-flex justify-content-between">
-							<span class="small">Cut</span>
-							<span class="h6 mb-0 small">2,000</span>
-						</div>
-						<hr class="my-1"> <!-- Divider -->
-					</li>
-					<li>
-						<div class="d-flex justify-content-between">
-							<span class="me-4 small">Tax</span>
-							<span class="text-danger small">200</span>
-						</div>
-						<hr class="my-1"> <!-- Divider -->
-					</li>
-					<li>
-						<div class="d-flex justify-content-between">
-							<span class="small">Bal</span>
-							<span class="h6 mb-0 small">${formatCurrency(transaction.amount)}</span>
-						</div>
-					</li>
-				</ul>
-			</td>
-			<td> <div class="badge ${transaction.status === 1 ? 'bg-success' : 'bg-danger'} bg-opacity-10 text-${transaction.status === 1 ? 'success' : 'danger'}">${transaction.status === 1 ? 'Paid' : 'Unpaid'}</div> </td>
-			<td> <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"><i class="bi bi-cloud-download"></i></a> </td>
-		`;
+            <td> #${transaction.id} </td>
+            <td> ${new Date(transaction.data).toLocaleDateString()}</td>
+            <td>${formatCurrency(transaction.amount)}
+                <a href="#" class="h6 mb-0" role="button" id="dropdownShare${transaction.id}" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-info-circle-fill"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare${transaction.id}">
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <span class="small">Cut</span>
+                            <span class="h6 mb-0 small">2,000</span>
+                        </div>
+                        <hr class="my-1"> <!-- Divider -->
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <span class="me-4 small">Tax</span>
+                            <span class="text-danger small">200</span>
+                        </div>
+                        <hr class="my-1"> <!-- Divider -->
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <span class="small">Bal</span>
+                            <span class="h6 mb-0 small">${formatCurrency(transaction.amount)}</span>
+                        </div>
+                    </li>
+                </ul>
+            </td>
+            <td> <div class="badge ${transaction.status === 1 ? 'bg-success' : 'bg-danger'} bg-opacity-10 text-${transaction.status === 1 ? 'success' : 'danger'}">${transaction.status === 1 ? 'Paid' : 'Unpaid'}</div> </td>
+            <td> <a href="#" class="btn btn-light btn-round mb-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Download"><i class="bi bi-cloud-download"></i></a> </td>
+        `;
 				tableBody.appendChild(tr);
 			});
 		}

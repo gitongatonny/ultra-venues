@@ -51,7 +51,8 @@ router.put("/venues/:id", upload, async (req, res) => {
     // #swagger.parameters['website'] = { in: 'body', description: 'Website URL of the venue' }
     // #swagger.parameters['services'] = { in: 'body', description: 'Services provided by the venue' }
     const id = req.params.id;
-    const { name, type, email, mobile, location, website, services } = req.body;
+    const { name, type, email, mobile, location, website, services, price } = req.body;
+    console.log(price);
 
     try {
         const venue = await Venue.findOne({ where: { id: id } });
@@ -59,7 +60,7 @@ router.put("/venues/:id", upload, async (req, res) => {
             return res.status(404).json({ error: "Venue not found" });
         }
         
-        let pictures = req.files.map(file => file.path);
+        // let pictures = req.files.map(file => file.path);
 
         venue.venueName = name;
         venue.venueType = type;
@@ -68,7 +69,8 @@ router.put("/venues/:id", upload, async (req, res) => {
         venue.location = location;
         venue.websiteUrl = website;
         venue.facilities = services;
-        venue.pictures = pictures;
+        venue.price = price;
+        // venue.pictures = pictures;
 
         await venue.save();
         res.status(200).json(venue);

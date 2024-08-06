@@ -278,8 +278,9 @@ Content END -->
 	<!-- Footer END -->
 
 	<script>
+		const venueDetails = JSON.parse(localStorage.getItem("userDetails"));
+		const venueId = venueDetails.id; // Replace with the actual venue ID
 		document.addEventListener('DOMContentLoaded', async () => {
-			const venueId = '3'; // Replace with the actual venue ID
 			try {
 				const response = await fetch(`http://localhost:5000/api/venues/${venueId}`);
 				if (!response.ok) {
@@ -304,6 +305,7 @@ Content END -->
 			document.getElementById('venueServices').value = venue.facilities;
 			document.getElementById('venueAdditionalServices').value = venue.additionalServices ?? "";
 			document.getElementById('currentEmail').innerText = venue.email;
+			document.getElementById('venuePrice').value = venue.price;
 
 			const venuePictures = document.getElementById('venuePictures');
 			// venue.pictures.forEach(picture => {
@@ -320,7 +322,6 @@ Content END -->
 		// Handle form submissions
 		document.getElementById('saveChangesButton').addEventListener('click', async (e) => {
 			e.preventDefault();
-			const venueId = '3'; // Replace with the actual venue ID
 			const updatedData = {
 				name: document.getElementById('venueName').value,
 				type: document.getElementById('venueType').value,
@@ -332,7 +333,9 @@ Content END -->
 				kraPin: document.getElementById('venueKraPin').value,
 				services: document.getElementById('venueServices').value,
 				additionalServices: document.getElementById('venueAdditionalServices').value,
-				pictures: [] // Handle pictures upload logic here
+				price: document.getElementById('venuePrice').value,
+
+				// pictures: [] // Handle pictures upload logic here
 			};
 
 			try {
@@ -358,7 +361,7 @@ Content END -->
 			e.preventDefault();
 			const newEmail = document.getElementById('newEmail').value;
 			try {
-				const response = await fetch(`http://localhost:5000/api/venues/update-email/3`, {
+				const response = await fetch(`http://localhost:5000/api/venues/update-email/${venueId}`, {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'

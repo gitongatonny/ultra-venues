@@ -116,6 +116,7 @@ router.post("/login", async (req, res) => {
             details: {
                 email: vendor.email,
                 venueName: vendor.venueName,
+                id: vendor.id
             }
         });
 
