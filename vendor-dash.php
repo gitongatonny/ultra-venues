@@ -156,53 +156,6 @@ Content START -->
 				</div>
 				<!-- Counter END -->
 
-				<!-- Graph START -->
-				<div class="row g-4" id="graphSection">
-					<!-- Booking Chart START -->
-					<div class="col-lg-7 col-xl-8">
-						<!-- Chart START -->
-						<div class="card border h-100">
-							<!-- Card header -->
-							<div class="card-header border-bottom">
-								<h5 class="card-header-title">Booking stats</h5>
-							</div>
-							<!-- Card body -->
-							<div class="card-body">
-								<!-- Apex chart -->
-								<div id="apexChartTrafficStats" class="mt-2"></div>
-							</div>
-						</div>
-						<!-- Chart END -->
-					</div>
-					<!-- Booking Chart END -->
-
-					<!-- Booking graph START -->
-					<div class="col-lg-4">
-						<div class="card border h-100">
-							<!-- Card header -->
-							<div class="card-header border-bottom d-flex justify-content-between align-items-center">
-								<h5 class="card-header-title">Event Categories</h5>
-								<a href="#" class="btn btn-link p-0 mb-0">View all</a>
-							</div>
-
-							<!-- Card body START -->
-							<div class="card-body p-3">
-								<!-- Chart -->
-								<div class="col-sm-6 mx-auto">
-									<div class="d-flex justify-content-center" id="ChartTrafficViews"></div>
-								</div>
-
-								<!-- Content -->
-								<ul class="list-group list-group-borderless align-items-center mt-3" id="eventCategories">
-									<!-- Event categories will be dynamically added here -->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- Booking graph END -->
-				</div>
-				<!-- Graph END -->
-
 
 				<!-- Booking table START -->
 				<div class="row">

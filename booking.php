@@ -34,13 +34,6 @@
 
                 <!-- Form START -->
                 <div class="row g-4">
-                    <!-- Input item -->
-                    <div class="col-md-6">
-                        <label class="form-label" for="customerFullName">Full name</label>
-                        <div class="input-group">
-                            <input type="text" id="customerFullName" name="customerFullName" class="form-control" placeholder="Full name">
-                        </div>
-                    </div>
 
                     <!-- Select item -->
                     <div class="col-md-6">
@@ -65,23 +58,6 @@
                         <input type="date" id="endDate" name="endDate" class="form-control">
                     </div>
 
-                    <!-- Input item -->
-                    <div class="col-md-6">
-                        <label class="form-label" for="customerEmailAddress">Email Address</label>
-                        <input type="email" id="customerEmailAddress" name="customerEmailAddress" class="form-control" placeholder="Enter your email address">
-                    </div>
-
-                    <!-- Input item -->
-                    <div class="col-md-6">
-                        <label class="form-label" for="customerPhoneNumber">Mobile Number</label>
-                        <input type="text" id="customerPhoneNumber" name="customerPhoneNumber" class="form-control" placeholder="Enter your mobile number">
-                    </div>
-
-                    <!-- Input item -->
-                    <div class="col-md-6">
-                        <label class="form-label" for="venuePhoneNumber">Venue Phone Number</label>
-                        <input type="text" id="venuePhoneNumber" name="venuePhoneNumber" class="form-control" placeholder="Enter venue phone number">
-                    </div>
 
                     <!-- Input item -->
                     <div class="col-md-6">
@@ -89,11 +65,6 @@
                         <input type="number" id="numberOfGuests" name="numberOfGuests" class="form-control" placeholder="Number of Guests">
                     </div>
 
-                    <!-- Input item -->
-                    <div class="col-md-6">
-                        <label class="form-label" for="venueEmailAddress">Venue Email Address</label>
-                        <input type="email" id="venueEmailAddress" name="venueEmailAddress" class="form-control" placeholder="Enter venue email address">
-                    </div>
 
                     <!-- Input item -->
                     <div class="col-md-6">
