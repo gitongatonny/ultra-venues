@@ -21,7 +21,7 @@ if (isset($_POST['phone_number'])) {
 
     $phone = $_POST['phone_number'];
     $orderNo = $_POST['orderNo'];
-    $amount = 1;
+    $amount = $_POST['amount'];
 
     $phone = (substr($phone, 0, 1) == "+") ? str_replace("+", "", $phone) : $phone;
     $phone = (substr($phone, 0, 1) == "0") ? preg_replace("/^0/", "254", $phone) : $phone;
@@ -82,26 +82,6 @@ if (isset($_POST['phone_number'])) {
         $MerchantRequestID = $result['MerchantRequestID'];
         $CheckoutRequestID = $result['CheckoutRequestID'];
 
-        // Database connection and operation commented out
-        /*
-        $conn = mysqli_connect("localhost","root","","mpesa");
-       
-        $sql = "INSERT INTO `orders`(`ID`, `OrderNo`, `Amount`, `Phone`, `CheckoutRequestID`, `MerchantRequestID`) VALUES ('','".$orderNo."','".$amount."','".$phone."','".$CheckoutRequestID."','".$MerchantRequestID."');";
-        
-        if ($conn->query($sql) === TRUE){
-            $_SESSION["MerchantRequestID"] = $MerchantRequestID;
-            $_SESSION["CheckoutRequestID"] = $CheckoutRequestID;
-            $_SESSION["phone"] = $phone;
-            $_SESSION["orderNo"] = $orderNo;
-
-            header('location: confirm-payment.php');
-        }else{
-            $errors['database'] = "Unable to initiate your order: ".$conn->error;;  
-            foreach($errors as $error) {
-                $errmsg .= $error . '<br />';
-            } 
-        }
-        */
         
     }else{
         $errors['mpesastk'] = $result['errorMessage'];
