@@ -69,6 +69,18 @@ Menu item START -->
 		<!-- =======================
 Menu item END -->
 
+<!-- =======================
+Content START -->
+<section class="pt-0">
+	<div class="container vstack gap-4">
+		<!-- Title START -->
+		<div class="row">
+			<div class="col-12">
+				<h1 class="fs-4 mb-0"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</h1>
+			</div>
+		</div>	
+		<!-- Title END -->
+
 		<!-- Counter START -->
 		<div class="row g-4">
 			<!-- Sales this month -->
@@ -116,7 +128,7 @@ Menu item END -->
 					</div>
 
 					<!-- Apex chart -->
-					<div id="apexChartTrafficStats"></div>
+					<div id=""></div>
 				</div>
 			</div>
 		</div>
