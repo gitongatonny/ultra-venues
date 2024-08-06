@@ -380,7 +380,7 @@ Content END -->
                         <td>${booking.eventType}</td>
                         <td>${formatDateRange(booking.startDate, booking.endDate)}</td>
                         <td><div class="badge text-bg-${booking.status === 'Upcoming' ? 'success' : booking.status === 'Done' ? 'info' : 'danger'}">${new Date(booking.endDate) < new Date() ? "Done" : new Date(booking.endDate) > new Date() ? "Upcoming" : "In progress"}</div></td>
-                        <td><div class="badge bg-${booking.paymentStatus === 0 ? 'success' : 'orange'} bg-opacity-10 text-${booking.paymentStatus === 0 ? 'success' : 'orange'}">${booking.paymentStatus}</div></td>
+                        <td><div class="badge bg-${booking.paymentStatus === 0 ? 'success' : 'orange'} bg-opacity-10 text-${booking.paymentStatus === 0 ? 'success' : 'orange'}">${booking.paymentStatus === 0 ? "Pending": "Paid"}</div></td>
                         <td><a href="#" class="btn btn-sm btn-light mb-0">View</a></td>
                     </tr>
                 `;
