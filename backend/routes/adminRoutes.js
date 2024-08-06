@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { Sequelize, DataTypes, Op } = require('sequelize');
 const {
 	isAdmin,
 	generateAccessToken,
@@ -153,6 +154,47 @@ router.post("/refresh-token", async (req, res) => {
 // router.use(authenticateToken);
 // router.use(isAdmin);
 
+router.get('/dashboard', async (req, res) => {
+    try {
+        // Calculate the start of the current quarter
+        const currentQuarterStart = new Date();
+        currentQuarterStart.setMonth(Math.floor(currentQuarterStart.getMonth() / 3) * 3);
+        currentQuarterStart.setDate(1);
+        currentQuarterStart.setHours(0, 0, 0, 0);
+
+        // Get the number of new venues this quarter
+        const newVenuesCount = await Venue.count({});
+
+        // Get the number of booked venues
+        const bookedVenuesCount = await Booking.count({
+            where: {
+                startDate: {
+                    [Op.gte]: currentQuarterStart
+                }
+            }
+        });
+
+        // Get the number of available venues (assuming a venue is available if it has no bookings in the current quarter)
+        const availableVenuesCount = await Venue.count({
+            where: {
+                id: {
+                    [Op.notIn]: Sequelize.literal(`(SELECT DISTINCT venueEmailAddress FROM Bookings WHERE startDate >= '${currentQuarterStart.toISOString()}')`)
+                }
+            }
+        });
+
+        // Send the data as JSON response
+        res.json({
+            newVenues: newVenuesCount,
+            bookedVenues: bookedVenuesCount,
+            availableVenues: newVenuesCount - bookedVenuesCount
+        });
+
+    } catch (error) {
+        console.error('Error fetching dashboard data:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+});
 // Endpoint to get all customers with their total booking count
 router.get('/customers', async (req, res) => {
     // #swagger.tags = ['Admin']
