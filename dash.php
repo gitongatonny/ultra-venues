@@ -1,6 +1,6 @@
 <?php
 // URL of the Flask API endpoint
-$api_url = 'http://127.0.0.1:5000/recommend?n=5'; // Modify this URL as needed
+$api_url = 'http://127.0.0.1:5000/recommend?n=4'; // Modify this URL as needed
 
 // Initialize a cURL session
 $curl = curl_init($api_url);
@@ -220,7 +220,7 @@ echo "</pre>";
                                                 <div class="card-footer border-top">
                                                     <!-- Buttons -->
                                                     <div class="d-flex justify-content-between align-items-center">
-                                                        <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i class="bi bi-arrow-right ms-1"></i></a>
+                                                        <a href=venue-details.php?id=<?= htmlspecialchars($venue['id']) ?> class="btn btn-link p-0 mb-0">View details<i class="bi bi-arrow-right ms-1"></i></a>
                                                         <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
                                                     </div>
                                                 </div>

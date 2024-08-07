@@ -12,7 +12,7 @@ if ($venue_id == 0) {
 // Parameters for the API
 $params = [
     'id' => $venue_id,
-    'n' => 2,
+    'n' => 3,
 ];
 
 // URL of the Flask API endpoint
