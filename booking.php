@@ -105,6 +105,7 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const venueId = urlParams.get('id');
+        const customerEmail = localStorage.getItem("customerEmail");
 
         // Event listeners to update the price when dates are changed
         document.getElementById('startDate').addEventListener('change', updatePrice);
@@ -121,7 +122,7 @@
                 startDate: document.getElementById('startDate').value,
                 endDate: document.getElementById('endDate').value,
                 venueId: venueId,
-                // customerEmailAddress: document.getElementById('customerEmailAddress').value,
+                customerEmailAddress: customerEmail,
                 // customerPhoneNumber: document.getElementById('customerPhoneNumber').value,
                 // venuePhoneNumber: document.getElementById('venuePhoneNumber').value,
                 numberOfGuests: document.getElementById('numberOfGuests').value,

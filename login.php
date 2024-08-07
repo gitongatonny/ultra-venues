@@ -118,6 +118,7 @@ Main Content END -->
                 if (response.ok) {
                     localStorage.setItem('accessToken', result.tokens.access);
                     localStorage.setItem('refreshToken', result.tokens.refresh);
+                    localStorage.setItem("customerEmail", result.customerDetails.email);
                     window.location.href = 'dash.php';
                 } else {
                     document.getElementById('errorMessage').textContent = result.error;
