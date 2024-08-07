@@ -1,3 +1,52 @@
+<?php
+// URL of the Flask API endpoint
+$api_url = 'http://127.0.0.1:5000/recommend?n=5'; // Modify this URL as needed
+
+// Initialize a cURL session
+$curl = curl_init($api_url);
+
+// Set cURL options
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_FAILONERROR, true); // Fail on HTTP error
+
+// Execute the cURL request and get the response
+$response = curl_exec($curl);
+
+// Check for cURL errors
+if ($response === false) {
+    $error = curl_error($curl);
+    echo "cURL Error: $error";
+    curl_close($curl);
+    exit;
+}
+
+// Close the cURL session
+curl_close($curl);
+
+// Debugging: Output the raw response before decoding
+echo "<pre>";
+echo "Raw API Response:\n";
+print_r($response);
+echo "</pre>";
+
+// Decode the JSON response
+$venues = json_decode($response, true);
+
+// Check for JSON decoding errors
+if (json_last_error() !== JSON_ERROR_NONE) {
+    echo "JSON Error: " . json_last_error_msg();
+    exit;
+}
+
+// Debugging: Output the decoded array
+echo "<pre>";
+echo "Decoded Venues:\n";
+print_r($venues);
+echo "</pre>";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <!-- push to mai -->
@@ -114,222 +163,78 @@
                     <!-- =======================
                     Main banner END -->
         
-                <!-- =======================
-                Top Venues START -->
-                <section class="pt-0 pt-sm-5">
-                            <div class="container">
-                                <!-- Title -->
-                                <div class="row mb-4 mb-sm-5">
-                                    <div class="col-12 text-center">
-                                        <h2 class="mb-0">Our Top Venues</h2>
-                                        <p class="mb-0">Book your venue with us and get the best service.</p>
-                                    </div>
-                                </div>
-
-                                <div class="row g-4">
-                                    <!-- Card item -->
-                                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                                        <div class="card shadow h-100">
-                                            <div class="position-relative">
-                                                <!-- Image -->
-                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
-                                                    alt="Card image">
-                                                <!-- Overlay -->
-                                                <div class="card-img-overlay p-3 z-index-1">
-                                                    <div class="badge text-bg-dark"><i
-                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i>Hotel</div>
-                                                    <div class="badge text-bg-success">Open</div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-                                                <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="venue-details.php">Green Hills Hotel</a>
-                                                </h5>
-                                                <br>
-
-                                                <!-- Address and Contact -->
-                                                <ul class="list-group list-group-borderless mb-0">
-                                                    <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Nyeri
-                                                    </li>
-                                                    <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 250 guests 
-                                                    </li>
-
-                                                    <br>
-                                                    <!-- Price -->
-                                                    <p class="mb-0">Starts at <span class="text-success">Ksh 9,999</span> per/day</p>
-                                                </ul>
-                                            </div>
-                                            <!-- Card body END -->
-
-                                            <!-- Card footer START-->
-                                            <div class="card-footer border-top">
-                                                <!-- Buttons -->
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
-                                                            class="bi bi-arrow-right ms-1"></i></a>
-                                                    <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Card item -->
-                                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                                        <div class="card shadow h-100">
-                                            <div class="position-relative">
-                                                <!-- Image -->
-                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
-                                                    alt="Card image">
-                                                <!-- Overlay -->
-                                                <div class="card-img-overlay p-3 z-index-1">
-                                                    <div class="badge text-bg-dark"><i
-                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i> Hotel</div>
-                                                    <div class="badge text-bg-success">Open</div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-                                                <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="venue-details.php">Alba Hotel</a></h5>
-                                                <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
-                                                <br>
-                                                <br>
-                                                <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Nyeri
-                                                    </li>
-                                                    <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 150 guests 
-                                                </li>
-                                                <br>
-
-                                                <!-- Content -->
-                                                <p class="mb-0">Starts at <span class="text-success">Ksh 11,000</span> per/day</p>
-                                            </div>
-                                            <!-- Card body END -->
-
-                                            <!-- Card footer START-->
-                                            <div class="card-footer border-top">
-                                                <!-- Buttons -->
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
-                                                            class="bi bi-arrow-right ms-1"></i></a>
-                                                    <a href="#" class="h6 mb-0 z-index-2"><i
-                                                            class="fa-solid fa-heart text-danger"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card item -->
-                                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                                        <div class="card shadow h-100">
-                                            <div class="position-relative">
-                                                <!-- Image -->
-                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
-                                                    alt="Card image">
-                                                <!-- Overlay -->
-                                                <div class="card-img-overlay p-3 z-index-1">
-                                                    <div class="badge text-bg-dark"><i
-                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i>Resort</div>
-                                                    <div class="badge text-bg-success">Open</div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-                                                <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="venue-details.php">Sarova Maiyan</a>
-                                                </h5>
-                                                <br>
-
-                                                <!-- Address and Contact -->
-                                                <ul class="list-group list-group-borderless mb-0">
-                                                    <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Nanyuki
-                                                    </li>
-                                                    <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 200 guests 
-                                                    </li>
-
-                                                    <br>
-                                                    <!-- Price -->
-                                                    <p class="mb-0">Starts at <span class="text-success">Ksh 19,999</span> per/day</p>
-                                                </ul>
-                                            </div>
-                                            <!-- Card body END -->
-
-                                            <!-- Card footer START-->
-                                            <div class="card-footer border-top">
-                                                <!-- Buttons -->
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
-                                                            class="bi bi-arrow-right ms-1"></i></a>
-                                                    <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card item -->
-                                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                                        <div class="card shadow h-100">
-                                            <div class="position-relative">
-                                                <!-- Image -->
-                                                <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top"
-                                                    alt="Card image">
-                                                <!-- Overlay -->
-                                                <div class="card-img-overlay p-3 z-index-1">
-                                                    <div class="badge text-bg-dark"><i
-                                                            class="fa-solid fa-building-columns fa-fw text-warning"></i> Palace</div>
-                                                    <div class="badge text-bg-success">Open</div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-                                                <!-- Title -->
-                                                <h5 class="card-title me-2"><a href="venue-details.php">Oriental Palace</a></h5>
-                                                <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
-                                                <br>
-                                                <br>
-                                                <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> Embu
-                                                    </li>
-                                                    <li class="list-group-item small pb-0">
-                                                        <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: 100 guests 
-                                                </li>
-                                                <br>
-
-                                                <!-- Content -->
-                                                <p class="mb-0">Starts at <span class="text-success">Ksh 15,999</span> per/day</p>
-                                            </div>
-                                            <!-- Card body END -->
-
-                                            <!-- Card footer START-->
-                                            <div class="card-footer border-top">
-                                                <!-- Buttons -->
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i
-                                                            class="bi bi-arrow-right ms-1"></i></a>
-                                                    <a href="#" class="h6 mb-0 z-index-2"><i
-                                                            class="fa-solid fa-heart text-danger"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
+                    <!-- =======================
+                    Top Recommendations START -->
+                    <section class="pt-0 pt-sm-5">
+                        <div class="container">
+                            <!-- Title -->
+                            <div class="row mb-4 mb-sm-5">
+                                <div class="col-12 text-center">
+                                    <h2 class="mb-0">Our Top Recommendations</h2>
+                                    <p class="mb-0">Book your venue with us and get the best service.</p>
                                 </div>
                             </div>
-                        </section>
-                        <!-- =======================
-                Top Venues END -->
+
+                            <div class="row g-4">
+                                <?php if (is_array($venues)) : ?>
+                                    <?php foreach ($venues as $venue) : ?>
+                                        <!-- Card item -->
+                                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                                            <div class="card shadow h-100">
+                                                <div class="position-relative">
+                                                    <!-- Image -->
+                                                    <img src="assets/images/Locations/Nyeri.jpg" class="card-img-top" alt="Card image">
+                                                    <!-- Overlay -->
+                                                    <div class="card-img-overlay p-3 z-index-1">
+                                                        <div class="badge text-bg-dark">
+                                                            <i class="fa-solid fa-building-columns fa-fw text-warning"></i> Hotel
+                                                        </div>
+                                                        <div class="badge text-bg-success">Open</div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card body START -->
+                                                <div class="card-body">
+                                                    <!-- Title -->
+                                                    <h5 class="card-title me-2">
+                                                        <a href=venue-details.php?id=<?= htmlspecialchars($venue['id']) ?>><?= htmlspecialchars($venue['venueName']) ?></a>
+                                                    </h5>
+                                                    <br>
+
+                                                    <!-- Address and Contact -->
+                                                    <ul class="list-group list-group-borderless mb-0">
+                                                        <li class="list-group-item small pb-0">
+                                                            <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> <?= htmlspecialchars($venue['location']) ?>
+                                                        </li>
+                                                        <!-- <li class="list-group-item small pb-0">
+                                                            <i class="bi bi-people-fill fa-fw h6 small mb-0"></i> Capacity: <?= htmlspecialchars($venue['Capacity']) ?> guests
+                                                        </li> -->
+                                                        <br>
+                                                        <!-- Price -->
+                                                        <p class="mb-0">Starts at <span class="text-success">Ksh <?= htmlspecialchars($venue['price']) ?></span> per/day</p>
+                                                    </ul>
+                                                </div>
+                                                <!-- Card body END -->
+
+                                                <!-- Card footer START-->
+                                                <div class="card-footer border-top">
+                                                    <!-- Buttons -->
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <a href="venue-details.php" class="btn btn-link p-0 mb-0">View details<i class="bi bi-arrow-right ms-1"></i></a>
+                                                        <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php else : ?>
+                                    <p>No recommendations found.</p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- =======================
+                    Top Recommendations END -->
 
 
 

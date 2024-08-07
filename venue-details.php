@@ -1,3 +1,61 @@
+<?php
+// Get the venue ID from the URL
+$venue_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+if ($venue_id == 0) {
+    echo "Invalid venue ID.";
+    exit;
+}
+
+// URL of the Flask API endpoint to get recommendations based on the venue ID
+
+// Parameters for the API
+$params = [
+    'id' => $venue_id,
+    'n' => 2,
+];
+
+// URL of the Flask API endpoint
+$api_url = 'http://127.0.0.1:5000/recommend?' . http_build_query($params);
+
+// Initialize a cURL session
+$curl = curl_init($api_url);
+
+// Set cURL options
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_FAILONERROR, true); // Fail on HTTP error
+
+// Execute the cURL request and get the response
+$response = curl_exec($curl);
+
+// Check for cURL errors
+if ($response === false) {
+    $error = curl_error($curl);
+    echo "cURL Error: $error";
+    curl_close($curl);
+    exit;
+}
+
+// Close the cURL session
+curl_close($curl);
+
+// Decode the JSON response
+$venues = json_decode($response, true);
+
+// Check for JSON decoding errors
+if (json_last_error() !== JSON_ERROR_NONE) {
+    echo "JSON Error: " . json_last_error_msg();
+    exit;
+}
+
+// Debugging: Output the raw response and decoded array
+// echo "<pre>";
+// echo "API Response:\n";
+// print_r($response);
+// echo "\nDecoded Venues:\n";
+// print_r($venues);
+// echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -281,7 +339,59 @@ Content START -->
         <!-- =======================
 Content END -->
 
-    </main>
+
+
+    <!-- =======================
+    Recommended Venues START -->
+    <section>
+        <div class="container">
+
+            <!-- Title -->
+            <div class="row mb-4">
+                <div class="col-12 text-start">
+                    <h4 class="mb-0">You would also like... </h4>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <?php if (isset($venues) && is_array($venues)) : ?>
+                    <?php foreach ($venues as $venue) : ?>
+                        <!-- Hotel item -->
+                        <div class="col-sm-6 col-xl-3">
+                            <!-- Card START -->
+                            <div class="card card-img-scale overflow-hidden bg-transparent">
+                                <!-- Image and overlay -->
+                                <div class="card-img-scale-wrapper rounded-3">
+                                    <!-- Image -->
+                                    <img src="assets/images/mt-kenya.jpg" class="card-img" alt="hotel image">
+                                    <!-- Badge -->
+                                    <div class="position-absolute bottom-0 start-0 p-3">
+                                        <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i class="bi bi-geo-alt me-2"></i><?= htmlspecialchars($venue['location']) ?></div>
+                                    </div>
+                                </div>
+
+                                <!-- Card body -->
+                                <div class="card-body px-2">
+                                    <!-- Title -->
+                                    <h5 class="card-title"><a href="venue-details.php?id=<?= htmlspecialchars($venue['id']) ?>" class="stretched-link"><?= htmlspecialchars($venue['venueName']) ?></a></h5>
+                                    <!-- Price and rating -->
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-success mb-0">Ksh. <?= htmlspecialchars($venue['price']) ?></h6>
+                                        <h6 class="mb-0">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card END -->
+                        </div>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <p>No recommendations found.</p>
+                <?php endif; ?>
+            </div> <!-- Row END -->
+        </div>
+    </section>
+    <!-- =======================
+    Recommended Venues END -->        
 
     <!-- Footer START -->
     <?php include "includes/footer.php"; ?>
@@ -336,6 +446,7 @@ Content END -->
                                     <label class="form-check-label" for="inquiryCheck">I agree to receive updates and offers</label>
                                 </div>
 
+
                                 <!-- Buttons -->
                                 <div class="d-grid gap-2 d-md-block">
                                     <button class="btn btn-dark mb-0" type="button">Send Inquiry</button>
@@ -358,7 +469,7 @@ Content END -->
                 try {
                     const response = await fetch(`http://localhost:5000/api/venues/${venueId}`); // Replace with your backend API URL
                     const data = await response.json();
-                    
+
                     document.getElementById('venue-description').textContent = data.description || "Description not available.";
                     document.getElementById('venue-additional-description').textContent = "Experience the warmth and hospitality of the staff..."; // Add more description if needed
                     document.getElementById('venue-price').textContent = `Ksh. ${data.price || "N/A"}`;
@@ -412,9 +523,11 @@ Content END -->
 
                     const venueServices = document.getElementById('venue-services');
                     venueServices.innerHTML = "";
+
                     if (data.facilities && data.facilities.length > 0) {
                         data.facilities = data.facilities.split(/\n|,/);
                         data.facilities.forEach(service => {
+
                             venueServices.innerHTML += `
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <ul class="list-group list-group-borderless mb-3">
