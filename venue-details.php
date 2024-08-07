@@ -19,74 +19,20 @@
     <main>
 
         <!-- =======================
-        Main banner START -->
+Main banner START -->
         <section class="py-0">
             <div class="container-fluid px-0">
                 <!-- Slider START -->
                 <div class="tiny-slider arrow-round arrow-blur">
-                    <div class="tiny-slider-inner" data-autoplay="true" data-arrow="true" data-gutter="0" data-edge="0" data-dots="false" data-items="3" data-items-md="2" data-items-xs="1">
-                        <!-- Slider item -->
-                        <div>
-                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
-                                <div class="card card-element-hover card-overlay-hover rounded-0 overflow-hidden">
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="" alt="">
-                                    <!-- Full screen button -->
-                                    <div class="hover-element w-100 h-100">
-                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slider item -->
-                        <div>
-                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/Locations/Nyeri.jpg">
-                                <div class="card card-element-hover card-overlay-hover rounded-0 overflow-hidden">
-                                    <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" class="" alt="">
-                                    <!-- Full screen button -->
-                                    <div class="hover-element w-100 h-100">
-                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slider item -->
-                        <div>
-                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
-                                <div class="card card-element-hover card-overlay-hover rounded-0 overflow-hidden">
-                                    <!-- Image -->
-                                    <img src="assets/images/mt-kenya.jpg" class="" alt="">
-                                    <!-- Full screen button -->
-                                    <div class="hover-element w-100 h-100">
-                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Slider item -->
-                        <div>
-                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="aassets/images/Locations/Nyeri.jpg">
-                                <div class="card card-element-hover card-overlay-hover rounded-0 overflow-hidden">
-                                    <!-- Image -->
-                                    <img src="assets/images/Locations/Nyeri.jpg" class="" alt="">
-                                    <!-- Full screen button -->
-                                    <div class="hover-element w-100 h-100">
-                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="tiny-slider-inner" data-autoplay="true" data-arrow="true" data-gutter="0" data-edge="0" data-dots="false" data-items="3" data-items-md="2" data-items-xs="1" id="slider-image-gallery">
+                        <!-- Default Slider items will be replaced by dynamic content -->
                     </div>
                 </div>
-                <!-- Slider START -->
+                <!-- Slider END -->
             </div>
         </section>
         <!-- =======================
-        Main banner END -->
+Main banner END -->
 
 
         <!-- =======================
@@ -107,7 +53,8 @@ Title and tabs START -->
 
                                     <!-- Title -->
                                     <h1 class="h3 mt-2 mb-1" id="venueName">Green Hills Hotel</h1>
-                                    <p class="mb-2 mb-sm-0"><i class="bi bi-geo-alt me-1 text-primary" id="venueAddress"></i></p></p>
+                                    <p class="mb-2 mb-sm-0"><i class="bi bi-geo-alt me-1 text-primary" id="venueAddress"></i></p>
+                                    </p>
                                 </div>
                                 <!-- Buttons -->
                                 <ul class="list-inline mb-0">
@@ -358,7 +305,7 @@ Content END -->
                 try {
                     const response = await fetch(`http://localhost:5000/api/venues/${venueId}`); // Replace with your backend API URL
                     const data = await response.json();
-                    
+
                     document.getElementById('venue-description').textContent = data.description || "Description not available.";
                     document.getElementById('venue-additional-description').textContent = "Experience the warmth and hospitality of the staff..."; // Add more description if needed
                     document.getElementById('venue-price').textContent = `Ksh. ${data.price || "N/A"}`;
@@ -392,8 +339,8 @@ Content END -->
 
                     const imageGallery = document.getElementById('image-gallery');
                     imageGallery.innerHTML = "";
-                    if (data.images && data.images.length > 0) {
-                        data.images.forEach(image => {
+                    if (data.pictures && data.pictures.length > 0) {
+                        data.pictures.forEach(image => {
                             imageGallery.innerHTML += `
                         <div class="col-md-4">
                             <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="${image}">
@@ -409,6 +356,67 @@ Content END -->
                     } else {
                         imageGallery.innerHTML = '<p>No images available</p>';
                     }
+
+                    const sliderImageGallery = document.getElementById('slider-image-gallery');
+
+                    if (data.pictures && data.pictures.length > 0 && data.pictures[0] !== "") {
+                    data.pictures.forEach(image => {
+                        sliderImageGallery.innerHTML += `
+                            <div>
+                                <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="${image}">
+                                    <div class="card card-element-hover card-overlay-hover overflow-hidden">
+                                        <img src="${image}" class="card-img" alt="">
+                                        <div class="hover-element w-100 h-100">
+                                            <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>`;
+                    });
+                } else {
+                    // Add default static images if no dynamic images are available
+                    sliderImageGallery.innerHTML += `
+                        <div>
+                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
+                                <div class="card card-element-hover card-overlay-hover overflow-hidden">
+                                    <img src="assets/images/mt-kenya.jpg" class="card-img" alt="">
+                                    <div class="hover-element w-100 h-100">
+                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/Locations/Nyeri.jpg">
+                                <div class="card card-element-hover card-overlay-hover overflow-hidden">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="card-img" alt="">
+                                    <div class="hover-element w-100 h-100">
+                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/mt-kenya.jpg">
+                                <div class="card card-element-hover card-overlay-hover overflow-hidden">
+                                    <img src="assets/images/mt-kenya.jpg" class="card-img" alt="">
+                                    <div class="hover-element w-100 h-100">
+                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/Locations/Nyeri.jpg">
+                                <div class="card card-element-hover card-overlay-hover overflow-hidden">
+                                    <img src="assets/images/Locations/Nyeri.jpg" class="card-img" alt="">
+                                    <div class="hover-element w-100 h-100">
+                                        <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                }
 
                     const venueServices = document.getElementById('venue-services');
                     venueServices.innerHTML = "";
