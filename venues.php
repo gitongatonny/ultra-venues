@@ -307,7 +307,7 @@ Hotel list END -->
 					card.innerHTML = `
                 <div class="row g-0">
                     <div class="col-md-5">
-                        <img src="assets/images/mt-kenya.jpg" class="card-img rounded-2" alt="Card image">
+						<img src="${(venue.pictures && venue.pictures.length > 0 && venue.pictures[0] !== "") ? venue.pictures[0] : 'assets/images/mt-kenya.jpg'}" class="card-img rounded-2" alt="Card image">
                     </div>
                     <div class="position-absolute top-0 start-0 z-index-1 m-2">
                         <div class="badge text-bg-danger">${venue.location}</div>

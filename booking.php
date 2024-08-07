@@ -105,6 +105,7 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const venueId = urlParams.get('id');
+        const customerEmail = localStorage.getItem("customerEmail");
 
         // Event listeners to update the price when dates are changed
         document.getElementById('startDate').addEventListener('change', updatePrice);
@@ -113,19 +114,14 @@
         document.getElementById('bookingForm').addEventListener('submit', async function(event) {
             event.preventDefault();
 
-        
             // Collect form data
             const formData = {
-                // customerFullName: document.getElementById('customerFullName').value,
                 eventType: document.getElementById('eventType').value,
                 startDate: document.getElementById('startDate').value,
                 endDate: document.getElementById('endDate').value,
                 venueId: venueId,
-                // customerEmailAddress: document.getElementById('customerEmailAddress').value,
-                // customerPhoneNumber: document.getElementById('customerPhoneNumber').value,
-                // venuePhoneNumber: document.getElementById('venuePhoneNumber').value,
+                customerEmailAddress: customerEmail,
                 numberOfGuests: document.getElementById('numberOfGuests').value,
-                // venueEmailAddress: document.getElementById('venueEmailAddress').value,
                 price: document.getElementById('price').value,
                 paymentStatus: 0 // Default value for payment status
             };
@@ -133,7 +129,7 @@
             console.log(formData);
             try {
                 // Send POST request to create booking endpoint
-                const response = await fetch('http://localhost:5000/api/customer/bookings/create', {
+                const response = await fetch(`http://localhost:5000/api/venues/${venueId}/bookings`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -159,12 +155,58 @@
             }
         });
 
+        // Function to disable booked dates in the date pickers
+        function disableBookedDates(bookedDates) {
+            const startDateInput = document.getElementById('startDate');
+            const endDateInput = document.getElementById('endDate');
+
+            function isDateBooked(date) {
+                return bookedDates.some(bookedDate => {
+                    const bookedStart = new Date(bookedDate.startDate);
+                    const bookedEnd = new Date(bookedDate.endDate);
+                    return date >= bookedStart && date <= bookedEnd;
+                });
+            }
+
+            function restrictDates(inputElement) {
+                inputElement.addEventListener('input', function() {
+                    if (isDateBooked(new Date(this.value))) {
+                        alert('This date is already booked. Please choose another date.');
+                        this.value = '';
+                    }
+                });
+            }
+
+            restrictDates(startDateInput);
+            restrictDates(endDateInput);
+        }
+
+        // Fetch booked dates for the venue
+        async function fetchBookedDates() {
+            try {
+                const response = await fetch(`http://localhost:5000/api/venues/${venueId}/booked-dates`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch booked dates');
+                }
+
+                const bookedDates = await response.json();
+                disableBookedDates(bookedDates);
+
+            } catch (error) {
+                console.error('Error fetching booked dates:', error);
+            }
+        }
+
         // Initial call to update the price field
         updatePrice();
+        // Initial call to fetch and disable booked dates
+        fetchBookedDates();
     </script>
+
 
     <!-- Footer START -->
     <?php include "includes/footer.php"; ?>
     <!-- Footer END -->
 </body>
+
 </html>

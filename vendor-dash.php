@@ -27,8 +27,8 @@ Menu item START -->
 						<div class="avatar avatar-xl mb-2 mb-sm-0">
 							<img class="avatar-img rounded-circle" src="assets/images/user.png" alt="">
 						</div>
-						<h4 class="mb-2 mb-sm-0 ms-sm-3"><span class="fw-light">Welcome Back, </span id="venueName"></h4>
-					</div>
+						<h4 class="mb-2 mb-sm-0 ms-sm-3" id="welcome-message"><span class="fw-light">Welcome Back, </span></h4>
+						</div>
 					<!-- Avatar and info START -->
 
 					<!-- Responsive navbar toggler -->
@@ -300,6 +300,19 @@ Content END -->
 	</main>
 
 	<script>
+
+		document.addEventListener('DOMContentLoaded', () => {
+			// Get the user details from localStorage
+			const userDetails = localStorage.getItem("userDetails");
+			if (userDetails) {
+				const user = JSON.parse(userDetails);
+				const venueName = user.venueName || "Guest"; // Fallback to "Guest" if venueName is not available
+
+				// Update the welcome message
+				const welcomeMessageElement = document.getElementById('welcome-message');
+				welcomeMessageElement.innerHTML = `<span class="fw-light">Welcome Back, </span>${venueName}`;
+			}
+		});
 		// Function to fetch dashboard data for a venue
 		async function fetchDashboardData() {
 			try {

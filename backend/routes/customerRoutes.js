@@ -89,6 +89,9 @@ router.post("/login", async (req, res) => {
             tokens: {
                 access: accessToken,
                 refresh: refreshToken
+            }, 
+            customerDetails: {
+                email: customer.email,
             }
         });
 
@@ -127,7 +130,7 @@ router.post('/bookings/create', async (req, res) => {
             eventType,
             startDate,
             endDate,
-            // customerEmailAddress,
+            customerEmailAddress,
             // customerPhoneNumber,
             venueId,
             // venuePhoneNumber,
@@ -137,9 +140,11 @@ router.post('/bookings/create', async (req, res) => {
             paymentStatus
         } = req.body;
 
-        const customerEmailAddress = "test@gmail.com";
+        // const customerEmailAddress = "test@gmail.com";
         const venue = await Venue.findOne({where : {id: venueId}});
         const customer = await Customer.findOne({where: {email: customerEmailAddress}});
+        console.log(customer);
+        console.log(customerEmailAddress);
         const customerFullName = customer.fullName;
         const customerPhoneNumber = customer.phoneNumber;
         const venuePhoneNumber = venue.phoneNumber;
