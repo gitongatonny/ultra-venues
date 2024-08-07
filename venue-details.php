@@ -303,7 +303,7 @@ Content END -->
                 const urlParams = new URLSearchParams(window.location.search);
                 const venueId = urlParams.get('id');
                 try {
-                    const response = await fetch(`http://localhost:5000/api/venues/${venueId}`); // Replace with your backend API URL
+                    const response = await fetch(`http://localhost:5000/api/venues/${venueId}`); 
                     const data = await response.json();
 
                     document.getElementById('venue-description').textContent = data.description || "Description not available.";

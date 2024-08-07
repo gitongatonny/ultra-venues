@@ -251,26 +251,40 @@ router.get("/customers/:id", async (req, res) => {
 	}
 });
 
-// endpoint to list all venues
+// Endpoint to list all venues
 router.get("/venues", async (req, res) => {
-	// #swagger.tags = ['Admin']
-	// #swagger.summary = 'Get all venues'
-	// #swagger.description = 'This endpoint returns all venues. Admin authentication is required.'
-    	/* #swagger.security = [{
-            "bearerAuth": []
+    // #swagger.tags = ['Admin']
+    // #swagger.summary = 'Get all venues'
+    // #swagger.description = 'This endpoint returns all venues. Admin authentication is required.'
+    /* #swagger.security = [{
+        "bearerAuth": []
     }] */
-	try {
-		const venues = await Venue.findAll({
-			attributes: { exclude: ["password"] },
-		});
-		res.status(200).json(venues);
-	} catch (error) {
-		console.error(error);
-		res.status(500).json({
-			error: "Could not fetch venues at this moment",
-		});
-	}
+    try {
+        const venues = await Venue.findAll({
+            attributes: {
+                exclude: ["password"],
+                include: [
+                    // Subquery to count bookings
+                    [
+                        Sequelize.literal(`(
+                            SELECT COUNT(*)
+                            FROM Bookings AS booking
+                            WHERE booking.id = Venue.id
+                        )`),
+                        'bookings'
+                    ]
+                ]
+            }
+        });
+        res.status(200).json(venues);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            error: "Could not fetch venues at this moment",
+        });
+    }
 });
+
 
 // endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {

@@ -354,7 +354,7 @@
                         </div>
                         <div class="card-body text-center pb-0">
                             <div class="avatar avatar-xl flex-shrink-0 mb-3">
-                                 <img class="avatar-img rounded-circle" src="assets/images/mt-kenya.jpg" alt="avatar">
+								<img src="${(venue.pictures && venue.pictures.length > 0 && venue.pictures[0] !== "") ? venue.pictures[0] : 'assets/images/mt-kenya.jpg'}" class="card-img rounded-2" alt="Card image">
                             </div>
                             <h5 class="mb-1">${venue.venueName}</h5>
                             <small><i class="bi bi-geo-alt me-1"></i>${venue.location}</small>
