@@ -103,28 +103,6 @@
             }
         }
 
-        // Disable booked dates in the date pickers
-        function disableBookedDates(bookedDates) {
-            const startDateInput = document.getElementById('startDate');
-            const endDateInput = document.getElementById('endDate');
-
-            startDateInput.addEventListener('input', function () {
-                const date = new Date(this.value);
-                if (bookedDates.includes(this.value)) {
-                    alert('This date is already booked. Please choose another date.');
-                    this.value = '';
-                }
-            });
-
-            endDateInput.addEventListener('input', function () {
-                const date = new Date(this.value);
-                if (bookedDates.includes(this.value)) {
-                    alert('This date is already booked. Please choose another date.');
-                    this.value = '';
-                }
-            });
-        }
-
         const urlParams = new URLSearchParams(window.location.search);
         const venueId = urlParams.get('id');
         const customerEmail = localStorage.getItem("customerEmail");
@@ -151,7 +129,7 @@
             console.log(formData);
             try {
                 // Send POST request to create booking endpoint
-                const response = await fetch(`http://localhost:5000/api/venues/${venueId}/booked-dates`, {
+                const response = await fetch(`http://localhost:5000/api/venues/${venueId}/bookings`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -177,6 +155,32 @@
             }
         });
 
+        // Function to disable booked dates in the date pickers
+        function disableBookedDates(bookedDates) {
+            const startDateInput = document.getElementById('startDate');
+            const endDateInput = document.getElementById('endDate');
+
+            function isDateBooked(date) {
+                return bookedDates.some(bookedDate => {
+                    const bookedStart = new Date(bookedDate.startDate);
+                    const bookedEnd = new Date(bookedDate.endDate);
+                    return date >= bookedStart && date <= bookedEnd;
+                });
+            }
+
+            function restrictDates(inputElement) {
+                inputElement.addEventListener('input', function() {
+                    if (isDateBooked(new Date(this.value))) {
+                        alert('This date is already booked. Please choose another date.');
+                        this.value = '';
+                    }
+                });
+            }
+
+            restrictDates(startDateInput);
+            restrictDates(endDateInput);
+        }
+
         // Fetch booked dates for the venue
         async function fetchBookedDates() {
             try {
@@ -186,17 +190,7 @@
                 }
 
                 const bookedDates = await response.json();
-                const dates = [];
-                bookedDates.forEach(booking => {
-                    let start = new Date(booking.startDate);
-                    let end = new Date(booking.endDate);
-                    while (start <= end) {
-                        dates.push(start.toISOString().split('T')[0]);
-                        start.setDate(start.getDate() + 1);
-                    }
-                });
-
-                disableBookedDates(dates);
+                disableBookedDates(bookedDates);
 
             } catch (error) {
                 console.error('Error fetching booked dates:', error);
@@ -209,8 +203,10 @@
         fetchBookedDates();
     </script>
 
+
     <!-- Footer START -->
     <?php include "includes/footer.php"; ?>
     <!-- Footer END -->
 </body>
+
 </html>
