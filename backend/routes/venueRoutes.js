@@ -70,6 +70,29 @@ router.get("/venues", async (req, res) => {
         res.status(500).json({ error: "Could not fetch venues at this moment" });
     }
 });
+
+// endpoint to get booked dates for a specific venue
+router.get('/venues/:id/booked-dates', async (req, res) => {
+    // #swagger.tags = ['Venues']
+    // #swagger.summary = 'Get booked dates for a venue'
+    // #swagger.description = 'This endpoint returns all booked dates for a specific venue.'
+    try {
+        const { id } = req.params;
+        const venue = await Venue.findOne({where: {id: id}});
+        const bookings = await Booking.findAll({
+            where: { venueEmailAddress: venue.email },
+            attributes: ['startDate', 'endDate']
+        });
+
+        res.status(200).json(bookings);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            error: 'Could not fetch booked dates at this moment'
+        });
+    }
+});
+
 // Endpoint to get venue details
 router.get("/venues/:id", async (req, res) => {
     // #swagger.tags = ['Venue']

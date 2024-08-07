@@ -103,6 +103,28 @@
             }
         }
 
+        // Disable booked dates in the date pickers
+        function disableBookedDates(bookedDates) {
+            const startDateInput = document.getElementById('startDate');
+            const endDateInput = document.getElementById('endDate');
+
+            startDateInput.addEventListener('input', function () {
+                const date = new Date(this.value);
+                if (bookedDates.includes(this.value)) {
+                    alert('This date is already booked. Please choose another date.');
+                    this.value = '';
+                }
+            });
+
+            endDateInput.addEventListener('input', function () {
+                const date = new Date(this.value);
+                if (bookedDates.includes(this.value)) {
+                    alert('This date is already booked. Please choose another date.');
+                    this.value = '';
+                }
+            });
+        }
+
         const urlParams = new URLSearchParams(window.location.search);
         const venueId = urlParams.get('id');
         const customerEmail = localStorage.getItem("customerEmail");
@@ -114,19 +136,14 @@
         document.getElementById('bookingForm').addEventListener('submit', async function(event) {
             event.preventDefault();
 
-        
             // Collect form data
             const formData = {
-                // customerFullName: document.getElementById('customerFullName').value,
                 eventType: document.getElementById('eventType').value,
                 startDate: document.getElementById('startDate').value,
                 endDate: document.getElementById('endDate').value,
                 venueId: venueId,
                 customerEmailAddress: customerEmail,
-                // customerPhoneNumber: document.getElementById('customerPhoneNumber').value,
-                // venuePhoneNumber: document.getElementById('venuePhoneNumber').value,
                 numberOfGuests: document.getElementById('numberOfGuests').value,
-                // venueEmailAddress: document.getElementById('venueEmailAddress').value,
                 price: document.getElementById('price').value,
                 paymentStatus: 0 // Default value for payment status
             };
@@ -134,7 +151,7 @@
             console.log(formData);
             try {
                 // Send POST request to create booking endpoint
-                const response = await fetch('http://localhost:5000/api/customer/bookings/create', {
+                const response = await fetch(`http://localhost:5000/api/venues/${venueId}/booked-dates`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -160,8 +177,36 @@
             }
         });
 
+        // Fetch booked dates for the venue
+        async function fetchBookedDates() {
+            try {
+                const response = await fetch(`http://localhost:5000/api/venues/${venueId}/booked-dates`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch booked dates');
+                }
+
+                const bookedDates = await response.json();
+                const dates = [];
+                bookedDates.forEach(booking => {
+                    let start = new Date(booking.startDate);
+                    let end = new Date(booking.endDate);
+                    while (start <= end) {
+                        dates.push(start.toISOString().split('T')[0]);
+                        start.setDate(start.getDate() + 1);
+                    }
+                });
+
+                disableBookedDates(dates);
+
+            } catch (error) {
+                console.error('Error fetching booked dates:', error);
+            }
+        }
+
         // Initial call to update the price field
         updatePrice();
+        // Initial call to fetch and disable booked dates
+        fetchBookedDates();
     </script>
 
     <!-- Footer START -->
