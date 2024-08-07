@@ -1,3 +1,5 @@
 *.docx
 *.pdf
 docs/
+*.env
+node_modules/

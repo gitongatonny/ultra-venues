@@ -340,6 +340,7 @@ Content START -->
 Content END -->
 
 
+
     <!-- =======================
     Recommended Venues START -->
     <section>
@@ -391,8 +392,6 @@ Content END -->
     </section>
     <!-- =======================
     Recommended Venues END -->        
-
-    </main>
 
     <!-- Footer START -->
     <?php include "includes/footer.php"; ?>
@@ -447,6 +446,7 @@ Content END -->
                                     <label class="form-check-label" for="inquiryCheck">I agree to receive updates and offers</label>
                                 </div>
 
+
                                 <!-- Buttons -->
                                 <div class="d-grid gap-2 d-md-block">
                                     <button class="btn btn-dark mb-0" type="button">Send Inquiry</button>
@@ -469,8 +469,7 @@ Content END -->
                 try {
                     const response = await fetch(`http://localhost:5000/api/venues/${venueId}`); // Replace with your backend API URL
                     const data = await response.json();
-                    
-                    console.log(data);
+
                     document.getElementById('venue-description').textContent = data.description || "Description not available.";
                     document.getElementById('venue-additional-description').textContent = "Experience the warmth and hospitality of the staff..."; // Add more description if needed
                     document.getElementById('venue-price').textContent = `Ksh. ${data.price || "N/A"}`;
@@ -524,8 +523,11 @@ Content END -->
 
                     const venueServices = document.getElementById('venue-services');
                     venueServices.innerHTML = "";
-                    if (data.services && data.services.length > 0) {
-                        data.services.forEach(service => {
+
+                    if (data.facilities && data.facilities.length > 0) {
+                        data.facilities = data.facilities.split(/\n|,/);
+                        data.facilities.forEach(service => {
+
                             venueServices.innerHTML += `
                         <div class="col-sm-6 col-lg-4 col-xl-3">
                             <ul class="list-group list-group-borderless mb-3">
